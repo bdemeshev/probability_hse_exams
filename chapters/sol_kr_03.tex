@@ -1,0 +1,81 @@
+\subsection*{Решения контрольной номер 3}
+
+\subsubsection*{\hyperref[sec:kr_03_2017_2018]{2017-2018}}
+\label{sec:sol_kr_03_2017_2018}
+
+
+\begin{enumerate}
+\item[5.]
+\begin{enumerate}
+\item $L(X_1, \ldots, X_n, \mu) = \prod_{i=1}^n \frac{1}{\sqrt{2\pi}} e^{-\frac{1}{2}\sum_{i=1}^n (X_i - \mu)^2}$
+\item $\hat\mu_{ML} = \bar X$
+\item $\E(\hat\mu_{ML}) = \E(\bar X) = \mu \Rightarrow$ оценка несмещённая
+
+$\plim \hat \mu_{ML} = \plim \bar X = \mu \Rightarrow$ оценка состоятельная
+\item $I(\mu) = n$
+\item $\Var(\theta) \geq \frac{1}{I(\theta)}$
+\item $\Var(\hat \mu_{ML}) = \frac{1}{n}$, так как неравенство Рао-Крамера выполнено
+как равенство, оценка является эффективной.
+\item $\theta = \E(X^2) = \Var(X) + \mu^2 = 1 + \mu^2$.
+Тогда в силу инвариантности оценок максимального правдоподобия: $\hat\theta_{ML} = 1 + \hat\mu^2$.
+\item $\E(\hat \theta_{ML}) = 1 + \E(\hat \mu^2) = 1 + \E((\bar X)^2)$
+
+Пользуясь соотношением $\E((\bar X)^2) = \Var(\bar X) + (\E(\bar X))^2$,
+получим: $\E(\hat \theta_{ML}) = 1 + \frac{1}{n} + \mu^2$, то есть оценка смещена.
+
+Однако, $\lim_{n \to \infty} \left(1 + \frac{1}{n} + \mu^2\right) = 1 + \mu^2$, значит,
+оценка асимптотически несмещена.
+\item $\hat \theta_{ML} \approx 1 + \mu^2 + 2\mu(\hat \mu - \mu)$
+
+$\Var(\hat \theta_{ML}) \approx 4 \mu^2 \Var(\hat \mu) = \frac{4 \mu^2}{n}$
+\item Так как $\hat \theta_{ML}$ асимптотически несмещена, то для проверки
+состоятельности достаточно показать, что
+$\Var(\hat \theta_{ML}) = \frac{4\mu^2}{n} \to_{n \to \infty} 0$.
+\end{enumerate}
+\item[6.]
+\begin{enumerate}
+\item $\E(X_1) = \int_{0}^{\theta} \frac{2}{\theta^2}(\theta - x)x dx = \frac{\theta}{3}$
+
+$\frac{\hat \theta_{MM}}{3} = \bar X \Rightarrow \hat \theta_{MM} = 3 \bar X$
+\item Оценка $\hat \theta$ состоятельна. если $\plim \hat \theta_n = \theta$.
+
+$\plim \hat \theta_{MM} = \plim 3 \bar X = 3 \E(X_1) = \theta \Rightarrow$ оценка состоятельна.
+\end{enumerate}
+\item[7.]
+\begin{enumerate}
+\item $\E\left(\frac{X_1 + X_2 + X_3}{3} \right) = \frac{1}{3} \cdot 3 \E(X_1) = 132.5$
+
+$\Var\left(\frac{X_1 + X_2 + X_3}{3} \right) = \frac{1}{9} \Var(X_1 + X_2 + X_3) =
+\frac{1}{9} (\Var(X_1) + \Var(X_2) + \Var(X_3) + 2 \Cov(X_1, X_2) + 2\Cov(X_1, X_3) + 2\Cov(X_2, X_3)) =
+\frac{1}{9}(3\Var(X_1) + 6\Cov(X_1,X_2))$
+
+$\Var(X_1) = \E(X_1^2) - \E(X_1)^2 = \frac{1}{4} \cdot 30^2 - \frac{1}{4} \cdot 500^2 - 132.5^2 = 45168.75$
+
+$\Cov(X_1, X_1 + \ldots + X_4 = \Var(X_1) + 3\Cov(X_1,X_2) = 0 \Rightarrow \Cov(X_1,X_2) = -\frac{45168.75}{3} = -15056.25$
+
+$\Var\left(\frac{X_1 + X_2 + X_3}{3} \right) = 5018.75$
+
+\item $3/4$
+\end{enumerate}
+\item[8.] $\Delta_i = X_i - Y_i \sim \cN(\mu_x - \mu_y, \sigma^2)$
+
+$\bar X = 297.5$, $\bar Y = 247.5$, $\bar \Delta = \bar X - \bar Y = 50$
+
+$\hat \sigma^2 = \frac{1}{n-1} \sum_{i=1}^n (\Delta_i - \bar \Delta)^2 = 18266.(6)$.
+
+Критическое значение — $t_{0.975, 3} = 3.182$ и доверительный интервал имеет вид:
+\[
+50 - 3.182 \sqrt{\frac{18266.(6)}{3}} < \mu_x - \mu_y < 50 + 3.182 \sqrt{\frac{18266.(6)}{3}}
+\]
+Так как $0$ входит в доверительный интервал, нельзя отвергнуть предположение о равенстве расхожов.
+\item[9.]
+\begin{enumerate}
+\item $0.7 - 1.96 \sqrt{\frac{0.7 \cdot 0.3}{60}} < p < 0.7 + 1.96 \sqrt{\frac{0.7 \cdot 0.3}{60}} $
+\item Да, так как $0.7667$ входит в доверительный интервал.
+\item $\P(|p - \hat p| \leq 0.01) = 0.95$
+
+$\P\left(\frac{|0.7 - p|}{\sqrt{\frac{0.7 \cdot 0.3}{n}}} < \frac{0.01}{\sqrt{\frac{0.7 \cdot 0.3}{n}}} \right) = 0.95$
+
+$\frac{0.01}{\sqrt{\frac{0.7 \cdot 0.3}{n}}} = 1.96 \Rightarrow n \approx 8068$
+\end{enumerate}
+\end{enumerate}

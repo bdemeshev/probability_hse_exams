@@ -1,0 +1,130 @@
+\subsection*{Решения контрольной номер 4}
+
+\subsubsection*{\hyperref[sec:kr_04_2017_2018]{2017-2018}}
+\label{sec:sol_kr_04_2017_2018}
+
+
+
+\begin{enumerate}
+\item Проверяем следующую гипотезу:
+\[
+\begin{cases}
+H_0: \mu_{D} = 100 \\
+H_a: \mu_{D} > 100
+\end{cases}
+\]
+Считаем наблюдаемое значение статистики:
+\[
+t_{obs} = \frac{\bar X - \mu_{D}}{\frac{\sigma_D}{\sqrt{n_D}}} = \frac{136 - 100}{\frac{55}{\sqrt{40}}} \approx 4.14
+\]
+При верной $H_0$ $t$-статистика имеет распределение $t_{40 - 1}$, значит, $t_{crit} \approx 1.68$.
+Поскольку $t_{crit} > t_{obs}$, основная гипотеза отвергается, $p-value \approx 0$.
+
+\item Проверяем следующую гипотезу:
+\[
+\begin{cases}
+H_0: \sigma^2_D = \sigma^2_T \\
+H_a: \sigma^2_D \neq \sigma^2_T
+\end{cases}
+\]
+Считаем наблюдаемое значение статистики:
+\[
+F_{obs} = \frac{\hat{\sigma}^2_D}{\hat{\sigma}^2_T} = \frac{55^2}{60^2} \approx 0.84
+\]
+При верной $H_0$ $F$-статистика имеет распределение $F_{40-1, 60-1}$.
+Находим критические значения: $F_{left} \approx 0.6$, $F_{right} \approx 1.6$.
+Поскольку $F_{left} < F_{obs} < F_{right}$, нет оснований отвергать $H_0$.
+\item
+\begin{enumerate}
+Проверяем гипотезу
+\[
+\begin{cases}
+H_0: \mu_{D} = \mu_{T} \\
+H_a: \mu_{D} < \mu_{T}
+\end{cases}
+\]
+\item Когда $n_D$, $n_T$ велики,
+\[
+\frac{\bar D - \bar T - (\mu_D - \mu_T)}{\sqrt{\frac{\sigma^2_D}{n_D} + \frac{\sigma^2_T}{n_T}}} \stackrel{H_0}{\sim} \cN(0, 1)
+\]
+Считаем наблюдаемое значение статистики:
+\[
+z_{obs} = \frac{136 - 139}{\sqrt{\frac{3025}{40} + \frac{3600}{60}}} \approx -0.25
+\]
+По таблице находим $z_{crit} = -1.28$.
+Так как $z_{crit} < z_{obs}$, нет оснований отвергать $H_0$.
+\item Когда считаем дисперсии одинаковыми, то:
+\[
+\hat{\sigma}^2_0 = \frac{\hat{\sigma}^2_D (n_D - 1) + \hat{\sigma}^2_T (n_T - 1)}{n_D + n_T - 2} = \frac{3025 \cdot 39 + 3600 \cdot 59}{30 + 60 - 2} \approx 3371
+\]
+и
+\[
+\frac{\bar D - \bar T - (\mu_D - \mu_T)}{\hat{\sigma}^2_0\sqrt{\frac{1}{n_D} + \frac{1}{n_T}}} \stackrel{H_0}{\sim} t_{n_D + n_T - 2}
+\]
+Считаем наблюдаемое значение статистики:
+\[
+t_{obs} = \frac{136 - 139}{\sqrt{3371}\sqrt{\frac{1}{40} + \frac{1}{60}}} \approx -0.25
+\]
+По таблице находим критическое значение: $t_{crit} \approx -1.29$.
+Поскольку $t_{crit} < t_{obs}$, нет оснований отвергать $H_0$.
+\end{enumerate}
+\item
+\begin{enumerate}
+\item Сначала найдём оценку максимального правдоподобия параметра $\lambda$:
+\begin{align*}
+L &= \prod_{i=1}^n \lambda e^{-\lambda x_i} = \lambda^n e^{-\lambda \sum_{i=1}^n x_i} \\
+\ell &= n \ln \lambda - \lambda \sum_{i=1}^n x_i \\
+\frac{\partial \ell}{\partial \lambda} &= \left. \frac{n}{\lambda} \right|_{\lambda = \hat \lambda} = 0 \\
+\frac{\partial^2 \ell}{\partial \lambda^2} &= -\frac{n}{\lambda^2} \\
+\hat \lambda &= \frac{1}{0.52}
+\end{align*}
+Так как
+\[
+\frac{\hat \lambda - \lambda}{\sqrt{\frac{1}{I(\lambda)}}} \stackrel{as}{\sim} \cN(0,1),
+\]
+доверительный интервал имеет вид
+\[
+\frac{1}{0.52} - 1.96 \frac{1}{\frac{10}{0.52}} < \lambda < \frac{1}{0.52} + 1.96 \frac{1}{\frac{10}{0.52}}
+\]
+\item Найдём вероятность того, что наушник проработает без сбоев 45 минут:
+\[
+g(\lambda) = \P(X > 0.75) = 1 - F(0.75) = e^{-0.75\lambda}
+\]
+Тогда
+\begin{align*}
+g(\hat \lambda) &= e^{-0.75 / 0.52} \\
+g'(\hat \lambda) &= -0.75 e^{-0.75 / 0.52}
+\end{align*}
+И доверительный интервал имеет вид:
+\[
+e^{-0.75 / 0.52} - 1.96 \cdot \frac{0.75 \cdot 0.52}{10} \cdot e^{-0.75 / 0.52} < g(\lambda) < e^{-0.75 / 0.52} + 1.96 \cdot \frac{0.75 \cdot 0.52}{10} \cdot e^{-0.75 / 0.52}
+\]
+\end{enumerate}
+\item Выпишем функцию правдоподобия:
+\begin{align*}
+L &= p_1^{10} \cdot p_2^{10} \cdot p_3^{15} \cdot p_4^{15} \cdot p_5^{25} \cdot (1 - p_1 - p_2 - p_3 - p_4 - p_5)^{25} \\
+\ell &= 10 \ln p_1 + 10 \ln p_2 + 15 \ln p_3 + 15 \ln p_4 + 25 \ln p_5 + 25 \ln (1 - p_1 - p_2 - p_3 - p_4 - p_5)
+\end{align*}
+Максимизируя логарифмическую функцию правдоподобия по всем параметрам,
+получим следующие оценки для неограниченной модели:
+\begin{align*}
+& \hat p_1 = \hat p_2 = 0.1 \\
+& \hat p_3 = \hat p_4 = 0.15 \\
+& \hat p_5 = 0.25
+\end{align*}
+Подставив найденные значения в логарифмическую функцию правдоподобия, получим
+\[
+\ell_{UR} \approx -172
+\]
+В ограниченной модели $p_1 = \ldots = p_6 = 1/6$, и значение функции правдоподобия
+будет
+\[
+\ell_R \approx -179
+\]
+Теперь можно посчитать наблюдаемое значение:
+\[
+LR = 2(\ell_{UR} - \ell_R) = 2(-172 - (-179)) = 14
+\]
+Критическое значение $\chi_{0.95, 5} = \approx 11 < 14$, значит, основная гипотеза
+отвергается.
+\end{enumerate}

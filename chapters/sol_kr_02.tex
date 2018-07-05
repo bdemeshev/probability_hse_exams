@@ -1,0 +1,59 @@
+\subsection*{Решения контрольной номер 2}
+
+\subsubsection*{\hyperref[sec:kr_02_2017_2018]{2017-2018}}
+\label{sec:sol_kr_02_2017_2018}
+
+\begin{enumerate}
+\item[7.]
+\begin{enumerate}
+\item Всем хватит места, если число явившихся на рейс пассажиров ($X$) не превысит $300$,
+то есть нужно найти $\P(X \leq 300)$. Найдём матожидание и дисперсию
+случайной величины $X$:
+\begin{align*}
+\E(X) &= np = 330 \cdot 0.9 = 297 \\
+\Var(X) &= np(1-p) = 330 \cdot 0.9 \cdot 0.1 = 29.7
+\end{align*}
+Теперь посчитаем нужную вероятность:
+\[
+\P(X \leq 300) = \P \left(\frac{X - 297}{\sqrt{29.7}} \leq \frac{300 - 297}{\sqrt{29.7}} \right) = \P(\cN(0,1) \leq 0.55) \approx 0.709
+\]
+\item Вероятность переполнения не должна превышать $0.1$:
+\begin{align*}
+&\P(X > 300) < 0.1 \\
+&\P\left(\frac{X - 0.9 \cdot n}{\sqrt{0.9 \cdot 0.1 \cdot n}} > \frac{300 - 0.9 \cdot n}{\sqrt{0.9 \cdot 0.1 \cdot n}} \right) < 0.1 \\
+&\frac{300 - 0.9 \cdot n}{\sqrt{0.9 \cdot 0.1 \cdot n}}  > 1.28 \\
+&300 - 0.9n > 1.28 \cdot 0.3 \sqrt{n} \\
+&n < 325.6
+\end{align*}
+\end{enumerate}
+\item[8.]
+\begin{enumerate}
+\item Выпишем случайную величину $X_i$ — цену акции после $i$-ого дня:
+\[
+X_i =
+\begin{cases}
+1.01, & p = 0.7 \\
+0.99, & p = 0.2999 \\
+0, & p = 0.0001
+\end{cases}
+\]
+Нужно посчитать ожидание цены акциии после 20 дней:
+\[
+\E(X_1 \cdot \ldots \cdot X_{20}) \stackrel{\text{незав-ть}}{=} \E(X_1) \cdot \ldots \cdot \E(X_{20}) = 1.004^{20} \approx 1.083
+\]
+\item По ЗБЧ:
+\[
+\plim_{n\to\infty} \frac{1}{n} \sum_{i=1}^n X_i = \E(X_i) = 1.004
+\]
+\item Аналогично пункту (а):
+\[
+\E(X_1 \cdot \ldots \cdot X_{n}) = (\E(X_1))^n = 1.004^n
+\]
+И понятно, что $1.004^n \to_{n\to\infty} +\infty$.
+\item
+\begin{multline*}
+\P(\text{разорения}) = 1 - \P(X_1 > 0, \ldots, X_n >0) = 1 - \prod_{i=1}^n \P(X_i > 0) \\
+= 1 - (1 - 0.0001)^n \to_{n\to\infty} 1
+\end{multline*}
+\end{enumerate}
+\end{enumerate}
