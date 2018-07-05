@@ -1,0 +1,510 @@
+\documentclass[12pt]{article}
+
+\usepackage{tikz} % картинки в tikz
+\usepackage{microtype} % свешивание пунктуации
+
+\usepackage{array} % для столбцов фиксированной ширины
+
+\usepackage{indentfirst} % отступ в первом параграфе
+
+\usepackage{sectsty} % для центрирования названий частей
+\allsectionsfont{\centering}
+
+\usepackage{amsmath} % куча стандартных математических плюшек
+
+\usepackage{comment}
+\usepackage{amsfonts}
+
+\usepackage[top=2cm, left=1.2cm, right=1.2cm, bottom=2cm]{geometry} % размер текста на странице
+
+\usepackage{lastpage} % чтобы узнать номер последней страницы
+
+\usepackage{enumitem} % дополнительные плюшки для списков
+%  например \begin{enumerate}[resume] позволяет продолжить нумерацию в новом списке
+\usepackage{caption}
+
+
+\usepackage{fancyhdr} % весёлые колонтитулы
+\pagestyle{fancy}
+\lhead{Теория вероятностей}
+\chead{}
+\rhead{Минимум к контрольной \textnumero 1 по ТВ и МС}
+\lfoot{}
+\cfoot{}
+\rfoot{\thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+\usepackage{todonotes} % для вставки в документ заметок о том, что осталось сделать
+% \todo{Здесь надо коэффициенты исправить}
+% \missingfigure{Здесь будет Последний день Помпеи}
+% \listoftodos --- печатает все поставленные \todo'шки
+
+
+% более красивые таблицы
+\usepackage{booktabs}
+% заповеди из докупентации:
+% 1. Не используйте вертикальные линни
+% 2. Не используйте двойные линии
+% 3. Единицы измерения - в шапку таблицы
+% 4. Не сокращайте .1 вместо 0.1
+% 5. Повторяющееся значение повторяйте, а не говорите "то же"
+
+
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+
+\setmainlanguage{russian}
+\setotherlanguages{english}
+
+% download "Linux Libertine" fonts:
+% http://www.linuxlibertine.org/index.php?id=91&L=1
+\setmainfont{Linux Libertine O} % or Helvetica, Arial, Cambria
+% why do we need \newfontfamily:
+% http://tex.stackexchange.com/questions/91507/
+\newfontfamily{\cyrillicfonttt}{Linux Libertine O}
+
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ} % для списков с русскими буквами
+\setlist[enumerate, 2]{label=\asbuk*),ref=\asbuk*}
+
+%% эконометрические сокращения
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\E}{E}
+\def \hb{\hat{\beta}}
+\def \hs{\hat{\sigma}}
+\def \htheta{\hat{\theta}}
+\def \s{\sigma}
+\def \hy{\hat{y}}
+\def \hY{\hat{Y}}
+\def \v1{\vec{1}}
+\def \e{\varepsilon}
+\def \he{\hat{\e}}
+\def \z{z}
+\def \hVar{\widehat{\Var}}
+\def \hCorr{\widehat{\Corr}}
+\def \hCov{\widehat{\Cov}}
+\def \cN{\mathcal{N}}
+\def \P{\mathbb{P}}
+
+
+\begin{document}
+
+\section{Теоретический минимум}
+
+
+\begin{enumerate}
+	\item Классическое определение вероятности
+	\item Определение условной вероятности
+	\item Определение независимости случайных событий
+	\item Формула полной вероятности
+	\item Формула Байеса
+	\item Функция распределения случайной величины. Определение и свойства.
+	\item Функция плотности. Определение и свойства.
+	\item Математическое ожидание. Определения для дискретного и абсолютно непрерывного случаев. Свойства.
+	\item Дисперсия. Определение и свойства.
+	\item Законы распределений. Определение, $\E(X)$, $\Var(X)$:
+	\begin{enumerate}
+	\item Биномиальное распределение
+	\item Распределение Пуассона
+	\item Геометрическое распределение
+	\item Равномерное распределение
+	\item Экспоненциальное распределение
+	\end{enumerate}
+\end{enumerate}
+
+
+\section{Задачный минимум}
+
+\begin{enumerate}
+\item  Пусть $\P(A) = 0.3, \P(B) = 0.4, \P(A\cap B) = 0.1 $. Найдите
+	\begin{enumerate}
+		\item  $\P(A|B)$
+		\item  $\P(A\cup B)$
+		\item  Являются ли события $A$ и $B$ независимыми?
+	\end{enumerate}
+
+
+
+\item  Пусть $\P(A) = 0.5, \P(B) = 0.5, \P(A\cap B) = 0.25 $. Найдите
+\begin{enumerate}
+	\item  $\P(A|B)$
+	\item  $\P(A\cup B)$
+	\item  Являются ли события $A$ и $B$ независимыми?
+\end{enumerate}
+
+
+
+\item  Карлсон выложил кубиками слово КОМБИНАТОРИКА. Малыш выбирает наугад четыре кубика и выкладывает их в случайном порядке.
+Найдите вероятность того, что при этом получится слово КОРТ.
+
+
+\item  Карлсон выложил кубиками слово КОМБИНАТОРИКА. Малыш выбирает наугад четыре кубика и выкладывает их в случайном порядке.
+Найдите вероятность того, что при этом получится слово РОТА.
+
+\item  В первой урне 7 белых и 3 черных шара, во второй урне 8 белых и 4 черных
+шара, в третьей урне 2 белых и 13 черных шаров. Из этих урн наугад выбирается одна урна. Какова вероятность того, что шар, взятый наугад из выбранной урны, окажется белым?
+
+
+\item  В первой урне 7 белых и 3 черных шара, во второй урне 8 белых и 4 черных
+шара, в третьей урне 2 белых и 13 черных шаров. Из этих урн наугад выбирается одна урна. Какова вероятность того, что была выбрана первая урна, если шар, взятый наугад из выбранной урны, оказался белым?
+
+
+\item  В операционном отделе банка работает 80\% опытных сотрудников и 20\%
+неопытных. Вероятность совершения ошибки при очередной банковской операции
+опытным сотрудником равна 0.01, а неопытным — 0.1. Найдите вероятность совершения ошибки при очередной банковской операции в этом отделе.
+
+
+\item  В операционном отделе банка работает 80\% опытных сотрудников и 20\%
+неопытных. Вероятность совершения ошибки при очередной банковской операции
+опытным сотрудником равна 0.01, а неопытным — 0.1. Известно, что при очередной банковской операции была допущена ошибка. Найдите вероятность того, что ошибку допустил неопытный сотрудник.
+
+\item  Пусть случайная величина $X$ имеет таблицу распределения:
+
+\begin{tabular}{ ll l l}
+	\toprule
+	$X$ & -1  & 0  & 1 \\
+	$\P_X$ & 0.25  & c  & 0.25 \\
+  \bottomrule
+\end{tabular}
+
+Найдите
+	\begin{enumerate}
+	\item константу $c$
+	\item $\P(\{X \geq 0\})$
+	\item $\P(\{X < -3\}])$
+	\item $\P(\{X \in [-\frac{1}{2}; \frac{1}{2}]\})$
+	\item функцию распределения случайной величины $X$
+	\item имеет ли случайная величина $X$ плотность распределения?
+	\end{enumerate}
+
+
+\item  Пусть случайная величина $X$ имеет таблицу распределения:
+
+\begin{tabular}{ llll}
+\toprule
+$X$ & -1  & 0  & 1 \\
+$\P_X$ & 0.25  & c  & 0.25 \\
+\bottomrule
+\end{tabular}
+
+Найдите
+\begin{enumerate}
+	\item константу $c$
+	\item $\E(X)$
+	\item $\E(X^2)$
+	\item $\Var(X)$
+	\item $\E(|X|)$
+\end{enumerate}
+
+\item  Пусть случайная величина $X$ имеет таблицу распределения:
+
+\begin{tabular}{ lll l}
+\toprule
+$X$ & -1  & 0  & 1 \\
+$\P_X$ & 0.25  & c  & 0.5 \\
+\bottomrule
+\end{tabular}
+
+Найдите
+	\begin{enumerate}
+	\item константу $c$
+	\item $\P(\{X \geq 0\})$
+	\item $\P(\{X < -3\}])$
+	\item $\P(\{X \in [-\frac{1}{2}; \frac{1}{2}]\})$
+	\item функцию распределения случайной величины $X$
+	\item имеет ли случайная величина $X$ плотность распределения?
+\end{enumerate}
+
+\item  Пусть случайная величина $X$ имеет таблицу распределения:
+
+\begin{tabular}{ l l l l}
+  \toprule
+$X$ & -1  & 0  & 1 \\
+$\P_X$ & 0.25  & c  & 0.5 \\
+\bottomrule
+\end{tabular}
+
+Найдите
+\begin{enumerate}
+	\item константу $c$
+	\item $\E(X)$
+	\item $\E(X^2)$
+	\item $\Var(X)$
+	\item $\E(|X|)$
+\end{enumerate}
+
+\item Пусть случайная величина $X$ имеет биномиальное распределение с
+параметрами $n = 4$ и $\P = \frac{3}{4}$.
+ Найдите
+\begin{enumerate}
+	\item $\P(\{X = 0\})$
+	\item $\P(\{X > 0\})$
+	\item $\P(\{X < 0\})$
+	\item $\E(X)$
+	\item $\Var(X)$
+	\item  наиболее вероятное значение, которое принимает случайная величина $X$
+\end{enumerate}
+
+\item Пусть случайная величина $X$ имеет биномиальное распределение с
+параметрами $n = 5$ и $\P = \frac{2}{5}$.
+Найдите
+\begin{enumerate}
+	\item $\P(\{X = 0\})$
+	\item $\P(\{X > 0\})$
+	\item $\P(\{X < 0\})$
+	\item $\E(X)$
+	\item $\Var(X)$
+	\item  наиболее вероятное значение, которое принимает случайная величина $X$
+\end{enumerate}
+
+
+\item  Пусть случайная величина X имеет распределение Пуассона с параметром $\lambda = 100$ . Найдите
+\begin{enumerate}
+	\item $\P(\{X = 0\})$
+	\item $\P(\{X > 0\})$
+	\item $\P(\{X < 0\})$
+	\item $\E(X)$
+	\item $\Var(X)$
+	\item  наиболее вероятное значение, которое принимает случайная величина $X$
+\end{enumerate}
+
+
+\item  Пусть случайная величина X имеет распределение Пуассона с параметром $\lambda = 101$ . Найдите
+\begin{enumerate}
+	\item $\P(\{X = 0\})$
+	\item $\P(\{X > 0\})$
+	\item $\P(\{X < 0\})$
+	\item $\E(X)$
+	\item $\Var(X)$
+	\item  наиболее вероятное значение, которое принимает случайная величина $X$
+\end{enumerate}
+
+
+\item В лифт 10-этажного дома на первом этаже вошли 5 человек. Вычислите
+вероятность того, что на 6-м этаже выйдет хотя бы один человек.
+
+
+\item В лифт 10-этажного дома на первом этаже вошли 5 человек. Вычислите
+вероятность того, что на 6-м этаже не выйдет ни один человек.
+
+
+\item При работе некоторого устройства время от времени возникают сбои.
+Количество сбоев за сутки имеет распределение Пуассона. Среднее количество сбоев за сутки равно 3. Найти вероятность того, что в течение суток произойдет хотя бы один сбой.
+
+
+\item При работе некоторого устройства время от времени возникают сбои.
+Количество сбоев за сутки имеет распределение Пуассона. Среднее количество сбоев за сутки равно 3. Найти вероятность того, что за двое суток не произойдет ни одного сбоя.
+
+
+\item Пусть случайная величина $X$ имеет плотность распределения
+
+\[
+f_X(x) =
+	\begin{cases}
+	c,\text{ при }  x \in [-1; 1] \\
+	0,\text{ при } x \notin  [-1; 1] \\
+	\end{cases}
+\]
+
+Найдите
+\begin{enumerate}
+	\item константу $c$
+	\item $\P(\{X \leq 0\})$
+	\item $\P(\{X \in [\frac{1}{2}; \frac{3}{2}]\})$
+	\item $\P(\{X \in [2;3]\}$
+	\item $F_X(x)$
+\end{enumerate}
+
+
+\item Пусть случайная величина $X$ имеет плотность распределения
+
+\[
+f_X(x) =
+	\begin{cases}
+	c,\text{ при }  x \in [-1; 1] \\
+	0,\text{ при } x \notin  [-1; 1] \\
+	\end{cases}
+\]
+
+Найдите
+\begin{enumerate}
+	\item константу $c$
+	\item $\E(X)$
+	\item $\E(X^2)$
+	\item $\Var(X)$
+	\item $\E(|X|)$
+\end{enumerate}
+
+
+\item Пусть случайная величина $X$ имеет плотность распределения
+
+\[
+f_X(x) =
+	\begin{cases}
+	cx,\text{ при }  x \in [0; 1] \\
+	0,\text{ при } x \notin  [0; 1] \\
+	\end{cases}
+\]
+
+Найдите
+\begin{enumerate}
+	\item константу $c$
+	\item $\P(\{X \leq \frac{1}{2}\})$
+	\item $\P(\{X \in [\frac{1}{2}; \frac{3}{2}]\})$
+	\item $\P(\{X \in [2;3]\}$
+	\item $F_X(x)$
+\end{enumerate}
+
+
+\item Пусть случайная величина $X$ имеет плотность распределения
+
+\[
+f_X(x) =
+	\begin{cases}
+	cx,\text{ при }  x \in [0; 1] \\
+	0,\text{ при } x \notin  [0; 1] \\
+	\end{cases}
+\]
+
+Найдите
+\begin{enumerate}
+	\item константу $c$
+	\item $\E(X)$
+	\item $\E(X^2)$
+	\item $\Var(X)$
+	\item $\E(\sqrt{X})$
+\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection*{Ответы}
+
+\begin{enumerate}
+	\item
+			\begin{enumerate}
+				\item 0.25
+				\item 0.6
+				\item нет
+			\end{enumerate}
+	\item
+			\begin{enumerate}
+				\item 0.5
+				\item  0.75
+				\item нет
+			\end{enumerate}
+	\item $\frac{4}{10 \cdot 11 \cdot 12 \cdot 13}$
+	\item $\frac{4}{10 \cdot 11 \cdot 12 \cdot 13}$
+	\item 0.5
+
+
+	\item 0.42
+	\item 0.028
+	\item $\frac{5}{7}$
+	\item
+			\begin{enumerate}
+				\item 0.5
+				\item 0.75
+				\item 0
+				\item 0.5
+			\end{enumerate}
+	\item
+			\begin{enumerate}
+				\item 0.5
+				\item  0
+				\item  0.5
+				\item  0.5
+				\item  0.5
+			\end{enumerate}
+	\item
+			\begin{enumerate}
+				\item 0.25
+				\item 0.75
+				\item 0
+				\item 0.5
+			\end{enumerate}
+	\item
+			\begin{enumerate}
+				\item 0.25
+				\item 0.25
+				\item 0.75
+				\item 0.5
+				\item 0.75
+			\end{enumerate}
+	\item
+			\begin{enumerate}
+				\item $\left( \frac{1}{4} \right) ^4$
+				\item $1 - \left( \frac{1}{4} \right) ^4$
+				\item 0
+				\item 3
+				\item 0.75
+				\item 2, 3
+			\end{enumerate}
+	\item
+			\begin{enumerate}
+				\item $\left( \frac{3}{5} \right) ^5$
+				\item $1 - \left( \frac{3}{5} \right) ^5$
+				\item 0
+				\item 2
+				\item 1.2
+				\item 2
+			\end{enumerate}
+	\item
+			\begin{enumerate}
+				\item $e^{-100}$
+				\item $1 - e^{-100}$
+				\item 0
+				\item 100
+				\item 100
+			\end{enumerate}
+	\item
+			\begin{enumerate}
+				\item $e^{-101}$
+				\item $1 - e^{-101}$
+				\item 0
+				\item 101
+				\item 101
+			\end{enumerate}
+	\item $1 - \frac{8^5}{9^5}$
+	\item $\frac{8^5}{9^5}$
+	\item $1 - e^{-3}$
+	\item $e^{-3}$
+	\item
+			\begin{enumerate}
+				\item 0.5
+				\item 0.25
+				\item 0.125
+				\item 1
+			\end{enumerate}
+	\item
+			\begin{enumerate}
+				\item 0.5
+				\item 0.5
+				\item $\frac{1}{3}$
+				\item $\frac{1}{12}$
+				\item 1
+			\end{enumerate}
+	\item
+			\begin{enumerate}
+				\item 2
+				\item 0.25
+				\item $\frac{3}{4}$
+				\item 1
+			\end{enumerate}
+	\item
+			\begin{enumerate}
+				\item 2
+				\item 0.5
+				\item 0.5
+				\item 0
+				\item 0.8
+			\end{enumerate}
+\end{enumerate}
+
+
+\end{document}

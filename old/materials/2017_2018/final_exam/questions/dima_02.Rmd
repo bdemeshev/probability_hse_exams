@@ -1,0 +1,41 @@
+Question
+========
+Величины $X_1, \, \ldots, \, X_n$ — случайная выборка с распределением
+
+\begin{tabular}{cccc}
+\toprule
+  $x$                     & $-4$                 & $0$    & $3$         \\
+  $\P(X_i=x)$        & $3/4 - \theta$       & $1/4$  & $\theta$    \\
+\bottomrule
+\end{tabular}
+
+Оценка неизвестного параметра $\theta$, найденная с помощью первого начального момента, равна
+
+
+Answerlist
+----------
+
+* $\frac{\bar X + 3}{7}$
+* $\frac{\bar X + 7}{3}$
+* $\frac{7 - \frac{1}{n} \sum_{i=1}^{n}X_i^2}{12}$
+* $\frac{12 - \frac{1}{n} \sum_{i=1}^{n}X_i^2}{7}$
+* $\frac{\frac{1}{n} \sum_{i=1}^{n}X_i^2 - 12}{7}$
+
+
+Solution
+========
+
+Answerlist
+----------
+* Ураа!!!
+* Не угадал
+* Неверно
+* Тоже ересь
+* Не туда!
+
+Meta-information
+================
+exname: estimator_first_moment
+extype: schoice
+exsolution: 10000
+exshuffle: 5

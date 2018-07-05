@@ -1,0 +1,278 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+
+\setmainlanguage{russian}
+\setotherlanguages{english}
+
+% download "Linux Libertine" OTF-fonts:
+% http://www.linuxlibertine.org/index.php?id=91&L=1
+\setmainfont{Linux Libertine O} % or Helvetica, Arial, Cambria
+% why do we need \newfontfamily:
+% http://tex.stackexchange.com/questions/91507/
+\newfontfamily{\cyrillicfonttt}{Linux Libertine O}
+\newfontfamily{\cyrillicfont}{Linux Libertine O}
+\newfontfamily{\cyrillicfontsf}{Linux Libertine O}
+
+\usepackage{etoolbox} % to use ifdef, must be after babel
+
+\usepackage[paper=a4paper,
+top=13.5mm, bottom=13.5mm,
+left=16.5mm, right=13.5mm, includefoot]{geometry}
+
+\usepackage{etex} % расширение классического tex
+% в частности позволяет подгружать гораздо больше пакетов, чем мы и займёмся далее
+
+
+
+
+\usepackage{makeidx} % для создания предметных указателей
+\usepackage{verbatim} % для многострочных комментариев
+%\usepackage[pdftex]{graphicx} % для вставки графики
+% omit pdftex option if not using pdflatex
+
+
+%\usepackage{dsfont} % шрифт для единички с двойной палочкой (для индикатора события)
+\usepackage{bbm} % шрифт - двойные буквы
+
+
+\usepackage[usenames, dvipsnames, svgnames, table, rgb]{xcolor}
+
+\usepackage{colortbl}
+
+
+% пакет для тестов:
+\usepackage[box, % запрет на перенос вопросов
+nopage, % убираем колонтитулы страницы
+insidebox, % ставим буквы в квадратики
+separateanswersheet, % добавляем бланк ответов
+nowatermark, % отсутствие надписи "Черновик"
+%indivanswers,  % показываем верные ответы
+%answers,
+lang=RU, % локализация слов "нет верных ответов", "вопрос" и тд
+completemulti % добавлять "нет правильного ответа" во всех вопросах множественного выбора
+]{automultiplechoice}
+
+
+\usepackage{multicol}
+
+\usepackage[colorlinks, hyperindex, unicode, breaklinks]{hyperref} % гиперссылки в pdf
+
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{epsfig}
+\usepackage{bm}
+\usepackage{color}
+
+
+
+\usepackage{multirow} % Слияние строк в таблице
+
+\usepackage{textcomp}  % Чтобы в формулах можно было русские буквы писать через \text{}
+
+%\usepackage{embedfile} % Чтобы код LaTeXа включился как приложение в PDF-файл
+
+\usepackage{subfigure} % для создания нескольких рисунков внутри одного
+
+\usepackage{tikz, pgfplots} % язык для рисования графики из latex'a
+\usetikzlibrary{trees} % прибамбас в нем для рисовки деревьев
+\usetikzlibrary{arrows} % прибамбас в нем для рисовки стрелочек подлиннее
+\usepackage{tikz-qtree} % прибамбас в нем для рисовки деревьев
+
+
+
+
+
+
+\usepackage{enumitem}
+
+
+%\embedfile[desc={Исходный LaTeX файл}]{\jobname.tex} % Включение кода в выходной файл
+%\embedfile[desc={Стилевой файл}]{title_bor_utf8.tex}
+
+
+
+% вместо горизонтальной делаем косую черточку в нестрогих неравенствах
+\renewcommand{\le}{\leqslant}
+\renewcommand{\ge}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+
+% делаем короче интервал в списках
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+
+% свешиваем пунктуацию (т.е. знаки пунктуации могут вылезать за правую границу текста, при этом текст выглядит ровнее)
+\usepackage{microtype}
+
+% более красивые таблицы
+\usepackage{booktabs}
+% заповеди из докупентации:
+% 1. Не используйте вертикальные линни
+% 2. Не используйте двойные линии
+% 3. Единицы измерения - в шапку таблицы
+% 4. Не сокращайте .1 вместо 0.1
+% 5. Повторяющееся значение повторяйте, а не говорите "то же"
+
+\usepackage{minted} % вставка кода, нужен питон :)
+
+
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\sgn}{sign}
+\DeclareMathOperator{\sign}{sign}
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\amn}{arg\,min}
+\DeclareMathOperator*{\amx}{arg\,max}
+\DeclareMathOperator{\cov}{Cov}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\let\P\relax
+\DeclareMathOperator{\P}{\mathbb{P}}
+
+
+
+
+\def \R{\mathbb{R}}
+\def \N{\mathbb{N}}
+\def \Z{\mathbb{Z}}
+
+
+
+
+
+\newcommand{\dx}[1]{\,\mathrm{d}#1} % для интеграла: маленький отступ и прямая d
+\newcommand{\ind}[1]{\mathbbm{1}_{\{#1\}}} % Индикатор события
+%\renewcommand{\to}{\rightarrow}
+\newcommand{\eqdef}{\mathrel{\stackrel{\rm def}=}}
+\newcommand{\iid}{\mathrel{\stackrel{\rm i.\,i.\,d.}\sim}}
+\newcommand{\const}{\mathrm{const}}
+
+
+\usepackage{epigraph}
+
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ} % для списков с русскими буквами
+\setlist[enumerate, 2]{label=\asbuk*),ref=\asbuk*}
+
+
+
+
+% \newenvironment{problem}{}{}
+% тут перещёлкиваем комментарий, чтобы убрать или показать решения:
+% \newenvironment{sol}{}{} % with solutions
+% \excludecomment{sol} % without solutions
+
+
+
+\unitlength=0.6mm
+
+\title{Подборка экзаменов по теории вероятностей. \\Факультет экономики, НИУ ВШЭ}
+\date{\today}
+\author{Коллектив кафедры \\
+математической экономики и эконометрики,
+талантливые студенты,\\
+ фольклор}
+
+
+%%%%%%%%%%%%%%%%%% вставки
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Списки без уродских отступов
+\newenvironment{enumerate*}{
+\begin{enumerate}
+  \setlength{\itemsep}{0pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{enumerate}}
+
+\newenvironment{itemize*}{
+\begin{itemize}
+  \setlength{\itemsep}{0pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+
+\abovedisplayskip=0mm
+\abovedisplayshortskip=0mm
+\belowdisplayskip=0mm
+\belowdisplayshortskip=0mm
+
+% \newcommand{\MIN}{\textbf{(MIN)}{}}
+
+
+\DeclareMathOperator{\Lin}{\mathrm{Lin}}
+\DeclareMathOperator{\Linp}{\Lin^{\perp}}
+\DeclareMathOperator*\plim{plim}
+\newcommand{\cN}{\mathcal{N}}
+
+
+\setcounter{secnumdepth}{0} % убираем нумерацию секций, подсекций и т.д.
+
+\begin{document}
+\maketitle
+
+\tableofcontents{}
+
+
+\parindent=0 pt % no indent
+
+\section{Описание}
+
+Свежую версию можно скачать с github-репозитория \url{https://github.com/bdemeshev/probability_hse_exams}.
+
+
+Уникальное предложение для студентов факультета экономики НИУ-ВШЭ:
+
+
+Найдите ошибки в этом документе или пришлите отсутствующие решения в техе и получите дополнительные бонусы!
+Найденные смысловые ошибки поощряются сильнее, чем просто опечатки.
+Замеченные ошибки и новые решения оформляйте в виде запросов на
+\url{https://github.com/bdemeshev/probability_hse_exams/issues/}.
+Перед публикацией запроса, пожалуйста, свертесь со свежей версией подборки.
+
+В создании подборки храбро участвовали
+Андрей Зубанов, Кирилл Пономарёв, Александр Левкун, Оля Гнилова,
+Настя Жаркова, Гарик Варданян и другие :)
+
+
+\subsection*{Доброе напутствие пишущим эту подборку :)}
+
+Здесь перечислены стилевые особенности коллекции и самые популярные ошибки.
+Узнать технические подробности по теху можно, например, \href{http://www.ccas.ru/voron/download/voron05latex.pdf}{в учебнике} К.В. Воронцова.
+
+\begin{enumerate}
+
+\item Дробную часть числа отделяй от целой точкой: $3.14$ — хорошо, $3{,}14$ — плохо. Это нарушает русскую традицию, но облегчает копирование-вставку в любой программный пакет.
+\item Существует длинное тире, —, которое отличается от просто дефиса - и нужно, чтобы разделять части предложения. \href{https://ru.wikihow.com/напечатать-тире}{Инструкция в картинках по набору тире :)}
+\item Выключные формулы следует окружать \verb|\[|\ldots\verb|\]|. Никаких \$\$\ldots\$\$!
+\item Про остальные окружения: для системы уравнений подойдёт \verb|cases|, для формул на несколько строк – \verb|multline*|, для нумерации – \verb|enumerate|.
+\item Русский текст внутри формулы нужно писать в \verb|\text{|\ldots\}.
+\item Для многоточий существует команда \verb|\ldots|.
+\item В преамбуле определены сокращения! Самые популярные: \verb|\P, \E, \Var, \Cov, \Corr, \cN|.
+\item Названия функций тоже идут со слэшем: \verb|\ln, \exp, \cos|\ldots
+\item Таблицы нужно оформлять по стандарту booktabs. Самый удобный способ сделать это – зайти на
+\href{https://www.tablesgenerator.com}{tablesgenerator} и выбрать там опцию booktabs table style вместо default table style.
+\item Уважай букву ё – ставь над ней точки! :)
+\end{enumerate}
+
+% стандарт имени файла:
+% добавляется префикс sol_ в файле с решениями
+
+\input{chapters/minima.tex}
+\input{chapters/kr_01.tex}
+
+
+\section{Ответы}
+
+\input{chapters/sol_minima.tex}
+\input{chapters/sol_kr_01.tex}
+
+
+
+\end{document}

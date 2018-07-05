@@ -1,0 +1,9 @@
+.DS_Store
+chapters/.DS_Store
+*.amc
+*.xdv
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+_minted-probability_hse_exams/
