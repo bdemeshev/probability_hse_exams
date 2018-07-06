@@ -90,21 +90,8 @@ completemulti % добавлять "нет правильного ответа" 
 \usepackage{enumitem}
 
 
-%\embedfile[desc={Исходный LaTeX файл}]{\jobname.tex} % Включение кода в выходной файл
-%\embedfile[desc={Стилевой файл}]{title_bor_utf8.tex}
 
 
-
-% вместо горизонтальной делаем косую черточку в нестрогих неравенствах
-\renewcommand{\le}{\leqslant}
-\renewcommand{\ge}{\geqslant}
-\renewcommand{\leq}{\leqslant}
-\renewcommand{\geq}{\geqslant}
-
-% делаем короче интервал в списках
-\setlength{\itemsep}{0pt}
-\setlength{\parskip}{0pt}
-\setlength{\parsep}{0pt}
 
 % свешиваем пунктуацию (т.е. знаки пунктуации могут вылезать за правую границу текста, при этом текст выглядит ровнее)
 \usepackage{microtype}
@@ -120,7 +107,12 @@ completemulti % добавлять "нет правильного ответа" 
 
 \usepackage{minted} % вставка кода, нужен питон :)
 
+\usepackage{epigraph}
 
+
+\DeclareMathOperator{\Lin}{\mathrm{Lin}}
+\DeclareMathOperator{\Linp}{\Lin^{\perp}}
+\DeclareMathOperator*\plim{plim}
 \DeclareMathOperator{\grad}{grad}
 \DeclareMathOperator{\card}{card}
 \DeclareMathOperator{\sgn}{sign}
@@ -140,7 +132,7 @@ completemulti % добавлять "нет правильного ответа" 
 
 
 
-
+\newcommand{\cN}{\mathcal{N}}
 \def \R{\mathbb{R}}
 \def \N{\mathbb{N}}
 \def \Z{\mathbb{Z}}
@@ -157,13 +149,24 @@ completemulti % добавлять "нет правильного ответа" 
 \newcommand{\const}{\mathrm{const}}
 
 
-\usepackage{epigraph}
+% вместо горизонтальной делаем косую черточку в нестрогих неравенствах
+\renewcommand{\le}{\leqslant}
+\renewcommand{\ge}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+
+
 
 \AddEnumerateCounter{\asbuk}{\russian@alph}{щ} % для списков с русскими буквами
 \setlist[enumerate, 2]{label=\asbuk*),ref=\asbuk*}
 
 
 
+
+% делаем короче интервал в списках
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
 
 % \newenvironment{problem}{}{}
 % тут перещёлкиваем комментарий, чтобы убрать или показать решения:
@@ -206,10 +209,7 @@ completemulti % добавлять "нет правильного ответа" 
 % \newcommand{\MIN}{\textbf{(MIN)}{}}
 
 
-\DeclareMathOperator{\Lin}{\mathrm{Lin}}
-\DeclareMathOperator{\Linp}{\Lin^{\perp}}
-\DeclareMathOperator*\plim{plim}
-\newcommand{\cN}{\mathcal{N}}
+
 
 
 \setcounter{secnumdepth}{0} % убираем нумерацию секций, подсекций и т.д.
