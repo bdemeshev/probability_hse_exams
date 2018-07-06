@@ -32,6 +32,8 @@ left=16.5mm, right=13.5mm, includefoot]{geometry}
 %\usepackage[pdftex]{graphicx} % для вставки графики
 % omit pdftex option if not using pdflatex
 
+\usepackage{comment} % для команды excludecomment
+
 
 %\usepackage{dsfont} % шрифт для единички с двойной палочкой (для индикатора события)
 \usepackage{bbm} % шрифт - двойные буквы
@@ -43,16 +45,16 @@ left=16.5mm, right=13.5mm, includefoot]{geometry}
 
 
 % пакет для тестов:
-\usepackage[box, % запрет на перенос вопросов
-nopage, % убираем колонтитулы страницы
-insidebox, % ставим буквы в квадратики
-separateanswersheet, % добавляем бланк ответов
-nowatermark, % отсутствие надписи "Черновик"
-%indivanswers,  % показываем верные ответы
-%answers,
-lang=RU, % локализация слов "нет верных ответов", "вопрос" и тд
-completemulti % добавлять "нет правильного ответа" во всех вопросах множественного выбора
-]{automultiplechoice}
+% \usepackage[box, % запрет на перенос вопросов
+% nopage, % убираем колонтитулы страницы
+% insidebox, % ставим буквы в квадратики
+% separateanswersheet, % добавляем бланк ответов
+% nowatermark, % отсутствие надписи "Черновик"
+% indivanswers,  % показываем верные ответы
+% answers,
+% lang=RU, % локализация слов "нет верных ответов", "вопрос" и тд
+% completemulti % добавлять "нет правильного ответа" во всех вопросах множественного выбора
+% ]{automultiplechoice}
 
 
 \usepackage{multicol}
@@ -278,7 +280,7 @@ completemulti % добавлять "нет правильного ответа" 
 \input{chapters/kr_03_ip.tex}
 \input{chapters/kr_04.tex}
 \input{chapters/kr_04_ip.tex}
-% \input{chapters/final_exam.tex}
+\input{chapters/final_exam.tex}
 
 \section{Ответы}
 
