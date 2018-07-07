@@ -376,3 +376,619 @@ $\P(\eta \geq 5, \tau >3)=\P(\tau>3)$.
 \E(\xi) = 9 \cdot \E(\xi_i) = 9 \cdot \left(1 - \left(\frac{8}{9}\right)^9\right)
 \]
 \end{enumerate}
+
+\subsubsection*{\hyperref[sec:kr_01_2015_2016]{2015-2016}}
+\label{sec:sol_kr_01_2015_2016}
+
+\begin{enumerate}
+\item
+\begin{enumerate}
+\item[$\alpha$)] Найдём вероятности каждого события:
+$\P(A) = 1/2$, $\P(B) = 1/2$, $\P(C) = 1/2$.
+
+Проверим попарную независимость:
+\begin{itemize}
+\item $\P(A \cap B) = 1/4$, $\P(A) \cdot \P(B) = 1/2 \cdot 1/2 = 1/4$
+\item $\P(A \cap C) = 1/4$, $\P(A) \cdot \P(C) = 1/2 \cdot 1/2 = 1/4$
+\item $\P(B \cap C) = 1/4$, $\P(B) \cdot \P(C) = 1/2 \cdot 1/2 = 1/4$
+\end{itemize}
+Значит, события попарно независимы.
+\item[$\beta$)] События $A_1, A_2, A_3$ называются независимыми в совокупности,
+если $\P(A_1 \cap A_2 \cap A_3) = \P(A_1) \cdot \P(A_2) \cdot \P(A_3)$.
+
+В нашем случае: $\P(A \cap B \cap C) = 0$, $ \P(A) \cdot \P(B) \cdot \P(C) = (1/2)^3$,
+следовательно, события не являются независимыми в совокупности.
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item[$\alpha$)] Воспользуемся формулой полной вероятности:
+\begin{align*}
+\P(\text{выпала «6»}) &= \P(\text{выпала «6»} \mid \text{взят белый кубик}) \cdot \P(\text{взят белый кубик}) \\
+&+ \P(\text{выпала «6»} \mid \text{взят красный кубик}) \cdot \P(\text{взят красный кубик}) \\
+&= \frac{1}{6} \cdot \frac{1}{2} + \frac{1}{3} \cdot \frac{1}{2} = \frac{1}{4}
+\end{align*}
+\item[$\beta$)] Воспользуемся формулой условной вероятности и результатом предыдущего пункта:
+\begin{align*}
+\P(\text{взят красный кубик} \mid \text{выпала «6»}) &= \frac{\P(\text{взят красный кубик} \cap \text{выпала «6»})}{\P(\text{выпала «6»})}  \\
+&= \frac{\frac{1}{2}\cdot \frac{1}{3}}{\frac{1}{4}} = \frac{2}{3}
+\end{align*}
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item[$\alpha$)] Совместное распределение имеет вид:
+\begin{center}
+\begin{tabular}{@{}lllllll@{}}
+\toprule
+$\eta$ $\backslash$ $\xi$ & $1$                            & $2$                            & $3$                            & $4$                            & $5$                            & $6$                            \\ \midrule
+$1$           & $\frac{2}{15}\cdot\frac{1}{6}$ & $\frac{2}{15}\cdot\frac{1}{6}\mbox{*}$  & $\frac{2}{15}\cdot\frac{1}{6}\mbox{*}$   & $\frac{2}{15}\cdot\frac{1}{6} \mbox{*}$   & $\frac{2}{15}\cdot\frac{1}{6} \mbox{*}$   & $\frac{1}{3}\cdot\frac{1}{6} \mbox{*}$   \\
+$2$           & $\frac{2}{15}\cdot\frac{1}{6}$ & $\frac{2}{15}\cdot\frac{1}{6}$ & $\frac{2}{15}\cdot\frac{1}{6}\mbox{*}$   & $\frac{2}{15}\cdot\frac{1}{6}\mbox{*}$   & $\frac{2}{15}\cdot\frac{1}{6}\mbox{*}$   & $\frac{1}{3}\cdot\frac{1}{6} \mbox{*}$   \\
+$3$           & $\frac{2}{15}\cdot\frac{1}{6}$ & $\frac{2}{15}\cdot\frac{1}{6}$ & $\frac{2}{15}\cdot\frac{1}{6}$ & $\frac{2}{15}\cdot\frac{1}{6} \mbox{*}$   & $\frac{2}{15}\cdot\frac{1}{6} \mbox{*}$   & $\frac{1}{3}\cdot\frac{1}{6} \mbox{*}$   \\
+$4$           & $\frac{2}{15}\cdot\frac{1}{6}$ & $\frac{2}{15}\cdot\frac{1}{6}$ & $\frac{2}{15}\cdot\frac{1}{6}$ & $\frac{2}{15}\cdot\frac{1}{6}$ & $\frac{2}{15}\cdot\frac{1}{6} \mbox{*}$ & $\frac{1}{3}\cdot\frac{1}{6} \mbox{*}$   \\
+$5$           & $\frac{2}{15}\cdot\frac{1}{6}$ & $\frac{2}{15}\cdot\frac{1}{6}$ & $\frac{2}{15}\cdot\frac{1}{6}$ & $\frac{2}{15}\cdot\frac{1}{6}$ & $\frac{2}{15}\cdot\frac{1}{6}$ & $\frac{1}{3}\cdot\frac{1}{6} \mbox{*}$   \\
+$6$           & $\frac{2}{15}\cdot\frac{1}{6}$ & $\frac{2}{15}\cdot\frac{1}{6}$ & $\frac{2}{15}\cdot\frac{1}{6}$ & $\frac{2}{15}\cdot\frac{1}{6}$ & $\frac{2}{15}\cdot\frac{1}{6}$ & $\frac{1}{3}\cdot\frac{1}{6}$ \\ \bottomrule
+\end{tabular}
+\end{center}
+\item[$\beta$)] $\P(\text{выиграет белый кубик}) = (6 + 5 + 4 + 3 + 2) \cdot \frac{2}{15}\cdot\frac{1}{6} + 1 \cdot \frac{1}{3}\cdot\frac{1}{6} = \frac{1}{2}$.
+
+Значит, Пете безразлично, какой кубик брать.
+\item[$\gamma)$] $F_{\zeta}(x) = \P(\zeta \leq x)$
+
+Выпишем таблицу распределения случайной величины $\zeta$:
+
+\begin{center}
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+$\zeta$     & $1$                              & $2$                                      & $3$                                      & $4$                                      & $5$                                      & $6$                                                                              \\ \midrule
+$\P(\cdot)$ & $\frac{2}{15} \cdot \frac{1}{6}$ & $\frac{2}{15} \cdot \frac{1}{6} \cdot 3$ & $\frac{2}{15} \cdot \frac{1}{6} \cdot 5$ & $\frac{2}{15} \cdot \frac{1}{6} \cdot 7$ & $\frac{2}{15} \cdot \frac{1}{6} \cdot 9$ & $\frac{1}{3} \cdot \frac{1}{6} \cdot 6 + \frac{2}{15} \cdot \frac{1}{6} \cdot 5$ \\ \bottomrule
+\end{tabular}
+\end{center}
+
+Тогда функция распределения имеет вид:
+\[
+F_{\zeta}(x) =
+\begin{cases}
+0 & x \leq 1 \\
+\frac{1}{45} & 1 < x \leq 2 \\
+\frac{4}{45} & 2 < x \leq 3 \\
+\frac{9}{45} & 3 < x \leq 4 \\
+\frac{16}{45} & 4 < x \leq 5 \\
+\frac{25}{45} & 5 < x \leq 6 \\
+1 & x > 6
+\end{cases}
+\]
+\item[$\delta$)] $\E(\zeta) = \frac{2}{15} \cdot \frac{1}{6} \cdot 1 + \frac{2}{15} \cdot \frac{1}{6} \cdot 3 \cdot 2 + \frac{2}{15} \cdot \frac{1}{6} \cdot 5 \cdot 3 + \frac{2}{15} \cdot \frac{1}{6} \cdot 7 \cdot 4 + \frac{2}{15} \cdot \frac{1}{6} \cdot 9 \cdot 5 + \frac{1}{3} \cdot \frac{1}{6} \cdot 6 + \frac{2}{15} \cdot \frac{1}{6} \cdot 6 = \frac{43}{9} \approx 4.8 $
+\end{enumerate}
+\item Пусть $x$ — вероятность того, что мужчина честно любит петь в душе.
+
+Распишем по формуле полной вероятности вероятность получить ответ «да»:
+\begin{multline*}
+P(\text{ответ «Да»}) = 1 \cdot \P(\text{выпала «6»}) + x \cdot(\P(\text{выпала «2»}) + \P(\text{выпала «3»}) +  \\
++ \P(\text{выпала «4»}) + \P(\text{выпала «5»})) = 1 \cdot \frac{1}{6} + x \cdot \frac{4}{6} \Rightarrow x = \frac{3}{4}
+\end{multline*}
+Тогда истинный процент «певцов» составляет $75 \%$
+
+\item Предположим, что ваше имя — Студент (7 букв), а фамилия — Идеальный (9 букв).
+\begin{enumerate}
+\item[$\alpha$)] $\P(\text{напишет фаимлию правильно}) = (0.9)^9$
+\item[$\beta$)] $\P(\text{ровно 2 ошибки в имени}) = C_{7}^2 \cdot 0.1^2 \cdot 0.9^5$
+\item[$\gamma$)] Наиболее вероятное число ошибок — 1
+\item[$\delta$)] $\P(\text{допустит хотя бы одну ошибку}) = 1 - \P(\text{не допустит ни одной ошибки}) = 1 - (0.9)^{16}$
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item[$\alpha$)] Из условия $\int_{0}^{1} (cy^2 + y) dy = 1$ получаем, что $c=3/2$.
+\item[$\beta$)]
+$F_{Y} (y) =
+\begin{cases}
+1 & y > 1 \\
+\frac{y^3 + y^2}{2} & 0 < y \leq 1 \\
+0 & y < 0
+\end{cases} $
+\item[$\gamma$)] $\P(Y < 0.5) = \int_{0}^{0.5} \left(\frac{3}{2} y^2 + y   \right) dy = \frac{3}{16}$
+\item[$\delta$)] $F_{Y} (y) = 0.5 \Rightarrow y \approx 0.75 $
+\item[$\epsilon$)] $\P(Y > 0.5 \mid Y \geq 0.25) = \frac{\P(Y > 0.5)}{\P(Y \geq 0.25)} = \frac{1 - \frac{3}{16}}{\int_{0.25}^{1} \left(\frac{3}{2} y^2 + y   \right) dy} = \frac{104}{123}$
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item[$\alpha$)] $\P(\text{кисточка окажется на слоне}) = \frac{1}{1.5} = \frac{2}{3}$
+\item[$\beta$)] $f_{\xi, \eta}(x, y) = \frac{1}{1.5}$
+\item[$\gamma$)] $f_{\xi} (x) = \int_{0}^{1} \frac{1}{1.5} dy = 1.5$
+
+$f_{\eta}(y) = \int_{0}^{1.5} \frac{1}{1.5} dx = 1$
+\item[$\delta$)] Да, поскольку $ f_{\xi} (x) \cdot f_{\eta}(y) = f_{\xi, \eta}(x, y)$
+\item[$\epsilon$)] $f_{\xi+\eta} (t) = \int_{-\infty}^{+\infty} f_{\xi}(u) f_{\eta}(t-u) du $
+\end{enumerate}
+\end{enumerate}
+
+
+
+\subsubsection*{\hyperref[sec:kr_01_2014_2015]{2014-2015}}
+\label{sec:sol_kr_01_2014_2015}
+
+
+
+\begin{enumerate}
+\item Внимательно читайте примечание! Всего 6 возможных ситуаций, только 1 — благоприятная.
+Требуемая вероятность равна $1/6$.
+
+\item
+Два события $A$ и $B$ независимы, если: $\P(AB) = \P(A) \P(B)$.
+
+Проверим, независимы ли события $A = \{ \xi < 1/2 \} $ и  $B = \{ \eta < 1/2 \} $:
+
+$\P(AB)$ ищется как отношение площади квадрата с вершинами в $(0,\,0)$, $(0,\,1/2)$,
+$(1/2,\,1/2)$, $(1/2,\,0)$ к площади данного треугольника, то есть:
+\[
+\P(AB) = \frac{(1/2)^2}{1/2}= \frac{1}{2}
+\]
+
+$\P(A)$ ищется как отношение площади трапеции с вершинами в $(0,\,0)$, $(0,\,1)$,
+$(1/2,\,1/2)$, $(1/2,\,0)$ к площади данного треугольника, то есть:
+\[
+\P(A) = \frac{(1/2)\cdot (3/2) \cdot (1/2)}{1/2}= \frac{3}{4}
+\]
+
+$\P(B)$ ищется как отношение площади трапеции с вершинами в $(0,\,0)$, $(1,\,0)$,
+$(1/2,\,1/2)$, $(0,\,1/2)$ к площади данного треугольника, то есть:
+\[
+\P(B) = \frac{(1/2)\cdot (3/2) \cdot (1/2)}{1/2}= \frac{3}{4}
+\]
+
+\[
+\P(A)\cdot \P(B) = \frac{3}{4} \cdot  \frac{3}{4} = \frac{9}{16} \ne \frac{1}{2} = \P(AB)
+\]
+
+Получается, события $A$ и $B$ зависимы.
+
+\item
+Пусть событие $A$ = \{Цель была поражена первым самолетом\},
+событие $B$ = \{Цель была поражена только одним самолетом\}.
+Тогда событие $AB$ = \{Первый самолет поразил цель, второй и третий — промахнулись\}.
+По формуле условной вероятности:
+
+\[\P(A|B) = \frac{\P(AB)}{\P(B)} = \frac{0.6 \cdot 0.6 \cdot 0.7}{0.6\cdot 0.6 \cdot 0.7 + 0.4 \cdot 0.4 \cdot 0.7 + 0.4 \cdot 0.6 \cdot 0.3} = \frac{0.252}{0.436} \approx 0.578\]
+
+\item
+Удобно рассуждать следующим образом: предположим, что каждая опечатка наугад
+(с равными вероятностями и независимо от других опечаток) выбирает, на какую
+страницу ей попасть.
+
+\begin{enumerate}
+\item Пусть $X$ — число опечаток на 13 странице. \[\P(X \geqslant 2) = 1 - \P(X=0) - \P(X=1) \]
+$\P(X=0) = \left( \frac{499}{500} \right)^{400}$ — каждая из 400 опечаток не должна попасть на 13 страницу.\\
+$\P(X=1) = 400\cdot\frac{1}{500}\cdot\left( \frac{499}{500} \right)^{399}$ — ровно одна опечатка (а есть 400 вариантов) должна попасть на 13 страницу, а остальные — мимо. Соответственно:
+\[
+\P(X \geqslant 2) = 1 - \left( \frac{499}{500} \right)^{400} - 400\cdot\frac{1}{500}\cdot\left( \frac{499}{500} \right)^{399} \approx 0.1911357
+\]
+Это если считать в явном виде. А если пользоваться приближением Пуассона:
+\[
+p(k) = \P(X = k) = \frac{\lambda^k}{k!}e^{-\lambda}
+\]
+неплохо бы вспомнить, что параметр $\lambda$ это математическое ожидание $X$, поэтому расчеты здесь пока оставим до лучших времен.
+
+\item Пусть $X$ — число опечаток на 13 странице. Введем случайную величину
+\[X_i =
+\begin{cases}
+1, & \text{если } i\text{-ая опечатка попала на 13 страницу}\\
+0, & \text{если нет}
+\end{cases}
+\]
+Тогда $X = \sum\limits_{i=1}^{400}X_i$. Рассмотрим отдельно $X_i$:
+
+\begin{center}
+\begin{tabular}{@{}ccc@{}}
+\toprule
+$x$         & $1$             & $0$               \\ \midrule
+$\P(X=x)$ & $\frac{1}{500}$ & $\frac{499}{500}$ \\ \bottomrule
+\end{tabular}
+\end{center}
+
+Так как $i$-ая опечатка наугад выбирает одну страницу из 500 и это должна быть именно 13.
+
+Тогда:
+\begin{align*}
+\E(X_i) &= \frac{1}{500} = \E(X^2_i)  \\
+\Var(X_i) &= \E(X^2_i) - (\E(X_i))^2 = \frac{1}{500} - \left(\frac{1}{500}\right)^2 = \frac{499}{500^2}
+\end{align*}
+Значит
+\begin{align*}
+\E(X) &= \E\left(\sum\limits_{i=1}^{400}X_i\right) = \sum\limits_{i=1}^{400}\E(X_i)  = \frac{400}{500} = 0.8 \\
+\Var(X) &= \Var\left(\sum\limits_{i=1}^{400}X_i\right) = \sum\limits_{i=1}^{400}\Var(X_i) = 400\cdot\frac{499}{500^2} = 0.8\cdot\frac{499}{500}
+\end{align*}
+
+Теперь мы знаем, что $\lambda = \E(X) = 0.8$ поэтому можем вернуться к пункту (а):
+\[
+\P(X \geqslant 2) = 1 - \P(X=0) - \P(X=1)  = 1 - \frac{0.8^0}{0!}e^{-0.8} - \frac{0.8^1}{1!}e^{-0.8} \approx 0.19
+\]
+
+Осталось найти наиболее вероятное число опечаток на 13 странице:
+\[
+\P(X=k) = \frac{0.8^k}{k!}e^{-0.8} \rightarrow \max \limits_k
+\]
+Очевидно, что эта функция убывает по $k$, ведь с ростом $k$:\\
+ $k!$ растет, а $0.8^k$ убывает. Значит наиболее вероятное число ошибок — $X = 0$
+
+\item \href{https://en.wikipedia.org/wiki/Triskaidekaphobia}{Ох уж эти предрассудки!}
+13-я страница точно такая же как и все остальные, ведь везде в решении можно просто заменить номер 13 на любой другой и ничего не изменится.
+
+\end{enumerate}
+
+\item
+Пусть событие $A$ означает, что медицинский тест показал наличие заболевания.
+Событие $B$ — заболевание на самом деле есть.
+
+Перепишем условие задачи:
+
+Чувствительность теста $=\P(A |B)$
+
+Специфичность теста $=\P(A^c | B^c)$
+
+Прогностическая сила теста $=\P(B | A)$
+
+$\P(B) = 0.01 \Rightarrow \P(B^c) = 0.99 $
+
+По условию, чувствительность теста равна $0.9$, тогда из формулы условной вероятности:
+\[
+\P(A | B) = \frac{\P(A \cap B)}{\P(B)} \Rightarrow
+\P(A \cap B) = 0.9 \cdot 0.01 = 0.009
+\]
+
+При этом очевидно, что:
+\[
+\P(B) = \P(A \cap B) +  \P(A^c \cap B) \Rightarrow
+\P(A^c \cap B) = 0.01 - 0.009 = 0.001
+\]
+
+По условию специфичность теста равна 0.95, тогда из формулы условной вероятности:
+\[
+\P(A^c | B^c) = \frac{\P(A^c \cap B^c)}{\P(B^c)} \Rightarrow
+\P(A^c \cap B^c) =0.95 \cdot 0.99 = 0.9405
+\]
+
+При этом очевидно, что:
+\[
+\P(B^c) = \P(A \cap B^c) + \P(A^c \cap B^c) \Rightarrow
+\P(A \cap B^c) = 0.99 - 0.9405 = 0.0495
+\]
+
+Теперь мы готовы отвечать на заданные вопросы:
+
+\begin{enumerate}
+\item
+\[
+\P(A) = \P(A \cap B^c) + \P(A \cap B) = 0.009+0.0495 = 0.0585
+\]
+
+\item Прогностическая сила теста:
+
+\[
+\P(B | A) = \frac{\P(A \cap B)}{\P(A) } = \frac{0.009}{0.0585} \approx 0.154
+\]
+
+Для того, чтобы повысить прогностическую силу теста, необходимо понизить
+$\P(A \cap B^c) $, а для этого необходимо повысить специфичность теста.
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item
+Должно выполняться условие нормировки:
+
+\begin{align*}
+& \int \limits_{-a}^0 1.5(x+a)^2 dx + \int \limits_0^a 1.5(x- a)^2  dx = 1   \\
+& \left. 0.5(x+a)^3 \right|_{-a}^0 + \left. 0.5(x- a)^3 \right|_0^a  = 1  \\
+& 0.5a^3 + 0.5a^3 = 1 \Rightarrow a = 1
+\end{align*}
+
+Теперь легко понять, как выглядит функция распределения (смотри определение функции распределения):
+
+\[
+F(x) = \begin{cases}
+0, & x < 1 \\
+0.5 (x+1)^3, & -1 \leqslant x <0 \\
+1 + 0.5 (x-1)^3, & 0 \leqslant x < 1 \\
+1, & x \geqslant 1
+\end{cases}
+\]
+
+И с её помощью всё посчитать:
+\begin{align*}
+& P\left(X \in \left[\frac{1}{2}, 2 \right]  \right) = F(2) - F\left(\frac{1}{2} \right) =
+1 - 1 +0.5^4 = 0.5^4  \\
+& \E(X) = \int \limits_{-1}^0 x \cdot 1.5 (x + 1)^2 dx +  \int \limits_0^1 x \cdot 1.5 (x - 1)^2 dx \\
+& = 1.5 \int \limits_{-1}^0\left( x^3 + 2x^2 + x\right) dx + 1.5 \int \limits_0^1\left( x^3 -2x^2 + x\right) dx \\
+& =  \frac{3}{8} x^4 |_{-1}^0 + x^3 |_{-1}^0 + \frac{3}{4} x^2|_{-1}^0+    \frac{3}{8} x^4 |_0^1   - x^3 |_0^1 + \frac{3}{4} x^2|_0^1  = - \frac{3}{8}  + 1- \frac{3}{4} + \frac{3}{8} - 1 +\frac{3}{4} = 0
+\end{align*}
+А можно было заметить, что функция плотности — четная функция, поэтому сразу $\E(X) = 0$
+
+Вычислим $\E(X^2)$:
+
+\begin{align*}
+& \E(X^2) = \int \limits_{-1}^0 x^2 \cdot 1.5 (x + 1)^2 dx +  \int \limits_0^1 x^2 \cdot 1.5 (x - 1)^2 dx \\
+& = 1.5 \int \limits_{-1}^0\left( x^4 + 2x^3 + x^2\right) dx + 1.5 \int \limits_0^1\left( x^4 -2x^3 + x^2\right) dx \\
+& =  \frac{3}{10} x^5 |_{-1}^0 + \frac{3}{4} x^4|_{-1}^0 + \frac{1}{2} x^3 |_{-1}^0 +  \frac{3}{10} x^5 |_0^1 - \frac{3}{4} x^4|_0^1  + \frac{1}{2} x^3 |_0^1 =  \frac{1}{10} \\
+& \Var(X) = \E(X^2) - (\E(X))^2 = 0.1
+\end{align*}
+
+\item Верим, что график $F(x)$, выписанной выше, вы построить можете :)
+\end{enumerate}
+\item
+Пусть $A = \{\text{«Лекция полезна»}\}$, $B = \{\text{«Лекция интересна»}\}$. Заметим, что лекции вообще независимы друг от друга.
+
+\begin{enumerate}
+\item Пусть $X_A$ — число полезных лекций, прослушанных Васей,  $X_B$ — число интересных лекций, прослушанных Васей. Введем случайную величину:
+\[X_i =
+\begin{cases}
+1 & \text{если } i\text{-ая лекция была полезна}\\
+0 & \text{если нет}
+\end{cases}
+\]
+
+Тогда $X_A = \sum\limits_{i=1}^{30}X_i$. Рассмотрим отдельно $X_i$:
+
+\begin{center}
+\begin{tabular}{@{}ccc@{}}
+\toprule
+$x$         & $1$             & $0$               \\ \midrule
+$\P(X=x)$ & $0.9$ & $0.1$ \\ \bottomrule
+\end{tabular}
+\end{center}
+
+Вероятность $0.9$ дана. Тогда:
+\begin{align*}
+\E(X_i) &= 0.9 = \E(X^2_i) \Rightarrow \\
+\Var(X_i) &= \E(X^2_i) - (\E(X_i))^2 = 0.9 - 0.9^2 = 0.09
+\end{align*}
+
+Значит
+\begin{align*}
+\E(X_A) &= \E\left(\sum\limits_{i=1}^{30}X_i\right) = \sum\limits_{i=1}^{30}\E(X_i)  = 0.9\cdot30 = 27 \\
+\Var(X_A) &= \Var\left(\sum\limits_{i=1}^{30}X_i\right) = \sum\limits_{i=1}^{30}\Var(X_i) = 0.09\cdot30 = 2.7
+\end{align*}
+
+Аналогично для числа интересных лекций можем получить:
+\begin{align*}
+\E(X_B) &= 0.7\cdot 30 = 21 \\
+\Var(X_A) &= 0.21\cdot 30 = 6.3
+\end{align*}
+
+
+\item Так как интересность и полезность — независимые свойства лекций, то:
+\[
+\P(A^c \cap B^c) = \P(A^c)\cdot \P(B^c) = 0.3\cdot0.1 = 0.03,
+\]
+где $A^c$ значит «не $A$».
+В свою очередь:
+\[
+\P(A\cup B) = \P(A\cap B^c) + \P(B\cap A^c) + \P(A\cap B) = 1 - \P(A^c)\cdot \P(B^c) = 0.97,
+\]
+где $(A\cup B)$ значит «$A$ или $B$», а $(A\cap)B$ — «$A$ и $B$».
+Аналогично, путем введения бинарной случайной величины можем получить:
+\begin{align*}
+& \E(X_{A^c \cap B^c}) = 0.03 \cdot  30 = 0.9 \\
+& \E(X_{A\cup B}) = 0.97\cdot30 = 29.1
+\end{align*}
+\end{enumerate}
+
+\item
+Дано: $\E(X) = 1$, $\E(Y) = 2$, $\E(X^2) = 5$, $\E(Y^2) = 8$, $\E(XY) = -1$.
+
+Будем использовать только свойства математического ожидания, ковариации и дисперсии, и ничего больше. Ни-че-го.
+
+\begin{itemize}
+\item  $\E(2X + Y - 4) = 2\E(X) + \E(Y) + \E(-4) = 2 + 2 - 4 = 0 $
+\item $\Var(X) = \E(X^2) - (\E(X))^2 = 5 - 1 = 4 $
+\item $\Var(Y) = \E(Y^2) - (\E(Y))^2 = 8 - 4 = 4 $
+\item $\Cov(X, Y) = \E(XY) - \E(X)\E(Y) = -1 - 2 = -3$
+\item $\Corr(X, Y) = \frac{\Cov(X, Y)}{\sqrt{\Var(X)}\sqrt{\Var(Y)}} = -\frac{3}{2\cdot 2} = -0.75$
+\item $\Var(X-Y-1) = \Var(X) + \Var(Y) - 2\Cov(X, Y) = 4+4 -2(-3) = 14$
+\item $\Var(X+Y+1) = \Var(X) + \Var(Y) + 2\Cov(X, Y) = 4+4+2(-3) =2 $
+\item \begin{multline*}
+\Cov(X-Y-1, X+Y+1)=\E((X-Y)(X+Y))-\E(X-Y)\E(X+Y) = \\
+\E(X^2-Y^2) - (\E(X)-\E(Y))(\E(X) + \E(Y)) =
+\E(X^2) - \E(Y^2) - ((\E(X))^2 -(\E(Y))^2)=\\
+ = \Var(X)-\Var(Y) = 0
+\end{multline*}
+ \item $\Cov(X-Y-1, X+Y+1)=0 \Rightarrow \Corr(X-Y-1, X+Y+1) = 0 $
+\end{itemize}
+
+\item Найдём частные распределения $Y$ и $Y^2$:
+\begin{center}
+\begin{tabular}{cccc}
+\toprule
+ & $X=1$ & $X=2$ & $\sum$ \\ \midrule
+$Y=-1$ & $0.1$ & $0.2$ & $0.3$ \\
+$Y=0$ & $0.2$ & $0.3$ & $0.5$ \\
+$Y=1$ & $0$ & $0.2$ & $0.2$ \\
+$\sum$ & $0.3$ & $0.7$ & \\ \bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+$y$         & $-1$             & $0$      & $1$         \\ \midrule
+$\P(Y=y)$ & $0.3$ & $0.5$  & $0.2$\\ \bottomrule
+\end{tabular}
+\end{center}
+
+Так как $Y^2$ может принимать только значения 0 или 1:
+
+\begin{center}
+\begin{tabular}{@{}ccc@{}}
+\toprule
+$y^2$         & $0$             & $1$               \\ \midrule
+$\P(Y^2 = y^2)$ & $0.5$ & $0.5$ \\ \bottomrule
+\end{tabular}
+\end{center}
+А ковариация:
+ \begin{multline*}
+ \Cov(X, Y) = \E(XY) - \E(X)\E(Y) =
+ ((-1)\cdot 1\cdot0.1 + (-1)\cdot2 \cdot 0.2 + 1\cdot2\cdot 0.2) -\\
+ - (0.3\cdot1 + 0.7 \cdot 2)\cdot(0.3\cdot(-1) + 0.1\cdot 0.2) = 0.07
+\end{multline*}
+
+Так как $\Cov(X, Y) \ne 0$ — величины зависимы
+
+\item Бонусная задача
+
+Предположим, что правильный ответ 0.25. Но это невозможно, потому что вариантов ответа 0.25 — два (1 и 4), значит ответ 0.5 тоже был бы правильный. Предположим, что правильный 0.5. Тогда 0.25 тоже правильный — таких вариантов два из четырех, значит вероятность попасть в 0.25, выбрав ответ наугад, равна 0.5. Ответ 0.6, очевидно, неверен, потому что вероятность попасть в него равна 0.25. \\
+\textbf{Правильный ответ:} 0
+\end{enumerate}
+
+
+
+\subsubsection*{\hyperref[sec:kr_01_2013_2014]{2013-2014}}
+\label{sec:sol_kr_01_2013_2014}
+
+\begin{enumerate}
+\item Введём обозначения:
+\begin{itemize}
+\item $\P(\text{В} | \text{A}^{c} \cap \text{М}^{c}) = 0.18$ — Вася пришёл, а девушки — нет
+\item $\P(\text{В} | \text{A} \cap \text{М}) = 0.9$ — пришли и Вася, и девушки
+\item $\P(\text{В} | \text{A}^{c} \cap \text{М}) = 0.54$ — Вася пришёл, если пришла только Маша
+\item $\P(\text{В} | \text{A} \cap \text{М}^{c}) = 0.36$ — Вася пришёл, если пришла только Алёна
+\item $\P(\text{М}) = 0.4$ — Маша пришла на лекцию
+\item $\P(\text{А}) = 0.6$ — Алёна пришла на лекцию
+\end{itemize}
+\begin{enumerate}
+\item Используя формулы Байеса и полной вероятности, получим:
+\[
+\P(\text{A} | \text{В} ) = \frac{\P(\text{A} \cap \text{В})}{\P(\text{В})}
+\]
+В числителе:
+\begin{multline*}
+\P(\text{В} | \text{A}) \cdot \P(\text{А}) = P(\text{В} | \text{A} \cap \text{М}) \cdot \P(\text{А}) \cdot \P(\text{М}) + \P(\text{В} | \text{A} \cap \text{М}^{c}) \cdot \P(\text{А}) = \cdot \P(\text{М}^{c}) \\
+= 0.9 \cdot 0.4 \cdot 0.6 + 0.36 \cdot 0.6 \cdot 0.6 = 0.3456
+\end{multline*}
+А в знаменателе:
+\begin{multline*}
+\P(\text{В} | \text{A}^{c} \cap \text{М}^{c}) \cdot \P(\text{A}^{c} \cap \text{М}^{c})+\P(\text{В} | \text{A} \cap \text{М}) \cdot \P(\text{A} \cap \text{М}) + \P(\text{В} | \text{A}^{c} \cap \text{М}) \cdot \P(\text{A}^{c} \cap \text{М})+ \\
++  \P(\text{В} | \text{A} \cap \text{М}^{c}) \cdot \P(\text{A} \cap \text{М}^{c}) = 0.18 \cdot 0.6 \cdot 0.4 + 0.9 \cdot 0.4 \cdot 0.6 + \\
++ 0.54 \cdot 0.4 \cdot 0.4 + 0.36 \cdot 0.6 \cdot 0.6 = 0.4752
+\end{multline*}
+Ответ:
+\[
+\P(\text{A} | \text{В} ) = \frac{\P(\text{A} \cap \text{В})}{\P(\text{В})} = \frac{0.3456}{0.4752}  =0.(72)
+\]
+
+\item Необходимо найти
+\[
+\P(\text{М} | \text{В}) = \frac{\P(\text{М} \cap \text{В})}{\P(\text{В})}
+\]
+Знаменатель этой дроби посчитан в предыдущем пункте, посчитаем числитель:
+\begin{multline*}
+\P(\text{М} \cap \text{В}) = \P(\text{В} | \text{М}) \cdot \P(\text{М}) = P(\text{В} | \text{М} \cap \text{А}) \cdot \P(\text{А}) \cdot \P(\text{М}) + \\
++ \P(\text{В} | \text{A}^{c} \cap \text{М}) \cdot \P(\text{А}^{c})  \cdot \P(\text{М}) = 0.9 \cdot 0.4 \cdot 0.6 + 0.54 \cdot 0.4 \cdot 0.4 = 0.3024
+\end{multline*}
+Ответ:
+\[
+\P(\text{М} | \text{В}) = \frac{\P(\text{М} \cap \text{В})}{\P(\text{В})} = \frac{0.3024}{0.4752} = 0.(63)
+\]
+Если Вася на лекции, вероятность застать на ней Алёну выше.
+\end{enumerate}
+
+
+\item $\P(X = 5) = C_{100}^5 0.002^5 0.998^{95}$,
+
+$\E(X) = 0.2$,
+
+$\Var(X) = 0.2\cdot 0.998$,
+
+наиболее вероятно событие $X = 0$.
+\item $c = 1/2$,
+$\P(X \in [\ln 0.5,\ln 4]) = 5/8$,
+$\E(X) = 0$,
+$\Var(X)=2$,
+$\E(X^{2k+1})=0$,
+$\E(X^{2k})=(2k)!$
+\item
+\begin{enumerate}
+\item $\E(Y - 2X - 3) = \E(Y) - 2 \E(X) - 3 = 0$
+
+$\Var(Y - 2X - 3) = \Var(Y) + 4\Var(X) - 2\Cov(Y, 2X) = 16$
+
+$\Cov(X, Y) = \Corr(X,Y) \cdot \sqrt{\Var(X) \cdot \Var(Y)} = 6$
+\item $\Corr(Y - 2X - 3, X) = \frac{\Cov(Y, X) - 2 \Var(X)}{\sqrt{\Var(Y - 2X - 3) \cdot \Var(X)}} = -1$.
+\item Корреляция равна $-1$, значит, есть линейная взаимосвязь между переменными.
+Пусть $Y+ a X = b$, тогда $\Var(Y+ a X)=0$, $\E(Y) = -a + b =1 $.
+Решая уравнения, находим, что $a=-2/3, b=1/3$.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item Таблицы распределения имеют вид:
+\begin{center}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+$x$         & $-1$  & $0$   & $1$   \\ \midrule
+$\P(X=x)$ & $0.3$ & $0.3$ & $0.4$ \\ \bottomrule
+\end{tabular}
+\hspace{1cm}
+\begin{tabular}{@{}ccc@{}}
+\toprule
+$y$         & $-1$  & $1$   \\ \midrule
+$\P(Y=y)$ & $0.5$ & $0.5$ \\ \bottomrule
+\end{tabular}
+\end{center}
+
+\item
+\begin{multline*}
+\Cov(X, Y) = \E(XY) - \E(X) \E(Y)  = (-1)\cdot (-1) \cdot 0.1 + (-1) \cdot 0 \cdot 0.2 + \\
++ (-1) \cdot 1 \cdot 0.2 + 1 \cdot (-1) \cdot 0.2 + 1 \cdot 0 \cdot 0.1 + 1 \cdot 1 \cdot 0.1 -
+0.1 \cdot 0 = -0.1
+\end{multline*}
+\item Да, поскольку если случайные величины независимы, то их ковариция равна нулю.
+\item Условное распределение:
+\begin{center}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+$X|Y=-1$    & $-1$  & $0$   & $1$   \\ \midrule
+$\P(\cdot)$ & $0.2$ & $0.4$ & $0.4$ \\ \bottomrule
+\end{tabular}
+\end{center}
+\item $\E(X | Y = -1) = -1 \cdot 0.2 + 0 \cdot 0.4 + 1 \cdot 0.4 = 0.2$
+\end{enumerate}
+\end{enumerate}
+
+
+
+
+\subsubsection*{\hyperref[sec:kr_01_2012_2013]{2012-2013}}
+\label{sec:sol_kr_01_2012_2013}
+
+\begin{enumerate}
+\item
+\begin{enumerate}
+\item $\P(A)=0.8\cdot 0.3+0.7\cdot 0.2=0.38$
+\item $\P(B)=0.9$
+\item $\P(C|A)=\frac{0.3\cdot 0.8}{0.38}=0.632$
+\item $\P(C|D)=\frac{0.3\cdot (0.9\cdot 0.8+0.1\cdot 0.2)}{0.9\cdot 0.38+0.1\cdot (1-0.38)}=0.55$
+\end{enumerate}
+\item Это была задачка-неберучка!
+\item
+\begin{enumerate}
+\item $1$
+\item $\E(X)=45/28\approx 1.61$, $\E(X^2)=93/35\approx 2.66$, $\Var(X)=291/3920\approx 0.07$
+\item $37/56\approx 0.66$
+\item $F(x)=\begin{cases} 0,\, x<1 \\
+\frac{x^3-1}{7},\, x\in [1;2] \\
+1,\, x>1 \end{cases}$
+\end{enumerate}
+\item
+\begin{enumerate}
+\item $a=0.1$
+\item $\P(X>-1)=0.7$, $\P(X>Y)=0.1$
+\item $\E(X)=-0.2$, $\E(X^2)=2$
+\item $\Corr(X,Y)=0.117$
+\end{enumerate}
+\item
+\begin{enumerate}
+\item Правильные: $\E(X)=10$, $\Var(X)=9$, неправильные: $\E(Y)=9$, $\Var(Y)=0.9$
+\item Наиболее вероятное число укусов равно математическому ожиданию
+\item Лучше идти к неправильным пчёлам, так как $\P(X\leq 2)<\P(Y\leq 2)$.
+\end{enumerate}
+\end{enumerate}
