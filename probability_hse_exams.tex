@@ -3,6 +3,7 @@
 \usepackage{fontspec}
 \usepackage{polyglossia}
 
+% \setdefaultlanguage{russian}
 \setmainlanguage{russian}
 \setotherlanguages{english}
 
@@ -100,30 +101,26 @@ left=16.5mm, right=13.5mm, includefoot]{geometry}
 
 \usepackage{epigraph}
 
-% \usepackage{fancyhdr} % настройка заголовков страниц
 \usepackage{titleps} % заголовки страниц
 
-% \usepackage{titlesec} % настройка поведения при начале section
-% конфликтует с fancyhdr
+
 
 
 
 
 % по поводу заголовков разделов в колонтитулах
 % https://tex.stackexchange.com/questions/236705
+% поэтому выбрали titleps вместо fancyhdr
 
 \newpagestyle{mypage}{%
   \headrule
   \sethead{\sectiontitle}{}{\subsectiontitle}
   \setfoot{}{}{\thepage}
 }
-\settitlemarks{section,subsection,subsubsection}
+\settitlemarks{section, subsection, subsubsection}
 \pagestyle{mypage}
 
 
-% начинаем каждую секцию с новой страницы и убираем все колонтитулы
-% \newcommand{\sectionbreak}{\clearpage\thispagestyle{empty}}
-% пакет titlesec конфликтует с fancyhdr
 
 
 \DeclareMathOperator{\Lin}{\mathrm{Lin}}
@@ -222,12 +219,17 @@ left=16.5mm, right=13.5mm, includefoot]{geometry}
 \belowdisplayskip=0mm
 \belowdisplayshortskip=0mm
 
-% \newcommand{\MIN}{\textbf{(MIN)}{}}
 
+% https://tex.stackexchange.com/questions/241343
+% https://tex.stackexchange.com/questions/168480
+\emergencystretch 5em % разрешаем дополнительные пробелы для упаковки параграфа до правой границы
 
+% why this does not work?
 \begin{hyphenrules}{russian}
-\hyphenation{прав-до-по-до-бия}
+\hyphenation{прав-до-по-до-бия диаг-нос-ти-ро-ван-ным экспо-нен-циаль-ному}
 \end{hyphenrules}
+
+
 
 
 % \setcounter{secnumdepth}{0} % убираем нумерацию секций, подсекций и т.д.
@@ -284,7 +286,8 @@ left=16.5mm, right=13.5mm, includefoot]{geometry}
 \href{https://www.tablesgenerator.com}{tablesgenerator} и выбрать там опцию booktabs table style вместо default table style.
 \item Уважай букву ё – ставь над ней точки! :)
 \item Начинай каждой предложение внутри теховского файла с новой строки.
-В готовом pdf предложения будут идти без разрыва, а читабельность теха повыситься.
+В готовом pdf предложения будут идти без разрыва, а читабельность теха повысится.
+\item В перечислениях после «Найдите» используй в качестве знаков препинания точки с запятой и точку в конце.
 \end{enumerate}
 
 % стандарт имени файла:
