@@ -180,10 +180,10 @@ $\P(A) \cdot \P (B) = 3/4 \cdot 3/4$.
 
 \item Все необходимые значения для второго пункта у нас есть,
 осталось применить формулу условной вероятности:
-\begin{multline*}
-\P  (A \mid B^c) =  \frac{\P(A\cap B^c)}{\P (B^c)} =  \frac{\P (B^c \cap A)}{\P(A)} \cdot \frac{\P(A)}{\P (B^c)} = \P (B^c \mid A) \cdot \frac{\P(A)}{\P (B^c)} = \\
-= (1-\P (B \mid A)) \cdot \frac{\P(A)}{1-\P (B)} = (1-0.22) \cdot \frac{0.04}{1-0.1432} \approx 0.0364
-\end{multline*}
+\begin{align*}
+\P  (A \mid B^c) &=  \frac{\P(A\cap B^c)}{\P (B^c)} =  \frac{\P (B^c \cap A)}{\P(A)} \cdot \frac{\P(A)}{\P (B^c)} = \P (B^c \mid A) \cdot \frac{\P(A)}{\P (B^c)} \\
+&= (1-\P (B \mid A)) \cdot \frac{\P(A)}{1-\P (B)} = (1-0.22) \cdot \frac{0.04}{1-0.1432} \approx 0.0364
+\end{align*}
 \end{enumerate}
 \item Введём индикатор события «Петя дал верный ответ на $i$-ый вопрос»:
 \[
@@ -219,11 +219,11 @@ m_0 = [np-q] +1 = [2.6] + 1 = 3
 \[\Var(X) = npq = 17 \cdot \frac{1}{5} \cdot \frac{4}{5} = 2.72\]
 
 \item
-\begin{multline*}
-\P (\text{Петя получит «отлично»}) = \P (X\geq 15) = \P (X = 15) + \P (X= 16) + \\
-+ \P (X = 17) = C^{15}_{17} \cdot \left(\frac{1}{5}\right)^{15} \cdot \left(\frac{4}{5}\right)^2 + C^{16}_{17} \cdot \left(\frac{1}{5}\right)^{16} \cdot \left(\frac{4}{5}\right)^1 + C^{17}_{17} \cdot \left(\frac{1}{5}\right)^{17} \cdot \left(\frac{4}{5}\right)^0 = \\
-= 136 \cdot \frac{16}{5^{17}} + 17 \cdot \frac{4}{5^{17}} + \frac{1}{5^{17}} \approx 2.94 \cdot 10^{-9}
-\end{multline*}
+\begin{align*}
+\P (\text{у Пети «отлично»}) &= \P (X\geq 15) = \P (X = 15) + \P (X= 16) + \P (X = 17) \\
+& = C^{15}_{17} \cdot \left(\frac{1}{5}\right)^{15} \cdot \left(\frac{4}{5}\right)^2 + C^{16}_{17} \cdot \left(\frac{1}{5}\right)^{16} \cdot \left(\frac{4}{5}\right)^1 + C^{17}_{17} \cdot \left(\frac{1}{5}\right)^{17} \cdot \left(\frac{4}{5}\right)^0 \\
+&= 136 \cdot \frac{16}{5^{17}} + 17 \cdot \frac{4}{5^{17}} + \frac{1}{5^{17}} \approx 2.94 \cdot 10^{-9}
+\end{align*}
 \item Рассмотрим первый вопрос теста. Петя может выбрать первый ответ с вероятностью $1/5$, и Вася
 может выбрать первый ответ с вероятностью $1/5$. Тогда они оба выберут одинаковый ответ с вероятностью $1/25$.
 Вариантов ответа в каждом вопросе $5$, значит, вероятность совпадения ответа в одном вопросе равна $1/5$.
@@ -237,7 +237,7 @@ m_0 = [np-q] +1 = [2.6] + 1 = 3
 \begin{center}
 \begin{tabular}{ccc}
 \toprule
-$\eta$ & $ 1 $ & $2$ \\ \midrule
+$\eta$ & $ 1 $ & $2$ \\
 $\P_{\eta}$ & $1/3$ & $2/3$ \\ \bottomrule
 \end{tabular}
 \end{center}
@@ -245,26 +245,26 @@ $\P_{\eta}$ & $1/3$ & $2/3$ \\ \bottomrule
 \begin{enumerate}
 
 \item Найдём $\P (\xi = 0 )$. По формуле полной вероятности, имеем:
-\begin{multline*}
-\P (\xi = 0) = \P (\xi = 0 \mid \eta = 1 ) \cdot \P ( \eta = 1 ) + \P (\xi = 0 \mid \eta = 2 )  \cdot \P ( \eta = 2 )  = \\
-= 0.9 \cdot \frac{1}{3} + 0.9\cdot0.9 \cdot \frac{2}{3} = 0.84
-\end{multline*}
+\begin{align*}
+\P (\xi = 0) &= \P (\xi = 0 \mid \eta = 1 ) \cdot \P ( \eta = 1 ) + \P (\xi = 0 \mid \eta = 2 )  \cdot \P ( \eta = 2 ) \\
+&= 0.9 \cdot \frac{1}{3} + 0.9\cdot0.9 \cdot \frac{2}{3} = 0.84
+\end{align*}
 
 \item Найдём $\P (\xi = 50000 )$ и $\P (\xi = 100000 )$ :
-\begin{multline*}
-\P (\xi = 50000 ) =  \P (\xi = 50000 \mid \eta = 1 ) \cdot \P ( \eta = 1  ) +  \P (\xi = 50000 \mid \eta = 2 ) \cdot  \P ( \eta = 2 )  = \\
-= 0.1 \cdot \frac{1}{3} + 2 \cdot 0.1 \cdot 0.9 \cdot \frac{2}{3} = 0.15(3)
-\end{multline*}
-\begin{multline*}
-\P (\xi = 100000 ) =  \P (\xi = 100000 \mid \eta = 1 ) \cdot \P ( \eta = 1 ) +  \P (\xi = 100000 \mid \eta = 2 ) \cdot  \P ( \eta = 2  )  =  \\
-= 0 \cdot \frac{1}{3} + 0.1\cdot 0.1  \cdot \frac{2}{3} = 0.00(6)
-\end{multline*}
+\begin{align*}
+\P (\xi = 50000 ) &= \P (\xi = 50000 \mid \eta = 1 ) \cdot \P ( \eta = 1  ) +  \P (\xi = 50000 \mid \eta = 2 ) \cdot  \P ( \eta = 2 ) \\
+&= 0.1 \cdot \frac{1}{3} + 2 \cdot 0.1 \cdot 0.9 \cdot \frac{2}{3} = 0.15(3)
+\end{align*}
+\begin{align*}
+\P (\xi = 100000 ) &=  \P (\xi = 100000 \mid \eta = 1 ) \cdot \P ( \eta = 1 ) +  \P (\xi = 100000 \mid \eta = 2 ) \cdot  \P ( \eta = 2  ) \\
+&= 0 \cdot \frac{1}{3} + 0.1\cdot 0.1  \cdot \frac{2}{3} = 0.00(6)
+\end{align*}
 Таблица распределения случайной величина $\xi$ имеет вид:
 
 \begin{center}
 \begin{tabular}{cccc}
 \toprule
-$\xi$ & $ 0 $ & $5000$ & $100000$ \\ \midrule
+$\xi$ & $ 0 $ & $5000$ & $100000$ \\
 $\P_{\xi}$ & $0.84$ & $0.15(3)$ & $0.00(6)$ \\ \bottomrule
 \end{tabular}
 \end{center}
@@ -281,11 +281,13 @@ F_{\xi} (X) =
 \end{cases}
 \]
 Опр.: $F_{\xi} = \P (\xi \leq x ), x \in \mathbb{R}$
-\item \[\E (X) = 0 \cdot 0.84 + 50000 \cdot 0.15(3) + 100000 \cdot 0.00(6) = 8333.(3)	\]
-\begin{multline*}
-\Var(X) = (0 - 8333.(3))^2 \cdot 0.84 + (50000-8333.(3))^2 \cdot 0.15(3) + \\
-+ (100000 - 8333.(3))^2 \cdot 0.00(6) = 380555555.(5)
-\end{multline*}
+\item \[
+\E (X) = 0 \cdot 0.84 + 50000 \cdot 0.15(3) + 100000 \cdot 0.00(6) = 8333.(3)
+\]
+\begin{align*}
+\Var(X) &= (0 - 8333.(3))^2 \cdot 0.84 + (50000-8333.(3))^2 \cdot 0.15(3) \\
+&+ (100000 - 8333.(3))^2 \cdot 0.00(6) = 380555555.(5)
+\end{align*}
 \end{enumerate}
 \item
 \begin{enumerate}
@@ -309,10 +311,10 @@ $
 q_{0.25} = 2 \cdot 0.25 = 0.5
 \]
 \item
-\begin{multline*}
-\E [ (\xi - \E(\xi))^{2017} ] = \int_{-\infty}^{+\infty} (x- \E(\xi) )^{2017} \cdot f_{\xi} (x) dx = \int_{-\infty}^{+\infty} (x-1)^{2017} f_{\xi} (x) dx = \\
-= \int_{0}^{2} (x-1)^{2017} \cdot \frac{1}{2} dx = \frac{(x-1)^{2018}}{2018} \cdot \frac{1}{2} \bigg\rvert_{x=0}^{x=2} =0
-\end{multline*}
+\begin{align*}
+\E [ (\xi - \E(\xi))^{2017} ] &= \int_{-\infty}^{+\infty} (x- \E(\xi) )^{2017} \cdot f_{\xi} (x) dx = \int_{-\infty}^{+\infty} (x-1)^{2017} f_{\xi} (x) dx \\
+&= \int_{0}^{2} (x-1)^{2017} \cdot \frac{1}{2} dx = \frac{(x-1)^{2018}}{2018} \cdot \frac{1}{2} \bigg\rvert_{x=0}^{x=2} =0
+\end{align*}
 \item $F_{\xi} (x) =
 \begin{cases}
 0 & \text{при } x < 0 \\
@@ -326,7 +328,7 @@ $
 \begin{center}
 \begin{tabular}{cccccc}
 \toprule
-$\tau$ & $ 1 $ & $2$ & $3$ & $4$ & \ldots \\ \midrule
+$\tau$ & $ 1 $ & $2$ & $3$ & $4$ & \ldots \\
 $\P_{\tau}$ & $1/4$ & $3/4\cdot1/4$ & $(3/4)^2 \cdot 1/4$ & $(3/4)^3 \cdot 1/4$ & \ldots\\ \bottomrule
 \end{tabular}
 \end{center}
@@ -464,10 +466,10 @@ F_{\zeta}(x) =
 \item Пусть $x$ — вероятность того, что мужчина честно любит петь в душе.
 
 Распишем по формуле полной вероятности вероятность получить ответ «да»:
-\begin{multline*}
-P(\text{ответ «Да»}) = 1 \cdot \P(\text{выпала «6»}) + x \cdot(\P(\text{выпала «2»}) + \P(\text{выпала «3»}) +  \\
-+ \P(\text{выпала «4»}) + \P(\text{выпала «5»})) = 1 \cdot \frac{1}{6} + x \cdot \frac{4}{6} \Rightarrow x = \frac{3}{4}
-\end{multline*}
+\begin{align*}
+P(\text{ответ «Да»}) &= 1 \cdot \P(\text{выпала «6»}) + x \cdot(\P(\text{выпала «2»}) + \P(\text{выпала «3»}) \\
+&+ \P(\text{выпала «4»}) + \P(\text{выпала «5»})) = 1 \cdot \frac{1}{6} + x \cdot \frac{4}{6} \Rightarrow x = \frac{3}{4}
+\end{align*}
 Тогда истинный процент «певцов» составляет $75 \%$
 
 \item Предположим, что ваше имя — Студент (7 букв), а фамилия — Идеальный (9 букв).
@@ -563,7 +565,7 @@ $(1/2,\,1/2)$, $(0,\,1/2)$ к площади данного треугольни
 $\P(X=0) = \left( \frac{499}{500} \right)^{400}$ — каждая из 400 опечаток не должна попасть на 13 страницу.\\
 $\P(X=1) = 400\cdot\frac{1}{500}\cdot\left( \frac{499}{500} \right)^{399}$ — ровно одна опечатка (а есть 400 вариантов) должна попасть на 13 страницу, а остальные — мимо. Соответственно:
 \[
-\P(X \geqslant 2) = 1 - \left( \frac{499}{500} \right)^{400} - 400\cdot\frac{1}{500}\cdot\left( \frac{499}{500} \right)^{399} \approx 0.1911357
+\P(X \geqslant 2) = 1 - \left( \frac{499}{500} \right)^{400} - 400\cdot\frac{1}{500}\cdot\left( \frac{499}{500} \right)^{399} \approx 0.19
 \]
 Это если считать в явном виде. А если пользоваться приближением Пуассона:
 \[
@@ -699,20 +701,25 @@ F(x) = \begin{cases}
 И с её помощью всё посчитать:
 \begin{align*}
 & P\left(X \in \left[\frac{1}{2}, 2 \right]  \right) = F(2) - F\left(\frac{1}{2} \right) =
-1 - 1 +0.5^4 = 0.5^4  \\
-& \E(X) = \int \limits_{-1}^0 x \cdot 1.5 (x + 1)^2 dx +  \int \limits_0^1 x \cdot 1.5 (x - 1)^2 dx \\
+1 - 1 +0.5^4 = 0.5^4
+\end{align*}
+\begin{align*}
+\E(X) &= \int \limits_{-1}^0 x \cdot 1.5 (x + 1)^2 dx +  \int \limits_0^1 x \cdot 1.5 (x - 1)^2 dx \\
 & = 1.5 \int \limits_{-1}^0\left( x^3 + 2x^2 + x\right) dx + 1.5 \int \limits_0^1\left( x^3 -2x^2 + x\right) dx \\
 & =  \frac{3}{8} x^4 |_{-1}^0 + x^3 |_{-1}^0 + \frac{3}{4} x^2|_{-1}^0+    \frac{3}{8} x^4 |_0^1   - x^3 |_0^1 + \frac{3}{4} x^2|_0^1  = - \frac{3}{8}  + 1- \frac{3}{4} + \frac{3}{8} - 1 +\frac{3}{4} = 0
 \end{align*}
 А можно было заметить, что функция плотности — четная функция, поэтому сразу $\E(X) = 0$
 
-Вычислим $\E(X^2)$:
+Вычислим $\E\left(X^2\right)$:
 
 \begin{align*}
-& \E(X^2) = \int \limits_{-1}^0 x^2 \cdot 1.5 (x + 1)^2 dx +  \int \limits_0^1 x^2 \cdot 1.5 (x - 1)^2 dx \\
-& = 1.5 \int \limits_{-1}^0\left( x^4 + 2x^3 + x^2\right) dx + 1.5 \int \limits_0^1\left( x^4 -2x^3 + x^2\right) dx \\
+\E(X^2) &= \int \limits_{-1}^0 x^2 \cdot 1.5 (x + 1)^2 dx +  \int \limits_0^1 x^2 \cdot 1.5 (x - 1)^2 dx \\
+&= 1.5 \int \limits_{-1}^0\left( x^4 + 2x^3 + x^2\right) dx + 1.5 \int \limits_0^1\left( x^4 -2x^3 + x^2\right) dx \\
 & =  \frac{3}{10} x^5 |_{-1}^0 + \frac{3}{4} x^4|_{-1}^0 + \frac{1}{2} x^3 |_{-1}^0 +  \frac{3}{10} x^5 |_0^1 - \frac{3}{4} x^4|_0^1  + \frac{1}{2} x^3 |_0^1 =  \frac{1}{10} \\
-& \Var(X) = \E(X^2) - (\E(X))^2 = 0.1
+\end{align*}
+Тогда:
+\begin{align*}
+&\Var(X) = \E(X^2) - (\E(X))^2 = 0.1
 \end{align*}
 
 \item Верим, что график $F(x)$, выписанной выше, вы построить можете :)
@@ -734,7 +741,7 @@ F(x) = \begin{cases}
 \begin{center}
 \begin{tabular}{@{}ccc@{}}
 \toprule
-$x$         & $1$             & $0$               \\ \midrule
+$x$         & $1$             & $0$               \\
 $\P(X=x)$ & $0.9$ & $0.1$ \\ \bottomrule
 \end{tabular}
 \end{center}
@@ -767,7 +774,7 @@ $\P(X=x)$ & $0.9$ & $0.1$ \\ \bottomrule
 \[
 \P(A\cup B) = \P(A\cap B^c) + \P(B\cap A^c) + \P(A\cap B) = 1 - \P(A^c)\cdot \P(B^c) = 0.97,
 \]
-где $(A\cup B)$ значит «$A$ или $B$», а $(A\cap)B$ — «$A$ и $B$».
+где $(A\cup B)$ значит «$A$ или $B$», а $(A\cap B)$ — «$A$ и $B$».
 Аналогично, путем введения бинарной случайной величины можем получить:
 \begin{align*}
 & \E(X_{A^c \cap B^c}) = 0.03 \cdot  30 = 0.9 \\
@@ -788,12 +795,12 @@ $\P(X=x)$ & $0.9$ & $0.1$ \\ \bottomrule
 \item $\Corr(X, Y) = \frac{\Cov(X, Y)}{\sqrt{\Var(X)}\sqrt{\Var(Y)}} = -\frac{3}{2\cdot 2} = -0.75$
 \item $\Var(X-Y-1) = \Var(X) + \Var(Y) - 2\Cov(X, Y) = 4+4 -2(-3) = 14$
 \item $\Var(X+Y+1) = \Var(X) + \Var(Y) + 2\Cov(X, Y) = 4+4+2(-3) =2 $
-\item \begin{multline*}
-\Cov(X-Y-1, X+Y+1)=\E((X-Y)(X+Y))-\E(X-Y)\E(X+Y) = \\
-\E(X^2-Y^2) - (\E(X)-\E(Y))(\E(X) + \E(Y)) =
-\E(X^2) - \E(Y^2) - ((\E(X))^2 -(\E(Y))^2)=\\
- = \Var(X)-\Var(Y) = 0
-\end{multline*}
+\item \begin{align*}
+\Cov(X-Y-1, X+Y+1)&=\E((X-Y)(X+Y))-\E(X-Y)\E(X+Y) \\
+&= \E\left(X^2-Y^2\right) - (\E(X)-\E(Y))(\E(X) + \E(Y)) \\
+&= \E\left(X^2\right) - \E\left(Y^2\right) - \left((\E(X))^2 -(\E(Y))^2\right)\\
+&= \Var(X)-\Var(Y) = 0
+\end{align*}
  \item $\Cov(X-Y-1, X+Y+1)=0 \Rightarrow \Corr(X-Y-1, X+Y+1) = 0 $
 \end{itemize}
 
@@ -812,7 +819,7 @@ $\sum$ & $0.3$ & $0.7$ & \\ \bottomrule
 \begin{center}
 \begin{tabular}{@{}cccc@{}}
 \toprule
-$y$         & $-1$             & $0$      & $1$         \\ \midrule
+$y$         & $-1$             & $0$      & $1$         \\
 $\P(Y=y)$ & $0.3$ & $0.5$  & $0.2$\\ \bottomrule
 \end{tabular}
 \end{center}
@@ -822,16 +829,16 @@ $\P(Y=y)$ & $0.3$ & $0.5$  & $0.2$\\ \bottomrule
 \begin{center}
 \begin{tabular}{@{}ccc@{}}
 \toprule
-$y^2$         & $0$             & $1$               \\ \midrule
+$y^2$         & $0$             & $1$               \\
 $\P(Y^2 = y^2)$ & $0.5$ & $0.5$ \\ \bottomrule
 \end{tabular}
 \end{center}
 А ковариация:
- \begin{multline*}
- \Cov(X, Y) = \E(XY) - \E(X)\E(Y) =
- ((-1)\cdot 1\cdot0.1 + (-1)\cdot2 \cdot 0.2 + 1\cdot2\cdot 0.2) -\\
- - (0.3\cdot1 + 0.7 \cdot 2)\cdot(0.3\cdot(-1) + 0.1\cdot 0.2) = 0.07
-\end{multline*}
+\begin{align*}
+\Cov(X, Y) &= \E(XY) - \E(X)\E(Y) =
+((-1)\cdot 1\cdot0.1 + (-1)\cdot2 \cdot 0.2 + 1\cdot2\cdot 0.2) \\
+&- (0.3\cdot1 + 0.7 \cdot 2)\cdot(0.3\cdot(-1) + 0.1\cdot 0.2) = 0.07
+\end{align*}
 
 Так как $\Cov(X, Y) \ne 0$ — величины зависимы
 
@@ -862,16 +869,17 @@ $\P(Y^2 = y^2)$ & $0.5$ & $0.5$ \\ \bottomrule
 \P(\text{A} | \text{В} ) = \frac{\P(\text{A} \cap \text{В})}{\P(\text{В})}
 \]
 В числителе:
-\begin{multline*}
-\P(\text{В} | \text{A}) \cdot \P(\text{А}) = P(\text{В} | \text{A} \cap \text{М}) \cdot \P(\text{А}) \cdot \P(\text{М}) + \P(\text{В} | \text{A} \cap \text{М}^{c}) \cdot \P(\text{А}) = \cdot \P(\text{М}^{c}) \\
-= 0.9 \cdot 0.4 \cdot 0.6 + 0.36 \cdot 0.6 \cdot 0.6 = 0.3456
-\end{multline*}
+\begin{align*}
+\P(\text{В} | \text{A}) \cdot \P(\text{А}) &= P(\text{В} | \text{A} \cap \text{М}) \cdot \P(\text{А}) \cdot \P(\text{М}) + \P(\text{В} | \text{A} \cap \text{М}^{c}) \cdot \P(\text{А}) = \cdot \P(\text{М}^{c}) \\
+&= 0.9 \cdot 0.4 \cdot 0.6 + 0.36 \cdot 0.6 \cdot 0.6 = 0.3456
+\end{align*}
 А в знаменателе:
-\begin{multline*}
-\P(\text{В} | \text{A}^{c} \cap \text{М}^{c}) \cdot \P(\text{A}^{c} \cap \text{М}^{c})+\P(\text{В} | \text{A} \cap \text{М}) \cdot \P(\text{A} \cap \text{М}) + \P(\text{В} | \text{A}^{c} \cap \text{М}) \cdot \P(\text{A}^{c} \cap \text{М})+ \\
-+  \P(\text{В} | \text{A} \cap \text{М}^{c}) \cdot \P(\text{A} \cap \text{М}^{c}) = 0.18 \cdot 0.6 \cdot 0.4 + 0.9 \cdot 0.4 \cdot 0.6 + \\
-+ 0.54 \cdot 0.4 \cdot 0.4 + 0.36 \cdot 0.6 \cdot 0.6 = 0.4752
-\end{multline*}
+\begin{align*}
+\P(\text{В}) &=
+\P(\text{В} | \text{A}^{c} \cap \text{М}^{c}) \cdot \P(\text{A}^{c} \cap \text{М}^{c})+\P(\text{В} | \text{A} \cap \text{М}) \cdot \P(\text{A} \cap \text{М}) + \P(\text{В} | \text{A}^{c} \cap \text{М}) \cdot \P(\text{A}^{c} \cap \text{М}) \\
+&+  \P(\text{В} | \text{A} \cap \text{М}^{c}) \cdot \P(\text{A} \cap \text{М}^{c}) \\
+&= 0.18 \cdot 0.6 \cdot 0.4 + 0.9 \cdot 0.4 \cdot 0.6 + 0.54 \cdot 0.4 \cdot 0.4 + 0.36 \cdot 0.6 \cdot 0.6 = 0.4752
+\end{align*}
 Ответ:
 \[
 \P(\text{A} | \text{В} ) = \frac{\P(\text{A} \cap \text{В})}{\P(\text{В})} = \frac{0.3456}{0.4752}  =0.(72)
@@ -882,10 +890,11 @@ $\P(Y^2 = y^2)$ & $0.5$ & $0.5$ \\ \bottomrule
 \P(\text{М} | \text{В}) = \frac{\P(\text{М} \cap \text{В})}{\P(\text{В})}
 \]
 Знаменатель этой дроби посчитан в предыдущем пункте, посчитаем числитель:
-\begin{multline*}
-\P(\text{М} \cap \text{В}) = \P(\text{В} | \text{М}) \cdot \P(\text{М}) = P(\text{В} | \text{М} \cap \text{А}) \cdot \P(\text{А}) \cdot \P(\text{М}) + \\
-+ \P(\text{В} | \text{A}^{c} \cap \text{М}) \cdot \P(\text{А}^{c})  \cdot \P(\text{М}) = 0.9 \cdot 0.4 \cdot 0.6 + 0.54 \cdot 0.4 \cdot 0.4 = 0.3024
-\end{multline*}
+\begin{align*}
+\P(\text{М} \cap \text{В}) &= \P(\text{В} | \text{М}) \cdot \P(\text{М}) \\
+&= P(\text{В} | \text{М} \cap \text{А}) \cdot \P(\text{А}) \cdot \P(\text{М}) + \P(\text{В} | \text{A}^{c} \cap \text{М}) \cdot \P(\text{А}^{c})  \cdot \P(\text{М}) \\
+&= 0.9 \cdot 0.4 \cdot 0.6 + 0.54 \cdot 0.4 \cdot 0.4 = 0.3024
+\end{align*}
 Ответ:
 \[
 \P(\text{М} | \text{В}) = \frac{\P(\text{М} \cap \text{В})}{\P(\text{В})} = \frac{0.3024}{0.4752} = 0.(63)
