@@ -100,10 +100,11 @@ left=16.5mm, right=13.5mm, includefoot]{geometry}
 
 \usepackage{epigraph}
 
-\usepackage{fancyhdr} % настройка заголовков страниц
+% \usepackage{fancyhdr} % настройка заголовков страниц
+\usepackage{titleps} % заголовки страниц
 
 % \usepackage{titlesec} % настройка поведения при начале section
-
+% конфликтует с fancyhdr
 
 
 
@@ -111,16 +112,18 @@ left=16.5mm, right=13.5mm, includefoot]{geometry}
 % по поводу заголовков разделов в колонтитулах
 % https://tex.stackexchange.com/questions/236705
 
-\pagestyle{fancy}
-\fancyhf{}
-\fancyfoot[LE,RO]{\thepage}
-\fancyhead[L]{\nouppercase{\leftmark}}
-\fancyhead[R]{\nouppercase{\rightmark}}
+\newpagestyle{mypage}{%
+  \headrule
+  \sethead{\sectiontitle}{}{\subsectiontitle}
+  \setfoot{}{}{\thepage}
+}
+\settitlemarks{section,subsection,subsubsection}
+\pagestyle{mypage}
 
 
 % начинаем каждую секцию с новой страницы и убираем все колонтитулы
 % \newcommand{\sectionbreak}{\clearpage\thispagestyle{empty}}
-
+% пакет titlesec конфликтует с fancyhdr
 
 
 \DeclareMathOperator{\Lin}{\mathrm{Lin}}
@@ -232,8 +235,8 @@ left=16.5mm, right=13.5mm, includefoot]{geometry}
 \begin{document}
 \maketitle
 
-\clearpage
-\thispagestyle{empty}
+%\clearpage
+%\thispagestyle{empty}
 \tableofcontents{}
 
 
