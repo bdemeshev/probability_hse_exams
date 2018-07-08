@@ -61,15 +61,12 @@ left=16.5mm, right=13.5mm, includefoot]{geometry}
 
 \usepackage[colorlinks, hyperindex, unicode, breaklinks]{hyperref} % гиперссылки в pdf
 
-
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{epsfig}
 \usepackage{bm}
 \usepackage{color}
-
-
 
 \usepackage{multirow} % Слияние строк в таблице
 
@@ -84,16 +81,7 @@ left=16.5mm, right=13.5mm, includefoot]{geometry}
 \usetikzlibrary{arrows} % прибамбас в нем для рисовки стрелочек подлиннее
 \usepackage{tikz-qtree} % прибамбас в нем для рисовки деревьев
 
-
-
-
-
-
 \usepackage{enumitem}
-
-
-
-
 
 % свешиваем пунктуацию (т.е. знаки пунктуации могут вылезать за правую границу текста, при этом текст выглядит ровнее)
 \usepackage{microtype}
@@ -110,6 +98,29 @@ left=16.5mm, right=13.5mm, includefoot]{geometry}
 \usepackage{minted} % вставка кода, нужен питон :)
 
 \usepackage{epigraph}
+
+\usepackage{fancyhdr}
+
+
+
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\rightmark}
+
+
+% \usepackage{titleps,kantlipsum}
+% \newpagestyle{mypage}{%
+%  \headrule
+%  \sethead{\MakeUppercase{\thesection\quad \sectiontitle}}{}{\thesubsection\quad \subsectiontitle}
+%  \setfoot{}{}{\thesubsubsection\quad \subsubsectiontitle}
+% }
+% \settitlemarks{section,subsection,subsubsection}
+% \pagestyle{mypage}
+
 
 
 \DeclareMathOperator{\Lin}{\mathrm{Lin}}
@@ -214,7 +225,7 @@ left=16.5mm, right=13.5mm, includefoot]{geometry}
 
 
 
-%\setcounter{secnumdepth}{0} % убираем нумерацию секций, подсекций и т.д.
+\setcounter{secnumdepth}{0} % убираем нумерацию секций, подсекций и т.д.
 
 \begin{document}
 \maketitle
@@ -224,7 +235,7 @@ left=16.5mm, right=13.5mm, includefoot]{geometry}
 
 \parindent=0 pt % no indent
 
-\section*{Описание}
+\section{Описание}
 
 Свежую версию можно скачать с github-репозитория \url{https://github.com/bdemeshev/probability_hse_exams}.
 
@@ -265,12 +276,12 @@ left=16.5mm, right=13.5mm, includefoot]{geometry}
 \href{https://www.tablesgenerator.com}{tablesgenerator} и выбрать там опцию booktabs table style вместо default table style.
 \item Уважай букву ё – ставь над ней точки! :)
 \item Начинай каждой предложение внутри теховского файла с новой строки.
-В готовом pdf предложения будут идти без разрыва, а читабельность теха повысится.
+В готовом pdf предложения будут идти без разрыва, а читабельность теха повыситься.
 \end{enumerate}
 
 % стандарт имени файла:
 % добавляется префикс sol_ в файле с решениями
-\newpage
+
 \input{chapters/minima.tex}
 \input{chapters/kr_01.tex}
 \input{chapters/kr_01_ip.tex}
@@ -278,18 +289,14 @@ left=16.5mm, right=13.5mm, includefoot]{geometry}
 % \input{chapters/midterm_exam.tex}
 \input{chapters/kr_03.tex}
 \input{chapters/kr_03_ip.tex}
-
-\newpage
 \input{chapters/kr_04.tex}
-
-\newpage
 \input{chapters/kr_04_ip.tex}
-
-\newpage
 \input{chapters/final_exam.tex}
 
-\newpage
-\section{Ответы}
+% \section{Ответы}
+\addcontentsline{toc}{section}{Ответы} % руками добавляем фейковую секцию Ответы в оглавление
+\setcounter{tocdepth}{0} % отныне включаем в оглавление только chapter
+
 
 \input{chapters/sol_minima.tex}
 \input{chapters/sol_kr_01.tex}
