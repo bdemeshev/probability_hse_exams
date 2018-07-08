@@ -18,7 +18,8 @@
 \usepackage{etoolbox} % to use ifdef, must be after babel
 
 \usepackage[paper=a4paper,
-top=16mm, bottom=13.5mm,
+top=20mm,
+bottom=13.5mm,
 left=16.5mm, right=13.5mm, includefoot]{geometry}
 
 \usepackage{etex} % расширение классического tex
@@ -221,10 +222,12 @@ left=16.5mm, right=13.5mm, includefoot]{geometry}
 % \newcommand{\MIN}{\textbf{(MIN)}{}}
 
 
+\begin{hyphenrules}{russian}
+\hyphenation{прав-до-по-до-бия}
+\end{hyphenrules}
 
 
-
-\setcounter{secnumdepth}{0} % убираем нумерацию секций, подсекций и т.д.
+% \setcounter{secnumdepth}{0} % убираем нумерацию секций, подсекций и т.д.
 
 \begin{document}
 \maketitle
@@ -234,7 +237,7 @@ left=16.5mm, right=13.5mm, includefoot]{geometry}
 
 \parindent=0 pt % no indent
 
-\section{Описание}
+\section*{Описание}
 
 Свежую версию можно скачать с github-репозитория \url{https://github.com/bdemeshev/probability_hse_exams}.
 
@@ -294,7 +297,7 @@ left=16.5mm, right=13.5mm, includefoot]{geometry}
 
 % \section{Ответы}
 \addcontentsline{toc}{section}{Ответы} % руками добавляем фейковую секцию Ответы в оглавление
-\setcounter{tocdepth}{0} % отныне включаем в оглавление только chapter
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}% Allow only \chapter in ToC
 
 
 \input{chapters/sol_minima.tex}
