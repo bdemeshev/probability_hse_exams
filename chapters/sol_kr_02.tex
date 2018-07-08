@@ -383,3 +383,112 @@ $B:=\{(x, y) \in \mathbb{R} : y < x-2 \}$ и $C := \{ (x,y) \in \mathbb{R} : y <
 \item $\Var(X) = \E(X^2) - (\E(X))^2 = 2 - 0^2 = 2$
 \end{enumerate}
 \end{enumerate}
+
+
+
+\subsection[2015-2016]{\hyperref[sec:kr_02_2015_2016]{2015-2016}}
+\label{sec:sol_kr_02_2015_2016}
+
+
+
+
+
+\begin{enumerate}
+\item
+\begin{enumerate}
+\item $ \E({\xi_1 \cdot \xi_2}) = \int_{0}^1 \int_0^1 xy f(x,y) \, dx \, dy = \int_0^1 \int_0^1 \frac{1}{2}\cdot x^2y + \frac{3}{2}\cdot xy^2 \, dx \, dy = \int_{0}^1 \frac{y}{6} + \frac{3y^2}{4} \,dy = \frac{1}{3}$
+\item $f_{\xi_1 | \xi_2} (x | y) = \frac{f_{\xi_1, \xi_2}(x, y)}{f_{\xi_2}(y)} = \frac{0.5x + 1.5y}{0.25 + 1.5y}, \text{ при } y \in (0,1)$
+\item
+\begin{multline*}
+\E(\xi_1 | \xi_2 = y) = \int_0^1 x f_{\xi_1 | \xi_2} (x | y) dx = \\
+= \int\limits_{0}^{1}  x \frac{0,5x + 1,5y}{0,25 + 1,5y} dx = \frac{1}{0,25 + 1,5y}  \left. \left( \dfrac{0,5x^3}{3} +  \dfrac{1,5yx^2}{2} \right) \right|_0^1  =  \frac{1/6 + 3/4y}{0,25 + 1,5y}
+\end{multline*}
+\item
+Для того, чтобы функция являлась совместной плотностью для пары случайных величин, должно выполнятся следующее:
+\[
+\int_{\Omega} kx f(x,y) \, dx \, dy = 1
+\]
+Вычислим, чему равняется левая часть:
+\[
+1 = \int_{\Omega} kx f(x,y) \, dx \, dy = \int_{0}^1 \int_{0}^1 kx \left(\frac{x + 3y}{2}\right) dx \, dy = \int_{0}^1 \frac{k}{6} + \frac{3ky}{4} \, dy = \frac{k}{6} + \frac{3k}{8} \Rightarrow
+\]
+\[
+k = \frac{24}{13}
+\]
+\end{enumerate}
+\item Заметим, что $\xi + \eta = 10$, тогда $\Cov(\xi, \eta) = \Cov(\xi, 10-\xi) = -\Var(\xi)$.
+
+Представим случайную величину $\xi$ в виде суммы случайных величин $\xi = \xi_1 + \ldots + \xi_{10}$, где
+\[
+\xi_i = \begin{cases}
+1, & \text{если у студента есть хотя бы один незачёт}, p=0.2 \\
+0, & \text{иначе}, p=0.8
+\end{cases} \quad i = 1, \ldots, 10
+\]
+
+Поскольку результаты каждого из стуентов независимы, $\Var(\xi) = 10\Var(\xi_1)$
+\[
+\Cov(\xi, \eta) = -10(1^2 \cdot 0.2 - (1\cdot 0.2)^2) = -1.6
+\]
+
+Так как случайные величины $\xi$ и $\eta$ связаны соотношением $\xi = 10 - \eta$, $\Corr(\xi, \eta)=-1$.
+
+Подставив в $\Cov(\xi - \eta, \xi)$ выражение $\eta = 10 - \xi$, получим:
+\[
+\Cov(\xi - \eta, \xi) = 2 \Cov(\xi, \xi) = 2 \cdot 0.16 = 0.32
+\]
+Случайные величины $\xi - \eta$ и $\xi$ не являются независиыми.
+\item Найдем ожидаемую доходность и риск портфеля $R = \alpha \xi + (1-\alpha) \eta$ для любого $\alpha$, тогда при $\alpha = 1$ получим результаты Пети, при $\alpha = 0.5$ — результаты Васи.
+\[
+\E R = \alpha + (1-\alpha) = 1 \: \, \forall \, \: \alpha \in [0,1]
+\]
+
+Находим дисперсию:
+\[
+\Var(R) = \alpha^2 \cdot 4 + (1-\alpha)^2 \cdot 9 - 6\alpha (1-\alpha) = 19\alpha^2 -24\alpha + 9 \to \min_{\alpha} \Rightarrow
+\]
+
+Теперь, найдем оптимальное $\alpha$:
+\[
+\alpha = \frac{24}{38}
+\]
+
+Финальные цифры:
+\[
+\begin{cases}
+\Var(R)^{P} = 4 \Rightarrow \sigma_{P} = 2 \\
+\Var(R)^{V} = 1.75 \Rightarrow \sigma_{V} \approx 1.32 \\
+\Var(R)^{M} = \frac{27}{19} \Rightarrow \sigma_{M} \approx 1.19 \\
+\end{cases}
+\]
+\item
+\begin{enumerate}
+\item Пусть $S$ количество мальчиков, тогда используя \href{https://en.wikipedia.org/wiki/Markov%27s_inequality}{неравенство Маркова} получаем:
+\[
+\P(S \ge 750) \le \frac{\E(S)}{750} = \frac{2}{3}
+\]
+\item Пусть, теперь, $\overline{X}$ доля мальчиков, то есть, $\overline{X} = \sum_{i=1}^n X_i /n$, где
+\[
+X_i =
+\begin{cases}
+1, \text{ если }i\text{-ый ребёнок — мальчик }\\
+0, \text{ иначе }
+\end{cases}
+\]
+тогда используя \href{https://en.wikipedia.org/wiki/Markov%27s_inequality}{неравенство Чебышева} получаем:
+\[
+\P(|\overline{X} - 0.5| \ge 0.25) \le \frac{\Var(\overline{X})}{0.25^2} = \frac{1/4000}{0.25^2} = 0.004
+\]
+\item Вероятность из предыдущего пункта можно записать в таком виде:
+\begin{multline*}
+\P(|\overline{X} - 0.5| \ge 0.25) = \P(\overline{X} \ge 0.75) + \P(\overline{X} \le 0.25) = 2\P(\overline{X} \ge 0.75)=\\
+= 2\P(\cN(0;1)\geq 0.25\sqrt{4000})=2\P(\cN(0;1)\geq 15.8) = 1.3 \cdot 10^{-56} \approx 0
+\end{multline*}
+\end{enumerate}
+\item Пусть случайная величина $S$ —  это валютный курс через полгода. Заметим, что $S = 100 + \delta_1 + \ldots + \delta_{171}$.
+Тогда по ЦПТ $S \sim \cN(142.75, 203.0625)$. Теперь можно искать нужную вероятность:
+\[
+\P(S > 250) = \P \left(\frac{S -  142.75}{\sqrt{203.0625}} > \frac{250-142.75}{\sqrt{203.0625}} \right) = \P(\cN(0, 1) > 7.6) \approx 0
+\]
+%\item $\lambda p$
+\end{enumerate}
