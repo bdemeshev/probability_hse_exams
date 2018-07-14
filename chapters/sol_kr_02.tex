@@ -499,3 +499,392 @@ X_i =
 \]
 %\item $\lambda p$
 \end{enumerate}
+
+
+
+\subsection[2014-2015]{\hyperref[sec:kr_02_2014_2015]{2014-2015}}
+\label{sec:sol_kr_02_2014_2015}
+
+
+\begin{enumerate}
+\item
+\begin{enumerate}
+\item
+Так как $(X, Y)$ имеют совместное равномерное распределение,
+$\P\left\{X+Y > 1/2 \right\}$ можно рассчитать как отношение
+соответствующих площадей:
+
+\begin{center}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=5.692307692307692cm,y=5.692307692307692cm]
+\draw[->,color=black] (-0.1,0.) -- (1.2,0.);
+\foreach \x in {,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.,1.1}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-0.1) -- (0.,1.2);
+\foreach \y in {0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.,1.1}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-0.1,-0.1) rectangle (1.2,1.2);
+\fill[color=zzttqq,fill=zzttqq,fill opacity=0.1] (0.,0.5) -- (0.5,0.) -- (1.,0.) -- (0.,1.) -- cycle;
+\draw (0.,1.)-- (1.,0.);
+\draw [color=zzttqq] (0.,0.5)-- (0.5,0.);
+\draw [color=zzttqq] (0.5,0.)-- (1.,0.);
+\draw [color=zzttqq] (1.,0.)-- (0.,1.);
+\draw [color=zzttqq] (0.,1.)-- (0.,0.5);
+\draw (0.344196516991,0.436512272899) node[anchor=north west] {$S_0$};
+\draw (0.129676687465,0.218325437741) node[anchor=north west] {$S_1$};
+\draw (0.0233335241101,1.16441289103) node[anchor=north west] {$y$};
+\draw (1.06109611823,0.08) node[anchor=north west] {$x$};
+\end{tikzpicture}
+\end{center}
+
+Соответственно: \[\P\left(X+Y > \frac{1}{2}\right) = \frac{S_0}{S_0+S_1} = \frac{0.5-S_1}{0.5} = \frac{\frac{1}{2}-\frac{1}{8}}{\frac{1}{2}} = \frac{3}{4}\]
+
+\item
+\[
+f_Y(y) = \int \limits_{0}^{1-y} f_{XY}(x,y) dx
+\]
+
+Поэтому, нам сначала нужно найти $f_{XY}(x,y)$, которая для равномерного
+распределения должна быть константой. Это можно сделать из условия:
+\begin{align*}
+&\int\limits_{0}^{1}\int \limits_{0}^{1-x} f_{XY}(x, y) dxdy = \int\limits_{0}^{1}\int \limits_{0}^{1-x} C dxdy = 1 \Rightarrow \\
+& \int\limits_{0}^{1}\int \limits_{0}^{1-x} C dxdy = \int\limits_{0}^{1} C(1-x) dx = \left. \left( Cx-C\frac{x^2}{2}\right) \right| _{0}^{1} =
+\frac{C}{2}  = 1
+\end{align*}
+
+Откуда имеем $f_{XY}(x, y) = C = 2$.
+Теперь можем найти плотность распределения расходов Васи:
+\[
+f_Y(y) = \int \limits_{0}^{1-y} 2 dx = 2(1-y)
+\]
+
+
+
+\item В данном случае площади немного другие, но смысл тот же:
+
+\begin{center}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=5.692307692307692cm,y=5.692307692307692cm]
+\draw[->,color=black] (-0.1,0.) -- (1.2,0.);
+\foreach \x in {,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.,1.1}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-0.1) -- (0.,1.2);
+\foreach \y in {,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.,1.1}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-0.1,-0.1) rectangle (1.2,1.2);
+\fill[color=zzttqq,fill=zzttqq,fill opacity=0.1] (0.,0.5) -- (0.,1.) -- (0.333333333333,0.666666666667) -- (0.333333333333,0.5) -- cycle;
+\draw (0.,1.)-- (1.,0.);
+\draw[dashed] (1/3, 2/3) -- (1/3,0);
+\draw (0.1004007648034,0.729040237615) node[anchor=north west] {$S_0$};
+\draw (0.343364031073,0.5908861537646) node[anchor=north west] {$S_1$};
+\draw (0.0233335241101,1.16441289103) node[anchor=north west] {$y$};
+\draw (1.06109611823,0.08) node[anchor=north west] {$x$};
+\draw (0.,0.5)-- (0.5,0.5);
+\draw [color=zzttqq] (0.,0.5)-- (0.,1.);
+\draw [color=zzttqq] (0.,1.)-- (0.333333333333,0.666666666667);
+\draw [color=zzttqq] (0.333333333333,0.666666666667)-- (0.333333333333,0.5);
+\draw [color=zzttqq] (0.333333333333,0.5)-- (0.,0.5);
+\end{tikzpicture}
+\end{center}
+
+
+\[\P\left( \left. X<\frac{1}{3} \hspace{1mm} \right| Y>\frac{1}{2}\right) = \frac{S_0}{S_0+S_1} = \frac{\frac{1}{8} - S_1}{\frac{1}{8}} = \frac{\frac{1}{8}-\frac{1}{72}}{\frac{1}{8}} = \frac{8}{9}\]
+
+\item При $Y = 1/2$, $X$ распределен равномерно от 0 до $1/2$, поэтому его плотность равна \[f_X(x) = \frac{1}{\frac{1}{2} - 0} = 2\]
+Соответственно, условное математическое ожидание:
+\[
+\E \left( X| Y =\frac{1}{2}\right) = \frac{1}{4}
+\]
+
+\item $\E(\E(X|Y)) = \E(X)$, а маргинальную функцию плотности для $X$ мы можем найти так же, как искали для $Y$, и получим $f_X(x) = 2(1-x)$. Отсюда:
+\[
+\E(X) = \int \limits_{0}^{1} 2x(1-x)dx = \left .\left(x^2 - \frac{2}{3}x^3\right) \right|^{1}_{0} = \frac{1}{3}
+\]
+
+\item Если вспомнить формулу для корреляции:
+\[
+\rho_{XY} = \frac{\Cov(X, Y)}{\sigma_X\sigma_Y}  = \frac{\E(XY) - \E(X)\E(Y)}{\sigma_X\sigma_Y}
+\]
+
+то станет более-менее очевидно, что надо найти $\E(XY)$ и дисперсии $X$ и $Y$.
+
+\begin{align*}
+\E(XY) &= \int \limits_{0}^{1} \int \limits_{0}^{1-x} 2xy dxdy = \int \limits_{0}^{1} 2xdx \int \limits_{0}^{1-x}ydy =  \int \limits_{0}^{1}x(x^2-2x+1)dx = \\
+&= \left. \left(\frac{x^4}{4} - \frac{2}{3}x^3 + \frac{x^2}{2}\right) \right|^{1}_{0} = \frac{3}{4}-\frac{2}{3} = \frac{1}{12}
+\end{align*}
+
+Соответственно:
+
+\[
+\Cov(X, Y) = \frac{1}{12} - \frac{1}{3}\cdot \frac{1}{3} = -\frac{1}{36}
+\]
+
+Найдем теперь дисперсии $X$ и $Y$ (они будут одинаковыми, как и математические ождания, в силу симметрии):
+
+\[
+\E\left(X^2\right) = \int \limits_{0}^{1} 2x^2(1-x)dx = \left. \left( \frac{2}{3}x^2 - \frac{x_4}{2} \right) \right|_{0}^{1} = \frac{1}{6}
+\]
+
+Поэтому:
+\[
+\Var(X) = \E\left(X^2\right) - (\E(X))^2 = \frac{1}{6} - \frac{1}{9} = \frac{1}{18}
+\]
+
+Теперь наконец-то можем найти корреляцию:
+\[
+\rho_{XY} = -\frac{\frac{1}{36}}{\sqrt{\frac{1}{18}}\sqrt{\frac{1}{18}}} = -\frac{1}{2}
+\]
+\end{enumerate}
+
+\item
+
+\begin{enumerate}
+
+\item Закон больших чисел гласит, что $\bar{X} \rightarrow
+\E(X)$ при $n\rightarrow \infty$. Проверим его выполнение в данном случае:
+\[
+\E(X_n) = \frac{1}{2n}(-\sqrt{n}) + \left(1-\frac{1}{n}\right)\cdot0 + \frac{1}{2n}\sqrt{n} = 0
+\]
+
+\[
+\lim\limits_{n\rightarrow\infty} \bar{X} = \lim\limits_{n\rightarrow\infty} \frac{X_1 +\dots + X_n}{n} = 0
+\]
+так как числитель ограничен, а знаменатель бесконечно возрастает.
+Видим, что ЗБЧ в данном случае, конечно, выполняется.
+
+Как вариант, можно было сказать, что дисперсия ограничена, и из этого также следует выполнение ЗБЧ.
+\item Неравенство Чебышева:
+\[
+\P(|X-\E(X)|\geqslant \varepsilon) \leqslant \frac{\Var(X)}{\varepsilon^2}
+\]
+
+Соответственно, искомую вероятность можем оценить следующим образом:
+\[
+\P(|\bar{X}| \leqslant 1) = 1 -\P(|\bar{X}| \geqslant 1) \Rightarrow \P(|\bar{X}| \leqslant 1) \geqslant 1 - \frac{\Var\left(\bar{X}\right)}{1}
+\]
+\[
+\Var\left(\bar{X}\right) = \Var\left(\frac{\sum\limits_{i=1}^{n} X_i}{n}\right) = \frac{1}{n^2}\sum \limits_{i=1}^{n} \Var{X_i}
+\]
+В свою очередь:
+
+\[
+\E\left(X_i^2\right) = 2\cdot\frac{1}{2n}\cdot n + \left(1-\frac{1}{n}\right)\cdot0 = 1 \Rightarrow \Var(X_i) = 1 \Rightarrow \Var\left(\bar{X}\right) = \frac{1}{n}
+\]
+
+Поэтому:
+\[
+\P(|\bar{X}| \leqslant 1)\geqslant 1 - \frac{1}{n}
+\]
+
+\item  \[1 - \frac{1}{n} = 0.9  \Rightarrow n = 10\]
+
+\end{enumerate}
+
+\item
+
+Обозначим за $R$ — необходимое количество наличных денег в банке. Пусть $X$ — случайная величина, показывающее размер суммарной выплаты $60$ ($n$ — достаточное большое для применения ЦПТ) клиентам. Ясно, что т.к. выплаты отдельным клиентам независимы: \( \E X = 60 \cdot 5000 = 3\cdot 10^5 \); \( \Var X = 60 \cdot 2000^2 = 2.4 \cdot 10^8 \); \( \sigma_X = \sqrt{2.4} \cdot 10^4 \approx 1.55 \cdot 10^4\)
+
+Теперь по ЦПТ:
+\begin{align*}
+&\P(R \geqslant X) = 0.95 \\
+&\P \left(\frac{X - \E X}{\sigma_X} \leqslant \frac{R - \E X}{\sigma_X} \right) = 0.95 \\
+&\P \left( Z \leqslant \frac{R - 3 \cdot 10^5}{1.55 \cdot 10^4} \right) = 0.95
+\end{align*}
+Слева функция распределения; подставляя 95-\% квантиль стандартного нормального распределения, получаем:
+\[
+\frac{R - 3 \cdot 10^5}{1.55 \cdot 10^4} = 1.64 \Rightarrow R = 325420
+\]
+
+
+\item
+
+\begin{enumerate}
+\item По предельной теореме Муавра-Лапласа:
+\[ \frac{\hat{p} - p}{\sqrt{p(1-p)/n}} \sim N (0,1) \]
+\[ \P \left( \frac{|\hat{p} - p|}{\sqrt{p(1-p)/n}} \leqslant \frac{0.1}{\sqrt{p(1-p)/n}} \right) \geqslant 0.99 \]
+\[ \P \left( |Z| \leqslant \frac{0.1}{\sqrt{p(1-p)/n}} \right) \geqslant 0.99 \]
+Из симметричности стандартного нормального распределения и зная его 99.5-\% квантиль, равный приблизительно 2.58, получаем:
+\[ \frac{0.1}{\sqrt{p(1-p)/n}} \geqslant 2.58 \]
+\[ \frac{\sqrt{n}}{\sqrt{p(1-p)}} \geqslant \frac{2.58}{0.1} \]
+\[ \sqrt{n} \geqslant \frac{2.58}{0.1} \sqrt{p(1-p)} \]
+\[ n \geqslant 665.64 \cdot p(1-p) \]
+
+С помощью неравенства Чебышева:
+\[ \P \left( |\hat{p} - p| \leqslant 0.1 \right) \geqslant 0.99 \]
+\[ \P \left( |\hat{p} - p| \geqslant 0.1 \right) \leqslant 0.01 \]
+Теперь просто смотрим на неравенство Чебышева и на строчку выше, на неравенство Чебышева и на строчку выше\ldots
+\[ \frac{p(1-p)/n}{0.1^2} = 0.01\]
+\[ n = 10^4 p(1-p) \]
+Принимаются оба ответа!
+
+\item По предельной теореме Муавра-Лапласа:
+\[ \P \left( \frac{|\hat{p} - p|}{\sqrt{p(1-p)/n}} \leqslant \frac{\varepsilon}{\sqrt{p(1-p)/1000}} \right) \geqslant 0.99 \]
+\[ \P \left( |Z| \leqslant \frac{\varepsilon}{\sqrt{p(1-p)/1000}} \right) \geqslant 0.99 \]
+Аналогично пункту 1:
+\[ \frac{\varepsilon}{\sqrt{p(1-p)/1000}} \geqslant 2.58 \]
+\[ \varepsilon \geqslant 0.082 \sqrt{p(1-p)} \]
+
+С помощью неравенства Чебышева:
+\[ \P \left( |\hat{p} - p| \leqslant \varepsilon \right) \geqslant 0.99 \]
+\[ \P \left( |\hat{p} - p| \geqslant \varepsilon \right) \leqslant 0.01 \]
+Аналогично пункту 1:
+\[ \frac{p(1-p)/1000}{\varepsilon^2} = 0.01\]
+\[ \varepsilon^2 = \frac{p(1-p)}{10} \]
+\[ \varepsilon = \sqrt{\frac{p(1-p)}{10}} \approx 0.316 \sqrt{p(1-p)} \]
+
+\end{enumerate}
+
+Нужно было показать, как мастерство владения теоремой Муавра-Лапласа, так и неравенством Чебышева.
+
+\end{enumerate}
+
+
+
+
+\subsection[2013-2014]{\hyperref[sec:kr_02_2013_2014]{2013-2014}}
+\label{sec:sol_kr_02_2013_2014}
+
+
+\begin{enumerate}
+\item
+\begin{enumerate}
+\item
+\begin{align*}
+\P(Y<X^2) &= \int_0^1 \int_0^{x^2} (x+y) dy dx = \left. \int_0^1 \left(xy \frac{y^2}{2} \right) \right|_0^{x^2} dx =  \int_0^1 \left(x^3 + \frac{x^4}{2} \right) dx = \\
+&= \left. \frac{x^4}{4} + \frac{x^5}{10} \right|_0^1 = 0.35
+\end{align*}
+\item $f_X (x) = \int_0^1 (x+y) dy = \left. xy + \frac{y^2}{2} \right|_0^1 = x + 0.5$
+
+$\E(X) = \int_0^1 f_X (x) \cdot x dx = \int_0^1 (x^2 + 0.5x) dx = 7/12$
+\item $f_{X|Y=2}(x) = \frac{f_{X, Y}(x, 2)}{f_Y (2)} = \frac{x+2}{2.5}$
+\end{enumerate}
+\item
+\begin{enumerate}
+\item Из условия находим, что $X \sim \cN (0, 9)$, тогда
+\[
+\P(X>1) = \P \left(\frac{X-0}{3} > \frac{1-0}{3} \right) = \P\left(\cN(0,1) > \frac{1}{3} \right) = 0.37
+\]
+\item Подготовимся: $\E(2X+Y) = 0$, $\Var(2X+Y) = 4\Var(X) + \Var(Y) + 4 \Cov(X, Y) = 36$
+\[
+\P(2X+Y > 3) = \P\left(\frac{2X+Y-0}{6} > \frac{3-0}{6} \right) = \P(\cN(0, 1) > 0.5) = 0.31
+\]
+\item $ \P(2X+Y > 3 | X=1) = \P(Y > 1) = \P \left(\frac{Y-0}{2} > \frac{1}{2} \right) = \P(\cN(0, 1) > 0.5) = 0.31$
+\item Заметим, что $\frac{X^2}{9}+\frac{Y^2}{4} \sim \chi^2_2$,
+и тогда по таблице находим, что $\P\left(\frac{X^2}{9}+\frac{Y^2}{4} >12\right) = 0.0025$
+\item Совместная функция плотности имеет вид:
+\[
+f(x, y) = \frac{1}{2\pi}\cdot \frac{1}{2\cdot 3\sqrt{1- \left(-\frac{1}{6}\right)^2}}\cdot \exp \left(- \frac{1}{2} \cdot \frac{1}{4\cdot9} \left(1- \left(-\frac{1}{6}\right)^2\right) \left(9x^2 + 2xy + 4y^2 \right) \right)
+\]
+\end{enumerate}
+\item
+\begin{enumerate}
+\item Заметим, что $\frac{X_1}{\sqrt{\frac{X_3^2+X_4^2+X_5^2}{3}}} \sim t_3$.
+По таблице находим искомую вероятность: $0.15$.
+\item
+\item Заметим, что $\frac{X_1^2}{X_2^2+X_3^2} \sim F_{1, 2}$.
+Нужное значение находим в таблице: $0.95$.
+\end{enumerate}
+\item
+\begin{enumerate}
+\item По неравенству Чебышёва: $ \P(|X_i-0.5|\geqslant 0.3) \leqslant \frac{1/12}{9/100} = \frac{25}{27}$
+\item По неравенству Маркова: $\P(X_i \geqslant 0.8) \leqslant \frac{5}{8}$
+\item $\E(\bar{X}) = \frac{1}{2}$, $\Var(\bar{X}) = \frac{1}{36\cdot 12}$, $\bar{X}\sim\cN(\frac{1}{2}, \frac{1}{36\cdot12})$
+
+$\P(\bar{X}>0.8) = \P\left(\frac{\bar{X} - \frac{1}{2}}{\sqrt{ \frac{1}{36\cdot 12}}} \geq \frac{0.8-0.5}{ \frac{1}{36\cdot 12}} \right) = \P(\cN(0,1) \geq 6.235) \approx 0$
+\item $ \P(|X_i-0.5|\geqslant 0.3) = 1 - \P(|X_i-0.5|\geqslant 0.3) = 1 - \P(-0.3 \leqslant X_i - 0.5 \leqslant 0.3) = 0.4$
+\item Нужно воспользоваться неравенством Берри-Ессеена.
+\[
+\E(|X_1 - 0.5|^3) = \int_0^1 |x_1 -0.5|^3 \cdot 1 dx = 2 \int_{0.5}^1 (x_1 - 0.5)^3 dx = \frac{1}{2^5}
+\]
+\item $\P(\bar{X} - 0.5 > 0.3) = \frac{25}{27n} \to_{n \to \infty} 0$
+\end{enumerate}
+\item $\P(\hat{p} \leq 0.25) = \P\left(\frac{\hat{p} - 0.2}{\sqrt{\frac{0.2\cdot0.8}{n}}} \leq \frac{0.25}{\sqrt{\frac{0.2\cdot0.8}{n}}}\right) = 0.99$
+
+По таблице: $\frac{0.25}{\sqrt{\frac{0.2\cdot0.8}{n}}} = 2.33 \Rightarrow n = 348$
+\item
+\begin{enumerate}
+\item $3, 4, 5, 7, 8, 9$
+\item $F(x) = \begin{cases}
+0 &  x < 3 \\
+1/6 & 3 < x \leq 4 \\
+2/6 & 4 < x \leq 5 \\
+3/6 & 5 < x \leq 7 \\
+4/6 & 7 < x \leq 8 \\
+5/6 & 8 < x \leq 9 \\
+1 &  x > 9 \\
+\end{cases}$
+\item $\bar{X} = 6$, $\widehat{\Var}(X) = 28$
+\end{enumerate}
+\end{enumerate}
+
+
+
+
+\subsection[2012-2013]{\hyperref[sec:kr_02_2012_2013]{2012-2013}}
+\label{sec:sol_kr_02_2012_2013}
+
+\begin{enumerate}
+\item  $f(s,t)=f(s)\cdot f(t|s)=\frac{1}{3s}$ при $0\leq t\leq s\leq 3$.
+Бонус тем, кто прочитал условие, $\P(S>T)=1$.
+\[
+\E\left(T^2\right)=\int_0^3\int_0^s \frac{t^2}{3s}\,dt\,ds=1
+\]
+\item
+\begin{enumerate}
+\item $\P(X>0.5) = \P(Z > 0.13) \approx 0.45$, $\sigma_X \approx 0.38$
+\item $\P(X+Y>0.5) =
+\P(Z>-0.65)\approx 0.74$,
+$\sigma_{X+Y} \approx 0.17$, $\E(X+Y) = 0.61$
+
+\item $X = 0.25$ при нормировке даёт $\tilde{X} = -0.53$.
+Получаем:
+\begin{align*}
+& \E\left(\tilde{Y} \mid \tilde{X} = -0.53\right) = 0.47 \\
+& \Var\left(\tilde{Y} \mid \tilde{X} = -0.53\right) = 0.19
+\end{align*}
+
+Значит $\E\left(Y \mid \tilde{X} = -0.53\right) = 0.34$,
+$\Var\left(Y \mid \tilde{X} = -0.53\right)=0.027$.
+
+\item $\P\left(Y > 1/3 \mid \tilde{X} = -0.53\right) = \P(Z > -0.04) = 0.52$
+\item Ноль
+\end{enumerate}
+\item $\E(\hat{p})=0.5$, $\Var(\hat{p})=0.25/n=1/16000$. По Чебышёву:
+\[
+\P(|\hat{p}-0.5|\leq 0.01)\geq 1-\frac{\Var(\hat{p})}{0.01^2}=\ldots=0.375
+\]
+Используя нормальную аппроксимацию:
+
+\[
+\P(|\hat{p}-0.5|\leq 0.01)=\P(|Z|\leq 1.26)\approx 0.79
+\]
+\item Обозначим $N$ — количество подключенных абонентов, тогда $N\sim Bin(n,0.3)$.
+При больших $n$ биномиальное распределение можно заменить на нормальное,
+$N\sim \cN(0.3n,0.21n)$.
+
+\[
+\P(120N>1\,080\,000)=\P(N>9000)=\P\left(Z>\frac{9000-0.3n}{\sqrt{0.21n}}\right)=0.99
+\]
+
+Из таблицы находим, что
+
+\[
+\frac{9000-0.3n}{\sqrt{0.21n}} = -2.33
+\]
+
+Решаем квадратное уравнение, находим корни, один — отрицательный, другой, $n\approx 30622$.
+\item
+
+Вариационный ряд: $3$, $5$, $6$, $7$, $8$, $9$. $\bar{X}\approx 6.3$,
+$\frac{\sum (X_i-\bar{X})^2}{n-1}\approx 4.7$,
+$\frac{\sum (X_i-\bar{X})^2}{n}\approx 3.9$
+
+
+\begin{minipage}{0.6\textwidth}
+\begin{center}
+\includegraphics[scale=0.5]{auto_figures_tikz/2012_2013_fig_02_empirical_dist.pdf}
+\end{center}
+\end{minipage}
+\end{enumerate}
