@@ -62,10 +62,9 @@ X_i =
 
 
 
+
 \subsection[2016-2017]{\hyperref[sec:kr_02_2016_2017]{2016-2017}}
 \label{sec:sol_kr_02_2016_2017}
-
-
 
 \begin{enumerate}
 \item \begin{enumerate}
@@ -86,20 +85,21 @@ $\Corr(\xi + \eta - 24, 365 - \xi - \eta) = -1$
 $\Cov(2016\cdot \xi, 2017) = 0$
 
 \end{enumerate}
-\item \begin{enumerate}
 \item
+\begin{enumerate}
+\item Частные распределения:
 
 \begin{center}
 \begin{tabular}{cccc}
 \toprule
-$\xi$ & $-1$ & $0$ & $2$ \\ \midrule
-$\P(\cdot)$ & $0.3$ & $0.4$ & $0.3$ \\ \bottomrule
+$x$ & $-1$ & $0$ & $2$ \\
+$\P(\xi = x)$ & $0.3$ & $0.4$ & $0.3$ \\ \bottomrule
 \end{tabular}
 \hspace{1cm}
 \begin{tabular}{ccc}
 \toprule
-$\eta$ & $-1$ & $1$ \\ \midrule
-$\P(\cdot)$ & $0.5$ & $0.5$ \\ \bottomrule
+$y$ & $-1$ & $1$ \\
+$\P(\eta = y)$ & $0.5$ & $0.5$ \\ \bottomrule
 \end{tabular}
 \end{center}
 
@@ -119,8 +119,8 @@ $\Var(\eta) = \E(\eta^2)-(\E(\eta))^2 = 1 - 0^2 = 1$
 \begin{center}
 \begin{tabular}{cccccc}
 \toprule
-$\xi \cdot \eta$ & $-2$ & $-1$ & $0$ & $1$ & $2$ \\ \midrule
-$\P(\cdot)$ & $0.2$ & $0.2$ & $0.4$ & $0.1$ & $0.1$ \\ \bottomrule
+$xy$ & $-2$ & $-1$ & $0$ & $1$ & $2$ \\
+$\P(\xi \cdot \eta = xy)$ & $0.2$ & $0.2$ & $0.4$ & $0.1$ & $0.1$ \\ \bottomrule
 \end{tabular}
 \end{center}
 
@@ -142,8 +142,8 @@ $\P (\xi = 2 \cap \eta=1) = \frac{\P (\xi = 2 \cap \eta=1)}{\P(\eta=1)} = \frac{
 \begin{center}
 \begin{tabular}{cccc}
 \toprule
-$\xi$ & $-1$ & $0$ & $2$ \\ \midrule
-$\P(\cdot)$ & $2/5$ & $2/5$ & $1/5$ \\ \bottomrule
+$x$ & $-1$ & $0$ & $2$ \\
+$\P(\xi = x)$ & $2/5$ & $2/5$ & $1/5$ \\ \bottomrule
 \end{tabular}
 \end{center}
 
@@ -178,16 +178,16 @@ $\P(\cdot)$ & $2/5$ & $2/5$ & $1/5$ \\ \bottomrule
 
 Обозначим $\bar{\xi}_n := \frac{1}{n} \left(\xi_1 + \ldots + \xi_n\right)$ – среднее число посетителей сайта за $n$ дней. Тогда
 \[
-\E(\bar{\xi}_n) = \E\left(\frac{1}{n} \sum_{i=1}^{n} \xi_i\right) = \frac{1}{n} \sum_{i=1}^{n} \E(\xi_i) = \frac{1}{n} \cdot n \cdot \lambda = \lambda = 250
+\E\left(\bar{\xi}_n\right) = \E\left(\frac{1}{n} \sum_{i=1}^{n} \xi_i\right) = \frac{1}{n} \sum_{i=1}^{n} \E(\xi_i) = \frac{1}{n} \cdot n \cdot \lambda = \lambda = 250
 \]
 \[
-\Var(\bar{\xi}_n) = \Var\left(\frac{1}{n} \sum_{i=1}^{n} \xi_i\right) = \frac{1}{n^2} \sum_{i=1}^{n} \Var (\xi_i) = \frac{n \cdot \lambda}{n^2} = \frac{\lambda}{n} = \frac{250}{n}
+\Var\left(\bar{\xi}_n\right) = \Var\left(\frac{1}{n} \sum_{i=1}^{n} \xi_i\right) = \frac{1}{n^2} \sum_{i=1}^{n} \Var (\xi_i) = \frac{n \cdot \lambda}{n^2} = \frac{\lambda}{n} = \frac{250}{n}
 \]
 Оценим вероятность
 \[
-\P(\vert\bar{\xi}_n-250\vert > 10) \leq \frac{\Var(\bar{\xi}_n)}{100} = \frac{250}{100\cdot n}
+\P\left(\left\vert\bar{\xi}_n-250\right\vert > 10\right) \leq \frac{\Var\left(\bar{\xi}_n\right)}{100} = \frac{250}{100\cdot n}
 \]
-Следовательно, $1 - \frac{250}{100\cdot n} \leq \P(\vert\bar{\xi}_n-250\vert \leq 10)$.
+Следовательно, $1 - \frac{250}{100\cdot n} \leq \P\left(\left\vert\bar{\xi}_n-250\right\vert \leq 10\right)$.
 
 Найдём наименьшее целое $n$, при котором левая часть неравенства ограничена снизу $0.99 \leq 1 - \frac{250}{100\cdot n}$.
 
@@ -196,23 +196,21 @@ $\P(\cdot)$ & $2/5$ & $2/5$ & $1/5$ \\ \bottomrule
 0.99 \leq 1 - \frac{250}{100\cdot n} \Leftrightarrow \frac{250}{100\cdot n} \leq 0.01 \Leftrightarrow n \geq \frac{250}{100 \cdot 0.01} \Leftrightarrow n  \geq 250
 \]
 Значит, $n=250$ – наименьшее число дней, при котором с вероятностью не менее $99\%$ среднее число посетителей будет отличаться от $250$ не более чем на $10$.
-\item  Требуется найти наименьшее целое $n$, при котором $\P(\vert\bar{\xi}_n-250\vert \leq 10)=0.99$
+\item  Требуется найти наименьшее целое $n$, при котором $\P\left(\left\vert\bar{\xi}_n-250\right\vert \leq 10\right) = 0.99$
 
 Имеем:
-\begin{multline*}
-\P(\vert\bar{\xi}_n-250\vert \leq 10)=0.99 \Leftrightarrow \P(-10\leq \bar{\xi}_n -250 \leq 10) =0.99 \Leftrightarrow \\
-\Leftrightarrow  \P(-10n \leq S_n-250n \leq 10n) =0.99
-\end{multline*}
-\[
-\E(S_n) = \E(\xi_1 + \ldots + \xi_n) = \E(\xi_1) + \ldots + \E(\xi_n) = 250\cdot n
-\]
-\[
-\Var(S_n) = \Var(\xi_1 + \ldots + \xi_n) = \Var(\xi_1) + \ldots + \Var(\xi_n) = 250 \cdot n
-\]
-\begin{multline*}
-\P\left(\frac{-10n}{\sqrt{250n}} \leq \frac{S_n - \E (S_n)}{\sqrt{\Var(S_n)}} \leq \frac{10n}{\sqrt{250n}}\right) =0.99 \Leftrightarrow 2 \Phi \left(\frac{10n}{\sqrt{250n}}\right) -1 = 0.99 \\
-\Phi \left(\frac{10n}{\sqrt{250n}}\right) = \frac{1 + 0.99}{2} \Leftrightarrow \frac{10n}{\sqrt{250n}} = 2.58 \Leftrightarrow \sqrt{n} = 2.58 \cdot \frac{\sqrt{250}}{10} \Leftrightarrow n = 16.641
-\end{multline*}
+\begin{align*}
+&\P(\vert\bar{\xi}_n - 250\vert \leq 10) = 0.99 \Leftrightarrow \P(-10\leq \bar{\xi}_n - 250 \leq 10) = 0.99 \\
+&\P(-10n \leq S_n - 250n \leq 10n) = 0.99 \\
+&\E(S_n) = \E(\xi_1 + \ldots + \xi_n) = \E(\xi_1) + \ldots + \E(\xi_n) = 250 \cdot n\\
+&\Var(S_n) = \Var(\xi_1 + \ldots + \xi_n) = \Var(\xi_1) + \ldots + \Var(\xi_n) = 250 \cdot n \\
+&\P\left(\frac{-10n}{\sqrt{250n}} \leq \frac{S_n - \E (S_n)}{\sqrt{\Var(S_n)}} \leq \frac{10n}{\sqrt{250n}}\right) = 0.99  \\
+&2 \Phi \left(\frac{10n}{\sqrt{250n}}\right) -1 = 0.99 \\
+&\Phi \left(\frac{10n}{\sqrt{250n}}\right) = \frac{1 + 0.99}{2}  \\
+&\frac{10n}{\sqrt{250n}} = 2.58 \\
+&\sqrt{n} = 2.58 \cdot \frac{\sqrt{250}}{10}  \\
+&n = 16.641
+\end{align*}
 Следовательно, наименьшее целое $n$, есть $n=17$.
 \item Пусть $X_1, X_2, \ldots, X_n, \ldots$ – последовательность независимых случайных величин с одинаковыми конечными математическими ожиданимяи и фиксированными конечными дисперсиями. Тогда $\frac{X_1 + \ldots + X_n}{n} \stackrel{\P}{\to} \E(X_i)$ при $n \to \infty$.
 
@@ -225,7 +223,14 @@ $\E(\xi_1^2) = \ldots = \E(\xi_n^2) = \ldots < + \infty$ и $\Var(\xi_1^2) = \ld
 \end{enumerate}
 
 \item \begin{enumerate}
-\item Пусть $X_1, X_2, \ldots, X_n, \ldots$ – последовательность независимых, одинаково распределённых случайных величин с $0<\Var(X_i)<\infty$, $i \in \mathbb{N}$.  Тогда для любого (борелевского) множества $B \subseteq R$ имеет место $\lim_{n \to \infty} \P\left(\frac{S_n - \E(S_n)}{\sqrt{\Var(S_n)}} \in B\right) = \int_B \frac{1}{\sqrt{2\pi}}e^{-t^2/2} dt$, где $S_n := X_1, \ldots, X_n$, $n \in \mathbb{N}$.
+\item Пусть $X_1, X_2, \ldots, X_n, \ldots$ – последовательность независимых,
+одинаково распределённых случайных величин с $0<\Var(X_i)<\infty$, $i \in \mathbb{N}$.
+Тогда для любого (борелевского) множества $B \subseteq R$ имеет место
+\[
+\lim_{n \to \infty} \P\left(\frac{S_n - \E(S_n)}{\sqrt{\Var(S_n)}} \in B\right) = \int_B \frac{1}{\sqrt{2\pi}}e^{-t^2/2} dt,
+\]
+где $S_n := X_1, \ldots, X_n$, $n \in \mathbb{N}$
+
 \item Введём случайную величину
 \[
 X_i = \begin{cases}
@@ -395,9 +400,6 @@ $B:=\{(x, y) \in \mathbb{R} : y < x-2 \}$ и $C := \{ (x,y) \in \mathbb{R} : y <
 \label{sec:sol_kr_02_2015_2016}
 
 
-
-
-
 \begin{enumerate}
 \item
 \begin{enumerate}
@@ -447,7 +449,7 @@ k = \frac{24}{13}
 для любого $\alpha$, тогда при $\alpha = 1$ получим результаты Пети,
 при $\alpha = 0.5$ — результаты Васи.
 \[
-\E R = \alpha + (1-\alpha) = 1 \: \, \forall \, \: \alpha \in [0,1]
+\E R = \alpha + (1 - \alpha) = 1 \: \, \forall \, \: \alpha \in [0,1]
 \]
 
 Находим дисперсию:
@@ -488,7 +490,7 @@ X_i =
 \]
 \item Вероятность из предыдущего пункта можно записать в таком виде:
 \begin{align*}
-\P(|\bar{X} - 0.5| \ge 0.25) &= \P(\bar{X} \ge 0.75) + \P(\bar{X} \le 0.25) = 2\P(\bar{X} \ge 0.75)=\\
+\P\left(\left|\bar{X} - 0.5\right| \ge 0.25\right) &= \P\left(\bar{X} \ge 0.75\right) + \P\left(\bar{X} \le 0.25\right) = 2\P\left(\bar{X} \ge 0.75\right) = \\
 &= 2\P(\cN(0;1)\geq 0.25\sqrt{4000})=2\P(\cN(0;1)\geq 15.8) = 1.3 \cdot 10^{-56} \approx 0
 \end{align*}
 \end{enumerate}
@@ -538,7 +540,10 @@ $\P\left\{X+Y > 1/2 \right\}$ можно рассчитать как отнош�
 \end{tikzpicture}
 \end{center}
 
-Соответственно: \[\P\left(X+Y > \frac{1}{2}\right) = \frac{S_0}{S_0+S_1} = \frac{0.5-S_1}{0.5} = \frac{\frac{1}{2}-\frac{1}{8}}{\frac{1}{2}} = \frac{3}{4}\]
+Соответственно:
+\[
+\P\left(X+Y > \frac{1}{2}\right) = \frac{S_0}{S_0+S_1} = \frac{0.5-S_1}{0.5} = \frac{\frac{1}{2}-\frac{1}{8}}{\frac{1}{2}} = \frac{3}{4}
+\]
 
 \item
 \[
@@ -558,8 +563,6 @@ f_Y(y) = \int \limits_{0}^{1-y} f_{XY}(x,y) dx
 \[
 f_Y(y) = \int \limits_{0}^{1-y} 2 dx = 2(1-y)
 \]
-
-
 
 \item В данном случае площади немного другие, но смысл тот же:
 
@@ -592,10 +595,14 @@ f_Y(y) = \int \limits_{0}^{1-y} 2 dx = 2(1-y)
 
 \[\P\left( \left. X<\frac{1}{3} \hspace{1mm} \right| Y>\frac{1}{2}\right) = \frac{S_0}{S_0+S_1} = \frac{\frac{1}{8} - S_1}{\frac{1}{8}} = \frac{\frac{1}{8}-\frac{1}{72}}{\frac{1}{8}} = \frac{8}{9}\]
 
-\item При $Y = 1/2$, $X$ распределен равномерно от 0 до $1/2$, поэтому его плотность равна \[f_X(x) = \frac{1}{\frac{1}{2} - 0} = 2\]
+\item При $Y = 1/2$, $X$ распределен равномерно от 0 до $1/2$, поэтому его плотность
+равна
+\[
+f_X(x) = \frac{1}{\frac{1}{2} - 0} = 2
+\]
 Соответственно, условное математическое ожидание:
 \[
-\E \left( X| Y =\frac{1}{2}\right) = \frac{1}{4}
+\E \left( X \left| Y =\frac{1}{2}\right.\right) = \frac{1}{4}
 \]
 
 \item $\E(\E(X|Y)) = \E(X)$, а маргинальную функцию плотности для $X$ мы можем найти так же, как искали для $Y$, и получим $f_X(x) = 2(1-x)$. Отсюда:
@@ -662,7 +669,7 @@ f_Y(y) = \int \limits_{0}^{1-y} 2 dx = 2(1-y)
 
 Соответственно, искомую вероятность можем оценить следующим образом:
 \[
-\P(|\bar{X}| \leqslant 1) = 1 -\P(|\bar{X}| \geqslant 1) \Rightarrow \P(|\bar{X}| \leqslant 1) \geqslant 1 - \frac{\Var\left(\bar{X}\right)}{1}
+\P\left(\left|\bar{X}\right| \leqslant 1\right) = 1 -\P\left(\left|\bar{X}\right| \geqslant 1\right) \Rightarrow \P\left(\left|\bar{X}\right| \leqslant 1\right) \geqslant 1 - \frac{\Var\left(\bar{X}\right)}{1}
 \]
 \[
 \Var\left(\bar{X}\right) = \Var\left(\frac{\sum\limits_{i=1}^{n} X_i}{n}\right) = \frac{1}{n^2}\sum \limits_{i=1}^{n} \Var{X_i}
@@ -675,10 +682,13 @@ f_Y(y) = \int \limits_{0}^{1-y} 2 dx = 2(1-y)
 
 Поэтому:
 \[
-\P(|\bar{X}| \leqslant 1)\geqslant 1 - \frac{1}{n}
+\P\left(\left|\bar{X}\right| \leqslant 1 \right) \geqslant 1 - \frac{1}{n}
 \]
 
-\item  \[1 - \frac{1}{n} = 0.9  \Rightarrow n = 10\]
+\item
+\[
+1 - \frac{1}{n} = 0.9  \Rightarrow n = 10
+\]
 
 \end{enumerate}
 
@@ -702,7 +712,7 @@ f_Y(y) = \int \limits_{0}^{1-y} 2 dx = 2(1-y)
 
 \begin{enumerate}
 \item По предельной теореме Муавра-Лапласа:
-\[ \frac{\hat{p} - p}{\sqrt{p(1-p)/n}} \sim N (0,1) \]
+\[ \frac{\hat{p} - p}{\sqrt{p(1-p)/n}} \sim \cN (0,1) \]
 \[ \P \left( \frac{|\hat{p} - p|}{\sqrt{p(1-p)/n}} \leqslant \frac{0.1}{\sqrt{p(1-p)/n}} \right) \geqslant 0.99 \]
 \[ \P \left( |Z| \leqslant \frac{0.1}{\sqrt{p(1-p)/n}} \right) \geqslant 0.99 \]
 Из симметричности стандартного нормального распределения и зная его 99.5-\% квантиль, равный приблизительно 2.58, получаем:
@@ -752,7 +762,7 @@ f_Y(y) = \int \limits_{0}^{1-y} 2 dx = 2(1-y)
 \begin{enumerate}
 \item
 \begin{align*}
-\P(Y<X^2) &= \int_0^1 \int_0^{x^2} (x+y) dy dx = \left. \int_0^1 \left(xy \frac{y^2}{2} \right) \right|_0^{x^2} dx =  \int_0^1 \left(x^3 + \frac{x^4}{2} \right) dx = \\
+\P\left(Y<X^2\right) &= \int_0^1 \int_0^{x^2} (x+y) dy dx = \left. \int_0^1 \left(xy \frac{y^2}{2} \right) \right|_0^{x^2} dx =  \int_0^1 \left(x^3 + \frac{x^4}{2} \right) dx = \\
 &= \left. \frac{x^4}{4} + \frac{x^5}{10} \right|_0^1 = 0.35
 \end{align*}
 \item $f_X (x) = \int_0^1 (x+y) dy = \left. xy + \frac{y^2}{2} \right|_0^1 = x + 0.5$
@@ -788,19 +798,21 @@ f(x, y) = \frac{1}{2\pi}\cdot \frac{1}{2\cdot 3\sqrt{1- \left(-\frac{1}{6}\right
 \end{enumerate}
 \item
 \begin{enumerate}
-\item По неравенству Чебышёва: $ \P(|X_i-0.5|\geqslant 0.3) \leqslant \frac{1/12}{9/100} = \frac{25}{27}$
+\item По неравенству Чебышёва:
+$\P(|X_i-0.5|\geqslant 0.3) \leqslant \frac{1/12}{9/100} = \frac{25}{27}$
 \item По неравенству Маркова: $\P(X_i \geqslant 0.8) \leqslant \frac{5}{8}$
-\item $\E(\bar{X}) = \frac{1}{2}$, $\Var(\bar{X}) = \frac{1}{36\cdot 12}$, $\bar{X}\sim\cN(\frac{1}{2}, \frac{1}{36\cdot12})$
+\item $\E\left(\bar{X}\right) = \frac{1}{2}$,
+$\Var\left(\bar{X}\right) = \frac{1}{36\cdot 12}$, $\bar{X}\sim\cN(\frac{1}{2}, \frac{1}{36\cdot12})$
 
-$\P(\bar{X}>0.8) = \P\left(\frac{\bar{X} - \frac{1}{2}}{\sqrt{ \frac{1}{36\cdot 12}}} \geq \frac{0.8-0.5}{ \frac{1}{36\cdot 12}} \right) = \P(\cN(0,1) \geq 6.235) \approx 0$
+$\P\left(\bar{X} > 0.8\right) = \P\left(\frac{\bar{X} - \frac{1}{2}}{\sqrt{ \frac{1}{36\cdot 12}}} \geq \frac{0.8-0.5}{ \frac{1}{36\cdot 12}} \right) = \P(\cN(0,1) \geq 6.235) \approx 0$
 \item $ \P(|X_i-0.5|\geqslant 0.3) = 1 - \P(|X_i-0.5|\geqslant 0.3) = 1 - \P(-0.3 \leqslant X_i - 0.5 \leqslant 0.3) = 0.4$
 \item Нужно воспользоваться неравенством Берри-Ессеена.
 \[
-\E(|X_1 - 0.5|^3) = \int_0^1 |x_1 -0.5|^3 \cdot 1 dx = 2 \int_{0.5}^1 (x_1 - 0.5)^3 dx = \frac{1}{2^5}
+\E\left(|X_1 - 0.5|^3\right) = \int_0^1 |x_1 -0.5|^3 \cdot 1 dx = 2 \int_{0.5}^1 (x_1 - 0.5)^3 dx = \frac{1}{2^5}
 \]
-\item $\P(\bar{X} - 0.5 > 0.3) = \frac{25}{27n} \to_{n \to \infty} 0$
+\item $\P\left(\bar{X} - 0.5 > 0.3\right) = \frac{25}{27n} \to_{n \to \infty} 0$
 \end{enumerate}
-\item $\P(\hat{p} \leq 0.25) = \P\left(\frac{\hat{p} - 0.2}{\sqrt{\frac{0.2\cdot0.8}{n}}} \leq \frac{0.25}{\sqrt{\frac{0.2\cdot0.8}{n}}}\right) = 0.99$
+\item $\P\left(\hat{p} \leq 0.25\right) = \P\left(\frac{\hat{p} - 0.2}{\sqrt{\frac{0.2\cdot0.8}{n}}} \leq \frac{0.25}{\sqrt{\frac{0.2\cdot0.8}{n}}}\right) = 0.99$
 
 По таблице: $\frac{0.25}{\sqrt{\frac{0.2\cdot0.8}{n}}} = 2.33 \Rightarrow n = 348$
 \item
@@ -829,7 +841,7 @@ $\P(\bar{X}>0.8) = \P\left(\frac{\bar{X} - \frac{1}{2}}{\sqrt{ \frac{1}{36\cdot 
 \item  $f(s,t)=f(s)\cdot f(t|s)=\frac{1}{3s}$ при $0\leq t\leq s\leq 3$.
 Бонус тем, кто прочитал условие, $\P(S>T)=1$.
 \[
-\E\left(T^2\right)=\int_0^3\int_0^s \frac{t^2}{3s}\,dt\,ds=1
+\E\left(T^2\right) = \int_0^3\int_0^s \frac{t^2}{3s}\,dt\,ds = 1
 \]
 \item
 \begin{enumerate}

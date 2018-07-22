@@ -17,7 +17,7 @@ $\plim \hat \mu_{ML} = \plim \bar X = \mu \Rightarrow$ оценка состоя
 \item $\Var(\theta) \geq \frac{1}{I(\theta)}$
 \item $\Var(\hat \mu_{ML}) = \frac{1}{n}$, так как неравенство Рао-Крамера выполнено
 как равенство, оценка является эффективной.
-\item $\theta = \E(X^2) = \Var(X) + \mu^2 = 1 + \mu^2$.
+\item $\theta = \E\left(X^2\right) = \Var(X) + \mu^2 = 1 + \mu^2$.
 Тогда в силу инвариантности оценок максимального правдоподобия: $\hat\theta_{ML} = 1 + \hat\mu^2$.
 \item $\E(\hat \theta_{ML}) = 1 + \E(\hat \mu^2) = 1 + \E((\bar X)^2)$
 
@@ -78,5 +78,425 @@ $\hat \sigma^2 = \frac{1}{n-1} \sum_{i=1}^n (\Delta_i - \bar \Delta)^2 = 18266.(
 $\P\left(\frac{|0.7 - p|}{\sqrt{\frac{0.7 \cdot 0.3}{n}}} < \frac{0.01}{\sqrt{\frac{0.7 \cdot 0.3}{n}}} \right) = 0.95$
 
 $\frac{0.01}{\sqrt{\frac{0.7 \cdot 0.3}{n}}} = 1.96 \Rightarrow n \approx 8068$
+\end{enumerate}
+\end{enumerate}
+
+
+\subsection[2016-2017]{\hyperref[sec:kr_03_2016_2017]{2016-2017}}
+\label{sec:sol_kr_03_2016_2017}
+
+
+\begin{enumerate}
+\item
+\begin{enumerate}
+\item $-2, 1, 4, 7, 10$
+\item $4$
+\item $S^2 = \frac{1}{n} \sum_{i=1}^n (X_i - \bar{X})^2 = 18$
+\item $\hat\sigma^2 = \frac{1}{n-1} \sum_{i=1}^n (X_i - \bar{X})^2 = 22.5$
+\item $\frac{1}{n} \sum_{i=1}^n X_i^2 = 34$
+\item $F_n(x) = \begin{cases}
+0, & x < -2 \\
+\frac{1}{5}, & -2 \leq x < 1 \\
+\frac{2}{5}, & 1 \leq x < 4 \\
+\frac{3}{5}, & 4 \leq x < 7 \\
+\frac{4}{5}, & 7 \leq x < 10 \\
+1, & x \geq 1
+\end{cases}$
+\end{enumerate}
+\item $E(X_1 + X_2) = 2 \cdot 11000 = 22000$
+
+$\Var(X_1+X_2) = \Var(X_1) + \Var(X_2) + 2\Cov(X_1, X_2) = \Var(X_1) + \Var(X_2) - \frac{2\Var(X_1)}{N-1} = 2 \cdot 3000 - \frac{2\cdot3000}{3-1} = 3000$
+\item
+\begin{enumerate}
+\item Необходимо решить следующую задачу:
+\[
+\begin{cases}
+\frac{0.4^2 \cdot 10^2}{n_1} + \frac{0.5^2 \cdot 30^2}{n_2} + \frac{0.1^2 \cdot 60^2}{n_3} \to \min_{n_1, n_2, n_3} \\
+150 n_1 + 300 n_2 + 600 n_3 \leq 30000
+\end{cases}
+\]
+Выпишем функцию Лагранжа и найдём её частные производные по $n_1$, $n_2$ и $n_3$:
+\begin{align*}
+L(n_1, n_2, n_3, \lambda) &= \frac{0.4^2 \cdot 10^2}{n_1} + \frac{0.5^2 \cdot 30^2}{n_2} + \frac{0.1^2 \cdot 60^2}{n_3} + \lambda (150 n_1 + 300 n_2 + 600 n_3 - 30000) \\
+\frac{\partial L}{\partial n_1} &= -\frac{0.4^2 \cdot 10^2}{n_1^2} + 150 \lambda \quad \Rightarrow \quad 150 \lambda = \frac{0.4^2 \cdot 10^2}{n_1^2} \\
+\frac{\partial L}{\partial n_2} &= -\frac{0.5^2 \cdot 30^2}{n_2^2} + 300 \lambda \quad \Rightarrow \quad 150 \lambda = \frac{0.5^2 \cdot 30^2}{2n_2^2} \\
+\frac{\partial L}{\partial n_2} &= -\frac{0.1^2 \cdot 60^2}{n_3^2} + 600 \lambda \quad \Rightarrow \quad 150 \lambda = \frac{0.1^2 \cdot 60^2}{4n_3^2}
+\end{align*}
+Выразим $n_2$ и $n_3$ через $n_1$:
+\begin{align*}
+\frac{0.4 \cdot 10}{n_1} = \frac{0.5 \cdot 30}{\sqrt{2}n_2} \Rightarrow n_2 = \frac{15n_1}{4\sqrt{2}} \\
+\frac{0.4 \cdot 10}{n_1} = \frac{0.1 \cdot 60}{2n_3} \Rightarrow n_3 = \frac{6n_1}{8}
+\end{align*}
+Подставим вcё в бюджетное ограничение:
+\[
+150 n_1 + 300 \cdot \frac{15n_1}{4\sqrt{2}} + 600 \cdot \frac{6n_1}{8} = 30000
+\]
+Откуда получаем: $n_1 = 21.5 \approx 22$, $n_2 \approx 57$, $n_3 \approx 16$.
+\item
+$\Var(\bar{X}_S) = \sum_{l=1}^L \frac{w_l^2 \cdot \sigma_l^2}{n_l}
+= \frac{0.4^2 \cdot 10^2}{22} + \frac{0.5^2 \cdot 30^2}{57} + \frac{0.1^2 \cdot 60^2}{16}
+\approx 6.92$
+\end{enumerate}
+\item $\hat{p} = \frac{8000}{12300000} = \frac{2}{3075}$,
+$\sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \approx 7.27 \cdot 10^{-6}$, $z_{\frac{\alpha}{2}} = 1.96$
+
+$\frac{2}{3075} - 1.96 \cdot 7.27 \cdot 10^{-6} < p < \frac{2}{3075} + 1.96 \cdot 7.27 \cdot 10^{-6}$
+
+$0.00064 < p < 0.00066$
+
+Поскольку $0$ не входит в доверительный интервал, утверждать, что доля статистически
+не отличается от нуля нельзя.
+
+\item
+\begin{enumerate}
+  \item
+  \begin{enumerate}
+    \item $\bar{Y} = 43$, $\hat{\sigma}_Y^2 = 32.5$, $t_{0.005, 4} = 4.6$
+
+    $43 - 4.6 \cdot \sqrt{\frac{32.5}{5}} < \mu < 43 + 4.6 \cdot \sqrt{\frac{32.5}{5}}$
+
+    $31.27 < \mu < 54.72$
+
+    \item $\chi^2_{0.95, 4} = 9.49$, $\chi^2_{0.05, 4} = 0.71$
+
+    $\frac{32.5 \cdot 4}{9.49} < \sigma^2 < \frac{32.5 \cdot 4}{0.71}$
+
+    $13.7 < \sigma^2 < 183$
+  \end{enumerate}
+  \item
+  \begin{enumerate}
+  \item
+  $X_1, \ldots, X_{n_X} \sim \cN(\mu_X, \sigma^2_X)$, $Y_1, \ldots, Y_{n_Y} \sim \cN(\mu_Y, \sigma^2_Y)$,
+  $\sigma^2_X = \sigma^2_Y = \sigma^2_0$, выборки независимы
+
+  \item $\bar{Y} - \bar{X} = 43 - 37 = 6$
+
+  $\hat{\sigma}^2_0 = \frac{\sum_{i=1}^{n_X} (X_i - \bar X)^2 + \sum_{i=1}^{n_Y} (Y_i - \bar Y)^2}{n_X + n_Y - 2} = \frac{680+130}{5+5-2} = 101.25$
+
+  $t_{0.95, 8} = 1.86$
+
+  $6 - 1.86 \sqrt{101.25} \sqrt{\frac{1}{5} + \frac{1}{5}} < \mu_Y - \mu_X <  6 + 1.86 \sqrt{101.25} \sqrt{\frac{1}{5} + \frac{1}{5}} $
+
+  $-5.83 < \mu_Y - \mu_X < 17.83$
+  \item Да, так как ноль входит в доверительный интервал.
+  \end{enumerate}
+\end{enumerate}
+\item
+\begin{enumerate}
+  \item Выборочный второй начальный момент: $\frac{1}{n} \sum_{i=1}^n X_i^2$.
+
+  Теоретический второй начальный момент: $\E\left(X^2\right) = \Var(X) + (\E X)^2 = \theta$
+
+  $\hat{\theta}_{MM} = \frac{1}{n} \sum_{i=1}^n X_i^2$
+  \item $\E(\hat{\theta}_{MM}) = \frac{1}{n} \sum_{i=1}^n \E(X_i^2) = \theta$ —
+  оценка несмещённая.
+  \item $\Var(\hat{\theta}_{MM}) = \Var\left(\frac{1}{n} \sum_{i=1}^n X_i^2 \right) = \frac{1}{n^2} \sum_{i=1}^n \Var(X_i^2) = \frac{3\theta^2 - \theta^2}{n} \underset{n \to \infty}{\to} 0$
+  — оценка состоятельная ($\E(X^4) = 3\theta^2$).
+  \item
+  \begin{align*}
+    L(x,\theta) &= \prod_{i=1}^n \frac{1}{\sqrt{2\pi\theta}} \exp\left(-\frac{1}{2}\frac{x_i^2}{\theta} \right) = \frac{1}{(\sqrt{2\pi\theta})^n} \exp \left(-\frac{1}{2\theta} \sum_{i=1}^n x_i^2  \right) \\
+    l(x, \theta) &= -\frac{n}{2}\ln(2\pi) - \frac{n}{2}\ln\theta -\frac{1}{2\theta} \sum_{i=1}^n x_i^2 \\
+    \frac{\partial l}{\partial \theta} &= -\frac{n}{2\theta} + \frac{1}{2\theta^2} \sum_{i=1}^n x_i^2 \\
+    \hat{\theta}_{ML} &= \frac{\sum_{i=1}^n x_i^2}{n}
+  \end{align*}
+  \item \begin{align*}
+    \frac{\partial^2 l}{\partial \theta^2} &= \frac{n}{2\theta^2} - \frac{1}{\theta^3} \sum_{i=1}^n x_i^2 \\
+    -\E\left( \frac{\partial^2 l}{\partial \theta^2} \right) &= -\frac{n}{2\theta^2} + \frac{1}{\theta^3} \cdot n \theta = \frac{n}{2\theta^2} \\
+    I(\theta) &= \frac{n}{2\theta^2}
+  \end{align*}
+  \item $\Var(\hat{\theta}) \geq \frac{1}{I(\theta)}$
+  \item $\Var(\hat{\theta}_{ML}) = \Var\left(\frac{\sum_{i=1}^n x_i^2}{n}\right) = \frac{1}{n^2}\cdot n \Var(X_1^2) = \frac{1}{n} (\E(X_1^4) - \E(X_1^2)^2) = \frac{2\theta^2}{n}$
+
+  Так как $\Var(\hat{\theta}_{ML}) = \frac{1}{I(\theta)}$, $\hat{\theta}_{ML}$ — эффективная оценка.
+\end{enumerate}
+\item
+\begin{enumerate}
+\item Вспомним, что для распределения Пуассона $\E(X) = \Var(X) = \lambda$
+\begin{align*}
+  L(x, \lambda) &= \prod_{i=1}^n e^{-\lambda} \frac{\lambda^{x_i}}{x_i!} = e^{-n\lambda} \lambda^{\sum_{i=1}^n x_i} \prod_{i=1}^n \frac{1}{x_i!} \\
+  l(x, \lambda) &= -n\lambda + \ln\lambda \sum_{i=1}^n x_i - \sum_{i=1}^n \ln x_i! \\
+  \frac{\partial l}{\partial \lambda} &= -n + \frac{1}{\lambda} \sum_{i=1}^n x_i \\
+  \hat{\lambda}_{ML} &= \bar{X}
+\end{align*}
+Значение по выборке: $\bar{X} = 14.5$
+\item см. предыдущий пункт
+\item $\hat \sigma^2 = \sqrt{\lambda_{ML}} = \sqrt{14.5}$
+\item $\P(X=0) = \frac{\lambda^0 e^{-\lambda}}{0!} = e^{-\lambda} \Rightarrow \widehat{\P(X=0)} = e^{-\hat\lambda} = e^{-\bar{X}}$
+\item $\left[14.5 - 1.96 \sqrt{\frac{14.5}{6}}; 14.5 + 1.96 \sqrt{\frac{14.5}{6}}\right]$, где $1.96$ — критическое значение $\cN(0;1)$. Конечно, этот результат верен только при больших $n$. Мы усиленно делаем вид, что $n=6$ велико. Полученный нами интервал может быть довольно далёк от 95\%-го.
+\item В данном случае: $g(\hat{\lambda}) = e^{-\hat\lambda}$, $g'(\hat\lambda) = -e^{-\hat\lambda}$.
+И доверительный интервал имеет вид:
+\begin{align*}
+  \left[e^{-\bar{X}} - 1.96 \sqrt{\frac{e^{-2\bar{X}}\bar{X}}{n}}; e^{-\bar{X}} + 1.96 \sqrt{\frac{e^{-2\bar{X}}\bar{X}}{n}} \right] \\
+  \left[e^{-14.5} - 1.96 \sqrt{\frac{e^{-29}14.5}{6}}; e^{-14.5} + 1.96 \sqrt{\frac{e^{-29}14.5}{6}} \right]
+\end{align*}
+Снова отметим, что наш интервал может на самом деле быть далеко не 95\%-ым, так наше $n=6$ мало для серьёзного применения метода максимального правдоподобия.
+\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection[2015-2016]{\hyperref[sec:kr_03_2015_2016]{2015-2016}}
+\label{sec:sol_kr_03_2015_2016}
+
+\begin{enumerate}
+\item Пусть случайная величина $S$ – это сумма поглощённых калорий
+
+\begin{center}
+\begin{tabular}{cccc}
+\toprule
+$s$ & $650$ & $800$ & $950$ \\
+$\P(S = s)$ & $1/3$ & $1/3$ & $1/3$ \\ \bottomrule
+\end{tabular}
+\end{center}
+
+Тогда
+\begin{align*}
+\E(S) &= \frac{1}{3}\cdot 650 +  \frac{1}{3}\cdot 800 +  \frac{1}{3}\cdot 950 = 800 \\
+\Var(S) &= \frac{1}{3}(650-800)^2 + \frac{1}{3}(800-800)^2 + \frac{1}{3}(950-800)^2 = 15000
+\end{align*}
+\item Вариационный ряд: $4, 6, 11$; медиана: $6$; выборочное среднее: $7$;
+несмещённая оценка дисперсии: $13$
+\item Фунуция плотности двумерного нормального распределения имеет вид:
+\begin{align*}
+f(x,y) &= \frac{1}{2\pi}\cdot \frac{1}{\sigma_x \sigma_y \sqrt{1-\rho^2}} \\
+&\cdot \exp\left\{{-\frac{1}{2}\frac{1}{\sigma_x^2 \sigma_y^2\left(1-\rho^2\right)}\left[\sigma_x^2(x-\mu_x)^2-2\rho\sigma_x\sigma_y(x-\mu_x)(y-\mu_y)+\sigma_y^2(y-\mu_y)^2\right]}\right\}
+\end{align*}
+Откуда: $\mu_X=1$, $\mu_Y=0$, $\sigma_X = 1$, $\sigma_Y = 1$, $\rho = 0.2$
+
+\item
+\begin{enumerate}
+\item $X \sim \cN(178, 49)$
+\begin{align*}
+P(X>185) &= 1  - \P(X<185) = 1- \P\left(\frac{X-178}{7} < \frac{185-178}{7}\right) \\
+&= 1 - 0.8413 = 0.1587
+\end{align*}
+\item Нет, так как $\Cov(X, Y) = 5.6 \neq 0$
+\item $Y \mid X \sim \cN\left(\mu_Y + \rho\sigma_Y\cdot\frac{X-\mu_X}{\sigma_X}; \sigma_Y^2\left(1-\rho^2\right)\right)$
+
+$Y \mid X=185 \sim \cN(42.8;0.36)$
+
+$\P(Y<42 \mid X=185) = \P\left(\frac{Y-42.8}{0.6} < \frac{42-42.8}{0.6}\mid X=185\right) = 0.9082$
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item $\E(X) = \frac{0+2\theta}{2}\mid_{\hat{\theta}} = \bar{X}$, $\hat{\theta}_{MM} = \bar{X}$
+\item $\forall \theta \in \Theta: \E\left(\hat{\theta}\right)=\theta \Rightarrow \hat{\theta}$ – несмещённая.
+
+$\forall \theta \in \Theta, \forall \epsilon > 0 : \P\left(\vert \widehat{\theta}_n - \theta \vert > \epsilon\right) \to 0 \Rightarrow  \widehat{\theta}_n$ – состоятельная.
+
+$\forall \theta \in \Theta: I_n^{-1} (\theta) = \Var\left(\hat{\theta}\right) \Rightarrow \hat{\theta} $ – эффективная.
+\item $\E(\theta) = \E(\bar{X}) = \E(X_1) = \theta \Rightarrow \hat{\theta}$ – несмещённая оценка
+
+$\Var\left(\hat{\theta_n}\right) = \Var\left(\bar{X}\right) = \frac{\Var(X_1)}{n} =
+\frac{4\theta^2}{12\cdot n} \underset{n \to \infty}{\to} 0$; из условий
+$\E\left(\widehat{\theta}_n\right) = \theta$ и $\Var\left(\widehat{\theta}_n\right)
+\underset{n \to \infty}{\to} 0$ следует, что $\widehat{\theta}_n \stackrel{\P}{\to}
+\theta$ при $n \to \infty$, т.е. $\widehat{\theta}_n$ является состоятельной.
+
+\item
+\begin{align*}
+F_{X_{(n)}} &= \P(\max(X_1, \ldots, X_n) \leq x) = \P(X_1 \leq x) \cdot \ldots \cdot \P(X_n \leq x) = (\P(X_1 \leq x))^n \\
+&= \begin{cases}
+0 & \text{при } x<0 \\
+\left(\frac{x}{2\theta}\right)^n & \text{при }  x \in [0, 2\theta] \\
+1 & \text{при }  x > 2\theta
+\end{cases}
+\end{align*}
+
+\[
+f_{X_{(n)}} (x)  = \begin{cases}
+0 & \text{при } x<0 \\
+\frac{nx^{n-1}}{2^n \theta^n} & \text{при }  x \in [0, 2\theta] \\
+0 & \text{при }  x > 2\theta
+\end{cases}
+\]
+
+\begin{align*}
+\E(X_{(n)}) &= \int_{-\infty}^{+\infty} x \cdot f_{X_{(n)}} (x) dx =  \int_{0}^{2\theta}	x \cdot \frac{nx^{n-1}}{2^n \theta^n} dx = \left. \frac{n}{2^n \theta^n} \cdot \frac{x^{n+1}}{n+1} \right|_{x=0}^{x=2\theta} \\
+&= \frac{n}{2^n \theta^n}  \cdot \frac{2^{n+1}\cdot \theta^{n+1}}{n+1} = \frac{n2\theta}{n+1}
+\end{align*}
+Следовательно, $\E \left(\frac{n+1}{2n} \cdot X_{(n)}\right) = \theta$, а значит, $\tilde{\theta} = \frac{n+1}{2n} \cdot X_{(n)}$ – несмещённая оценка вида $c \cdot  X_{(n)}$
+\item $\Var\left(\tilde{\theta}\right) = \frac{(n+1)^2}{4n^2} \Var(X_{(n)})$
+
+\begin{align*}
+\E\left(X_{(n)}^2\right) &= \int_{-\infty}^{+\infty} x^2 f_{X_{(n)}} (x) dx = \int_{0}^{2\theta} x^2 \frac{nx^{n-1}}{2^n \theta^n}  dx = \frac{n}{2^n \theta^n}  \int_{0}^{2\theta} x^{n+1} dx \\
+&= \left. \frac{n}{2^n \theta^n} \cdot \frac{x^{n+2}}{n+2} \right|_{x=0}^{x=2\theta} = \frac{n}{2^n \theta^n} \cdot  \frac{2^{n+2}\cdot \theta^{n+2}}{n+2} = \frac{n\cdot4\cdot\theta^2}{n+2}
+\end{align*}
+
+\[
+\Var(X_{(n)}) = \E\left(X_{(n)}^2\right)  - (\E(X_{(n)}))^2 = \frac{4n\theta^2}{n+2} - \frac{4 n^2 \cdot \theta^2}{(n+1)^2} = 4n\theta^2 \left(\frac{1}{n+2} - \frac{n}{(n+1)^2}\right)
+\]
+
+\[
+\Var\left(\tilde{\theta}\right) = \frac{(n+1)^2}{4n^2} \Var(X_{(n)}) = \frac{(n+1)^2}{4n^2}  \cdot 4n\theta^2 \left(\frac{n^2+2n+1 - n^2-2n}{(n+2)(n+1)^2} \right) = \frac{\theta^2}{n(n+2)}
+\]
+Оценка $\tilde{\theta}_n$ является состоятельной, так как
+$\E\left(\tilde{\theta}_n\right) = \theta$ и
+$\Var\left(\tilde{\theta}_n\right) = \frac{\theta^2}{n(n+2)} \underset{n \to \infty}{\to} 0$
+\item  Поскольку $\Var\left(\widehat{\theta}_n\right) = \frac{\theta^2}{3n}$,
+$\Var\left(\tilde{\theta}_n\right) = \frac{\theta^2}{n(n+2)}$ при достаточно большом $n$
+$\Var\left(\tilde{\theta}_n\right) < \Var\left(\widehat{\theta}_n\right)$.
+Значит, при таких $n$ оценка $\tilde{\theta}_n$ будет более эффективной по сравнению
+с оценкой $\widehat{\theta}_n$.
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item $X_i \sim Bin (n=10, p)$
+\item $L(p)  = \prod_{i=1}^{n} C_{10}^{x_i} p^{x_i} (1-p)^{10-x_i}$
+\item $\ln L(p) = \sum_{i=1}^{n} \ln C_{10}^{x_i} + \sum_{i=1}^n x_i \ln p + \sum_{i=1}^{n} (10-x_i)\ln (1-p) \to \max_p$
+
+$\frac{\partial \ln L}{\partial p} = \frac{\sum_{i=1}^n x_i}{p} - \frac{\sum_{i=1}^{n} (10-x_i)}{1-p} \mid_{p=\hat{p}} = 0 \Rightarrow \hat{p} = \frac{\bar{X}}{n} = \frac{\sum_{i=1}^{n} x_i}{10n}$
+
+$\frac{\partial^2 \ln L}{\partial p^2} = -\frac{\sum_{i=1}^n x_i}{p^2} -  \frac{\sum_{i=1}^{n} (10-x_i)}{(1-p)^2}$
+
+\item $I(p) = -\E \left(\frac{\partial^2 \ln L}{\partial p^2}  \right) = \E \left(\frac{\sum_{i=1}^n x_i}{p^2} + \frac{\sum_{i=1}^{n} (10-x_i)}{(1-p)^2}\right) = \frac{10np}{p^2} + \frac{10n - 10np}{(1-p)^2} = \frac{10n}{p(1-p)}$
+
+$i(p) = \frac{I(p)}{n} = \frac{10}{p(1-p)}$
+
+\item $\Var(T) \geq \frac{1}{ni(T)}$
+
+\item $\Var(\hat{p}_{ML}) = \Var\left(\frac{\sum_{i=1}^{n} x_i}{10n}\right) = \frac{1}{(10n)^2} n \Var(X_i) = \frac{1}{100n}10p(1-p) = \frac{p(1-p)}{10n}$
+
+$\frac{p(1-p)}{10n} = \frac{1}{\frac{10n}{p(1-p)}} \Rightarrow$ да
+
+\item $\E(X_i) = 10p \Rightarrow \widehat{\E(X_i)} = 10 \hat{p}_{ML} = \bar{X}$
+
+$\Var(X_i) = 10p(1-p) \Rightarrow \widehat{\Var(X_i)} = \bar{X}\left(1-\frac{\bar{X}}{10}\right)$
+
+\item $\hat{p} = \frac{3+4+0+2+6}{10\cdot 5} = 0.3$
+\end{enumerate}
+
+\item $L(x, \theta) = \prod_{i=1}^{n} (1 + \theta) x_i^\theta = (1+\theta)^n \prod_{i=1}^n x_i^\theta \to \max_\theta$
+
+$\ln L (x, \theta) = n\ln (1+\theta) + \theta\sum_{i=1}^{n} \ln x_i \to \max_\theta$
+
+$\frac{\partial \ln L}{\partial \theta} = \frac{n}{1+\theta} + \sum_{i=1}^{n} \ln x_i \mid_{\theta=\hat{\theta}} = 0 \Rightarrow \hat{\theta}_{ML} = -\frac{1}{\sum_{i=1}^{n} \ln x_i} -1$
+
+\item $\bar{X} - 1.96 \frac{7}{\sqrt{20}} < \mu <\bar{X} + 1.96 \frac{7}{\sqrt{20}} $
+\end{enumerate}
+
+
+
+\subsection[2014-2015]{\hyperref[sec:kr_03_2014_2015]{2014-2015}}
+\label{sec:sol_kr_03_2014_2015}
+
+\begin{enumerate}
+\item Пусть случайная величина $S$ – это сумма поглощённых калорий
+
+\begin{center}
+\begin{tabular}{cccc}
+\toprule
+$s$ & $650$ & $800$ & $950$ \\
+$\P(S=s)$ & $1/3$ & $1/3$ & $1/3$ \\ \bottomrule
+\end{tabular}
+\end{center}
+
+Тогда
+
+\begin{align*}
+\E(S) &= \frac{1}{3}\cdot 650 + \frac{1}{3}\cdot 800 +  \frac{1}{3}\cdot 950 = 800 \\
+\Var(S) &= \frac{1}{3}(650-800)^2 + \frac{1}{3}(800-800)^2 + \frac{1}{3}(950-800)^2 = 15000
+\end{align*}
+
+\item Ответ — решение оптимизационной задачи:
+\[
+\begin{cases}
+\Var(\bar{X}_S) = \frac{0.3^2\cdot 10^2}{n_1} + \frac{0.6^2 \cdot 30^2}{n_2} + \frac{0.1^2 \cdot 60^2}{n_3} \to min_{n_1, n_2, n_3} \\
+150\cdot n_1 + 300 \cdot n_2 + 600 \cdot n_3 \leq 15000
+\end{cases}
+\]
+
+\item
+\begin{enumerate}
+\item $\E(\mu_1) = \E\left(\frac{X_1+X_2}{2}\right)  = \frac{1}{2}(\mu+\mu) = \mu \Rightarrow$  несмещённая
+
+$\E(\mu_2) = \E \left(\frac{X_1}{4} + \frac{X_2+\ldots+X_{n-1}}{2n-4} + \frac{X_n}{4}\right) = \frac{1}{4}\mu + \frac{n-2}{2n-4}\mu + \frac{1}{4}\mu = \mu \Rightarrow$ несмещённая
+
+$\E(\bar{X}) = \E\left(\frac{X_1 + \ldots + X_n}{n}\right) = \mu \Rightarrow$ несмещённая
+
+\item $\Var(\mu_1) = \Var\left(\frac{X_1+X_2}{2}\right)  = \frac{1}{4}2\Var(X_1) = \frac{\sigma^2}{2}$
+
+$\Var(\mu_2) = \Var \left(\frac{X_1}{4} + \frac{X_2+\ldots+X_{n-1}}{2n-4} + \frac{X_n}{4}\right)  = \frac{\sigma^2}{16} + \frac{(n-2)\sigma^2}{(2n-4)^2} + \frac{\sigma^2}{16} = \sigma^2\left(\frac{1}{8} + \frac{1}{2(2n-4)} \right)$
+
+$\Var(\mu_3) = \Var\left(\frac{X_1 + \ldots + X_n}{n}\right)  = \frac{1}{n^2}n\sigma^2 = \frac{\sigma^2}{n}$
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item $X \sim \cN (1;1)$
+
+$\P(X>1) = 0.5$, так как нормальное распределение симметрично относительно своего
+математического ожидания.
+
+\item $X \sim \cN (1;1)$, $2X \sim \cN(2; 4), Y \sim \cN(2, 4) \Rightarrow 2X+Y \sim \cN (4, 4)$
+
+$\P(2X+Y > 2) = 1 - \P(2X+Y < 1) = 1 - \P\left(\frac{2X+Y - 4}{2} < \frac{1-4}{2}\right) = 1 - 0.0668 = 0.9332$
+
+\item $Y \mid X \sim \cN\left(\mu_Y + \rho\sigma_Y\cdot\frac{X-\mu_X}{\sigma_X};
+\sigma_Y^2\left(1 - \rho^2\right)\right)$, $Y \mid X = 2 \sim \cN(1.5, 3)$
+
+$\E(2X+Y \mid X=2) = 2\E (X\mid X=2) + \E(Y\mid X=2) = 4 + 1.5 = 5.5$
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item $X_1^2 + X_2^2 \sim \chi^2_2$, $\P(X_1^2 + X_2^2 > 6)  \approx 0.05$
+\item $\P\left(\frac{X_1^2}{X_2^2+X_3^2} > 9.25\right) = \P\left(\frac{\frac{X_1^2}{1}}{\frac{X_2^2+X_3^2}{2}} > 18.5\right) \approx 0.05$, $\frac{\frac{X_1^2}{1}}{\frac{X_2^2+X_3^2}{2}} \sim F_{1, 2}$
+\end{enumerate}
+\item
+\begin{enumerate}
+\item \begin{align*}
+F_{X_{(n)}} &= \P(\max(X_1, \ldots, X_n) \leq x) = \P(X_1 \leq x) \cdot \ldots \cdot \P(X_n \leq x) = (\P(X_1 \leq x))^n \\
+&= \begin{cases}
+0 & \text{при } x<0 \\
+\left(\frac{x}{\theta}\right)^n & \text{при }  x \in [0, \theta] \\
+1 & \text{при }  x > \theta
+\end{cases}
+\end{align*}
+
+\[
+f_{X_{(n)}} (x)  = \begin{cases}
+0 & \text{при } x<0 \\
+\frac{nx^{n-1}}{ \theta^n} & \text{при }  x \in [0, \theta] \\
+0 & \text{при }  x > \theta
+\end{cases}
+\]
+
+\begin{align*}
+\E(X_{(n)}) &= \int_{-\infty}^{+\infty} x \cdot f_{X_{(n)}} (x) dx =  \int_{0}^{\theta}	x \cdot \frac{nx^{n-1}}{\theta^n} dx = \left. \frac{n}{\theta^n} \cdot \frac{x^{n+1}}{n+1} \right|_{x=0}^{x=\theta} \\
+&= \frac{n}{\theta^n}  \cdot \frac{\cdot \theta^{n+1}}{n+1} = \frac{n\theta}{n+1}
+\end{align*}
+Следовательно, $\E \left(\frac{n+1}{n} \cdot X_{(n)}\right) = \theta$, а значит,
+$\hat{\theta} = \frac{n+1}{n} \cdot X_{(n)}$ – несмещённая оценка вида $c \cdot  X_{(n)}$.
+
+\item $\Var\left(\hat{\theta}\right) = \frac{(n+1)^2}{n^2} \Var(X_{(n)})$
+
+\begin{align*}
+\E\left(X_{(n)}^2\right) &= \int_{-\infty}^{+\infty} x^2 f_{X_{(n)}} (x) dx = \int_{0}^{\theta} x^2 \frac{nx^{n-1}}{\theta^n}  dx = \frac{n}{\theta^n}  \int_{0}^{\theta} x^{n+1} dx \\
+&= \left. \frac{n}{\theta^n} \cdot \frac{x^{n+2}}{n+2} \right|_{x=0}^{x=\theta} = \frac{n}{\theta^n} \cdot  \frac{\theta^{n+2}}{n+2} = \frac{n\cdot\theta^2}{n+2}
+\end{align*}
+
+\[
+\Var(X_{(n)}) = \E\left(X_{(n)}^2\right)  - (\E(X_{(n)}))^2 = \frac{n\theta^2}{n+2} - \frac{n^2 \cdot \theta^2}{(n+1)^2} = n\theta^2 \left(\frac{1}{n+2} - \frac{n}{(n+1)^2}\right)
+\]
+
+\[
+\Var\left(\tilde{\theta}\right) = \frac{(n+1)^2}{n^2} \Var(X_{(n)}) = \frac{(n+1)^2}{n^2}  \cdot n\theta^2 \left(\frac{n^2+2n+1 - n^2-2n}{(n+2)(n+1)^2} \right) = \frac{\theta^2}{n(n+2)}
+\]
+Оценка $\hat{\theta}_n$ является состоятельной, так как $\E(\hat{\theta}_n) = \theta$ и $\Var(\hat{\theta}_n) = \frac{\theta^2}{n(n+2)} \underset{n \to \infty}{\to} 0$
+
+\item $\E(X_1) = \left. \frac{\theta}{2} \right|_{\theta = \hat{\theta}_{MM}} = \bar{X} \Rightarrow \hat{\theta}_{MM} = 2\bar{X}$
+\item $\Var\left(2\bar{X}\right) = \frac{4}{n^2}n\Var(X_1) = \frac{4\theta}{12n} = \frac{\theta}{3n} > \Var\left(\hat{\theta}_n\right)$
+\end{enumerate}
+\item
+\begin{enumerate}
+\item $L(x, p) = \prod_{i=1}^n \P(X_i = x_i) = p^{\sum_{i=1}^n(x_i-1)} (1-p)^n$
+
+$\ln L (x, p) = \sum_{i=1}^n(x_i-1) \ln p  + n\ln(1-p)$
+
+$\frac{\partial \ln L}{\partial p} = \frac{\sum_{i=1}^n(x_i-1)}{p} - \frac{n}{1-p} = 0 \Rightarrow \hat{p} = \frac{\sum_{i=1}^n x_i - n}{\sum_{i=1}^n x_i}$
+\item $\E(X) = \frac{n}{p} \Rightarrow \hat{\E}(X) = \frac{n\sum_{i=1}^n x_i}{\sum_{i=1}^n x_i - n}$
 \end{enumerate}
 \end{enumerate}

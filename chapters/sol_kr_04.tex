@@ -4,8 +4,6 @@
 \subsection[2017-2018]{\hyperref[sec:kr_04_2017_2018]{2017-2018}}
 \label{sec:sol_kr_04_2017_2018}
 
-
-
 \begin{enumerate}
 \item Проверяем следующую гипотезу:
 \[
@@ -128,4 +126,333 @@ LR = 2(\ell_{UR} - \ell_R) = 2(-172 - (-179)) = 14
 \]
 Критическое значение $\chi_{0.95, 5} = \approx 11 < 14$, значит, основная гипотеза
 отвергается.
+\end{enumerate}
+
+
+
+\subsection[2016-2017]{\hyperref[sec:kr_04_2016_2017]{2016-2017}}
+\label{sec:sol_kr_04_2016_2017}
+
+
+\begin{enumerate}
+\item
+\begin{enumerate}
+\item $t_{obs} = \frac{\bar X - \mu}{\hat\sigma/\sqrt{n}} = \frac{9.5-10}{0.5/\sqrt{100}} = -10$
+
+В таблице для $t_{0.975;100-1}$ находим $-t_{crit} = -1.66$.
+
+Поскольку $t_{obs} < -t_{crit}$, основная гипотеза отвергается.
+\item $p-value \approx 0$
+\item $X_1, \ldots, X_{100} \sim \cN(\mu, \sigma^2)$
+\item $\gamma_{obs} = \frac{\hat{\sigma}^2}{\sigma^2_0}(n-1) =
+\frac{0.5^2}{0.3}(100-1) = 82.5$
+
+В таблице находим нужные значения $\chi^2_{0.975;100-1}$, $\gamma_{crit, r} = 128$
+и $\chi^2_{0.025;100-1}$, $\gamma_{crit, l} = 73$.
+
+Так $\gamma_{crit, l} < \gamma_{obs} < \gamma_{crit, r}$, нет оснований отвергать $H_0$.
+\end{enumerate}
+\item $\hat{p} = \frac{16}{40} = 0.4$, проверять будем двустороннюю гипотезу.
+
+$z_{obs} = \frac{\hat{p} - p}{\sqrt{\hat{p}(1-\hat{p})/n}} =
+\frac{0.4-0.5}{\sqrt{0.4\cdot0.6/40}} \approx -1.3$
+
+В таблице нормального распределения находим значение $z_{0.975}$, $z_{crit} = 1.96$.
+
+Так как $\vert z_{obs} \vert < z_{crit}$, нет оснований отвергать $H_0$.
+\item
+\begin{enumerate}
+\item $\hat{\sigma}_0^2 = \frac{\hat{\sigma}_\alpha^2(n_\alpha -1) +
+\hat{\sigma}_\beta^2(n_\beta-1)}{n_\alpha + n_\beta-2} = \frac{0.25\cdot19 + 0.36\cdot24}{20+25-2} = 0.31$
+
+$\frac{\bar{X} - \bar{Y}}{\hat{\sigma}_0 \sqrt{\frac{1}{n_\alpha} + \frac{1}{n_\beta}}} \sim t_{n_\alpha + n_\beta-2}$
+
+$t_{obs} = \frac{9.5-9.8}{0.56\sqrt{\frac{1}{20}+ \frac{1}{25}}} = -1.79$
+
+$t_{crit} = 2.02$
+
+Поскольку $\vert t_{obs} \vert < t_{crit}$, нет оснований отвергать $H_0$.
+\item Выборки независимы, дисперсии неизвестны, но равны,
+$X_1, \ldots, X_{n_\alpha} \sim \cN\left(\mu_X, \sigma^2_X\right)$,
+$X_1, \ldots, Y_{n_\beta} \sim \cN\left(\mu_Y, \sigma^2_Y\right)$.
+\item $\frac{\hat{\sigma}_\alpha^2}{\hat{\sigma}_\beta^2} \sim F_{n_{\alpha-1}, n_{\beta-1}}$
+
+$F_{obs} = \frac{0.5}{0.6} \approx 0.83$
+
+$F_{crit, 0.975} = 2.35$, $F_{crit, 0.025} = 0.41$
+
+Поскольку $F_{crit, 0.025} < F_{obs} < F_{crit, 0.975}$, нет оснований отвергать $H_0$.
+\end{enumerate}
+\item $H_0: p = 0.5$, где $p$ — вероятность того, что бутерброд упадёт маслом вниз.
+
+$\hat{p} = \frac{105}{200} = 0.525$
+
+$z_{obs} = \frac{\hat p - p}{\sqrt{\hat p (1 - \hat p)/n}} = \frac{0.525-0.5}{\sqrt{0.525\cdot0.475/200}} \approx 0.7$
+
+$z_{crit} = 1.96$
+
+Так как $z_{obs} < z_{crit}$, нет оснований отвергать $H_0$.
+\item $LR \sim \chi^2_1$, так как в основной гипотезе одно уравнение.
+Выпишем функцию правдоподобия и найдём $\hat{\mu}_{ML}$ и $\hat{\nu}_{ML}$.
+\begin{align*}
+L &= \prod_{i=1}^{100} \frac{1}{\sqrt{2\pi\nu}} \exp\left(-\frac{1}{2} \frac{(x_i-\mu)^2}{\nu} \right) = \frac{1}{(\sqrt{2\pi\nu})^{100}} \exp \left(-\frac{1}{2\nu}\sum_{i=1}^{100} (x_i - \mu)^2 \right) \\
+\ell &= -\frac{100}{2}\ln (2\pi) - \frac{100}{2} \ln \nu - \frac{1}{2\nu}\sum_{i=1}^{100} (x_i - \mu)^2 \\
+\frac{\partial \ell}{\partial \mu} &= \frac{1}{\nu} \sum_{i=1}^{100} (x_i - \mu) \Rightarrow \hat{\mu}_{ML} = \frac{\sum_{i=1}^{100} x_i}{100} = 0.3 \\
+\frac{\partial \ell}{\partial \nu} &= -\frac{100}{2\nu} + \frac{1}{2\nu^2}\sum_{i=1}^{100} (x_i - \mu)^2 \Rightarrow \hat{\nu}_{ML} = 1.37
+\end{align*}
+Тогда $LR=2(\ell(\hat{\mu}_{ML}, \hat{\nu}_{ML}) - \ell(\hat{\mu}_{ML}, \nu = 1))$ имеет вид:
+\[
+Q_{obs}= 2 \left(-50 \ln(2\pi) - 50 \ln 1.37 - \frac{1}{2\cdot1.37}\cdot 137 + 50 \ln(2\pi) + 0 + \frac{1}{2} \cdot 137 \right) \approx 5.5
+\]
+Из таблицы: $Q_{crit} = 3.84$. Поскольку $Q_{obs} > Q_{crit}$, основная гипотеза отвергается.
+\end{enumerate}
+
+
+
+
+\subsection[2015-2016]{\hyperref[sec:kr_04_2015_2016]{2015-2016}}
+\label{sec:sol_kr_04_2015_2016}
+
+\begin{enumerate}
+\item[2.]
+\begin{enumerate}
+\item
+\begin{align*}
+  L(x, \lambda) &= \prod_{i=1}^{250} e^{-\lambda} \frac{\lambda^{x_i}}{x_i!} = e^{-250\lambda} \lambda^{\sum_{i=1}^{250} x_i} \prod_{i=1}^{250} \frac{1}{x_i!} \\
+  \ell(x, \lambda) &= -250\lambda + \ln\lambda \sum_{i=1}^{250} x_i - \sum_{i=1}^{250} \ln x_i! \\
+  \frac{\partial \ell}{\partial \lambda} &= -250 + \frac{1}{\lambda} \sum_{i=1}^{250} x_i \\
+  \hat{\lambda}_{ML} &= \bar{X}
+\end{align*}
+\item $\E\left(\hat{\lambda}_{ML}\right) = \E\left(\bar{X}\right) = \lambda \Rightarrow$ оценка несмещённая.
+
+$\Var\left(\hat{\lambda}_{ML}\right) = \Var\left(\bar{X}\right) = \frac{1}{n^2}\cdot n\Var(X_1) = \frac{\lambda}{n} \to_{n \to \infty} 0 \Rightarrow$ оценка состоятельная.
+
+$\frac{\partial^2 \ell}{\partial \lambda^2} = -\frac{1}{\lambda^2} \sum_{i=1}^{n} x_i$,
+$I(\lambda) = - \E\left(-\frac{1}{\lambda^2} \sum_{i=1}^{n} x_i\right) = \frac{n}{\lambda}$.
+Так как $\Var\left(\hat{\lambda}_{ML}\right) = \frac{1}{I(\lambda)}$, оценка является эффективной.
+\item $\P(X=0) = \frac{\lambda^0 e^{-\lambda}}{0!} = e^{-\lambda} \Rightarrow \widehat{\P(X=0)} = e^{-\hat\lambda} = e^{-\bar{X}}$
+\item В данном случае: $g\left(\hat{\lambda}\right) = e^{-\hat\lambda}$, $g'\left(\hat\lambda\right) = -e^{-\hat\lambda}$.
+И доверительный интервал имеет вид:
+\[
+  \left[e^{-\bar{X}} - 1.96 \sqrt{\frac{e^{-2\bar{X}}\bar{X}}{n}}; e^{-\bar{X}} + 1.96 \sqrt{\frac{e^{-2\bar{X}}\bar{X}}{n}} \right]
+\]
+\end{enumerate}
+
+
+\item[3.]
+\begin{enumerate}
+\item $\hat p \stackrel{as.}{\sim}\cN\left(p, \frac{p(1-p)}{n}\right)$
+
+О1Р: лекарство помогает в $80\%$ случаев, но в данной выборке оно помогло менее чем 12 людям.
+
+$\alpha = \P(\text{О1Р}) = \P\left(\hat p < \left. \frac{12}{20} \right| p=0.8 \right) = \P \left(\frac{\hat p - 0.8}{\sqrt{\frac{0.8\cdot0.2}{20}}} < \frac{\frac{12}{20} - 0.8}{\sqrt{\frac{0.8\cdot0.2}{20}}} \right) = 0.0125$
+\item О2Р: лекарство помогает в $60\%$ случаев, но $Y \geq 12$.
+
+$\hat p \sim \cN\left(0.6, \frac{0.6\cdot0.4}{20} \right)$
+
+$\beta = \P\left( \hat p \geq \frac{12}{20} \right) = \frac{1}{2}$
+\item $\P(Z < a) =0.1$, из таблицы находим, что $a=-1.28$.
+\[
+a = \frac{\frac{c}{20} - 0.8}{\sqrt{\frac{0.8\cdot0.2}{20}}} = -1.28 \Rightarrow c \approx 13.7
+\]
+\item $\P(\vert \hat p - p \vert \leq 0.01) \geq 0.95$, будем считать, что $p=0.6$.
+\[
+\P(\vert \hat p - p \vert \leq 0.01) = \P(-0.01 \leq \hat p - p \leq 0.01) = \P\left(-\frac{0.01}{\sqrt{\frac{0.6\cdot0.4}{n}}} \leq Z \leq \frac{0.01}{\sqrt{\frac{0.6\cdot0.4}{n}}} \right) =0.95
+\]
+Из таблицы находим
+\[
+\frac{0.01}{\sqrt{\frac{0.6\cdot0.4}{n}}} = 1.96 \Rightarrow n = \frac{0.6\cdot0.4\cdot1.96^2}{0.01^2}
+\]
+\end{enumerate}
+
+\item[4.] $H_0: p_{\text{c}} = \frac{1}{7}, p_{\text{л}} = \frac{2}{7}, p_{\text{к}} = \frac{4}{7}$
+
+$Q = \sum_{i=1}^{s=3} \frac{(\nu_i - np_i)^2}{np_i} \sim \chi^2_{s-k-1} = \chi^2_2$
+
+$Q_{obs} = \frac{\left(10-50\frac{1}{7}\right)^2}{50\frac{1}{7}} + \frac{\left(1-50\frac{2}{7}\right)^2}{50\frac{2}{7}} + \frac{\left(39-50\frac{4}{7}\right)^2}{50\frac{4}{7}} = 17.29$
+
+$Q_{crit} = 5.99$, $Q_{crit} < Q_{obs} \Rightarrow$ гипотеза отвергается
+
+\item[5.] $LR \sim \chi^2_1$, так как основная гипотеза содержит одно уравнение
+
+$L(x, \lambda) = \prod_{i=1}^{n=50} \lambda e^{-\lambda x} = \lambda^{50} e^{-\lambda \sum_{i=1}^{n=50} x_i}$
+
+$\ln L (x, \lambda) = 50\ln\lambda - \lambda \sum_{i=1}^{n=50} x_i \to \max_\lambda$
+
+$\frac{\partial \ln L}{\partial \lambda} = \frac{50}{\lambda} - \sum_{i=1}^{n=50} x_i \mid_{\lambda=\hat{\lambda}} = 0 \Rightarrow \hat{\lambda}_{ML} = \frac{1}{\bar{X}} = \frac{10}{11}$
+
+При верной $H_0:  \lambda=1$, тогда $\ln L (\lambda=1) = 50 \ln 1 - 1 \cdot 1.1 \cdot 50 = -55$
+
+При верной $H_1: \lambda=\lambda_{ML}$, тогда $\ln L \left(\lambda=\frac{10}{11}\right) = 50 \ln \frac{10}{11} - \frac{10}{11} \cdot 50 \cdot 1.1 = -54.77$
+
+$LR_{obs} = 2(\ln L (H_1) - \ln(H_0)) = 2(-54.77- (-55)) = 0.46$
+
+$LR_{crit} = 2.71$, $LR_{crit} > LR_{obs} \Rightarrow$ оснований отвергать $H_0$ нет
+
+\item[6.]  Будем проверять гипотезы на уровне значимости $0.05$
+\begin{enumerate}
+\item $\hat{\sigma}^2_{\text{в}} = 484$, $\hat{\sigma}^2_{\text{р}} = 400$
+
+$\frac{\hat{\sigma}^2_{\text{в}} }{\hat{\sigma}^2_{\text{р}}} \sim F_{21-1 , 19-1}$
+
+$F_{obs} = \frac{484}{400} = 1.21$, $F_{crit, left} = 0.4$, $F_{crit, right} = 2.6  \Rightarrow$ оснований отвергать $H_0$ нет
+
+\item $\hat{\sigma}_0^2 = \frac{484 \cdot (21-1) + 400 \cdot (19-1)}{21 + 19 - 2} \approx 444$
+
+$t_{obs} = \frac{78-67}{\sqrt{444} \sqrt{\frac{1}{21}+ \frac{1}{19}}} \approx 1.8 $
+
+$t_{crit}  \sim t_{21+19-2} = t_{38}$, $t_{crit} = \pm 2.02 \Rightarrow$ нет оснований отвергать $H_0$
+\end{enumerate}
+\item[7.] $\gamma = \sum_{i=1}^s \sum_{j=1}^m \frac{\left(n_{ij} - \frac{n_{i\cdot}n_{\cdot j}}{n}\right)^2}{\frac{n_{i\cdot}n_{\cdot j}}{n}} \sim \chi^2_{(s-1)(m-1)}$
+
+$\gamma_{obs} = \frac{\left(12-\frac{44\cdot48}{100}\right)^2}{\frac{44\cdot48}{100}} + \frac{\left(36-\frac{56\cdot48}{100}\right)^2}{\frac{56\cdot48}{100}} + \frac{\left(32-\frac{44\cdot52}{100}\right)^2}{\frac{44\cdot52}{100}} + \frac{\left(20-\frac{50\cdot52}{100}\right)^2}{\frac{50\cdot52}{100}} \approx 12$
+
+$\gamma_{crit} = 3.84 \Rightarrow$  гипотеза отвергается
+
+\end{enumerate}
+
+
+
+\subsection[2014-2015]{\hyperref[sec:kr_04_2014_2015]{2014-2015}}
+\label{sec:sol_kr_04_2014_2015}
+
+
+\begin{enumerate}
+
+\item[1.] \textbf{Задача для первого потока.}
+
+\begin{enumerate}
+\item \begin{align*}
+-Z_{\frac{\alpha}{2}}<\frac{\hat{p}-p}{\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}}<Z_{\frac{\alpha}{2}} \\
+-1.96<\frac{0.4-p}{\sqrt{\frac{0.4\cdot0.6}{40}}}<1.96 \\
+-0.56<p<1.36
+\end{align*}
+
+\item $H_0$ не отвергается, так как
+\[
+-0.56<0.5<1.36
+\]
+
+\item $H_0$ отвергается, если $p=0.5$ не лежит в построенном доверительном интервале:
+\begin{align*}
+0.5\geq0.5Z_{\frac{\alpha}{2}}+0.4 \\
+0.2\geq Z_{\frac{\alpha}{2}} \Rightarrow \alpha=0.0456
+\end{align*}
+
+\end{enumerate}
+
+\item[1.] \textbf{Задача для второго потока.}
+\begin{enumerate}
+\item
+При верной $H_0: \mu=55$.
+Находим $t_{crit} = 1.721$ и $t_{obs} = \frac{51-55}{0.45}= -8.9$, $H_0$ отвергается.
+
+\item
+При верной $H_0: \frac{\sigma^2_1}{\sigma^2_2}=1$.
+Находим $F_{left} = 0.5$, $F_{right}=2.07$ и $F_{obs} = 2/3$, $H_0$ не отвергается.
+\end{enumerate}
+
+\item[2.] \textbf{Задача для первого потока.}
+
+При верной $H_0: \mu_{\alpha}=\mu_{\beta}$.
+Находим $t_{crit} = 2.048$ и $t_{obs} =\frac{9.5-9.8}{0.216}= -1.4$, $H_0$ не отвергается.
+
+\item[2.] \textbf{Задача для второго потока.}
+\begin{enumerate}
+\item
+\begin{align*}
+\hat{\sigma}^2_1 &= 0.2 \cdot 0.8 = 0.16 \\
+\hat{\sigma}^2_2 &= 0.17 \cdot 0.83 = 0.1411
+\end{align*}
+
+При верной $H_0: \mu_1=\mu_2$.
+Находим $Z_{crit} = 2.58$ и $t_{obs} =\frac{0.2-0.17}{0.06}= 0.5$, $H_0$ не отвергается.
+\item
+\[
+p_{value} = 1 - F(0.5) \approx 1 - 0.6915 = 0.3085
+\]
+\end{enumerate}
+
+\item[3.]
+\begin{align*}
+&L(x, \theta) = \theta^{-2n} x^n \exp \left(-\frac{1}{\theta}\sum_ix_i\right) \\
+&\ell=\ln(L)=-2n\ln(\theta)+n\ln(x)-\frac{1}{\theta}\sum_ix_i \\
+&\ell'_{\theta}=-\frac{2n}{\theta} + \frac{1}{\theta^2}\sum_ix_i \\
+&-2n\frac{1}{\hat{\theta}}\sum_ix_i=0 \\
+&\hat{\theta}_{ML}=\frac{1}{2}\bar{X} \\
+\end{align*}
+
+
+\item[4.]
+Пусть $\ell=\ln(L)$ — логарифмическая функция правдоподобия.
+\[
+\ell=-\frac{n}{2}\ln(2\pi)-\frac{n}{2}\ln(\nu)-\frac{1}{2\nu}\sum_i(x_i-\bar{x})^2
+\]
+Известно, что для выборки из нормального распределения
+$\hat{\mu}_{ML} = \bar{x} = 0.3$, $\hat{\nu}_{ML} = S^2 = 1.37$, поэтому
+\begin{align*}
+&\ell_{UR} = -50\ln(2\pi) - 50\ln(1.37)-\frac{137}{2 \cdot 1.37} \\
+&\ell_{R} = -50\ln(2\pi) - \frac{137}{2} \\
+& LR_{obs}=2\left(-50\ln(2\pi)-50\ln(1.37)-\frac{137}{2\cdot1.37}+50\ln(2\pi)+\frac{137}{2}\right) \approx 12
+\end{align*}
+При верной $H_0$ $LR\sim\chi^2_1 \Rightarrow LR_{crit}\approx3.8$, основная гипотеза отвергается.
+
+\item[5.] \textbf{Исследовательская задача.}
+\begin{enumerate}
+\item
+Пусть $\ell=\ln(L)$ — логарифмическая функция правдоподобия.
+Воспользуемся также тем, что для выборки из нормального распределения
+$\hat{\mu}_{ML}=\bar{X}$, $\hat{\nu}_{ML}=S^2$.
+\begin{align*}
+\ell &= -\frac{n}{2}\ln(2\pi) - \frac{n}{2}\ln(\nu) - \frac{1}{2\nu}\sum^n_{i=1}(x_i-\bar{x})^2 \\
+\Var\left(\ell'(\hat{\mu})\right) &= \frac{1}{\nu^2} \Var\left(\sum^n_{i=1}(X_i-\bar{X})\right) = \frac{n}{\nu^2}\Var(X_1) = \frac{n}{\nu} \\
+LM &= \frac{\left(\ell'(\hat{\mu}) - \ell'(0)\right)^2}{\Var(\ell'(\hat{\mu}))} = \frac{\left(\frac{1}{\nu}\sum^n_{i=1}(X_i-\bar{X})-\frac{1}{\nu}\sum^n_{i=1}X_i\right)^2}{\frac{n}{\nu}} = \frac{n}{\nu}\bar{X}^2 \\
+W &= \frac{(\hat{\mu}-0)^2}{\Var(\hat{\mu})} = \frac{\left(\frac{\sum^n_{i=1}X_i}{n}\right)^2}{\frac{\nu}{n}}=\frac{n}{\nu}\bar{X}^2 \\
+\end{align*}
+\begin{align*}
+LR &= 2\left(-\frac{1}{2\nu}\sum^n_{i=1}(X_i-\bar{X}) + \frac{1}{2\nu}\sum^n_{i=1}X_i\right) = \\
+&= \frac{1}{\nu}\left(\sum^n_{i=1}X^2_i-\sum^n_{i=1}X^2_i+2\bar{X} \cdot \sum^n_{i=1}X_i-n\bar{X}^2\right) = \\
+&= \frac{1}{\nu} \left(2\bar{X}\cdot n\cdot\bar{X}-n\bar{X}^2\right)=\frac{n}{\nu}\bar{X}^2
+\end{align*}
+Как видим, $LR=LM=W$.
+\item
+\end{enumerate}
+
+\item[6.] \textbf{Исследовательская задача.}
+
+\begin{enumerate}
+
+\item
+\begin{align*}
+\E(X) &= \int^{+\infty}_{0}a^2x^2e^{-ax} dx = -ax^2e^{-ax}\bigg|^{+\infty}_0 + 2\int^{+\infty}_{0}axe^{-ax} dx= \\
+&= -2xe^{-ax}\bigg|^{+\infty}_0 + 2\int^{+\infty}_{0}e^{-ax} dx = -\frac{2}{a}e^{-ax}\bigg|^{+\infty}_0=\frac{2}{a} \\
+\frac{2}{\hat{a}_{MM}} &= \frac{\sum^{n}_{i=1}x_i}{n} \Rightarrow \hat{a}_{MM}=\frac{2}{3}
+\end{align*}
+
+\item
+\[
+\hat{a}_{MM}=\frac{2}{\bar{X}}
+\]
+
+Разложим $\hat{a}_{MM}$ по формуле Тейлора в окрестности точки $\bar{X}=3$:
+\begin{align*}
+\hat{a}_{MM} &\approx \frac{2}{3} - \frac{2}{9}\left(\bar{X}-3\right) \\
+\widehat{\Var}(X) &= \frac{\sum^n_{i=1}(X_i-\bar{X})^2}{n}=\frac{\sum^n_{i=1}X_i^2-2\bar{X}\sum^n_{i=1}X_i+n\bar{X}^2}{n} \\
+&= \frac{1000 - 6\cdot300 + 100\cdot9}{100} = 1 \\
+\Var\left(\hat{a}_{MM}\right) &\approx \frac{4}{81}\Var\left(\bar{X}\right) = \frac{4\cdot100}{81\cdot100^2} \Var(X)\Rightarrow \widehat{\Var}\left(\hat{a}_{MM}\right) = \frac{4}{8100}
+\end{align*}
+\item
+\begin{align*}
+-t_{\frac{\alpha}{2};n-1}<\frac{\bar{X}-\mu}{\frac{\hat{\sigma}}{\sqrt{n}}}<t_{\frac{\alpha}{2};n-1} \\
+-1.98<\frac{3-\mu}{\frac{1}{10}}<1.98
+\end{align*}
+Воспользуемся тем, что $\mu=\frac{2}{a}$:
+
+\begin{align*}
+-1.98<\frac{3-\frac{2}{a}}{\frac{1}{10}}<1.98 \\
+-0.198<3-\frac{2}{a}<0.198 \\
+0.63<a<0.71
+\end{align*}
+
+\end{enumerate}
 \end{enumerate}
