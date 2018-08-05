@@ -1027,3 +1027,385 @@ $\P(X = x |Y=-1)$ & $0.2$ & $0.4$ & $0.4$ \\ \bottomrule
 \item Лучше идти к неправильным пчёлам, так как $\P(X\leq 2)<\P(Y\leq 2)$.
 \end{enumerate}
 \end{enumerate}
+
+
+\subsection[2011-2012]{\hyperref[sec:kr_01_2011_2012]{2011-2012}}
+\label{sec:sol_kr_01_2011_2012}
+
+\begin{enumerate}
+\item $ \P(A) = \frac{3\cdot 2^3}{C_{10}^{5}} = \frac{2}{21} \approx 0.095$
+\item $ \P(A|B) = \frac{0.999\cdot 0.01}{0.999\cdot 0.01+0.001\cdot 0.9} \approx 0.917 $
+\item
+\begin{enumerate}
+\item $\P(A_1) = 0.079 + 0.209(0.209 + 0.337) + 0.375(0.375 + 0.337) + 0.337 \cdot
+0.337 \approx 0.574$
+\item $\P(A_2) \approx 0.778$
+\end{enumerate}
+\item
+\begin{enumerate}
+\item $\P(X_v = 10) = 0.9^3 \cdot 0.3^3 \cdot 0.5^4$
+\item $\Var(X_m) = 0.9$, $\Var(X_d) = 2.1$, $\Var(X_v) = 0.27 + 0.63 + 1 = 1.9$
+
+$\Corr(X_v,X_d) = \frac{0.27}{\sqrt{1.9\cdot 2.1}}$
+
+$\Corr(X_v,X_m) = \frac{0.63}{\sqrt{1.9\cdot 0.9}}$
+\end{enumerate}
+\item
+\begin{enumerate}
+\item $c = 3$
+\item $ F(x) =
+\begin{cases}
+0, \quad x<1 \\
+1-x^{-3}, \quad x\geq 1
+\end{cases} $
+\item $\P(0.5 < X < 1.5) = 1 - 1.5^{-3} = \frac{19}{27} \approx 0.70$
+\item Заметим, что $\E(X^a) = 3/(3-a)$. Поэтому $\E(X) = 3/2$ и $\E(X^2) = 3$.
+Значит, $\Var(X) = 3/4$.
+\end{enumerate}
+\item
+\begin{enumerate}
+\item $ F(y) = \P(Y \leq y) = \P(1/X \leq y) = \P(X \geq 1/y) =
+\begin{cases}
+0, y < 0 \\
+y^3, y \in [0;1) \\
+1, y \geq 1
+\end{cases}$
+
+$p(y)=
+\begin{cases}
+3y^2, y \in [0;1] \\
+0, y \notin [0;1]
+\end{cases}$
+\item $\E(X) = 3/2$, $\E(Y) = 3/4$, $\E(XY) = \E(1) = 1$, значит $\Cov(X,Y) = 1 - 9/8 = -1/8$
+
+$\E(Y^2) = 3/5$, $\Var(Y) = 3/80$, $\Corr(X,Y) = -\sqrt{5}/3 \approx 0.75$
+\end{enumerate}
+\item Функция плотности симметрична около нуля, поэтому: $\E\left((X - \E(X))^{2011}\right) =
+\E\left(X^{2011}\right) = 0$
+\item
+\begin{enumerate}
+\item $\E(U) = 5$, $\E(V) = -3$, $\Var(U) = 26$, $\Var(V) = 10$, $\Cov(U,V) = 0$
+\item Нет, даже нулевой ковариации недостаточно для того, чтобы говорить о
+независимости случайных величин.
+\end{enumerate}
+\item
+\begin{enumerate}
+\item $ \E(X) = 80\cdot 0.05 = 4$, $\Var(X) = 80 \cdot 0.05 \cdot 0.95 = 4 \cdot 0.95$
+\item $ \P(X = 5) = C_{80}^{5}0.05^{5}0.95^{75}$
+\item $ \P(X = 5) \approx \exp(-4)4^5/5!$
+\item $ \triangle\leq \min\{p,np^2\} = \min\{0.05,4\cdot 0.05\} = 0.05$
+\end{enumerate}
+\item
+\begin{enumerate}
+\item $\P(X > 20) = \frac{80 + 80 + 50}{300} = 0.7$
+
+$\P(X > 20|X > Y) = \frac{80 + 50 + 50}{100 + 50 + 50} = 0.9$
+
+$\P(X > Y|X > 20) = \frac{80 + 50 + 50}{80 + 80 + 50} = \frac{6}{7}$
+\item $\E(X) = 50$
+\item $
+F(x) =
+\begin{cases}
+    0, \quad x<0 \\
+    \frac{1}{6}+\frac{4}{600}x, \quad x\in [0;100) \\
+    1, \quad x\geq 100 \\
+\end{cases}$
+У функции два скачка высотой по $1/6$, в точках $x = 0$ и $x = 100$. На остальных
+участках функция линейна.
+\item Нет, например, если $Y=50$ мы можем быть уверены в том, что $X\notin [10;90]$.
+\end{enumerate}
+\end{enumerate}
+
+
+\subsection[2010-2011]{\hyperref[sec:kr_01_2010_2011]{2010-2011}}
+\label{sec:sol_kr_01_2010_2011}
+
+\begin{enumerate}
+\item $p$, всё равно
+\item $\P(A) = 0.8$, $\P(B|A) = 0.84$
+\item $a \geq 2\ln 10$
+\item $\E(X) = 1.36$, $\Var(X) = 0.2$, $F(x) = \begin{cases}
+0, \, x<1 \\
+2/3, \, x\in [1;2) \\
+35/36, \, x\in[2;3) \\
+1, \, x\geq 3
+\end{cases}$
+\item $\Var(X) = 1.05$, $\E(X) = 6.5$, $P(A) = 0.3^5$; $Y = 5 + V - (5 - V) = 2V$,
+$\Cov(X, Y) = \Cov(5 + V, 2V) = 2\Var(V) = 2.1$
+\item $\E(X) = 0.5$, $\E(Y) = 1.5$, $\Var(X) = 1.65$, $\Cov(X, Y) = 0.05$,
+$\Cov(2X + 3, -3Y + 1) = -0.3$
+\item $\E(X_1) = 1$, $\Var(X_1) = 1/3$, $Med(X_1) = 1$, $f(x,y) = \begin{cases}
+\frac{1}{4}, \, x_1\in [0;2], x_2\in [1,3] \\
+0, \text{ иначе}
+\end{cases}$
+\end{enumerate}
+
+
+
+\subsection[2008-2009 Демо-версия]{\hyperref[sec:kr_01_2008_2009_demo]{2008-2009 Демо-версия}}
+\label{sec:sol_kr_01_2008_2009_demo}
+
+\begin{enumerate}
+\item $\P(A) = 2/15$
+\item $\P(X < 1) = 1/3$, $\E(X) = 1.5$
+\item
+\item $c = 0.1$, $\P(X > 30) = e^{-3}$, $\P(X > 45 \mid X > 15) = e^{-3}$, $\E(X) = 10$
+\item $k^*=2$, $\Var(X) = 1.875$, $\E(X) = 2.5$
+\item $c = 0.2$, $\P(Y > -X) = 0.5$, $\E(XY) = 0$, $\Corr(X, Y) = -0.155$, $\E(Y| X > 0) = 1/4$
+\item $\E(N)=\E(X_1)+\E(X_2)+\E(X_3)=0.9+0.7+0.5=2.1$
+\item $\E(X) \approx 1.7$, $\Var(X) \approx 1.08$
+\item[9-А.]
+\item[9-Б.] Рассмотрим совершенно конкурентный невольничий рынок начинающих певиц.
+Певицы в хорошем настроении продаются по $V_1$, в депрессии — по $V_2$. Получаем
+систему уравнений:
+\[
+\begin{cases}
+  V_1 = 0.75 + (0.5 V_1 + 0.5 V_2) \\
+  V_2 = \max_x \sqrt{x}V_1 + (1 - \sqrt{x})V_2 - x
+\end{cases}
+\]
+Оптимизируем и получаем, $x^* = (V_1 - V_2)^2/4$. Из первого уравнения находим
+$(V_1 - V_2) / 2 = 0.75$.
+\end{enumerate}
+
+
+\subsection[2008-2009]{\hyperref[sec:kr_01_2008_2009]{2008-2009}}
+\label{sec:sol_kr_01_2008_2009}
+
+\begin{enumerate}
+\item
+\begin{enumerate}
+\item $0.9 \cdot 0.9 \cdot 0.8$
+\item $2 \cdot 0.1 \cdot 0.9 \cdot 0.8 + 0.9 \cdot 0.9 \cdot 1 = 0.9(0.16 + 0.9) =
+0.9 \cdot 1.06 = 0.954$
+\item $0.9 + 0.9 + 0.8 = 2.6$
+\end{enumerate}
+\item
+\begin{enumerate}
+\item 9 (если взять 9 с вероятностью один)
+\item 4 (если взять 5 и 9 равновероятно)
+\end{enumerate}
+\item
+\begin{enumerate}
+\item $0.7 + 0.3 \cdot 0.5 = 0.85$
+\item $\frac{0.7}{0.85} = \frac{14}{17} \approx 0.82$
+\end{enumerate}
+\item Нормальная случайная величина имеют функцию плотности $p(t) = c \cdot
+\exp(-\frac{1}{2\sigma^{2}}(x - \mu)^{2})$
+
+Отсюда: $\E(X) = 1$, $\E(Y) = 0$, $\Var(X) = 16$, $\Var(Y) = 9$
+\item $\E(X) = 0.5$, $\E(Y) = 1.5$, $\Var(X) = 1.65$, $\Cov(X,Y) = 0.05$,
+$\Cov(2X + 3, -3Y + 1) = -0.3$
+\item $0.2$, $\frac{1}{e^4}$, $\frac{1}{e^4}$, $5$
+\item Любое разумное понимание «полугодовой» принимается. То есть подходят 182,
+183, и если посчитаны только рабочие дни, и если взят пример марсианского теннисиста
+с указанием количествава дней в марсианском году и пр.
+
+И биномиальные и пуассоновские ответы принимаются.
+
+Для 182:
+\begin{enumerate}
+\item $182 \cdot 0.00037 = 0.06734$
+\item $(1 - 0.00037)^182 \approx \exp(-0.06734)$
+\item $C_{182}^{2}p^{2}(1-p)^{180} \approx 0.5 \exp(-0.06734)0.06734^2$
+\end{enumerate}
+\item
+\begin{enumerate}
+\item $\P(Y < 2) = 1/4$
+\item два отрезка: на высоте 2/16 (от 0 до 4) и 1/16 (от 4 до 12)
+\item $\E(Y) = 5$, $\Var(Y) = 12.(3)$
+\item $\Cov(X, Y) = 3.(3)$
+\end{enumerate}
+\item[9-А.] Составляется граф по которому «блуждает» мистер А. Пишутся рекуррентные
+соотношения. Получается 12 или 13 в зависимости от того, считать ли прогулку
+«босиком» или нет. Оба ответа считать правильными.
+\item[9-Б.] X раскладывается в сумму индикаторов.
+
+Имеется $6 \cdot 9$ позиций для потенциального «уголка».
+
+$\E(X) = 6 \cdot 9 \cdot 1/4 = 13.5$
+
+Имеется $6 \cdot 5 + 5 \cdot 9$ «боковых» пересечений потенциальных позиций.
+
+Имеется $5 \cdot 8$ «угловых» пересечений потенциальных позиций.
+
+Только они и могут дать ковариацию.
+
+$\Var(X) = 54 \cdot 1/4 \cdot 3/4 + 2 \cdot(6 \cdot 8 + 5 \cdot 9) \cdot 3/32 +
+2 \cdot 5 \cdot 8 \cdot 5/64 = 541/16$
+\end{enumerate}
+
+
+
+\subsection[2007-2008]{\hyperref[sec:kr_01_2007_2008]{2007-2008}}
+\label{sec:sol_kr_01_2007_2008}
+
+\begin{enumerate}
+\item Слева должен сесть тот, у кого есть тезка. $p_{1} = 4/6$.
+
+Справа должен сесть его парный, $p_{2} = 1/5$.
+
+Итого: $p = p_{1}\cdot p_{2} = 2/15$
+\item $p = 1/3$, $\E(X) = 1.5$
+\item $p_{a} = \frac{1}{3}(0.9 + 0.5 + 0.3) = \frac{17}{30}$
+
+$p_{b} = \frac{1}{3}(0.9^{2} + 0.5^{2} + 0.3^{2}) / p_{a} = \frac{115}{170}$
+\item
+\begin{enumerate}
+\item Либо взятие интеграла, либо готовый ответ: $c = 0.1$
+\item $\int_{30}^{+\infty}p(t)dt=e^{-3}\approx 0.05$
+\item Такой же результат, как в «б»
+\item $1/\lambda=10$
+\end{enumerate}
+\item
+\begin{enumerate}
+\item[б)] $365 \cdot 0.00037 = 0.13505$
+
+Следовательно, «a», ближайшее целое равно 0.
+
+Для Пуассоновского распределения: $\lambda=0.13505$
+\item[в)] $\P(N = 0) = 0.99963^{365} \approx e^{-\lambda}$
+\item[г)] $\P(N = 2) = C_{365}^{2} 0.99963^{363} 0.00037^{2} \approx e^{-\lambda} \lambda^{2}/2$
+\end{enumerate}
+\item $\E(X) = 3 - 4\theta$, $\theta \in [0;1/3]$, $\theta_{max} = 0$, $\theta_{min} = 1/3$
+\item $N = X_{1} + X_{2} + X_{3}$, где $X_{i}$ равно 1 или 0 в зависимости от того,
+пришёл ли друг. Значит, $\E(N) = \E(X_{1}) + \E(X_{2}) + \E(X_{3}) = 0.9 + 0.7 + 0.5 = 2.1$
+\item $\P(N = 1) = \frac{C_{4}^{2}}{C_{6}^{2}} = 6/15$
+
+$\P(N = 3) = \frac{4 \cdot 2}{C_{6}^{2}} \frac{3 \cdot 1}{C_{5}^{2}} = 4/15$
+
+$\P(N = 2) = 5/15$
+
+$\E(N) = 28/15$, первая.
+\item[9-А.] Имеется $n$ способов выбрать левую точку. Оставшиеся $(n-1)$ точка
+должны попасть в правую полуокружность относительно выбранной левой точки.
+
+Получаем $p = n \cdot (0.5)^{n-1}$
+\item[9-Б.] Будем считать координату одного за точку отсчета. На квадрате
+$[0;1] \times [0;1]$ нетрудно нарисовать нужное множество.
+
+$p = 3/8$
+\end{enumerate}
+
+
+
+\subsection[2006-2007]{\hyperref[sec:kr_01_2006_2007]{2006-2007}}
+\label{sec:sol_kr_01_2006_2007}
+
+
+\begin{enumerate}
+\item
+\begin{enumerate}
+\item $\P(A) = 0.5$, $\P(B) = 1 - \P(B^{c}) = 1 - 0.5^{3} = \frac{7}{8}$,
+$\P(A \cap B) = 0.5 \cdot \left(1 - 0.5^{2}\right) = \frac{3}{8}$,
+$\P(A \cap B)\neq \P(A)\P(B)$, события зависимы.
+\item $\P(A) = p$, $\P(B) = 1 - p^{3}$, $\P(A \cap B) = p(1 - p^{2})$,
+независимость событий возможна только при~$p = 0$ или $p = 1$.
+\end{enumerate}
+\item  Пусть $X$ — число правильных ответов.
+\begin{enumerate}
+\item $\P(X = 1) = C_{10}^{1} \left(\frac{1}{4}\right)^{1}\left(\frac{3}{4}\right)^{9}$
+\item $k_{\P(X = k)\rightarrow \max}=\lfloor p(n + 1)\rfloor = \lfloor
+\frac{11}{4}\rfloor=2$ (можно, не~зная формулы, просто выбрать наибольшую вероятность)
+\item $\E(X) = 10\E(X_{i}) = \frac{10}{4}$
+
+$\Var(X) = 10 \Var(X_{i}) = 10 \cdot \frac{1}{4} \cdot \frac{3}{4}$
+\item $\sum_{i=5}^{10}C_{10}^{i} \left(\frac{1}{4}\right)^{i}\left(\frac{3}{4}\right)^{10-i}$
+\end{enumerate}
+\item $A$ — изделие браковано, $B$ — изделие признано хорошим
+\begin{enumerate}
+\item $\P(B) = 0.96\cdot 0.96+0.04\cdot 0.05$
+\item $\P(A|B) = \frac{0.04\cdot 0.05}{\P(B)}$
+\end{enumerate}
+\item $\lambda = np = 4$
+
+$\P(X = k) = e^{-\lambda}\frac{\lambda^{k}}{k!}$
+
+$\P(X = 0) = e^{-4}$
+\item
+\begin{enumerate}
+\item Распределение имеет вид:
+
+\begin{center}
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+$x$       & $1$   & $2$               & $3$                           & $4$             \\
+$\P(X=x)$ & $0.6$ & $(1-0.6)\cdot0.5$ & $(1-0.6)\cdot(1-0.5)\cdot0.4$ & $1-p_1-p_2-p_3$ \\ \bottomrule
+\end{tabular}
+\end{center}
+
+Упростим:
+
+\begin{center}
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+$x$       & $1$   & $2$   & $3$    & $4$    \\
+$\P(X=x)$ & $0.6$ & $0.2$ & $0.08$ & $0.12$ \\ \bottomrule
+\end{tabular}
+\end{center}
+
+\item $\E(X) = 1.7$, $\Var(X) \approx 1.08$
+\end{enumerate}
+\item  $\P(X \le 0.5) = \frac{0.5}{2} = 0.25$, $\E(X) = \frac{0 + 2}{2} = 1$ (здравый смысл)
+
+$\Var(X) = \E\left(X^{2}\right) - (\E(X))^{2}$
+
+$\E\left(X^{2}\right) = \int_{0}^{2}t^{2} \cdot p(t) dt = \int_{0}^{2}t^{2} \cdot 0.5 dt
+= \frac{4}{3}$
+\item $\E(X) = 10 = \frac{1}{\lambda}$, $\lambda = \frac{1}{10}$,
+$p(t) = \lambda e^{\lambda t}$ при $t>0$
+
+$\P(X > 15) = \int_{15}^{\infty}p(t)dt = \ldots = e^{-\frac{3}{2}}$
+
+$\P(X > 25 | X > 10) = \frac{\P(X > 25)}{\P(X > 10)} = \ldots = e^{-\frac{3}{2}}$
+\item Функция распределения:
+
+$F_{Y}(t) = \P(Y \le t) = \P (\max\{X_{1},X_{2}\}\le t) = \P(X_{1}\le t\cap X_{2}\le t)
+= \P(X_{1}\le t)\P(X_{2}\le t) = \frac{t+1}{2}\cdot t$ при $t\in [0;1]$.
+
+При $t>1$ получаем, что $F_{Y}(t) = 1$ и при $t<0$ получаем, что $F_{Y}(t) = 0$.
+
+$\P(\max\{X_{1},X_{2}\} > 0.5) = 1 - \P(\max\{X_{1},X_{2}\}\le 0.5) = 1 - F(0.5) = \frac{5}{8}$
+\end{enumerate}
+
+
+
+\subsection[2005-2006]{\hyperref[sec:kr_01_2005_2006]{2005-2006}}
+\label{sec:sol_kr_01_2005_2006}
+
+
+\begin{enumerate}
+\item $\P(A)=\frac{2\cdot 3!3!}{6!}=1/10$
+\item $\P(A|B)=\frac{1/3}{1/3+2/12}=2/3$
+\item $\P\left(X>\frac{1}{2} \right) =1/3$,  $\P\left(X>\frac{1}{2} |Y<\frac{1}{2} \right) = 1/4$
+\item
+\begin{enumerate}
+\item
+\begin{center}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+$x$         & $2$   & $3$   & $4$   \\
+$\P(X = x)$ & $1/6$ & $1/3$ & $1/2$ \\ \bottomrule
+\end{tabular}
+\end{center}
+\item $\E(X)=3\frac{1}{3}$
+\end{enumerate}
+\item  $\P(A|B) = \frac{0.4 \cdot 0.3}{0.4 \cdot 0.3 + 0.6 \cdot 0.7}$
+\item
+\begin{enumerate}
+\item $\Var(Z) = 6$, $\Var(4 - 3Z)=54$, $\E(5 + 3Z - Z^2) = -19$
+\item $\Cov(X,Y) = 2.5$, $\Cov(6 - X, 3Y) = -7.5$
+\end{enumerate}
+\item $x = -2$, $\Var(X) = 3.1 - 0.49 = 2.61$
+\item $c = 3/16$, $\P(X > 1) = 13/16$, $\E(X) = 0$, $\E(1 / (X^3 + 10)) = \frac{3}{8} \ln(3)$,
+$F(x)=\begin{cases}
+0, \, x<-2 \\
+\frac{x^3+8}{16}, \, x\in [-2;2] \\
+1, \, x>2
+\end{cases}$
+\item $\P(X = 3 \cap Y = 5) = 2/36$, $\E(X) = 91/36$, $\Var(X) \approx 2.1$,
+заметим, что $X + Y = R_1 + R_2$, поэтому $\E(X) + \E(Y) = 7$, и $\E(3X - 2Y) =
+3\E(X) - 2\E(Y) = 3\E(X) - 2(7 - \E(X)) = 5\E(X) - 14$
+\item $\P(X > 3) = 61/1024$, $\Var(X) = 15/16$, $\Cov(X, Y) = \Cov(X, 5 - X) =
+-\Cov(X, X) = -15/16$, $\Corr(X, Z) = \Corr(X, 2X - 5) = 1$
+\end{enumerate}
