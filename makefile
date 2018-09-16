@@ -26,7 +26,7 @@ pdf_from_R_files = $(r_plots_files:.R=.pdf)
 # add folder before each file
 pdf_full_from_R_files = $(addprefix $(auto_tikz_folder)/, $(pdf_from_R_files))
 
-all: $(r_done_files) $(file_name).pdf
+all: $(r_done_files) $(file_name).pdf excerpt_minima.pdf excerpt_exam_questions.pdf
 
 # to build "all" target we need updated .Rdone files for each R script and main pdf file
 # to build main pdf file we need: main tex file, chapters tex files, pdf files of plots
@@ -37,6 +37,33 @@ all: $(r_done_files) $(file_name).pdf
 # 1. all R sripts will be run and png and tex plot files will be produced and .Rdone will be touched
 # 2. all tex plots will be transformed to small pdfs
 # 3. main tex file will be proceeded
+
+excerpt_minima.pdf: excerpt_minima.tex chapters/*.tex 
+	# protection against biber error
+	# http://tex.stackexchange.com/questions/140814/
+	rm -rf `biber --cache`
+
+	# create pdf
+	# will automatically run pdflatex/biber if necessary
+	latexmk -xelatex -latexoption=-shell-escape excerpt_minima.tex
+
+	# clean
+	latexmk -c excerpt_minima.tex
+
+
+excerpt_exam_questions.pdf: excerpt_exam_questions.tex chapters/*.tex 
+	# protection against biber error
+	# http://tex.stackexchange.com/questions/140814/
+	rm -rf `biber --cache`
+
+	# create pdf
+	# will automatically run pdflatex/biber if necessary
+	latexmk -xelatex -latexoption=-shell-escape excerpt_exam_questions.tex
+
+	# clean
+	latexmk -c excerpt_exam_questions.tex
+
+
 
 
 $(file_name).pdf: $(file_name).tex chapters/*.tex $(pdf_full_from_R_files)

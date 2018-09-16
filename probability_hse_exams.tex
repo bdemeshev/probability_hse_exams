@@ -59,8 +59,6 @@ left=16.5mm, right=13.5mm, includefoot]{geometry}
 % ]{automultiplechoice}
 
 
-\usepackage{multicol}
-
 \usepackage[colorlinks, hyperindex, unicode, breaklinks]{hyperref} % гиперссылки в pdf
 
 \usepackage{amssymb}
@@ -70,6 +68,7 @@ left=16.5mm, right=13.5mm, includefoot]{geometry}
 \usepackage{bm}
 \usepackage{color}
 
+\usepackage{multicol}
 \usepackage{multirow} % Слияние строк в таблице
 
 \usepackage{textcomp}  % Чтобы в формулах можно было русские буквы писать через \text{}
@@ -83,7 +82,7 @@ left=16.5mm, right=13.5mm, includefoot]{geometry}
 \usetikzlibrary{arrows} % прибамбас в нем для рисовки стрелочек подлиннее
 \usepackage{tikz-qtree} % прибамбас в нем для рисовки деревьев
 
-\usepackage{enumitem}
+\usepackage{enumitem} % развернутые списки
 
 % свешиваем пунктуацию (т.е. знаки пунктуации могут вылезать за правую границу текста, при этом текст выглядит ровнее)
 \usepackage{microtype}
@@ -104,6 +103,10 @@ left=16.5mm, right=13.5mm, includefoot]{geometry}
 \usepackage{titleps} % заголовки страниц
 
 
+\usepackage{ifthen} % для написания условий
+
+\newboolean{excerpt}
+\setboolean{excerpt}{false} % мы компилируем большой документ
 
 
 
@@ -301,6 +304,7 @@ left=16.5mm, right=13.5mm, includefoot]{geometry}
 % добавляется префикс sol_ в файле с решениями
 
 \input{chapters/minima.tex}
+\input{chapters/exam_questions.tex}
 \input{chapters/kr_01.tex}
 \input{chapters/kr_01_ip.tex}
 \input{chapters/kr_02.tex}
