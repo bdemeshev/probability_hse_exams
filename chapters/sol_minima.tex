@@ -145,8 +145,8 @@
 \item
 \begin{tabular}{lrr}
 \toprule
-$X$ & $-1$  & $1$   \\ \midrule
-$\P(\cdot)$ & $0.5$ & $0.5$ \\ \bottomrule
+$x$ & $-1$  & $1$   \\ \midrule
+$\P(X=x)$ & $0.5$ & $0.5$ \\ \bottomrule
 \end{tabular}
 \item  $F_{X}(x) = \begin{cases}
 0, & \text{при } x < -1 \\
@@ -164,8 +164,8 @@ $\P(\cdot)$ & $0.5$ & $0.5$ \\ \bottomrule
 \item
 \begin{tabular}{lrrr}
 \toprule
-$Y$ & $-1$  & $0$   & $1$   \\ \midrule
-$\P(\cdot)$ & $0.4$ & $0.2$ & $0.4$ \\ \bottomrule
+$y$ & $-1$  & $0$   & $1$   \\ \midrule
+$\P(Y=y)$ & $0.4$ & $0.2$ & $0.4$ \\ \bottomrule
 \end{tabular}
 \item   $F_{Y}(y) = \begin{cases}
 0, & \text{при } y < -1 \\
@@ -207,11 +207,12 @@ $\P(\cdot)$ & $0.4$ & $0.2$ & $0.4$ \\ \bottomrule
 \begin{enumerate}
 \item $0.25$
 \item $0.2$
-\item
+\item Обозначим $A = \{X = -1\}$
+
 \begin{tabular}{lrrr}
 \toprule
-$Y$ | $\{X = -1\}$ & $-1$  & $0$   & $1$   \\ \midrule
-$\P(\cdot)$              & $0.4$ & $0.2$ & $0.4$ \\ \bottomrule
+$y$           & $-1$  & $0$   & $1$   \\ \midrule
+$\P(Y=y|A)$   & $0.4$ & $0.2$ & $0.4$ \\ \bottomrule
 \end{tabular}
 \item $0$
 \item $0.8 $
@@ -220,11 +221,11 @@ $\P(\cdot)$              & $0.4$ & $0.2$ & $0.4$ \\ \bottomrule
 \begin{enumerate}
 \item $0.5$
 \item $0.2$
-\item
+\item Обозначим $A = \{X = 1\}$
 \begin{tabular}{lrrr}
 \toprule
-$Y$ | $\{X = 1\}$ & $-1$  & $0$   & $1$   \\ \midrule
-$\P(\cdot)$             & $0.4$ & $0.2$ & $0.4$ \\ \bottomrule
+$y$ & $-1$  & $0$   & $1$   \\ \midrule
+$\P(Y=y|A)$             & $0.4$ & $0.2$ & $0.4$ \\ \bottomrule
 \end{tabular}
 \item $0$
 \item $0.8$
