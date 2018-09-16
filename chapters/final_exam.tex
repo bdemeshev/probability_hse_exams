@@ -1,6 +1,11 @@
 \section{Финальные экзамены}
 
 % [1][3] 1 = one argument, 3 = value if missing
+% эта магия создаёт окружение answerlist
+% именно в окружении answerlist записаны варианты ответов в подключаемых exerciseXX
+% просто \begin{answerlist} сделает ответы в три столбца
+% если ответы длинные, то надо в них руками сделать
+% \begin{answerlist}[1] чтобы они шли в один столбец
 \newenvironment{answerlist}[1][3]{
 \begin{multicols}{#1}
 \begin{enumerate}[label=\fbox{\emph{\Alph*}},ref=\emph{\alph*}]
@@ -21,33 +26,33 @@
 \label{sec:final_exam_2017_2018}
 
 
-\input{tests/final_2017_2018/exercise01}
-\input{tests/final_2017_2018/exercise02}
-\input{tests/final_2017_2018/exercise03}
-\input{tests/final_2017_2018/exercise04}
-\input{tests/final_2017_2018/exercise05}
-\input{tests/final_2017_2018/exercise06}
-\input{tests/final_2017_2018/exercise07}
-\input{tests/final_2017_2018/exercise08}
-\input{tests/final_2017_2018/exercise09}
-\input{tests/final_2017_2018/exercise10}
-\input{tests/final_2017_2018/exercise11}
-\input{tests/final_2017_2018/exercise12}
-\input{tests/final_2017_2018/exercise13}
-\input{tests/final_2017_2018/exercise14}
-\input{tests/final_2017_2018/exercise15}
-\input{tests/final_2017_2018/exercise16}
-\input{tests/final_2017_2018/exercise17}
-\input{tests/final_2017_2018/exercise18}
-\input{tests/final_2017_2018/exercise19}
-\input{tests/final_2017_2018/exercise20}
-\input{tests/final_2017_2018/exercise21}
-\input{tests/final_2017_2018/exercise22}
-\input{tests/final_2017_2018/exercise23}
-\input{tests/final_2017_2018/exercise24}
-\input{tests/final_2017_2018/exercise25}
-\input{tests/final_2017_2018/exercise26}
-\input{tests/final_2017_2018/exercise27}
-\input{tests/final_2017_2018/exercise28}
-\input{tests/final_2017_2018/exercise29}
-\input{tests/final_2017_2018/exercise30}
+\input{tests/2017_2018/final/tex/exercise01}
+\input{tests/2017_2018/final/tex/exercise02}
+\input{tests/2017_2018/final/tex/exercise03}
+\input{tests/2017_2018/final/tex/exercise04}
+\input{tests/2017_2018/final/tex/exercise05}
+\input{tests/2017_2018/final/tex/exercise06}
+\input{tests/2017_2018/final/tex/exercise07}
+\input{tests/2017_2018/final/tex/exercise08}
+\input{tests/2017_2018/final/tex/exercise09}
+\input{tests/2017_2018/final/tex/exercise10}
+\input{tests/2017_2018/final/tex/exercise11}
+\input{tests/2017_2018/final/tex/exercise12}
+\input{tests/2017_2018/final/tex/exercise13}
+\input{tests/2017_2018/final/tex/exercise14}
+\input{tests/2017_2018/final/tex/exercise15}
+\input{tests/2017_2018/final/tex/exercise16}
+\input{tests/2017_2018/final/tex/exercise17}
+\input{tests/2017_2018/final/tex/exercise18}
+\input{tests/2017_2018/final/tex/exercise19}
+\input{tests/2017_2018/final/tex/exercise20}
+\input{tests/2017_2018/final/tex/exercise21}
+\input{tests/2017_2018/final/tex/exercise22}
+\input{tests/2017_2018/final/tex/exercise23}
+\input{tests/2017_2018/final/tex/exercise24}
+\input{tests/2017_2018/final/tex/exercise25}
+\input{tests/2017_2018/final/tex/exercise26}
+\input{tests/2017_2018/final/tex/exercise27}
+\input{tests/2017_2018/final/tex/exercise28}
+\input{tests/2017_2018/final/tex/exercise29}
+\input{tests/2017_2018/final/tex/exercise30}
