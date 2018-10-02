@@ -1,4 +1,4 @@
-\documentclass[12pt, a4paper]{article}
+\documentclass[11pt, a4paper]{article}
 
 \usepackage{fontspec}
 \usepackage{polyglossia}
@@ -18,10 +18,14 @@
 
 \usepackage{etoolbox} % to use ifdef, must be after babel
 
+\newtoggle{excerpt} % помечаем, что это не отрывок, а далее в тексте может использовать
+\togglefalse{excerpt}
+
+
 \usepackage[paper=a4paper,
-top=20mm,
+top=15mm,
 bottom=13.5mm,
-left=16.5mm, right=13.5mm, includefoot]{geometry}
+left=13mm, right=13mm, includefoot]{geometry}
 
 \usepackage{etex} % расширение классического tex
 % в частности позволяет подгружать гораздо больше пакетов, чем мы и займёмся далее

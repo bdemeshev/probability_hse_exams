@@ -1,5 +1,10 @@
 \documentclass[12pt]{article}
 
+\usepackage{etoolbox} % для условия if-else
+\newtoggle{excerpt} % помечаем, что это отрывок, а далее в тексте может использовать
+\toggletrue{excerpt}
+% команду \iftoggle{excerpt}{yes}{no}
+
 \usepackage{tikz} % картинки в tikz
 \usepackage{microtype} % свешивание пунктуации
 
