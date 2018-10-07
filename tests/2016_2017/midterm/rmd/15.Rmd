@@ -1,0 +1,32 @@
+Question
+========
+  Если $\Corr(X, Y)= 0.5$ и $\Var(X)=\Var(Y)$, то $\Corr(X + Y, 2Y - 7)$ равна
+  
+
+Answerlist
+----------
+*  $\sqrt3/2$
+*  $\sqrt2/3$
+*  $1$
+*  $0$
+*  $1/2$
+*  $\sqrt3/3$
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 15
+extype: schoice
+exsolution: 100000
+exshuffle: 5

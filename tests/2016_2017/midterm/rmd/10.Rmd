@@ -1,0 +1,45 @@
+Question
+========
+Функцией плотности случайной величины может являться функция
+  
+
+Answerlist
+----------
+*  $ f(x) = \begincases
+            \frac1
+*  $ f(x) = \begincases
+     				x - 1, x \in [0,1+\sqrt3] \\
+     				0,\text иначе
+ 				\endcases  $
+
+*  $ f(x) = \begincases
+     			  x^2, x \in [0,2] \\
+     				0,\text иначе
+ 				\endcases  $
+
+
+
+*  $ f(x) = \begincases
+     				-1, x \in [-1, 0] \\
+     				0,\text иначе
+ 				\endcases  $
+
+*  $ f(x) = \frac1
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 10
+extype: schoice
+exsolution: 10000
+exshuffle: 5

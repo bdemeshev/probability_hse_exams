@@ -1,0 +1,30 @@
+Question
+========
+  Известно, что $\xi \sim U[0;\,1]$. Вероятность $\P(0.2<\xi<0.7)$ равна
+  
+
+Answerlist
+----------
+*  $1/2$
+*  $\int_0.2^0.7\frac1
+*  $\int_0^1\frac1
+*  $1/4$
+*  $0.17$
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 16
+extype: schoice
+exsolution: 10000
+exshuffle: 5

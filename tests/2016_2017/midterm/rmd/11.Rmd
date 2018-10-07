@@ -1,0 +1,30 @@
+Question
+========
+  Известно, что $\E(X)=3$, $\E(Y)=2$, $\Var(X)=12$, $\Var(Y)=1$, $\Cov(X,Y)=2$. Ожидание $\E(XY)$ равно
+  
+
+Answerlist
+----------
+*  8
+*  6
+*  0
+*  2
+*  5
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 11
+extype: schoice
+exsolution: 10000
+exshuffle: 5
