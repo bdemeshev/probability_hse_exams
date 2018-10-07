@@ -1,0 +1,43 @@
+Question
+========
+Функция распределения случайной величины $X$ имеет вид
+\[
+F(x)=\begin{cases}
+0, \; \text{ если } x<0 \\
+cx^2, \; \text{ если } x\in [0;1] \\
+1, \; \text{ если } x>1
+\end{cases}
+\]
+
+\vspace{0.5cm} 
+ 
+ 
+Константа $c$ равна
+ 
+
+Answerlist
+----------
+*  $1$
+*  $0.5$
+*  $1.5$
+*  $2$
+*  $2/3$
+
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 17
+extype: schoice
+exsolution: 10000
+exshuffle: 5

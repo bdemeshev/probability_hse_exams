@@ -1,0 +1,36 @@
+Question
+========
+Известно, что $\E(X)=1$, $\Var(X)=1$, $\E(Y)=4$, $\Var(Y)=9$, $\Cov(X,Y)=-3$
+
+\vspace{0.5cm} 
+ 
+ 
+Ковариация $\Cov(2X-Y,X+3Y)$ равна
+ 
+
+Answerlist
+----------
+*  $-40$
+*  $-18$
+*  $22$
+*  $40$
+*  $18$
+
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 24
+extype: schoice
+exsolution: 10000
+exshuffle: 5

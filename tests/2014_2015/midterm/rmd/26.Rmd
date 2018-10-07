@@ -1,0 +1,32 @@
+Question
+========
+Пусть случайные величины $X$ и $Y$ — независимы, тогда \textbf{НЕ ВЕРНЫМ} является утверждение
+ 
+
+Answerlist
+----------
+*  $\Var(X-Y)<\Var(X)+\Var(Y)$ 
+*  $\Cov(X,Y) = 0$
+*  $\E(XY)=\E(X)\E(Y)$
+*  $\E(X|Y)=\E(X)$
+*  $\P(X<a, Y<b)=\P(X<a)\P(Y<b)$
+*  $\P(X<a | Y<b)=\P(X<a)$
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 26
+extype: schoice
+exsolution: 100000
+exshuffle: 5
