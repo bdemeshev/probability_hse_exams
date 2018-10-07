@@ -1,0 +1,30 @@
+Question
+========
+Величины $Z_1$, $Z_2$, \ldots, $Z_n$ независимы и нормальны $N(0,1)$. Случайная величина $\frac{Z_1\sqrt{n-3}}{\sqrt{\sum_{i=4}^n Z_i^2}}$ имеет распределение
+ 
+
+Answerlist
+----------
+*  $N(0,1)$
+*  $t_n-3$
+*  $t_n-1$
+*  $F_1,n-2$
+*  $\chi^2_n-4$
+
+Solution
+========
+
+Answerlist
+----------
+*  Неверно
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 36
+extype: schoice
+exsolution: 01000
+exshuffle: 5
