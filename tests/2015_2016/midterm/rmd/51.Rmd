@@ -1,0 +1,30 @@
+Question
+========
+Геродот Геликарнасский проверяет гипотезу $H_0: \; \mu=2$. Лог-функция правдоподобия имеет вид $\ell(\mu,\nu)=-\frac{n}{2}\ln (2\pi)-\frac{n}{2}\ln \nu -\frac{\sum_{i=1}^n(x_i-\mu)^2}{2\nu}$. Оценка максимального правдоподобия для $\nu$ при предположении, что $H_0$ верна, равна
+ 
+
+Answerlist
+----------
+*  $\frac\sum x_i^2 - 4\sum x_i
+*  $\frac\sum x_i^2 - 4\sum x_i
+*  $\frac\sum x_i^2 - 4\sum x_i
+*  $\frac\sum x_i^2 - 4\sum x_i
+*  $\frac\sum x_i^2 - 4\sum x_i
+
+Solution
+========
+
+Answerlist
+----------
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+*  Отлично
+
+Meta-information
+================
+exname: 51
+extype: schoice
+exsolution: 00001
+exshuffle: 5
