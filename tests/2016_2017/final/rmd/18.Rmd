@@ -1,0 +1,29 @@
+Question
+========
+  Величины $X_1$, $X_2$, \ldots, $X_n$ представляют собой случайную выборку из $\cN(\mu; \sigma^2)$. Вася оценивает оба параметра с помощью максимального правдоподобия. При этом
+
+Answerlist
+----------
+*  $\E(\hat \mu)=\mu$, $\E(\hat\sigma^2) < \sigma^2$
+*  $\E(\hat \mu)=\mu$, $\E(\hat\sigma^2) = \sigma^2$
+*  $\E(\hat \mu)=\mu$, $\E(\hat\sigma^2) > \sigma^2$
+*  $\E(\hat \mu)>\mu$, $\E(\hat\sigma^2) = \sigma^2$
+*  $\E(\hat \mu)<\mu$, $\E(\hat\sigma^2) = \sigma^2$
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 18
+extype: schoice
+exsolution: 10000
+exshuffle: 5
