@@ -1,0 +1,29 @@
+Question
+========
+  Величины $X_1$, $X_2$, \ldots, $X_{2016}$ независимы и одинаково распределены, $\cN(\mu ; 42)$. Оказалось, что $\bar X =  -23$. Про оценки метода моментов, $\hat \mu_{MM}$, и метода максимального правдоподобия, $\hat \mu_{ML}$, можно утверждать, что
+
+Answerlist
+----------
+*  $\hat \mu_ML = -23$, $\hat\mu_MM = -23$
+*  $\hat \mu_ML > -23$, $\hat\mu_MM = -23$
+*  $\hat \mu_ML = -23$, $\hat\mu_MM > -23$
+*  $\hat \mu_ML < -23$, $\hat\mu_MM = -23$
+*  $\hat \mu_ML = -23$, $\hat\mu_MM < -23$
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 34
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,43 @@
+Question
+========
+    Случайные величины $X_1$, $X_2$ и $X_3$ независимы и одинаково распределены,
+
+\begin{center}
+    \begin{tabular}{lrr} \toprule
+    $X_i$ & 3 & 5 \\
+    \midrule
+    $\P(\cdot)$ & $p$ & $1-p$ \\
+    \bottomrule
+    \end{tabular}
+\end{center}
+
+    По выборке оказалось, что $\bar X = 4.5$. Оценка неизвестного $p$, полученная методом моментов, равна:
+
+
+    
+
+Answerlist
+----------
+*  $1/4$
+*  $1/2$
+*  $1/3$
+*  $2/3$
+*  Метод неприменим
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 33
+extype: schoice
+exsolution: 10000
+exshuffle: 5

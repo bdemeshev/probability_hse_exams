@@ -1,0 +1,28 @@
+Question
+========
+Для выборки $X_1,\ldots,X_n$, имеющей нормальное распределение, проверяется гипотеза $H_0: \sigma^2=\sigma_0^2$ против $H_a: \sigma^2 < \sigma_0^2$. Критическая область имеет вид
+
+
+Answerlist
+----------
+*  $(0,A)$, где $A$ таково, что $F_\chi^2_n-1 (A) =\alpha$
+*  $(0,A)$, где $A$ таково, что $F_\chi^2_n-1 (A) =1-\alpha$
+*  $(-\infty,A)$, где $A$ таково, что $F_\chi^2_n-1 (A) =\alpha$
+*  $(A,+\infty)$, где $A$ таково, что $F_\chi^2_n-1 (A) =1-\alpha$
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 12
+extype: schoice
+exsolution: 1000
+exshuffle: 5

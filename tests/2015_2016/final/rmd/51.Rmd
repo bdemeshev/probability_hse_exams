@@ -1,0 +1,30 @@
+Question
+========
+Пусть $X = (X_1, \ldots , X_n)$ — случайная выборка и $\ell(\theta) = \ell(X_1, ... , X_n; \theta)$ — логарифмическая функция правдоподобия. Тогда информация Фишера $I_n(\theta)$ равна
+  
+
+Answerlist
+----------
+*  $\E \left( \left( \frac\partial \ell (\theta)
+*  $\E \left( \frac\partial \ell (\theta)
+*  $- \E \left( \frac\partial \ell (\theta)
+*  $ \E \left( \frac\partial^2 \ell (\theta)
+*  $- \E \left( \frac\partial \ell (\theta)
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 51
+extype: schoice
+exsolution: 10000
+exshuffle: 5

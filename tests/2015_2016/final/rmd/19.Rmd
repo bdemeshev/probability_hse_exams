@@ -1,0 +1,30 @@
+Question
+========
+  Пусть $X_1,\ldots,X_n$ — выборка из нормального распределения с известной дисперсией $\sigma^2$. Пусть $U = \frac{\bar{X}-\mu_0}{\sigma/\sqrt{n}}$. Величина $U^2$ имеет распределение
+  
+
+Answerlist
+----------
+*  $\chi^2_1$
+*  $\chi^2_n-1$
+*  $t_1$
+*  $t_n-1$
+*  $F_1,n-1$
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 19
+extype: schoice
+exsolution: 10000
+exshuffle: 5

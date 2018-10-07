@@ -1,0 +1,30 @@
+Question
+========
+Пусть $X = (X_1, \ldots , X_n)$ — случайная выборка из биномиального распределения $Bi(5, p)$. Известно, что $\P(X = x) =C_n^x p^x(1-p)^{n-x} $. Информация Фишера $I_n(p)$ равна:
+  
+
+Answerlist
+----------
+*  $\frac5n
+*  $\fracp(1-p)
+*  $\frac5p(1-p)
+*  $\fracn
+*  $\fracn
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 40
+extype: schoice
+exsolution: 10000
+exshuffle: 5
