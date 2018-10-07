@@ -1,0 +1,30 @@
+Question
+========
+Случайная величина $\xi$ имеет показательное (экспоненциальное) распределение с параметром $\lambda$. Математическое ожидание $\E[\xi^2]$ равно
+  
+
+Answerlist
+----------
+*   $2/\lambda^2$ 
+*   $1/\lambda$ 
+*   $1/\lambda^2$ 
+*   $\lambda^2$ 
+*   $1/\lambda^2 - 1/ \lambda$ 
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 31
+extype: schoice
+exsolution: 10000
+exshuffle: 5

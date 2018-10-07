@@ -1,0 +1,30 @@
+Question
+========
+  Двумерная функция распределения $F_{X,Y}(x,y)$ может \textbf{НЕ} удовлетворять свойству
+  
+
+Answerlist
+----------
+*  $F_X,Y(x,y)$ не убывает по $x$
+*  $\lim_x,y \to +\infty F_X,Y(x,y) = 1$
+*  $0 \leq F_X,Y(x, y)\leq 1$
+*  функция $F_X,Y(x, y)$ непрерывна
+*  $\lim_y \to +\infty F_X,Y(x,y) = F_X(x)$
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 3
+extype: schoice
+exsolution: 10000
+exshuffle: 5

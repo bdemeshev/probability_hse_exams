@@ -1,0 +1,29 @@
+Question
+========
+Известно, что $\E(X)=-1$, $\E(Y)=2$, $\Var(X)=4$, $\Var(Y)=9$, $\Cov(X,Y)=-3$. Корреляция $\Corr(X+Y, Y)$ равна
+
+Answerlist
+----------
+*   $2/\sqrt7$ 
+*   $-1/\sqrt7 $ 
+*   $-2/\sqrt6$ 
+*   $1/\sqrt6$  
+*   $-3/\sqrt6$ 
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 21
+extype: schoice
+exsolution: 10000
+exshuffle: 5
