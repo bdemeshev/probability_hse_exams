@@ -1,0 +1,30 @@
+Question
+========
+Если $X_i$ независимы, $\E(X_i)=\mu$ и $\Var(X_i)=\sigma^2$, то математическое ожидание величины $Y=\sum_{i=1}^{n}(X_i-\bar{X})^2$ равно
+ 
+
+Answerlist
+----------
+*  $\hat\sigma^2$
+*  $(n-1)\sigma^2$
+*  $\mu$
+*  $\sigma^2$
+*  $\sigma^2/n$
+
+Solution
+========
+
+Answerlist
+----------
+*  Неверно
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 35
+extype: schoice
+exsolution: 01000
+exshuffle: 5

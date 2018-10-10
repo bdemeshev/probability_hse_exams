@@ -1,0 +1,30 @@
+Question
+========
+  Для случайной величины $X \sim \cN(\mu_X, \sigma^2_X)$ вероятность $\P(X - \mu_x > 5\sigma_X)$  примерно равна
+  
+
+Answerlist
+----------
+*  $0$
+*  $1/5$
+*  $0.05$
+*  $0.95$
+*  $0.5$
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 1
+extype: schoice
+exsolution: 10000
+exshuffle: 5

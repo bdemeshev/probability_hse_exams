@@ -1,0 +1,51 @@
+Question
+========
+    Случайный вектор $(\xi, \eta)^T$ имеет нормальное распределение
+    $\cN \left(
+    \begin{pmatrix}
+      0 \\
+      0
+    \end{pmatrix};
+    \begin{pmatrix}
+      1 & 1/2 \\
+      1/2 & 1
+    \end{pmatrix}
+  \right)$. Если случайный вектор $z$ определён как $z=(\xi - 0.5\eta, \eta)^T$, то
+  
+
+Answerlist
+----------
+*  $z$ является двумерным нормальным вектором
+*  $z \sim \cN \left(
+      \beginpmatrix
+        0 \\
+        0
+      \endpmatrix;
+      \beginpmatrix
+        1 & 0 \\
+        0 & 1
+      \endpmatrix
+    \right)$
+*  компоненты вектора $z$ зависимы
+*  компоненты вектора $z$ коррелированы
+*  $\xi - 0.5\eta \sim \cN(0;1)$
+*  $(\xi - 0.5\eta)^2 + 2\eta^2 \sim \chi_2^2$
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 27
+extype: schoice
+exsolution: 100000
+exshuffle: 5

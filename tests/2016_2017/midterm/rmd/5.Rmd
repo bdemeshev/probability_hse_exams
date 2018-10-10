@@ -1,0 +1,30 @@
+Question
+========
+  Если $\P(A)=0.2$, $\P(B)=0.5$, $\P(A | B) = 0.3$, то
+  
+
+Answerlist
+----------
+*  $\P(A \cap B) = 0.15$
+*  $\P(A \cup B) = 0.8$
+*  $\P(A \cap B) = 0.05$
+*  $\P(A \cup B) = 0.7$
+*  $\P(B \cup A) = 0.3$
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 5
+extype: schoice
+exsolution: 10000
+exshuffle: 5

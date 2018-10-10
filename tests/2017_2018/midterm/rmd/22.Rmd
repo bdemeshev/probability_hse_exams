@@ -1,0 +1,29 @@
+Question
+========
+Известно, что $\E(X)=-1$, $\E(Y)=2$, $\Var(X)=4$, $\Var(Y)=9$, $\Cov(X,Y)=-3$. Из условия  $\E(aX+(1-a)Y)=0$ следует, что $a$ равно
+
+Answerlist
+----------
+*   2/3 
+*   1/3 
+*   1/2 
+*   0 
+*   1 
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 22
+extype: schoice
+exsolution: 10000
+exshuffle: 5

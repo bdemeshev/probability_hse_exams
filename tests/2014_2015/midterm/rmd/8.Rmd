@@ -1,0 +1,30 @@
+Question
+========
+Вася бросает 7 правильных игральных кубиков. Вероятность того, что ровно на пяти из кубиков выпадет шестёрка равна
+     
+
+Answerlist
+----------
+*  $525\left(\frac1
+*  $\frac7
+*  $\frac525
+*  $\left(\frac1
+*  $\left(\frac1
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 8
+extype: schoice
+exsolution: 10000
+exshuffle: 5

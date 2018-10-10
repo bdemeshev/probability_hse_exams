@@ -1,0 +1,29 @@
+Question
+========
+  Пусть $\hat{\theta}$ — несмещенная оценка для неизвестного параметра $\theta$, а также выполнены условия регулярности. Неравенство Крамера-Рао представимо в виде
+
+Answerlist
+----------
+*  $I_n^-1(\theta) \leq \Var(\hat\theta)$
+*  $\Var(\hat\theta) \cdot I_n(\theta) > 1$
+*  $\Var(\hat\theta) \cdot I_n(\theta) \leq 1$
+*  $\Var(\hat\theta) \leq I_n(\theta)$
+*  $I_n(\theta) \leq \Var(\hat\theta)$
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 25
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,29 @@
+Question
+========
+Случайная величина $\xi$ имеет стандартное нормальное распределение. Вероятность $\P(\{\xi \in [-1; \, 2]\})$ равна
+
+Answerlist
+----------
+*   $\int_-1^2\tfrac1
+*   $\int_-1^2\tfrac1
+*   $\int_-1^2\tfrac1
+*   $\int_-1^2\tfrac1
+*   $\int_-1^2\tfrac1
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 32
+extype: schoice
+exsolution: 10000
+exshuffle: 5

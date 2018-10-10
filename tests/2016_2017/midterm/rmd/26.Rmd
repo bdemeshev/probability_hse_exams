@@ -1,0 +1,41 @@
+Question
+========
+  Случайный вектор $(\xi, \eta)^T$ имеет нормальное распределение
+  $\cN \left(
+  \begin{pmatrix}
+    0 \\
+    0
+  \end{pmatrix};
+  \begin{pmatrix}
+    1 & 1/2 \\
+    1/2 & 1
+  \end{pmatrix}
+\right)$ и функцию плотности $f_{\xi, \eta}(x, y) = \frac{1}{2\pi a} \exp\left(-\frac{1}{2a^2}(x^2-bxy+y^2) \right)$. При этом
+
+  
+
+Answerlist
+----------
+*  $a=\sqrt3/2$, $b=1$
+*  $a=1$, $b=1$
+*  $a=\sqrt3/4$, $b=0$
+*  $a=1/2$, $b=1$
+*  $a=1$, $b=0$
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 26
+extype: schoice
+exsolution: 10000
+exshuffle: 5

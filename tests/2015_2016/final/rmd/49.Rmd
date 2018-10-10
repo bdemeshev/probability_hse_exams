@@ -1,0 +1,30 @@
+Question
+========
+Пусть $X = (X_1, \ldots , X_n)$ — случайная выборка и $I_n(\theta)$ — информация Фишера. Тогда несмещённая оценка $\hat{\theta}$ называется эффективной, если
+  
+
+Answerlist
+----------
+*  $\Var(\hat\theta) \cdot I_n (\theta) = 1$
+*  $I^-1_n (\theta) \leq \Var(\hat\theta)$
+*  $I^-1_n (\theta) \geq \Var(\hat\theta)$
+*  $\Var(\hat\theta) = I_n (\theta)$
+*  $\Var(\hat\theta) \leq I_n (\theta)$
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 49
+extype: schoice
+exsolution: 10000
+exshuffle: 5

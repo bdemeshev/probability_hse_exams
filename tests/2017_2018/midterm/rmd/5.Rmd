@@ -1,0 +1,30 @@
+Question
+========
+  Ковариационной матрицей может являться матрица
+  
+
+Answerlist
+----------
+*  $\beginpmatrix 9 & 7 \\ 7 & 6 \\ \endpmatrix$
+*  $\beginpmatrix 1 & 2 \\ 1 & 2 \\ \endpmatrix$
+*  $\beginpmatrix -1 & 2 \\ 2 & 10 \\ \endpmatrix$
+*  $\beginpmatrix 1 & 2 \\ 2 & 1 \\ \endpmatrix$
+*  $\beginpmatrix 1 & 4 \\ 4 & 9 \\ \endpmatrix$
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 5
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,30 @@
+Question
+========
+  Известно, что $\E(X)=3$, $\E(Y)=2$, $\Var(X)=12$, $\Var(Y)=1$, $\Cov(X,Y)=2$. Дисперсия $\Var(2X-Y+4)$ равна
+  
+
+Answerlist
+----------
+*  41
+*  49
+*  53
+*  57
+*  45
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 13
+extype: schoice
+exsolution: 10000
+exshuffle: 5

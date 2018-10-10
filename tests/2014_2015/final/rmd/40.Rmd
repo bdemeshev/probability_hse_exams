@@ -1,0 +1,30 @@
+Question
+========
+Функция правдоподобия, построенная по случайной выборке $X_1$, \ldots, $X_n$ из распределения с функцией плотности $f(x)=(\theta+1)x^{\theta}$ при $x\in [0;1]$ имеет вид
+ 
+
+Answerlist
+----------
+*  $(\theta+1)x^n\theta$
+*  $\sum (\theta+1)x_i^\theta$
+*  $(\theta+1)^\sum x_i$
+*  $(\sum x_i)^\theta$
+*  $(\theta+1)^n\prod x_i^\theta$
+
+Solution
+========
+
+Answerlist
+----------
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+*  Отлично
+
+Meta-information
+================
+exname: 40
+extype: schoice
+exsolution: 00001
+exshuffle: 5

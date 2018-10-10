@@ -1,0 +1,30 @@
+Question
+========
+Случайная величина $\xi$ имеет распределение Пуассона с параметром $\lambda$. Математическое ожидание $\E[\xi^2]$ равно
+  
+
+Answerlist
+----------
+*  $\lambda(\lambda+1)$
+*  $\lambda^2$
+*  $\lambda(1 - \lambda)$
+*  $e^-\lambda$
+*  $\lambda$
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 27
+extype: schoice
+exsolution: 10000
+exshuffle: 5

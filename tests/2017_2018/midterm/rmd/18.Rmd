@@ -1,0 +1,31 @@
+Question
+========
+Известно, что $\E(X)=-1$, $\E(Y)=2$, $\Var(X)=4$, $\Var(Y)=9$, $\Cov(X,Y)=-3$. Ожидание $\E((X-1)Y)$ равно
+
+  
+
+Answerlist
+----------
+*  $-7$
+*  $-8$
+*  $-9$
+*  $-6$
+*  $-5$
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 18
+extype: schoice
+exsolution: 10000
+exshuffle: 5

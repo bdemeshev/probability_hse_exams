@@ -1,0 +1,42 @@
+Question
+========
+Совместная функция плотности пары $X$ и $Y$ имеет вид
+\[
+f(x,y)=\begin{cases}
+cx^2y^2, \; \text{ если } x\in[0;1], y\in [0;1] \\
+0, \; \text{ иначе}
+\end{cases}
+\]
+
+\vspace{0.5cm} 
+ 
+ 
+Математическое ожидание $\E(X/Y)$ равно
+ 
+
+Answerlist
+----------
+*  $9/8$
+*  $3$
+*  $1$
+*  $1/2$
+*  $2$
+
+
+Solution
+========
+
+Answerlist
+----------
+*  Отлично
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 23
+extype: schoice
+exsolution: 10000
+exshuffle: 5

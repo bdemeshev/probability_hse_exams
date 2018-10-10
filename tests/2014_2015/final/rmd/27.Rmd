@@ -1,0 +1,30 @@
+Question
+========
+Вероятность ошибки первого рода, $\alpha$, и вероятность ошибки второго рода, $\beta$, всегда связаны соотношением
+ 
+
+Answerlist
+----------
+*  $\alpha+\beta=1$
+*  $\alpha+\beta \leq 1$
+*  $\alpha+\beta \geq 1$
+*  $\alpha\leq \beta $
+*  $\alpha\geq \beta $
+
+Solution
+========
+
+Answerlist
+----------
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 27
+extype: schoice
+exsolution: 00000
+exshuffle: 5

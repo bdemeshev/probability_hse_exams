@@ -1,0 +1,30 @@
+Question
+========
+Последовательность оценок $\hat{\theta}_1$, $\hat{\theta}_2$, \ldots называется состоятельной, если
+ 
+
+Answerlist
+----------
+*  $\E(\hat\theta_n)=\theta$
+*  $\Var(\hat\theta_n)\to 0$
+*  $\P(|\hat\theta_n - \theta |>t)\to 0$ для всех $t>0$
+*  $\E(\hat\theta_n)\to \theta$
+*  $\Var(\hat\theta_n)\geq \Var(\hat\theta_n+1)$
+
+Solution
+========
+
+Answerlist
+----------
+*  Неверно
+*  Неверно
+*  Отлично
+*  Неверно
+*  Неверно
+
+Meta-information
+================
+exname: 39
+extype: schoice
+exsolution: 00100
+exshuffle: 5
