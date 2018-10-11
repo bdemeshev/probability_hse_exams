@@ -1,0 +1,38 @@
+Question
+========
+В алгоритме Метрополиса-Гастингса был предложен переход из точки $\theta^{(0)}=5$ в точку $\theta^{(1)}_{prop}=4$.
+Априорное распределение $\theta$ равномерное. Известны значения функций правдоподобия, $f(data|\theta=4)=0.7$, $f(data|\theta=5)=0.8$.
+Вероятность одобрения перехода равна
+
+Answerlist
+----------
+* $7/8$
+* $4/5$
+* $1$
+* $28/40$
+* $0.8/5$
+
+Solution
+========
+
+$$
+\alpha(x \to y) = \begin{cases}
+1, \text{ если } f(y|data) > f(x|data) \\
+f(y|data) / f(x|data), \text{ если } f(y|data) < f(x|data) \\
+\end{cases}
+$$
+
+Answerlist
+----------
+* Отлично
+* Неверно
+* Не угадал
+* Неверно
+* Тоже ересь
+
+Meta-information
+================
+exname: mh_one_step
+extype: schoice
+exsolution: 10000
+exshuffle: 5

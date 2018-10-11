@@ -1,0 +1,32 @@
+Question
+========
+
+Оценка $\hat a$ параметра $a$ является несмещённой, если
+
+Answerlist
+----------
+
+* $\E(\hat a - a) = 0$
+* $\E((\hat a - a)^2)=0$
+* $\Var(\hat a) = a$
+* $\Var(\hat a) = 0$ 
+* $\lim \E(\hat a) = a$
+
+
+Solution
+========
+
+Answerlist
+----------
+* Ураа!!!
+* Не угадал
+* Неверно
+* Тоже ересь
+* Не туда!
+
+Meta-information
+================
+exname: unbiased_estimator
+extype: schoice
+exsolution: 10000
+exshuffle: 5

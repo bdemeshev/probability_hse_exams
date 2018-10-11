@@ -1,0 +1,30 @@
+Question
+========
+Оценка $\hat a$ называется эффективной оценкой параметра $a$ в классе оценок $K$, если
+
+Answerlist
+----------
+* $\E((\hat a - a)^2) \leq \E((\tilde a - a)^2)$ для всех $\tilde a \in K$
+* $\E((\hat a - a)^2) \geq \E((\tilde a - a)^2)$ для всех $\tilde a \in K$
+* $\E((\hat a - \tilde a)^2) \leq \E((\tilde a - a)^2)$ для всех $\tilde a \in K$
+* $\E((\hat a - \tilde a)^2) \geq \E((\tilde a - a)^2)$ для всех $\tilde a \in K$
+* $\E(\hat a^2) \geq \E(\tilde a ^2)$ для всех $\tilde a \in K$
+
+Solution
+========
+
+Answerlist
+----------
+* Отлично
+* Неверно
+* Не угадал
+* Неверно
+* Тоже ересь
+
+
+Meta-information
+================
+exname: efficient
+extype: schoice
+exsolution: 10000
+exshuffle: 5

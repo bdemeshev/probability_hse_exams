@@ -1,0 +1,32 @@
+Question
+========
+
+Величины $X_1$, $X_2$, \ldots, $X_n$ имеют нормальное распределение $\cN(\theta, 7)$. Оценка $\bar X - \frac{X_1}{n}$ является
+
+Answerlist
+----------
+
+* состоятельной
+* несмещённой
+* оптимальной
+* эффективной
+* экспоненциальной
+
+
+Solution
+========
+
+Answerlist
+----------
+* Ураа!!!
+* Не угадал
+* Неверно
+* Тоже ересь
+* Не туда!
+
+Meta-information
+================
+exname: unbiased_estimator
+extype: schoice
+exsolution: 10000
+exshuffle: 5
