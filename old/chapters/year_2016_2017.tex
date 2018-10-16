@@ -127,7 +127,7 @@ $\P (A_i) = \frac{1}{10^6}, i = 1, \ldots, N$;
 \P(B_N) \leq \frac{1}{10^2}
 \]
 \begin{multline*}
-\P(B_N) = \P\left(\cup_{i=1}^n A_i\right) = 1 - \P (\left(\cup_{i=1}^n A_i\right)^c)  \stackrel{\text{ф-ла де Моргана}}{=} 1 - \P \left(\cup_{i=1}^N A_i^c\right) \stackrel{A_1, \ldots, A_N \text{– независ.}}{=} \\
+\P(B_N) = \P\left(\cup_{i=1}^n A_i\right) = 1 - \P (\left(\cup_{i=1}^n A_i\right)^c)  \stackrel{\text{ф-ла де Моргана}}{=} 1 - \P \left(\cap_{i=1}^N A_i^c\right) \stackrel{A_1, \ldots, A_N \text{– независ.}}{=} \\
 = 1 - \P(A_1^c) \cdot \ldots \cdot \P(A_N^c) = 1 - \left(1-\frac{1}{10^6}\right)^N
 \end{multline*}
 Итак, требуется найти такое максимальное $N \in \mathbb{N}$, при котором

@@ -161,7 +161,7 @@ $\P(A) \cdot \P (B) = 3/4 \cdot 3/4$.
 
 \begin{align*}
 \P(B_N) &= \P\left(\cup_{i=1}^n A_i\right) = 1 - \P (\left(\cup_{i=1}^n A_i\right)^c) \\
-&\stackrel{\text{ф-ла де Моргана}}{=} 1 - \P \left(\cup_{i=1}^N A_i^c\right) \stackrel{A_1, \ldots, A_N \text{– независ.}}{=} 1 - \P(A_1^c) \cdot \ldots \cdot \P(A_N^c) \\
+&\stackrel{\text{ф-ла де Моргана}}{=} 1 - \P \left(\cap_{i=1}^N A_i^c\right) \stackrel{A_1, \ldots, A_N \text{– независ.}}{=} 1 - \P(A_1^c) \cdot \ldots \cdot \P(A_N^c) \\
 &= 1 - \left(1-\frac{1}{10^6}\right)^N
 \end{align*}
 Чтобы найти такое максимальное $N \in \mathbb{N}$, надо решить следующее неравенство
