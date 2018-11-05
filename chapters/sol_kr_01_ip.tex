@@ -5,9 +5,9 @@
 \label{sec:sol_kr_01_ip_2018_2019}
 
 \begin{enumerate}
-\item Воспользуемся методом первого шага. Пусть средняя длительность игры равна $m$. Дерево вероятностей выглядит так:
+\item Воспользуемся методом первого шага. Пусть средняя длительность игры равна $m$. Дерево игры выглядит так (в конечных вершинах -- длительность):
 \begin{center}
-\begin{tikzpicture} \node (y) {$m$} child {node (x) {$m+1$} edge from parent node[left] {НР}} child {
+\begin{tikzpicture} \node (y) {} child {node (x) {$m+1$} edge from parent node[left] {НР}} child {
  child {
  child {
 node (z) {$m+3$} edge from parent 
