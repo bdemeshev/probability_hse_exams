@@ -6,4 +6,5 @@ chapters/.DS_Store
 *.fdb_latexmk
 *.fls
 *.log
+*.out
 _minted-probability_hse_exams/
