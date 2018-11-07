@@ -6,41 +6,42 @@
 
 \begin{enumerate}
 
-\item Воспользуемся методом первого шага. Дерево игры выглядит так (в вершинах — длительность сответствующей подыгры):
+\item Воспользуемся методом первого шага. Дерево игры выглядит так (в вершинах — длительность сответствующей подыгры, а на концах ветвей — доля разбавленных пинт среди тех, что Джо помнит):
 \begin{center}
-\begin{tikzpicture} \node {$a$} child {node {} edge from parent node[left] {Р} node[right] {}} 
-child {node {b} 
-child {node {} edge from parent node[left] {Р}} 
+\begin{tikzpicture} \node {$a$} child {node {1} edge from parent node[left] {Р} node[right] {}} 
+child {node {$b$} 
+child {node {1/2} edge from parent node[left] {Р}} 
 child {node (x) {$c$} 
-child {node (r) {} edge from parent node[left] {НР}}
 child {node (y) {$d$}
-child {node (s) {} edge from parent node[left] {НР}}
-child {node {} edge from parent node[right] {Р}}
+child {node (s) {$e$} 
+child {node {2/3} edge from parent node[right] {Р}}
+edge from parent node[left] {НР}}
+child {node {2/3} edge from parent node[right] {Р}}
 edge from parent node[right] {Р}}
 edge from parent node[right] {НР}}  
 edge from parent node[right] {НР}}; 
-\draw [->,black] (r) .. controls +(down:0.1cm) and +(left:1cm) .. node[below,sloped] {} (x); 
-\draw [->,black] (s) .. controls +(down:0.1cm) and +(left:1cm) .. node[below,sloped] {} (y); 
+\draw [->,black] (x) .. controls +(down:1cm) and +(left:1cm) .. node[below,sloped] {НР} (x); 
+\draw [->,black] (s) .. controls +(up:0.1cm) and +(left:2.5cm) .. node[below,sloped] {НР} (x); 
 \end{tikzpicture}
 \end{center}
 
 Если первая пинта разбавлена, то игра заканчивается (разбавлены 100\% рома). 
 Если первая пинта не разбавлена, то, если разбавлена вторая, игра заканчивается (50\%). 
 Если вторая не разбавлена, и третья тоже, то это равносильно тому, что не разбавлены только две (Джо не помнит больше трех). 
-Если вторая не разбавлена, а третья разбавлена, возможны два случая: если четвёртая не разбавлена, 
-то это равносильно тому, что две не разбавлены, а одна разбавлена; если четвёртая разбавлена, то игра заканчивается. 
+Если вторая не разбавлена, а третья разбавлена, возможны три случая: если четвёртая разбавлена, то игра заканчивается; 
+если четвёртая не разбавлена, и пятая не разбавлена, то это эквивалентно тому, что не разбавлены только две; 
+если четвёртая не разбавлена, а пятая разбавлена, то игра заканчивается. 
 Из этих соображений получаем систему уравнений: 
-
 \[
 \begin{cases}a=\frac{1}{8}+\frac{7}{8}(b+1)\\
 b=\frac{1}{8}+\frac{7}{8}(c+1)\\
 c=\frac{1}{8}(d+1)+\frac{7}{8}(c+1)\\
-d=\frac{1}{8}+\frac{7}{8}(d+1)\\
+d=\frac{1}{8}+\frac{7}{8}(e+1)\\
+e=\frac{1}{8}+\frac{7}{8}(c+3)
 \end{cases}
 \]
 
-
-Отсюда $a=14.125,b=15,c=16,d=8$.
+Отсюда $a=7514/192,b=1046/24,c=146/3,d=122/3,e=136/3$.
 
 \item Пусть 
 \[
