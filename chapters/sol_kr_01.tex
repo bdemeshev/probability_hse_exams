@@ -28,8 +28,8 @@
 в два раза.
 
 \begin{align*}
-\P &= \frac{\binom{K-1}{23}}{\binom{K-1}{25}} \cdot \frac{2}{25-K+1} +  \frac{ 2 \cdot \binom{K-2}{23}}{\binom{K-1}{25}} \cdot \frac{1}{25-K+1} \\
-&= \frac{23! \cdot (K-1)! \cdot (26-K)! \cdot2}{(K-1)! \cdot (24-K)! \cdot 25! \cdot (26-K)} + \frac{23! \cdot (K-1)! \cdot (26-K)! \cdot2}{(K-2)! \cdot (25-K)! \cdot 25! \cdot (26-K)} \\
+\P &= \frac{C^{K-1}_{23}}{C^{K-1}_{25}} \cdot \frac{2}{25-K+1} +  \frac{2 \cdot C^{K-2}_{23}}{C^{K-1}_{25}} \cdot \frac{1}{25-K+1}
+&= \frac{23! \cdot (K-1)! \cdot (26-K)! \cdot2}{(K-1)! \cdot (24-K)! \cdot 25! \cdot (26-K)}
 &= \frac{2(25 - K)}{25 \cdot 24} + \frac{2(K-1)}{25 \cdot 24} \\
 &= \frac{48}{25 \cdot 24} = \frac{2}{25}
 \end{align*}
