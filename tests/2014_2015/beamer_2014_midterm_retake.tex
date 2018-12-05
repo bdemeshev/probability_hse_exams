@@ -1,0 +1,2285 @@
+\documentclass[t]{beamer}
+
+\usetheme{Boadilla} 
+ \usecolortheme{seahorse} 
+
+\setbeamertemplate{footline}[frame number]{} 
+ \setbeamertemplate{navigation symbols}{} 
+ \setbeamertemplate{footline}{}
+\usepackage{cmap} 
+
+\usepackage{mathtext} 
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools}
+\usepackage[T2A]{fontenc} 
+
+\usepackage[utf8]{inputenc} 
+\usepackage{booktabs}
+\usepackage[english,russian]{babel} 
+
+\DeclareMathOperator{\Lin}{\mathrm{Lin}} 
+ \DeclareMathOperator{\Linp}{\Lin^{\perp}} 
+ \DeclareMathOperator*\plim{plim}
+
+ \DeclareMathOperator{\grad}{grad} 
+ \DeclareMathOperator{\card}{card} 
+ \DeclareMathOperator{\sgn}{sign} 
+ \DeclareMathOperator{\sign}{sign} 
+ \DeclareMathOperator*{\argmin}{arg\,min} 
+ \DeclareMathOperator*{\argmax}{arg\,max} 
+ \DeclareMathOperator*{\amn}{arg\,min} 
+ \DeclareMathOperator*{\amx}{arg\,max} 
+ \DeclareMathOperator{\cov}{Cov} 
+
+\DeclareMathOperator{\Var}{Var} 
+ \DeclareMathOperator{\Cov}{Cov} 
+ \DeclareMathOperator{\Corr}{Corr} 
+ \DeclareMathOperator{\E}{\mathbb{E}} 
+ \let\P\relax 
+
+\DeclareMathOperator{\P}{\mathbb{P}} 
+ \newcommand{\cN}{\mathcal{N}} 
+ \def \R{\mathbb{R}} 
+ \def \N{\mathbb{N}} 
+ \def \Z{\mathbb{Z}} 
+
+\title{Midterm 2014} 
+ \subtitle{Теория вероятностей и математическая статистика} 
+ \author{Обратная связь: \url{https://github.com/bdemeshev/probability_hse_exams}} 
+ \date{Последнее обновление: \today}
+\begin{document} 
+
+\frame[plain]{\titlepage}
+
+ \begin{frame} \label{1} 
+\begin{block}{1} 
+
+Случайным образом выбирается семья с двумя детьми. Событие $A$ — в семье старший ребенок — мальчик,  событие $B$ — в семье только один из детей — мальчик, событие $C$ — в семье хотя бы один из детей — мальчик.  Вероятность $\P(C)$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{1-Yes}{\beamergotobutton{} $3/4$}
+\item[] \hyperlink{1-No}{\beamergotobutton{} $1/4$}
+\item[] \hyperlink{1-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{1-No}{\beamergotobutton{} $2/3$
+}
+\item[] \hyperlink{1-No}{\beamergotobutton{} $1$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{2} 
+\begin{block}{2} 
+
+Случайным образом выбирается семья с двумя детьми. Событие $A$ — в семье старший ребенок — мальчик,  событие $B$ — в семье только один из детей — мальчик, событие $C$ — в семье хотя бы один из детей — мальчик.  Вероятность $\P(A \cup C)$ равна
+    
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{2-No}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{2-No}{\beamergotobutton{} $1/2$
+}
+\item[] \hyperlink{2-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{2-Yes}{\beamergotobutton{} $3/4$}
+\item[] \hyperlink{2-No}{\beamergotobutton{} $3/8$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{3} 
+\begin{block}{3} 
+
+Случайным образом выбирается семья с двумя детьми. Событие $A$ — в семье старший ребенок — мальчик,  событие $B$ — в семье только один из детей — мальчик, событие $C$ — в семье хотя бы один из детей — мальчик.  Вероятность $\P(A | C)$ равна
+   
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{3-No}{\beamergotobutton{} $1/4$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $3/4$
+}
+\item[] \hyperlink{3-Yes}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $1/2$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{4} 
+\begin{block}{4} 
+
+Случайным образом выбирается семья с двумя детьми. Событие $A$ — в семье старший ребенок — мальчик,  событие $B$ — в семье только один из детей — мальчик, событие $C$ — в семье хотя бы один из детей — мальчик.
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{4-Yes}{\beamergotobutton{} $A$ и $B$ — независимы, $A$ и $C$ — зависимы, $B$ и $C$ — зависимы}
+\item[] \hyperlink{4-No}{\beamergotobutton{} Любые два события из $A$, $B$, $C$ — зависимы}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $\P(A\cap B\cap C)=\P(A)\P(B)\P(C)$
+}
+\item[] \hyperlink{4-No}{\beamergotobutton{} События $A$, $B$, $C$ — независимы в совокупности}
+\item[] \hyperlink{4-No}{\beamergotobutton{} События $A$, $B$, $C$ — независимы попарно, но зависимы в совокупности}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{5} 
+\begin{block}{5} 
+
+Имеется три монетки. Две «правильных» и одна — с «орлами» по обеим сторонам. Вася выбирает одну монетку наугад и подкидывает ее один раз. Вероятность того, что выпадет орел равна
+     
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{5-No}{\beamergotobutton{} $1/3$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $3/5$}
+\item[] \hyperlink{5-Yes}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $2/5$
+}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{6} 
+\begin{block}{6} 
+
+Имеется три монетки. Две «правильных» и одна — с «орлами» по обеим сторонам. Вася выбирает одну монетку наугад и подкидывает ее один раз. Вероятность того, что была выбрана неправильная монетка, если выпал орел, равна
+   
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{6-No}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $3/5$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $1/3$}
+\item[] \hyperlink{6-Yes}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $3/2$
+}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{7} 
+\begin{block}{7} 
+
+Вася бросает 7 правильных игральных кубиков. Наиболее вероятное количество выпавших шестёрок равно
+     
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{7-No}{\beamergotobutton{} $0$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $2$
+}
+\item[] \hyperlink{7-Yes}{\beamergotobutton{} $1$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $7/6$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $6/7$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{8} 
+\begin{block}{8} 
+
+Вася бросает 7 правильных игральных кубиков. Вероятность того, что ровно на пяти из кубиков выпадет шестёрка равна
+     
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{8-No}{\beamergotobutton{} $\left(\frac{1}{6}\right)^7$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $\left(\frac{1}{6}\right)^5$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $\frac{525}{12}\left(\frac{1}{6}\right)^7$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $\frac{7}{12}\left(\frac{1}{6}\right)^5$}
+\item[] \hyperlink{8-Yes}{\beamergotobutton{} $525\left(\frac{1}{6}\right)^7$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{9} 
+\begin{block}{9} 
+
+Вася бросает 7 правильных игральных кубиков. Математическое ожидание суммы выпавших очков равно
+     
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{9-No}{\beamergotobutton{} $7/6$}
+\item[] \hyperlink{9-No}{\beamergotobutton{} $42$
+}
+\item[] \hyperlink{9-No}{\beamergotobutton{} $21$}
+\item[] \hyperlink{9-No}{\beamergotobutton{} $30$}
+\item[] \hyperlink{9-Yes}{\beamergotobutton{} $24.5$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{10} 
+\begin{block}{10} 
+
+Вася бросает 7 правильных игральных кубиков. Дисперсия суммы выпавших очков равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{10-No}{\beamergotobutton{} $35/36$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $7/6$}
+\item[] \hyperlink{10-Yes}{\beamergotobutton{} $7\cdot\frac{35}{12}$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $7\cdot \frac{35}{36}$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $7$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{11} 
+\begin{block}{11} 
+
+Вася бросает 7 правильных игральных кубиков. Пусть величина  $X$ — сумма очков, выпавших на первых двух кубиках, а величина  $Y$ — сумма очков, выпавших на следующих пяти кубиках. Ковариация $\Cov(X,Y)$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{11-Yes}{\beamergotobutton{} $0$}
+\item[] \hyperlink{11-No}{\beamergotobutton{} $-2/5$
+}
+\item[] \hyperlink{11-No}{\beamergotobutton{} $0.5$}
+\item[] \hyperlink{11-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{11-No}{\beamergotobutton{} $2/5$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{12} 
+\begin{block}{12} 
+
+Число изюминок в булочке — случайная величина, имеющая распределение Пуассона. Известно, что в среднем каждая булочка содержит 13 изюминок. Вероятность того, что в случайно выбранной булочке окажется только одна изюминка равна:
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{12-No}{\beamergotobutton{} $1/13$}
+\item[] \hyperlink{12-Yes}{\beamergotobutton{} $13e^-13$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $e^-13/13$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $e^13/13!$
+}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $e^-13$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{13} 
+\begin{block}{13} 
+
+Совместное распределение пары величин $X$ и $Y$ задано таблицей:
+\begin{center}
+\begin{tabular}{@{}c|ccc@{}}
+\toprule
+       & $Y=-1$ & $Y=0$ & $Y=1$ \\ \midrule
+$X=-1$ & $1/4$  & $0$   & $1/4$ \\
+$X=1$  & $1/6$  & $1/6$ & $1/6$ \\ \bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.5cm} 
+ 
+ 
+Математическое ожидание случайной величины $X$ при условии, что $Y=-1$ равно
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{13-Yes}{\beamergotobutton{} $-1/5$}
+\item[] \hyperlink{13-No}{\beamergotobutton{} $-1/3$}
+\item[] \hyperlink{13-No}{\beamergotobutton{} $1/10$
+}
+\item[] \hyperlink{13-No}{\beamergotobutton{} $-1/12$}
+\item[] \hyperlink{13-No}{\beamergotobutton{} $0$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{14} 
+\begin{block}{14} 
+
+Совместное распределение пары величин $X$ и $Y$ задано таблицей:
+\begin{center}
+\begin{tabular}{@{}c|ccc@{}}
+\toprule
+       & $Y=-1$ & $Y=0$ & $Y=1$ \\ \midrule
+$X=-1$ & $1/4$  & $0$   & $1/4$ \\
+$X=1$  & $1/6$  & $1/6$ & $1/6$ \\ \bottomrule
+\end{tabular}
+\end{center}
+\vspace{0.5cm} 
+ 
+ 
+Вероятность того, что $X=1$ при условии, что $Y<0$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{14-No}{\beamergotobutton{} $1/12$}
+\item[] \hyperlink{14-Yes}{\beamergotobutton{} $2/5$}
+\item[] \hyperlink{14-No}{\beamergotobutton{} $1/6$}
+\item[] \hyperlink{14-No}{\beamergotobutton{} $1/3$
+}
+\item[] \hyperlink{14-No}{\beamergotobutton{} $5/12$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{15} 
+\begin{block}{15} 
+
+Совместное распределение пары величин $X$ и $Y$ задано таблицей:
+\begin{center}
+\begin{tabular}{@{}c|ccc@{}}
+\toprule
+       & $Y=-1$ & $Y=0$ & $Y=1$ \\ \midrule
+$X=-1$ & $1/4$  & $0$   & $1/4$ \\
+$X=1$  & $1/6$  & $1/6$ & $1/6$ \\ \bottomrule
+\end{tabular}
+\end{center}
+\vspace{0.5cm} 
+ 
+ 
+Дисперсия случайной величины $Y$  равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{15-No}{\beamergotobutton{} $1/3$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} $5/12$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{15-Yes}{\beamergotobutton{} $5/6$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} $12/5$
+}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{16} 
+\begin{block}{16} 
+
+Совместное распределение пары величин $X$ и $Y$ задано таблицей:
+
+\begin{center}
+\begin{tabular}{@{}c|ccc@{}}
+\toprule
+       & $Y=-1$ & $Y=0$ & $Y=1$ \\ \midrule
+$X=-1$ & $1/4$  & $0$   & $1/4$ \\
+$X=1$  & $1/6$  & $1/6$ & $1/6$ \\ \bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.5cm} 
+ 
+ 
+Ковариация, $\Cov(X,Y)$, равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{16-Yes}{\beamergotobutton{} $0$}
+\item[] \hyperlink{16-No}{\beamergotobutton{} $0.5$}
+\item[] \hyperlink{16-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{16-No}{\beamergotobutton{} $-1$
+}
+\item[] \hyperlink{16-No}{\beamergotobutton{} $-0.5$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{17} 
+\begin{block}{17} 
+
+Функция распределения случайной величины $X$ имеет вид
+\[
+F(x)=\begin{cases}
+0, \; \text{ если } x<0 \\
+cx^2, \; \text{ если } x\in [0;1] \\
+1, \; \text{ если } x>1
+\end{cases}
+\]
+
+\vspace{0.5cm} 
+ 
+ 
+Константа $c$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{17-Yes}{\beamergotobutton{} $1$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $0.5$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $2/3$
+}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $2$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $1.5$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{18} 
+\begin{block}{18} 
+
+Функция распределения случайной величины $X$ имеет вид
+\[
+F(x)=\begin{cases}
+0, \; \text{ если } x<0 \\
+cx^2, \; \text{ если } x\in [0;1] \\
+1, \; \text{ если } x>1
+\end{cases}
+\]
+
+\vspace{0.5cm} 
+ 
+ 
+Вероятность того, что величина $X$ примет значение из интервала  $[0.5, 1.5]$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{18-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $3/2$
+}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{18-Yes}{\beamergotobutton{} $3/4$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{19} 
+\begin{block}{19} 
+
+Функция распределения случайной величины $X$ имеет вид
+\[
+F(x)=\begin{cases}
+0, \; \text{ если } x<0 \\
+cx^2, \; \text{ если } x\in [0;1] \\
+1, \; \text{ если } x>1
+\end{cases}
+\]
+
+\vspace{0.5cm} 
+ 
+ 
+Математическое ожидание $\E(X)$ равно
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{19-Yes}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $3/4$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $2$
+}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $1/4$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{20} 
+\begin{block}{20} 
+
+Совместная функция плотности пары $X$ и $Y$ имеет вид
+\[
+f(x,y)=\begin{cases}
+cx^2y^2, \; \text{ если } x\in[0;1], y\in [0;1] \\
+0, \; \text{ иначе}
+\end{cases}
+\]
+
+\vspace{0.5cm} 
+ 
+ 
+Константа $c$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{20-No}{\beamergotobutton{} $2$
+}
+\item[] \hyperlink{20-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} $1/4$}
+\item[] \hyperlink{20-Yes}{\beamergotobutton{} $9$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} $1/2$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{21} 
+\begin{block}{21} 
+
+Совместная функция плотности пары $X$ и $Y$ имеет вид
+\[
+f(x,y)=\begin{cases}
+cx^2y^2, \; \text{ если } x\in[0;1], y\in [0;1] \\
+0, \; \text{ иначе}
+\end{cases}
+\]
+
+\vspace{0.5cm} 
+ 
+ 
+Вероятность $\P(X<0.5, Y<0.5)$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{21-No}{\beamergotobutton{} $9/16$
+}
+\item[] \hyperlink{21-Yes}{\beamergotobutton{} $1/64$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $1/16$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $1/8$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $1/4$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{22} 
+\begin{block}{22} 
+
+Совместная функция плотности пары $X$ и $Y$ имеет вид
+\[
+f(x,y)=\begin{cases}
+cx^2y^2, \; \text{ если } x\in[0;1], y\in [0;1] \\
+0, \; \text{ иначе}
+\end{cases}
+\]
+ 
+Условная функция плотности  $f_{X|Y=2}(x)$ равна
+
+ \end{block} 
+
+\begin{enumerate} 
+\item[] \hyperlink{22-No}{\beamergotobutton{} $f_X|Y=2(x)=\begin{cases} 3x^2\, \text{если}  x\in [0;1] \\ 0, \text{иначе}     \end{cases}$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $f_X|Y=2(x)=\begin{cases} 36x^2\, \text{если}  x\in [0;1] \\ 0, \text{иначе}     \end{cases}$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $f_X|Y=2(x)=\begin{cases} 9x^2\, \text{если}  x\in [0;1] \\ 0, \text{иначе}     \end{cases}$}
+\item[] \hyperlink{22-Yes}{\beamergotobutton{} не определена}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $f_X|Y=2(x)=\begin{cases} x^2\, \text{если}  x\in [0;1] \\ 0, \text{иначе}     \end{cases}$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{23} 
+\begin{block}{23} 
+
+Совместная функция плотности пары $X$ и $Y$ имеет вид
+\[
+f(x,y)=\begin{cases}
+cx^2y^2, \; \text{ если } x\in[0;1], y\in [0;1] \\
+0, \; \text{ иначе}
+\end{cases}
+\]
+
+\vspace{0.5cm} 
+ 
+ 
+Математическое ожидание $\E(X/Y)$ равно
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{23-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $2$
+}
+\item[] \hyperlink{23-Yes}{\beamergotobutton{} $9/8$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $3$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $1$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{24} 
+\begin{block}{24} 
+
+Известно, что $\E(X)=1$, $\Var(X)=1$, $\E(Y)=4$, $\Var(Y)=9$, $\Cov(X,Y)=-3$
+
+\vspace{0.5cm} 
+ 
+ 
+Ковариация $\Cov(2X-Y,X+3Y)$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{24-No}{\beamergotobutton{} $40$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} $22$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} $18$
+}
+\item[] \hyperlink{24-No}{\beamergotobutton{} $-18$}
+\item[] \hyperlink{24-Yes}{\beamergotobutton{} $-40$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{25} 
+\begin{block}{25} 
+
+Известно, что $\E(X)=1$, $\Var(X)=1$, $\E(Y)=4$, $\Var(Y)=9$, $\Cov(X,Y)=-3$
+
+\vspace{0.5cm} 
+ 
+ 
+Корреляция $\Corr(2X+3,4Y-5)$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{25-No}{\beamergotobutton{} $-1/8$}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $1/6$
+}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $1/3$}
+\item[] \hyperlink{25-Yes}{\beamergotobutton{} $-1$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{26} 
+\begin{block}{26} 
+
+Пусть случайные величины $X$ и $Y$ — независимы, тогда \textbf{НЕ ВЕРНЫМ} является утверждение
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{26-No}{\beamergotobutton{} $\P(X<a, Y<b)=\P(X<a)\P(Y<b)$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $\Cov(X,Y) = 0$}
+\item[] \hyperlink{26-Yes}{\beamergotobutton{} $\Var(X-Y)<\Var(X)+\Var(Y)$ }
+\item[] \hyperlink{26-No}{\beamergotobutton{} $\E(XY)=\E(X)\E(Y)$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $\E(X|Y)=\E(X)$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $\P(X<a | Y<b)=\P(X<a)$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{27} 
+\begin{block}{27} 
+
+Если $\E(X)=0$, то, согласно неравенству Чебышева, $\P(|X| \leq 5 \sqrt{\Var(X)})$ лежит в интервале
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{27-Yes}{\beamergotobutton{} $[0.96;1]$ }
+\item[] \hyperlink{27-No}{\beamergotobutton{} $[0;0.04]$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $[0.8;1]$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $[0;0.2]$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $[0.5;1]$
+}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{28} 
+\begin{block}{28} 
+
+Пусть $X_1$, $X_2$, \ldots, $X_n$ — последовательность независимых одинаково распределенных случайных величин, $\E(X_i)=3$ и $\Var(X_i)=9$. Следующая величина имеет асимптотически стандартное нормальное распределение
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\frac{\bar{X}_n-3}{3}$}
+\item[] \hyperlink{28-Yes}{\beamergotobutton{} $\sqrt{n}\frac{\bar{X}-3}{3}$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\frac{\bar{X}_n-3}{3\sqrt{n}}$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\frac{X_n-3}{3}$ }
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\sqrt{n}(\bar{X}-3)$ }
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{29} 
+\begin{block}{29} 
+
+Случайная величина $X$ имеет функцию плотности $f(x)=\frac{1}{3\sqrt{2\pi}} \exp\left(-\frac{(x-1)^2}{18} \right)$. Следующее утверждение \textbf{НЕ ВЕРНО}
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{29-No}{\beamergotobutton{} $\E(X)=1$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $\Var(X)=9$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $\P(X>1)=0.5$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $\P(X=0)=0$}
+\item[] \hyperlink{29-Yes}{\beamergotobutton{} Случайная величина $X$ дискретна}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{30} 
+\begin{block}{30} 
+
+Пусть $X_1$, $X_2$, \ldots, $X_n$ — последовательность независимых одинаково распределенных случайных величин, $\E(X_i)=\mu$ и $\Var(X_i)=\sigma^2$. Следующее утверждение в общем случае \textbf{НЕ ВЕРНО}:
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{30-Yes}{\beamergotobutton{} $\frac{X_n-\mu}{\sigma} \overset{F}{\to} N(0;1)$ при $n\to\infty$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $\lim_{n\to\infty} \Var(\bar{X}_n)=0$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $\bar{X}_n \overset{P}{\to} \mu$ при $n\to\infty$}
+\item[] \hyperlink{30-No}{\beamergotobutton{}$\frac{\bar{X}_n-\mu}{\sigma /\sqrt{n}} \overset{F}{\to } N(0,1) $ при $n\to\infty$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $\frac{\bar{X}_n-\mu}{\sqrt{n} \sigma } \overset{P}{\to } 0 $ при $n\to\infty$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{1-Yes} 
+\begin{block}{1} 
+
+Случайным образом выбирается семья с двумя детьми. Событие $A$ — в семье старший ребенок — мальчик,  событие $B$ — в семье только один из детей — мальчик, событие $C$ — в семье хотя бы один из детей — мальчик.  Вероятность $\P(C)$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{1-Yes}{\beamergotobutton{} $3/4$}
+\item[] \hyperlink{1-No}{\beamergotobutton{} $1/4$}
+\item[] \hyperlink{1-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{1-No}{\beamergotobutton{} $2/3$
+}
+\item[] \hyperlink{1-No}{\beamergotobutton{} $1$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{2}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{2-Yes} 
+\begin{block}{2} 
+
+Случайным образом выбирается семья с двумя детьми. Событие $A$ — в семье старший ребенок — мальчик,  событие $B$ — в семье только один из детей — мальчик, событие $C$ — в семье хотя бы один из детей — мальчик.  Вероятность $\P(A \cup C)$ равна
+    
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{2-No}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{2-No}{\beamergotobutton{} $1/2$
+}
+\item[] \hyperlink{2-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{2-Yes}{\beamergotobutton{} $3/4$}
+\item[] \hyperlink{2-No}{\beamergotobutton{} $3/8$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{3}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{3-Yes} 
+\begin{block}{3} 
+
+Случайным образом выбирается семья с двумя детьми. Событие $A$ — в семье старший ребенок — мальчик,  событие $B$ — в семье только один из детей — мальчик, событие $C$ — в семье хотя бы один из детей — мальчик.  Вероятность $\P(A | C)$ равна
+   
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{3-No}{\beamergotobutton{} $1/4$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $3/4$
+}
+\item[] \hyperlink{3-Yes}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $1/2$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{4}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{4-Yes} 
+\begin{block}{4} 
+
+Случайным образом выбирается семья с двумя детьми. Событие $A$ — в семье старший ребенок — мальчик,  событие $B$ — в семье только один из детей — мальчик, событие $C$ — в семье хотя бы один из детей — мальчик.
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{4-Yes}{\beamergotobutton{} $A$ и $B$ — независимы, $A$ и $C$ — зависимы, $B$ и $C$ — зависимы}
+\item[] \hyperlink{4-No}{\beamergotobutton{} Любые два события из $A$, $B$, $C$ — зависимы}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $\P(A\cap B\cap C)=\P(A)\P(B)\P(C)$
+}
+\item[] \hyperlink{4-No}{\beamergotobutton{} События $A$, $B$, $C$ — независимы в совокупности}
+\item[] \hyperlink{4-No}{\beamergotobutton{} События $A$, $B$, $C$ — независимы попарно, но зависимы в совокупности}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{5}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{5-Yes} 
+\begin{block}{5} 
+
+Имеется три монетки. Две «правильных» и одна — с «орлами» по обеим сторонам. Вася выбирает одну монетку наугад и подкидывает ее один раз. Вероятность того, что выпадет орел равна
+     
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{5-No}{\beamergotobutton{} $1/3$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $3/5$}
+\item[] \hyperlink{5-Yes}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $2/5$
+}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{6}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{6-Yes} 
+\begin{block}{6} 
+
+Имеется три монетки. Две «правильных» и одна — с «орлами» по обеим сторонам. Вася выбирает одну монетку наугад и подкидывает ее один раз. Вероятность того, что была выбрана неправильная монетка, если выпал орел, равна
+   
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{6-No}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $3/5$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $1/3$}
+\item[] \hyperlink{6-Yes}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $3/2$
+}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{7}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{7-Yes} 
+\begin{block}{7} 
+
+Вася бросает 7 правильных игральных кубиков. Наиболее вероятное количество выпавших шестёрок равно
+     
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{7-No}{\beamergotobutton{} $0$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $2$
+}
+\item[] \hyperlink{7-Yes}{\beamergotobutton{} $1$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $7/6$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $6/7$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{8}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{8-Yes} 
+\begin{block}{8} 
+
+Вася бросает 7 правильных игральных кубиков. Вероятность того, что ровно на пяти из кубиков выпадет шестёрка равна
+     
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{8-No}{\beamergotobutton{} $\left(\frac{1}{6}\right)^7$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $\left(\frac{1}{6}\right)^5$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $\frac{525}{12}\left(\frac{1}{6}\right)^7$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $\frac{7}{12}\left(\frac{1}{6}\right)^5$}
+\item[] \hyperlink{8-Yes}{\beamergotobutton{} $525\left(\frac{1}{6}\right)^7$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{9}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{9-Yes} 
+\begin{block}{9} 
+
+Вася бросает 7 правильных игральных кубиков. Математическое ожидание суммы выпавших очков равно
+     
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{9-No}{\beamergotobutton{} $7/6$}
+\item[] \hyperlink{9-No}{\beamergotobutton{} $42$
+}
+\item[] \hyperlink{9-No}{\beamergotobutton{} $21$}
+\item[] \hyperlink{9-No}{\beamergotobutton{} $30$}
+\item[] \hyperlink{9-Yes}{\beamergotobutton{} $24.5$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{10}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{10-Yes} 
+\begin{block}{10} 
+
+Вася бросает 7 правильных игральных кубиков. Дисперсия суммы выпавших очков равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{10-No}{\beamergotobutton{} $35/36$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $7/6$}
+\item[] \hyperlink{10-Yes}{\beamergotobutton{} $7\cdot\frac{35}{12}$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $7\cdot \frac{35}{36}$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $7$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{11}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{11-Yes} 
+\begin{block}{11} 
+
+Вася бросает 7 правильных игральных кубиков. Пусть величина  $X$ — сумма очков, выпавших на первых двух кубиках, а величина  $Y$ — сумма очков, выпавших на следующих пяти кубиках. Ковариация $\Cov(X,Y)$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{11-Yes}{\beamergotobutton{} $0$}
+\item[] \hyperlink{11-No}{\beamergotobutton{} $-2/5$
+}
+\item[] \hyperlink{11-No}{\beamergotobutton{} $0.5$}
+\item[] \hyperlink{11-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{11-No}{\beamergotobutton{} $2/5$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{12}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{12-Yes} 
+\begin{block}{12} 
+
+Число изюминок в булочке — случайная величина, имеющая распределение Пуассона. Известно, что в среднем каждая булочка содержит 13 изюминок. Вероятность того, что в случайно выбранной булочке окажется только одна изюминка равна:
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{12-No}{\beamergotobutton{} $1/13$}
+\item[] \hyperlink{12-Yes}{\beamergotobutton{} $13e^-13$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $e^-13/13$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $e^13/13!$
+}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $e^-13$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{13}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{13-Yes} 
+\begin{block}{13} 
+
+Совместное распределение пары величин $X$ и $Y$ задано таблицей:
+\begin{center}
+\begin{tabular}{@{}c|ccc@{}}
+\toprule
+       & $Y=-1$ & $Y=0$ & $Y=1$ \\ \midrule
+$X=-1$ & $1/4$  & $0$   & $1/4$ \\
+$X=1$  & $1/6$  & $1/6$ & $1/6$ \\ \bottomrule
+\end{tabular}
+\end{center}
+\vspace{0.5cm} 
+ 
+ 
+Математическое ожидание случайной величины $X$ при условии, что $Y=-1$ равно
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{13-Yes}{\beamergotobutton{} $-1/5$}
+\item[] \hyperlink{13-No}{\beamergotobutton{} $-1/3$}
+\item[] \hyperlink{13-No}{\beamergotobutton{} $1/10$
+}
+\item[] \hyperlink{13-No}{\beamergotobutton{} $-1/12$}
+\item[] \hyperlink{13-No}{\beamergotobutton{} $0$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{14}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{14-Yes} 
+\begin{block}{14} 
+
+Совместное распределение пары величин $X$ и $Y$ задано таблицей:
+\begin{center}
+\begin{tabular}{@{}c|ccc@{}}
+\toprule
+       & $Y=-1$ & $Y=0$ & $Y=1$ \\ \midrule
+$X=-1$ & $1/4$  & $0$   & $1/4$ \\
+$X=1$  & $1/6$  & $1/6$ & $1/6$ \\ \bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.5cm} 
+ 
+ 
+Вероятность того, что $X=1$ при условии, что $Y<0$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{14-No}{\beamergotobutton{} $1/12$}
+\item[] \hyperlink{14-Yes}{\beamergotobutton{} $2/5$}
+\item[] \hyperlink{14-No}{\beamergotobutton{} $1/6$}
+\item[] \hyperlink{14-No}{\beamergotobutton{} $1/3$
+}
+\item[] \hyperlink{14-No}{\beamergotobutton{} $5/12$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{15}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{15-Yes} 
+\begin{block}{15} 
+
+Совместное распределение пары величин $X$ и $Y$ задано таблицей:
+
+\begin{center}
+	\begin{tabular}{@{}c|ccc@{}}
+		\toprule
+		& $Y=-1$ & $Y=0$ & $Y=1$ \\ \midrule
+		$X=-1$ & $1/4$  & $0$   & $1/4$ \\
+		$X=1$  & $1/6$  & $1/6$ & $1/6$ \\ \bottomrule
+	\end{tabular}
+\end{center}
+
+\vspace{0.5cm} 
+ 
+ 
+Дисперсия случайной величины $Y$  равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{15-No}{\beamergotobutton{} $1/3$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} $5/12$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{15-Yes}{\beamergotobutton{} $5/6$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} $12/5$
+}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{16}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{16-Yes} 
+\begin{block}{16} 
+
+Совместное распределение пары величин $X$ и $Y$ задано таблицей:
+
+\begin{center}
+	\begin{tabular}{@{}c|ccc@{}}
+		\toprule
+		& $Y=-1$ & $Y=0$ & $Y=1$ \\ \midrule
+		$X=-1$ & $1/4$  & $0$   & $1/4$ \\
+		$X=1$  & $1/6$  & $1/6$ & $1/6$ \\ \bottomrule
+	\end{tabular}
+\end{center}
+
+\vspace{0.5cm} 
+ 
+ 
+Ковариация, $\Cov(X,Y)$, равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{16-Yes}{\beamergotobutton{} $0$}
+\item[] \hyperlink{16-No}{\beamergotobutton{} $0.5$}
+\item[] \hyperlink{16-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{16-No}{\beamergotobutton{} $-1$
+}
+\item[] \hyperlink{16-No}{\beamergotobutton{} $-0.5$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{17}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{17-Yes} 
+\begin{block}{17} 
+
+Функция распределения случайной величины $X$ имеет вид
+\[
+F(x)=\begin{cases}
+0, \; \text{ если } x<0 \\
+cx^2, \; \text{ если } x\in [0;1] \\
+1, \; \text{ если } x>1
+\end{cases}
+\]
+
+\vspace{0.5cm} 
+ 
+ 
+Константа $c$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{17-Yes}{\beamergotobutton{} $1$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $0.5$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $2/3$
+}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $2$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $1.5$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{18}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{18-Yes} 
+\begin{block}{18} 
+
+Функция распределения случайной величины $X$ имеет вид
+\[
+F(x)=\begin{cases}
+0, \; \text{ если } x<0 \\
+cx^2, \; \text{ если } x\in [0;1] \\
+1, \; \text{ если } x>1
+\end{cases}
+\]
+
+\vspace{0.5cm} 
+ 
+ 
+Вероятность того, что величина $X$ примет значение из интервала  $[0.5, 1.5]$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{18-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $3/2$
+}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{18-Yes}{\beamergotobutton{} $3/4$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{19}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{19-Yes} 
+\begin{block}{19} 
+
+Функция распределения случайной величины $X$ имеет вид
+\[
+F(x)=\begin{cases}
+0, \; \text{ если } x<0 \\
+cx^2, \; \text{ если } x\in [0;1] \\
+1, \; \text{ если } x>1
+\end{cases}
+\]
+
+\vspace{0.5cm} 
+ 
+ 
+Математическое ожидание $\E(X)$ равно
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{19-Yes}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $3/4$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $2$
+}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $1/4$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{20}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{20-Yes} 
+\begin{block}{20} 
+
+Совместная функция плотности пары $X$ и $Y$ имеет вид
+\[
+f(x,y)=\begin{cases}
+cx^2y^2, \; \text{ если } x\in[0;1], y\in [0;1] \\
+0, \; \text{ иначе}
+\end{cases}
+\]
+
+\vspace{0.5cm} 
+ 
+ 
+Константа $c$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{20-No}{\beamergotobutton{} $2$
+}
+\item[] \hyperlink{20-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} $1/4$}
+\item[] \hyperlink{20-Yes}{\beamergotobutton{} $9$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} $1/2$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{21}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{21-Yes} 
+\begin{block}{21} 
+
+Совместная функция плотности пары $X$ и $Y$ имеет вид
+\[
+f(x,y)=\begin{cases}
+cx^2y^2, \; \text{ если } x\in[0;1], y\in [0;1] \\
+0, \; \text{ иначе}
+\end{cases}
+\]
+
+\vspace{0.5cm} 
+ 
+ 
+Вероятность $\P(X<0.5, Y<0.5)$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{21-No}{\beamergotobutton{} $9/16$
+}
+\item[] \hyperlink{21-Yes}{\beamergotobutton{} $1/64$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $1/16$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $1/8$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $1/4$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{22}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{22-Yes} 
+\begin{block}{22} 
+
+Совместная функция плотности пары $X$ и $Y$ имеет вид
+\[
+f(x,y)=\begin{cases}
+cx^2y^2, \; \text{ если } x\in[0;1], y\in [0;1] \\
+0, \; \text{ иначе}
+\end{cases}
+\]
+
+\vspace{0.5cm} 
+ 
+ 
+Условная функция плотности  $f_{X|Y=2}(x)$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{22-No}{\beamergotobutton{} $f_X|Y=2(x)=\begin{cases} 3x^2\, \text{если}  x\in [0;1] \\ 0, \text{иначе}     \end{cases}$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $f_X|Y=2(x)=\begin{cases} 36x^2\, \text{если}  x\in [0;1] \\ 0, \text{иначе}     \end{cases}$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $f_X|Y=2(x)=\begin{cases} 9x^2\, \text{если}  x\in [0;1] \\ 0, \text{иначе}     \end{cases}$}
+\item[] \hyperlink{22-Yes}{\beamergotobutton{} не определена}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $f_X|Y=2(x)=\begin{cases} x^2\, \text{если}  x\in [0;1] \\ 0, \text{иначе}     \end{cases}$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{23}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{23-Yes} 
+\begin{block}{23} 
+
+Совместная функция плотности пары $X$ и $Y$ имеет вид
+\[
+f(x,y)=\begin{cases}
+cx^2y^2, \; \text{ если } x\in[0;1], y\in [0;1] \\
+0, \; \text{ иначе}
+\end{cases}
+\]
+
+\vspace{0.5cm} 
+ 
+ 
+Математическое ожидание $\E(X/Y)$ равно
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{23-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $2$
+}
+\item[] \hyperlink{23-Yes}{\beamergotobutton{} $9/8$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $3$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $1$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{24}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{24-Yes} 
+\begin{block}{24} 
+
+Известно, что $\E(X)=1$, $\Var(X)=1$, $\E(Y)=4$, $\Var(Y)=9$, $\Cov(X,Y)=-3$
+
+\vspace{0.5cm} 
+ 
+ 
+Ковариация $\Cov(2X-Y,X+3Y)$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{24-No}{\beamergotobutton{} $40$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} $22$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} $18$
+}
+\item[] \hyperlink{24-No}{\beamergotobutton{} $-18$}
+\item[] \hyperlink{24-Yes}{\beamergotobutton{} $-40$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{25}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{25-Yes} 
+\begin{block}{25} 
+
+Известно, что $\E(X)=1$, $\Var(X)=1$, $\E(Y)=4$, $\Var(Y)=9$, $\Cov(X,Y)=-3$
+
+\vspace{0.5cm} 
+ 
+ 
+Корреляция $\Corr(2X+3,4Y-5)$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{25-No}{\beamergotobutton{} $-1/8$}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $1/6$
+}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $1/3$}
+\item[] \hyperlink{25-Yes}{\beamergotobutton{} $-1$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{26}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{26-Yes} 
+\begin{block}{26} 
+
+Пусть случайные величины $X$ и $Y$ — независимы, тогда \textbf{НЕ ВЕРНЫМ} является утверждение
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{26-No}{\beamergotobutton{} $\P(X<a, Y<b)=\P(X<a)\P(Y<b)$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $\Cov(X,Y) = 0$}
+\item[] \hyperlink{26-Yes}{\beamergotobutton{} $\Var(X-Y)<\Var(X)+\Var(Y)$ }
+\item[] \hyperlink{26-No}{\beamergotobutton{} $\E(XY)=\E(X)\E(Y)$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $\E(X|Y)=\E(X)$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $\P(X<a | Y<b)=\P(X<a)$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{27}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{27-Yes} 
+\begin{block}{27} 
+
+Если $\E(X)=0$, то, согласно неравенству Чебышева, $\P(|X| \leq 5 \sqrt{\Var(X)})$ лежит в интервале
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{27-Yes}{\beamergotobutton{} $[0.96;1]$ }
+\item[] \hyperlink{27-No}{\beamergotobutton{} $[0;0.04]$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $[0.8;1]$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $[0;0.2]$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $[0.5;1]$
+}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{28}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{28-Yes} 
+\begin{block}{28} 
+
+Пусть $X_1$, $X_2$, \ldots, $X_n$ — последовательность независимых одинаково распределенных случайных величин, $\E(X_i)=3$ и $\Var(X_i)=9$. Следующая величина имеет асимптотически стандартное нормальное распределение
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\frac{\bar{X}_n-3}{3}$}
+\item[] \hyperlink{28-Yes}{\beamergotobutton{} $\sqrt{n}\frac{\bar{X}-3}{3}$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\frac{\bar{X}_n-3}{3\sqrt{n}}$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\frac{X_n-3}{3}$ }
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\sqrt{n}(\bar{X}-3)$ }
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{29}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{29-Yes} 
+\begin{block}{29} 
+
+Случайная величина $X$ имеет функцию плотности $f(x)=\frac{1}{3\sqrt{2\pi}} \exp\left(-\frac{(x-1)^2}{18} \right)$. Следующее утверждение \textbf{НЕ ВЕРНО}
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{29-No}{\beamergotobutton{} $\E(X)=1$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $\Var(X)=9$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $\P(X>1)=0.5$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $\P(X=0)=0$}
+\item[] \hyperlink{29-Yes}{\beamergotobutton{} Случайная величина $X$ дискретна}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{30}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{30-Yes} 
+\begin{block}{30} 
+
+Пусть $X_1$, $X_2$, \ldots, $X_n$ — последовательность независимых одинаково распределенных случайных величин, $\E(X_i)=\mu$ и $\Var(X_i)=\sigma^2$. Следующее утверждение в общем случае \textbf{НЕ ВЕРНО}:
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{30-Yes}{\beamergotobutton{} $\frac{X_n-\mu}{\sigma} \overset{F}{\to} N(0;1)$ при $n\to\infty$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $\lim_{n\to\infty} \Var(\bar{X}_n)=0$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $\bar{X}_n \overset{P}{\to} \mu$ при $n\to\infty$}
+\item[] \hyperlink{30-No}{\beamergotobutton{}$\frac{\bar{X}_n-\mu}{\sigma /\sqrt{n}} \overset{F}{\to } N(0,1) $ при $n\to\infty$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $\frac{\bar{X}_n-\mu}{\sqrt{n} \sigma } \overset{P}{\to } 0 $ при $n\to\infty$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{31}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{1-No} 
+\begin{block}{1} 
+
+Случайным образом выбирается семья с двумя детьми. Событие $A$ — в семье старший ребенок — мальчик,  событие $B$ — в семье только один из детей — мальчик, событие $C$ — в семье хотя бы один из детей — мальчик.  Вероятность $\P(C)$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{1-Yes}{\beamergotobutton{} $3/4$}
+\item[] \hyperlink{1-No}{\beamergotobutton{} $1/4$}
+\item[] \hyperlink{1-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{1-No}{\beamergotobutton{} $2/3$
+}
+\item[] \hyperlink{1-No}{\beamergotobutton{} $1$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{2-No} 
+\begin{block}{2} 
+
+Случайным образом выбирается семья с двумя детьми. Событие $A$ — в семье старший ребенок — мальчик,  событие $B$ — в семье только один из детей — мальчик, событие $C$ — в семье хотя бы один из детей — мальчик.  Вероятность $\P(A \cup C)$ равна
+    
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{2-No}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{2-No}{\beamergotobutton{} $1/2$
+}
+\item[] \hyperlink{2-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{2-Yes}{\beamergotobutton{} $3/4$}
+\item[] \hyperlink{2-No}{\beamergotobutton{} $3/8$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{3-No} 
+\begin{block}{3} 
+
+Случайным образом выбирается семья с двумя детьми. Событие $A$ — в семье старший ребенок — мальчик,  событие $B$ — в семье только один из детей — мальчик, событие $C$ — в семье хотя бы один из детей — мальчик.  Вероятность $\P(A | C)$ равна
+   
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{3-No}{\beamergotobutton{} $1/4$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $3/4$
+}
+\item[] \hyperlink{3-Yes}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $1/2$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{4-No} 
+\begin{block}{4} 
+
+Случайным образом выбирается семья с двумя детьми. Событие $A$ — в семье старший ребенок — мальчик,  событие $B$ — в семье только один из детей — мальчик, событие $C$ — в семье хотя бы один из детей — мальчик.
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{4-Yes}{\beamergotobutton{} $A$ и $B$ — независимы, $A$ и $C$ — зависимы, $B$ и $C$ — зависимы}
+\item[] \hyperlink{4-No}{\beamergotobutton{} Любые два события из $A$, $B$, $C$ — зависимы}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $\P(A\cap B\cap C)=\P(A)\P(B)\P(C)$
+}
+\item[] \hyperlink{4-No}{\beamergotobutton{} События $A$, $B$, $C$ — независимы в совокупности}
+\item[] \hyperlink{4-No}{\beamergotobutton{} События $A$, $B$, $C$ — независимы попарно, но зависимы в совокупности}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{5-No} 
+\begin{block}{5} 
+
+Имеется три монетки. Две «правильных» и одна — с «орлами» по обеим сторонам. Вася выбирает одну монетку наугад и подкидывает ее один раз. Вероятность того, что выпадет орел равна
+     
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{5-No}{\beamergotobutton{} $1/3$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $3/5$}
+\item[] \hyperlink{5-Yes}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $2/5$
+}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{6-No} 
+\begin{block}{6} 
+
+Имеется три монетки. Две «правильных» и одна — с «орлами» по обеим сторонам. Вася выбирает одну монетку наугад и подкидывает ее один раз. Вероятность того, что была выбрана неправильная монетка, если выпал орел, равна
+   
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{6-No}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $3/5$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $1/3$}
+\item[] \hyperlink{6-Yes}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $3/2$
+}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{7-No} 
+\begin{block}{7} 
+
+Вася бросает 7 правильных игральных кубиков. Наиболее вероятное количество выпавших шестёрок равно
+     
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{7-No}{\beamergotobutton{} $0$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $2$
+}
+\item[] \hyperlink{7-Yes}{\beamergotobutton{} $1$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $7/6$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $6/7$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{8-No} 
+\begin{block}{8} 
+
+Вася бросает 7 правильных игральных кубиков. Вероятность того, что ровно на пяти из кубиков выпадет шестёрка равна
+     
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{8-No}{\beamergotobutton{} $\left(\frac{1}{6}\right)^7$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $\left(\frac{1}{6}\right)^5$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $\frac{525}{12}\left(\frac{1}{6}\right)^7$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $\frac{7}{12}\left(\frac{1}{6}\right)^5$}
+\item[] \hyperlink{8-Yes}{\beamergotobutton{} $525\left(\frac{1}{6}\right)^7$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{9-No} 
+\begin{block}{9} 
+
+Вася бросает 7 правильных игральных кубиков. Математическое ожидание суммы выпавших очков равно
+     
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{9-No}{\beamergotobutton{} $7/6$}
+\item[] \hyperlink{9-No}{\beamergotobutton{} $42$
+}
+\item[] \hyperlink{9-No}{\beamergotobutton{} $21$}
+\item[] \hyperlink{9-No}{\beamergotobutton{} $30$}
+\item[] \hyperlink{9-Yes}{\beamergotobutton{} $24.5$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{10-No} 
+\begin{block}{10} 
+
+Вася бросает 7 правильных игральных кубиков. Дисперсия суммы выпавших очков равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{10-No}{\beamergotobutton{} $35/36$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $7/6$}
+\item[] \hyperlink{10-Yes}{\beamergotobutton{} $7\cdot\frac{35}{12}$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $7\cdot \frac{35}{36}$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $7$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{11-No} 
+\begin{block}{11} 
+
+Вася бросает 7 правильных игральных кубиков. Пусть величина  $X$ — сумма очков, выпавших на первых двух кубиках, а величина  $Y$ — сумма очков, выпавших на следующих пяти кубиках. Ковариация $\Cov(X,Y)$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{11-Yes}{\beamergotobutton{} $0$}
+\item[] \hyperlink{11-No}{\beamergotobutton{} $-2/5$
+}
+\item[] \hyperlink{11-No}{\beamergotobutton{} $0.5$}
+\item[] \hyperlink{11-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{11-No}{\beamergotobutton{} $2/5$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{12-No} 
+\begin{block}{12} 
+
+Число изюминок в булочке — случайная величина, имеющая распределение Пуассона. Известно, что в среднем каждая булочка содержит 13 изюминок. Вероятность того, что в случайно выбранной булочке окажется только одна изюминка равна:
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{12-No}{\beamergotobutton{} $1/13$}
+\item[] \hyperlink{12-Yes}{\beamergotobutton{} $13e^-13$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $e^-13/13$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $e^13/13!$
+}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $e^-13$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{13-No} 
+\begin{block}{13} 
+
+Совместное распределение пары величин $X$ и $Y$ задано таблицей:
+\begin{center}
+\begin{tabular}{@{}c|ccc@{}}
+\toprule
+       & $Y=-1$ & $Y=0$ & $Y=1$ \\ \midrule
+$X=-1$ & $1/4$  & $0$   & $1/4$ \\
+$X=1$  & $1/6$  & $1/6$ & $1/6$ \\ \bottomrule
+\end{tabular}
+\end{center}
+\vspace{0.5cm} 
+ 
+ 
+Математическое ожидание случайной величины $X$ при условии, что $Y=-1$ равно
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{13-Yes}{\beamergotobutton{} $-1/5$}
+\item[] \hyperlink{13-No}{\beamergotobutton{} $-1/3$}
+\item[] \hyperlink{13-No}{\beamergotobutton{} $1/10$
+}
+\item[] \hyperlink{13-No}{\beamergotobutton{} $-1/12$}
+\item[] \hyperlink{13-No}{\beamergotobutton{} $0$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{14-No} 
+\begin{block}{14} 
+
+Совместное распределение пары величин $X$ и $Y$ задано таблицей:
+\begin{center}
+\begin{tabular}{@{}c|ccc@{}}
+\toprule
+       & $Y=-1$ & $Y=0$ & $Y=1$ \\ \midrule
+$X=-1$ & $1/4$  & $0$   & $1/4$ \\
+$X=1$  & $1/6$  & $1/6$ & $1/6$ \\ \bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.5cm} 
+ 
+ 
+Вероятность того, что $X=1$ при условии, что $Y<0$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{14-No}{\beamergotobutton{} $1/12$}
+\item[] \hyperlink{14-Yes}{\beamergotobutton{} $2/5$}
+\item[] \hyperlink{14-No}{\beamergotobutton{} $1/6$}
+\item[] \hyperlink{14-No}{\beamergotobutton{} $1/3$
+}
+\item[] \hyperlink{14-No}{\beamergotobutton{} $5/12$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{15-No} 
+\begin{block}{15} 
+
+Совместное распределение пары величин $X$ и $Y$ задано таблицей:
+
+\begin{center}
+	\begin{tabular}{@{}c|ccc@{}}
+		\toprule
+		& $Y=-1$ & $Y=0$ & $Y=1$ \\ \midrule
+		$X=-1$ & $1/4$  & $0$   & $1/4$ \\
+		$X=1$  & $1/6$  & $1/6$ & $1/6$ \\ \bottomrule
+	\end{tabular}
+\end{center}
+
+\vspace{0.5cm} 
+ 
+ 
+Дисперсия случайной величины $Y$  равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{15-No}{\beamergotobutton{} $1/3$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} $5/12$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{15-Yes}{\beamergotobutton{} $5/6$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} $12/5$
+}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{16-No} 
+\begin{block}{16} 
+
+Совместное распределение пары величин $X$ и $Y$ задано таблицей:
+
+\begin{center}
+	\begin{tabular}{@{}c|ccc@{}}
+		\toprule
+		& $Y=-1$ & $Y=0$ & $Y=1$ \\ \midrule
+		$X=-1$ & $1/4$  & $0$   & $1/4$ \\
+		$X=1$  & $1/6$  & $1/6$ & $1/6$ \\ \bottomrule
+	\end{tabular}
+\end{center}
+
+\vspace{0.5cm} 
+ 
+ 
+Ковариация, $\Cov(X,Y)$, равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{16-Yes}{\beamergotobutton{} $0$}
+\item[] \hyperlink{16-No}{\beamergotobutton{} $0.5$}
+\item[] \hyperlink{16-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{16-No}{\beamergotobutton{} $-1$
+}
+\item[] \hyperlink{16-No}{\beamergotobutton{} $-0.5$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{17-No} 
+\begin{block}{17} 
+
+Функция распределения случайной величины $X$ имеет вид
+\[
+F(x)=\begin{cases}
+0, \; \text{ если } x<0 \\
+cx^2, \; \text{ если } x\in [0;1] \\
+1, \; \text{ если } x>1
+\end{cases}
+\]
+
+\vspace{0.5cm} 
+ 
+ 
+Константа $c$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{17-Yes}{\beamergotobutton{} $1$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $0.5$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $2/3$
+}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $2$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $1.5$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{18-No} 
+\begin{block}{18} 
+
+Функция распределения случайной величины $X$ имеет вид
+\[
+F(x)=\begin{cases}
+0, \; \text{ если } x<0 \\
+cx^2, \; \text{ если } x\in [0;1] \\
+1, \; \text{ если } x>1
+\end{cases}
+\]
+
+\vspace{0.5cm} 
+ 
+ 
+Вероятность того, что величина $X$ примет значение из интервала  $[0.5, 1.5]$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{18-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $3/2$
+}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{18-Yes}{\beamergotobutton{} $3/4$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{19-No} 
+\begin{block}{19} 
+
+Функция распределения случайной величины $X$ имеет вид
+\[
+F(x)=\begin{cases}
+0, \; \text{ если } x<0 \\
+cx^2, \; \text{ если } x\in [0;1] \\
+1, \; \text{ если } x>1
+\end{cases}
+\]
+
+\vspace{0.5cm} 
+ 
+ 
+Математическое ожидание $\E(X)$ равно
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{19-Yes}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $3/4$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $2$
+}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $1/4$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{20-No} 
+\begin{block}{20} 
+
+Совместная функция плотности пары $X$ и $Y$ имеет вид
+\[
+f(x,y)=\begin{cases}
+cx^2y^2, \; \text{ если } x\in[0;1], y\in [0;1] \\
+0, \; \text{ иначе}
+\end{cases}
+\]
+
+\vspace{0.5cm} 
+ 
+ 
+Константа $c$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{20-No}{\beamergotobutton{} $2$
+}
+\item[] \hyperlink{20-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} $1/4$}
+\item[] \hyperlink{20-Yes}{\beamergotobutton{} $9$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} $1/2$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{21-No} 
+\begin{block}{21} 
+
+Совместная функция плотности пары $X$ и $Y$ имеет вид
+\[
+f(x,y)=\begin{cases}
+cx^2y^2, \; \text{ если } x\in[0;1], y\in [0;1] \\
+0, \; \text{ иначе}
+\end{cases}
+\]
+
+\vspace{0.5cm} 
+ 
+ 
+Вероятность $\P(X<0.5, Y<0.5)$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{21-No}{\beamergotobutton{} $9/16$
+}
+\item[] \hyperlink{21-Yes}{\beamergotobutton{} $1/64$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $1/16$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $1/8$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $1/4$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{22-No} 
+\begin{block}{22} 
+
+Совместная функция плотности пары $X$ и $Y$ имеет вид
+\[
+f(x,y)=\begin{cases}
+cx^2y^2, \; \text{ если } x\in[0;1], y\in [0;1] \\
+0, \; \text{ иначе}
+\end{cases}
+\]
+
+\vspace{0.5cm} 
+ 
+ 
+Условная функция плотности  $f_{X|Y=2}(x)$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{22-No}{\beamergotobutton{} $f_X|Y=2(x)=\begin{cases} 3x^2\, \text{если}  x\in [0;1] \\ 0, \text{иначе}     \end{cases}$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $f_X|Y=2(x)=\begin{cases} 36x^2\, \text{если}  x\in [0;1] \\ 0, \text{иначе}     \end{cases}$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $f_X|Y=2(x)=\begin{cases} 9x^2\, \text{если}  x\in [0;1] \\ 0, \text{иначе}     \end{cases}$}
+\item[] \hyperlink{22-Yes}{\beamergotobutton{} не определена}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $f_X|Y=2(x)=\begin{cases} x^2\, \text{если}  x\in [0;1] \\ 0, \text{иначе}     \end{cases}$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{23-No} 
+\begin{block}{23} 
+
+Совместная функция плотности пары $X$ и $Y$ имеет вид
+\[
+f(x,y)=\begin{cases}
+cx^2y^2, \; \text{ если } x\in[0;1], y\in [0;1] \\
+0, \; \text{ иначе}
+\end{cases}
+\]
+
+\vspace{0.5cm} 
+ 
+ 
+Математическое ожидание $\E(X/Y)$ равно
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{23-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $2$
+}
+\item[] \hyperlink{23-Yes}{\beamergotobutton{} $9/8$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $3$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $1$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{24-No} 
+\begin{block}{24} 
+
+Известно, что $\E(X)=1$, $\Var(X)=1$, $\E(Y)=4$, $\Var(Y)=9$, $\Cov(X,Y)=-3$
+
+\vspace{0.5cm} 
+ 
+ 
+Ковариация $\Cov(2X-Y,X+3Y)$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{24-No}{\beamergotobutton{} $40$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} $22$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} $18$
+}
+\item[] \hyperlink{24-No}{\beamergotobutton{} $-18$}
+\item[] \hyperlink{24-Yes}{\beamergotobutton{} $-40$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{25-No} 
+\begin{block}{25} 
+
+Известно, что $\E(X)=1$, $\Var(X)=1$, $\E(Y)=4$, $\Var(Y)=9$, $\Cov(X,Y)=-3$
+
+\vspace{0.5cm} 
+ 
+ 
+Корреляция $\Corr(2X+3,4Y-5)$ равна
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{25-No}{\beamergotobutton{} $-1/8$}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $1/6$
+}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $1/3$}
+\item[] \hyperlink{25-Yes}{\beamergotobutton{} $-1$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{26-No} 
+\begin{block}{26} 
+
+Пусть случайные величины $X$ и $Y$ — независимы, тогда \textbf{НЕ ВЕРНЫМ} является утверждение
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{26-No}{\beamergotobutton{} $\P(X<a, Y<b)=\P(X<a)\P(Y<b)$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $\Cov(X,Y) = 0$}
+\item[] \hyperlink{26-Yes}{\beamergotobutton{} $\Var(X-Y)<\Var(X)+\Var(Y)$ }
+\item[] \hyperlink{26-No}{\beamergotobutton{} $\E(XY)=\E(X)\E(Y)$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $\E(X|Y)=\E(X)$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $\P(X<a | Y<b)=\P(X<a)$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{27-No} 
+\begin{block}{27} 
+
+Если $\E(X)=0$, то, согласно неравенству Чебышева, $\P(|X| \leq 5 \sqrt{\Var(X)})$ лежит в интервале
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{27-Yes}{\beamergotobutton{} $[0.96;1]$ }
+\item[] \hyperlink{27-No}{\beamergotobutton{} $[0;0.04]$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $[0.8;1]$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $[0;0.2]$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $[0.5;1]$
+}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{28-No} 
+\begin{block}{28} 
+
+Пусть $X_1$, $X_2$, \ldots, $X_n$ — последовательность независимых одинаково распределенных случайных величин, $\E(X_i)=3$ и $\Var(X_i)=9$. Следующая величина имеет асимптотически стандартное нормальное распределение
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\frac{\bar{X}_n-3}{3}$}
+\item[] \hyperlink{28-Yes}{\beamergotobutton{} $\sqrt{n}\frac{\bar{X}-3}{3}$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\frac{\bar{X}_n-3}{3\sqrt{n}}$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\frac{X_n-3}{3}$ }
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\sqrt{n}(\bar{X}-3)$ }
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{29-No} 
+\begin{block}{29} 
+
+Случайная величина $X$ имеет функцию плотности $f(x)=\frac{1}{3\sqrt{2\pi}} \exp\left(-\frac{(x-1)^2}{18} \right)$. Следующее утверждение \textbf{НЕ ВЕРНО}
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{29-No}{\beamergotobutton{} $\E(X)=1$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $\Var(X)=9$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $\P(X>1)=0.5$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $\P(X=0)=0$}
+\item[] \hyperlink{29-Yes}{\beamergotobutton{} Случайная величина $X$ дискретна}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{30-No} 
+\begin{block}{30} 
+
+Пусть $X_1$, $X_2$, \ldots, $X_n$ — последовательность независимых одинаково распределенных случайных величин, $\E(X_i)=\mu$ и $\Var(X_i)=\sigma^2$. Следующее утверждение в общем случае \textbf{НЕ ВЕРНО}:
+ 
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{30-Yes}{\beamergotobutton{} $\frac{X_n-\mu}{\sigma} \overset{F}{\to} N(0;1)$ при $n\to\infty$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $\lim_{n\to\infty} \Var(\bar{X}_n)=0$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $\bar{X}_n \overset{P}{\to} \mu$ при $n\to\infty$}
+\item[] \hyperlink{30-No}{\beamergotobutton{}$\frac{\bar{X}_n-\mu}{\sigma /\sqrt{n}} \overset{F}{\to } N(0,1) $ при $n\to\infty$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $\frac{\bar{X}_n-\mu}{\sqrt{n} \sigma } \overset{P}{\to } 0 $ при $n\to\infty$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+\end{document}
