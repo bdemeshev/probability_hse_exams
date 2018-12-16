@@ -1,26 +1,26 @@
 Question
 ========
   Ковариационной матрицей может являться матрица
-  
+ 
 
 Answerlist
 ----------
-*  $\beginpmatrix 9 & 7 \\ 7 & 6 \\ \endpmatrix$
-*  $\beginpmatrix 1 & 2 \\ 1 & 2 \\ \endpmatrix$
-*  $\beginpmatrix -1 & 2 \\ 2 & 10 \\ \endpmatrix$
-*  $\beginpmatrix 1 & 2 \\ 2 & 1 \\ \endpmatrix$
-*  $\beginpmatrix 1 & 4 \\ 4 & 9 \\ \endpmatrix$
+*  $\begin{pmatrix} 9 & 7 \\ 7 & 6 \\ \end{pmatrix}$
+*  $\begin{pmatrix} 1 & 2 \\ 1 & 2 \\ \end{pmatrix}$
+*  $\begin{pmatrix} -1 & 2 \\ 2 & 10 \\ \end{pmatrix}$
+*  $\begin{pmatrix} 1 & 2 \\ 2 & 1 \\ \end{pmatrix}$
+*  $\begin{pmatrix} 1 & 4 \\ 4 & 9 \\ \end{pmatrix}$
 
 Solution
 ========
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================

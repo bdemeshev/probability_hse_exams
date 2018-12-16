@@ -2,6 +2,8 @@ Question
 ========
 Известно, что $\E(X)=-1$, $\E(Y)=2$, $\Var(X)=4$, $\Var(Y)=9$, $\Cov(X,Y)=-3$. Дисперсия $\Var(2X-Y+1)$ равна
 
+ 
+
 Answerlist
 ----------
 *  $37$
@@ -15,11 +17,11 @@ Solution
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================

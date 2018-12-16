@@ -1,26 +1,26 @@
 Question
 ========
 Величины $X_1$, $X_2$, \ldots, независимы и одинаково распределены с $\E(X_i) = 4$ и $\Var(X_i) = 100$, а $S_n = X_1 + X_2 + \ldots + X_n$. К нормальному стандартному распределению сходится последовательность
-  
+ 
 
 Answerlist
 ----------
-*   $\fracS_n - 4n
-*   $\sqrtn\fracS_n - 4n
-*   $\sqrtn\fracS_n - 4
-*   $\sqrtn\fracS_n - 4
-*   $\sqrtn\fracS_n - 4
+*  $\frac{S_n - 4n}{10\sqrt{n}}$
+*  $\sqrt{n}\frac{S_n - 4n}{10/\sqrt{n}}$
+*  $\sqrt{n}\frac{S_n - 4}{10/\sqrt{n}}$
+*  $\sqrt{n}\frac{S_n - 4}{10}$
+*  $\sqrt{n}\frac{S_n - 4}{10}\sqrt{n}$
 
 Solution
 ========
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================

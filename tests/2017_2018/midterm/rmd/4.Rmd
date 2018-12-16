@@ -1,7 +1,7 @@
 Question
 ========
   Случайные величины $X$ и $Y$ независимы и нормально распределены с параметрами $\E(X)=2$, $\Var(X)=3$, $\E(Y)=1$, $\Var(Y)=4$. Вероятность $\P(X+Y<3)$ равна
-  
+ 
 
 Answerlist
 ----------
@@ -16,11 +16,11 @@ Solution
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================

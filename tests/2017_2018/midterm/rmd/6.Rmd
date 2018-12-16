@@ -13,7 +13,7 @@ $X=6$ & $0.1$ & $0.2$ & $0.1$ \\
 
 Условное ожидание $\E(X|Y=-2)$ равно
 
- 
+
 
 Answerlist
 ----------
@@ -28,11 +28,11 @@ Solution
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================

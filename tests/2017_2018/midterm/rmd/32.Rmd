@@ -2,24 +2,26 @@ Question
 ========
 Случайная величина $\xi$ имеет стандартное нормальное распределение. Вероятность $\P(\{\xi \in [-1; \, 2]\})$ равна
 
+ 
+
 Answerlist
 ----------
-*   $\int_-1^2\tfrac1
-*   $\int_-1^2\tfrac1
-*   $\int_-1^2\tfrac1
-*   $\int_-1^2\tfrac1
-*   $\int_-1^2\tfrac1
+*  $\int_{-1}^{2}\tfrac{1}{\sqrt{2\pi}}e^{-x^2 / 2}\,dx$
+*  $\int_{-1}^{2}\tfrac{1}{\sqrt{2\pi}}e^{x^2}\,dx$
+*  $\int_{-1}^{2}\tfrac{1}{\sqrt{2\pi}}e^{-x^2}\,dx$
+*  $\int_{-1}^{2}\tfrac{1}{\sqrt{2\pi}}e^{x^2 / 2}\,dx$
+*  $\int_{-1}^{2}\tfrac{1}{2\pi}e^{-x^2 / 2}\,dx$
 
 Solution
 ========
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================

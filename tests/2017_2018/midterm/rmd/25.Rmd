@@ -1,7 +1,7 @@
 Question
 ========
 Случайная величина $\xi$ имеет распределение Бернулли с параметром $p$. Математическое ожидание $\E[\xi^2]$ равно
-  
+ 
 
 Answerlist
 ----------
@@ -16,11 +16,11 @@ Solution
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================

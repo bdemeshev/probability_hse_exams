@@ -1,26 +1,26 @@
 Question
 ========
 У пары случайных величин $X$, $Y$ существует совместная функция плотности $f(x,y)$ и условная функция плотности $f(x|y)$. Условную дисперсию $\Var(X|Y)$ можно найти по формуле
-  
+ 
 
 Answerlist
 ----------
-*  $\int_-\infty^+\infty x^2 f(x|Y) \, dx - (\E(X|Y))^2$
-*  $\int_-\infty^+\infty (x - \E(X))^2 f(x|Y) \, dx$
-*  $\int_-\infty^+\infty x^2 f(x|Y) \, dx$
-*  $\int_-\infty^+\infty (x - \E(X|Y))^2 \, dx$
-*  $\left(\int_-\infty^+\infty x f(x|Y) \, dx\right)^2 - (\E(X|Y))^2$
+*  $\int_{-\infty}^{+\infty} x^2 f(x|Y) \, dx - (\E(X|Y))^2$
+*  $\int_{-\infty}^{+\infty} (x - \E(X))^2 f(x|Y) \, dx$
+*  $\int_{-\infty}^{+\infty} x^2 f(x|Y) \, dx$
+*  $\int_{-\infty}^{+\infty} (x - \E(X|Y))^2 \, dx$
+*  $\left(\int_{-\infty}^{+\infty} x f(x|Y) \, dx\right)^2 - (\E(X|Y))^2$
 
 Solution
 ========
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================

@@ -1,0 +1,68 @@
+\section{Промежуточные экзамены}
+
+% [1][3] 1 = one argument, 3 = value if missing
+% эта магия создаёт окружение answerlist
+% именно в окружении answerlist записаны варианты ответов в подключаемых exerciseXX
+% просто \begin{answerlist} сделает ответы в три столбца
+% если ответы длинные, то надо в них руками сделать
+% \begin{answerlist}[1] чтобы они шли в один столбец
+\newenvironment{answerlist}[1][3]{
+\begin{multicols}{#1}
+\begin{enumerate}[label=\fbox{\emph{\Alph*}},ref=\emph{\alph*}]
+}
+{
+\end{enumerate}
+\end{multicols}
+}
+
+
+\excludecomment{solution} % without solutions
+
+\theoremstyle{definition}
+\newtheorem{question}{Вопрос}
+
+
+\subsection[2017-2018]{\hyperref[sec:sol_midterm_exam_2017_2018]{2017-2018}}
+\label{sec:midterm_exam_2017_2018}
+
+
+\input{tests/2017_2018/midterm/tex/exercise01}
+\input{tests/2017_2018/midterm/tex/exercise02}
+\input{tests/2017_2018/midterm/tex/exercise03}
+\input{tests/2017_2018/midterm/tex/exercise04}
+\input{tests/2017_2018/midterm/tex/exercise05}
+\input{tests/2017_2018/midterm/tex/exercise06}
+\input{tests/2017_2018/midterm/tex/exercise07}
+\input{tests/2017_2018/midterm/tex/exercise08}
+\input{tests/2017_2018/midterm/tex/exercise09}
+\input{tests/2017_2018/midterm/tex/exercise10}
+\input{tests/2017_2018/midterm/tex/exercise11}
+\input{tests/2017_2018/midterm/tex/exercise12}
+\input{tests/2017_2018/midterm/tex/exercise13}
+\input{tests/2017_2018/midterm/tex/exercise14}
+\input{tests/2017_2018/midterm/tex/exercise15}
+\input{tests/2017_2018/midterm/tex/exercise16}
+\input{tests/2017_2018/midterm/tex/exercise17}
+\input{tests/2017_2018/midterm/tex/exercise18}
+\input{tests/2017_2018/midterm/tex/exercise19}
+\input{tests/2017_2018/midterm/tex/exercise20}
+\input{tests/2017_2018/midterm/tex/exercise21}
+\input{tests/2017_2018/midterm/tex/exercise22}
+\input{tests/2017_2018/midterm/tex/exercise23}
+\input{tests/2017_2018/midterm/tex/exercise24}
+\input{tests/2017_2018/midterm/tex/exercise25}
+\input{tests/2017_2018/midterm/tex/exercise26}
+\input{tests/2017_2018/midterm/tex/exercise27}
+\input{tests/2017_2018/midterm/tex/exercise28}
+\input{tests/2017_2018/midterm/tex/exercise29}
+\input{tests/2017_2018/midterm/tex/exercise30}
+\input{tests/2017_2018/midterm/tex/exercise31}
+\input{tests/2017_2018/midterm/tex/exercise32}
+\input{tests/2017_2018/midterm/tex/exercise33}
+\input{tests/2017_2018/midterm/tex/exercise34}
+\input{tests/2017_2018/midterm/tex/exercise35}
+\input{tests/2017_2018/midterm/tex/exercise36}
+\input{tests/2017_2018/midterm/tex/exercise37}
+\input{tests/2017_2018/midterm/tex/exercise38}
+\input{tests/2017_2018/midterm/tex/exercise39}
+\input{tests/2017_2018/midterm/tex/exercise40}

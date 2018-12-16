@@ -1,7 +1,7 @@
 Question
 ========
 Математическое ожидание величины $X$ равно 2, а дисперсия равна 6. Вероятность $\P(X^2 \geq 100)$ лежит в диапазоне
-  
+ 
 
 Answerlist
 ----------
@@ -16,11 +16,11 @@ Solution
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================

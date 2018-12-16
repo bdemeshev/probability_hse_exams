@@ -1,7 +1,7 @@
 Question
 ========
 Величины $X_1$, $X_2$, \ldots, независимы и одинаково распределены $\cN(0;1)$. Предел по вероятности $\plim_{n\to\infty} \frac{X_1^2+ X_2^2 + \ldots + X_n^2}{n}$ равен
- 
+
 
 Answerlist
 ----------
@@ -16,11 +16,11 @@ Solution
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================
