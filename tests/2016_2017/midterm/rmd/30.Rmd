@@ -1,7 +1,7 @@
 Question
 ========
 Вероятность того, что $X=0$ при условии $Y<1$ равна
-  
+
 
 Answerlist
 ----------
@@ -11,17 +11,16 @@ Answerlist
 *  $1/2$
 *  $3/4$
 
-
 Solution
 ========
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================

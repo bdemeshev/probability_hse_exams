@@ -1,26 +1,26 @@
 Question
 ========
-  Известно, что $\E(X)=3$, $\E(Y)=2$, $\Var(X)=12$, $\Var(Y)=1$, $\Cov(X,Y)=2$. Корреляция $\Corr(X,Y)$ равна
-  
+Известно, что $\E(X)=3$, $\E(Y)=2$, $\Var(X)=12$, $\Var(Y)=1$, $\Cov(X,Y)=2$. Корреляция $\Corr(X,Y)$ равна
+
 
 Answerlist
 ----------
-*  $\frac1
-*  $\frac2
-*  $\frac1
-*  $\frac1
-*  $\frac2
+*  $\frac{1}{\sqrt{3}}$
+*  $\frac{2}{\sqrt{13}}$
+*  $\frac{1}{12}$
+*  $\frac{1}{\sqrt{12}}$
+*  $\frac{2}{12}$
 
 Solution
 ========
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================

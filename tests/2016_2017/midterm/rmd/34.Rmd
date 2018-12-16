@@ -1,26 +1,26 @@
 Question
 ========
-  Условное распределение $X$ при условии $Y=1$ имеет вид
-  
+Условное распределение $X$ при условии $Y=1$ имеет вид
+
 
 Answerlist
 ----------
-*  $ f(x) = \begincases
-     				3 x^2 , x \in [0,1] \\
-     				0,\text иначе
- 				\endcases  $
-*  $ f(x) = \begincases
-     				3 x , x \in [0,1] \\
-     				0,\text иначе
- 				\endcases  $
-*  $ f(x) = \begincases
-     				9 x^2 , x \in [0,1] \\
-     				0,\text иначе
- 				\endcases  $
-*  $ f(x) = \begincases
-     				9 x , x \in [0,1] \\
-     				0,\text иначе
- 				\endcases  $
+*  $f(x) = \begin{cases}
+3 x^2 , x \in [0,1] \\
+0,\text{ иначе}
+\end{cases}$
+*  $f(x) = \begin{cases}
+3 x , x \in [0,1] \\
+0,\text{ иначе}
+\end{cases}$
+*  $f(x) = \begin{cases}
+9 x^2 , x \in [0,1] \\
+0,\text{ иначе}
+\end{cases}$
+*  $f(x) = \begin{cases}
+9 x , x \in [0,1] \\
+0,\text{ иначе}
+\end{cases}$
 *  Не определено
 
 Solution
@@ -28,11 +28,11 @@ Solution
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================

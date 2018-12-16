@@ -1,12 +1,14 @@
 Question
 ========
-  Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из распределения Пуассона с параметром $\lambda > 0$. Информация Фишера о параметре $\lambda$, заключенная в~\textsc{одном} наблюдении случайной выборки, равна
+Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из распределения Пуассона с параметром $\lambda > 0$. Информация Фишера о параметре $\lambda$, заключенная в~\textsc{одном} наблюдении случайной выборки, равна
+
 
 Answerlist
 ----------
+*  $F_{m-1,n-1}$
 *  $1 / \lambda$
-*  $e^-\lambda$
-*   $n / \lambda$
+*  $e^{-\lambda}$
+*  $n / \lambda$
 *  $\lambda / n$
 *  $\lambda$
 
@@ -15,15 +17,16 @@ Solution
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================
 exname: 21
 extype: schoice
-exsolution: 10000
+exsolution: 110000
 exshuffle: 5

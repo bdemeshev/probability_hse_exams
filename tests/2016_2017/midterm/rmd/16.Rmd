@@ -1,13 +1,13 @@
 Question
 ========
-  Известно, что $\xi \sim U[0;\,1]$. Вероятность $\P(0.2<\xi<0.7)$ равна
-  
+Известно, что $\xi \sim U[0;\,1]$. Вероятность $\P(0.2<\xi<0.7)$ равна
+
 
 Answerlist
 ----------
 *  $1/2$
-*  $\int_0.2^0.7\frac1
-*  $\int_0^1\frac1
+*  $\int_{0.2}^{0.7}\frac{1}{\sqrt{2\pi}}\,e^{-t^2/2}\,dt$
+*  $\int_{0}^{1}\frac{1}{\sqrt{2\pi}}\,e^{-t^2/2}\,dt$
 *  $1/4$
 *  $0.17$
 
@@ -16,11 +16,11 @@ Solution
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================

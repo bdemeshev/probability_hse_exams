@@ -1,7 +1,7 @@
 Question
 ========
-  Если $\P(A)=0.2$, $\P(B)=0.5$, $\P(A | B) = 0.3$, то
-  
+Если $\P(A)=0.2$, $\P(B)=0.5$, $\P(A | B) = 0.3$, то
+
 
 Answerlist
 ----------
@@ -16,11 +16,11 @@ Solution
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================

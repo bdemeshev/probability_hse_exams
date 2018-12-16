@@ -52,5 +52,3 @@ exams <- exams2nops(files_sample, n = 1,
 sol <- exams_metainfo(exams)
 print(sol, 1)
 
-
-

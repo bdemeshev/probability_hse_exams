@@ -1,25 +1,26 @@
 Question
 ========
-    Оценка  $\hat\theta_n$ параметра $\theta$ называется эффективной в некотором классе оценок $\mathcal{K}$, если
+Оценка  $\hat\theta_n$ параметра $\theta$ называется эффективной в некотором классе оценок $\mathcal{K}$, если
+
 
 Answerlist
 ----------
-*  $\hat\theta_n \xrightarrowP\theta$
+*  $\hat\theta_n \xrightarrow{P}\theta$
 *  $\E(\hat\theta_n)=\theta$
-*  $\Var(\hat\theta_n)=\frac\sigma^2
+*  $\Var(\hat\theta_n)=\frac{\sigma^2}{n}$
 *  $\Var(\hat\theta_n) \to 0$
-*  Для любой оценки $T$ из класса $\mathcalK$ и любого $\theta$ выполнено $\E((\hat\theta_n-\theta)^2)\leq \E((T-\theta)^2)$
+*  Для любой оценки $T$ из класса $\mathcal{K}$ и любого $\theta$ выполнено $\E((\hat\theta_n-\theta)^2)\leq \E((T-\theta)^2)$
 
 Solution
 ========
 
 Answerlist
 ----------
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
-*  Отлично
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Good answer :)
 
 Meta-information
 ================

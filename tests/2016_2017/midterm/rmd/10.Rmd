@@ -1,41 +1,38 @@
 Question
 ========
 Функцией плотности случайной величины может являться функция
-  
+
 
 Answerlist
 ----------
-*  $ f(x) = \begincases
-            \frac1
-*  $ f(x) = \begincases
-     				x - 1, x \in [0,1+\sqrt3] \\
-     				0,\text иначе
- 				\endcases  $
-
-*  $ f(x) = \begincases
-     			  x^2, x \in [0,2] \\
-     				0,\text иначе
- 				\endcases  $
-
-
-
-*  $ f(x) = \begincases
-     				-1, x \in [-1, 0] \\
-     				0,\text иначе
- 				\endcases  $
-
-*  $ f(x) = \frac1
+*  $f(x) = \begin{cases}
+\frac{1}{x^2}, x \in [1,+ \infty) \\
+0,\text{ иначе}
+\end{cases}$
+*  $f(x) = \begin{cases}
+x - 1, x \in [0,1+\sqrt{3}] \\
+0,\text{ иначе}
+\end{cases}$
+*  $f(x) = \begin{cases}
+x^2, x \in [0,2] \\
+0,\text{ иначе}
+\end{cases}$
+*  $f(x) = \begin{cases}
+-1, x \in [-1, 0] \\
+0,\text{ иначе}
+\end{cases}$
+*  $f(x) = \frac{1}{\sqrt{2\pi}} e^{-x^2}$
 
 Solution
 ========
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================

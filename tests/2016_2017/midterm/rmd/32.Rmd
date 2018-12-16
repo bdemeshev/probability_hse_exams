@@ -1,7 +1,7 @@
 Question
 ========
- Ковариация случайных величин $X$ и $Y$ равна:
-  
+Ковариация случайных величин $X$ и $Y$ равна:
+
 
 Answerlist
 ----------
@@ -16,11 +16,11 @@ Solution
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================
