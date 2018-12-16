@@ -154,6 +154,12 @@ left=13mm, right=13mm, includefoot]{geometry}
 
 
 \newcommand{\cN}{\mathcal{N}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cBinom}{\mathcal{Binom}}
+\newcommand{\cPois}{\mathcal{Pois}}
+\newcommand{\cBeta}{\mathcal{Beta}}
+\newcommand{\cGamma}{\mathcal{Gamma}}
+
 \def \R{\mathbb{R}}
 \def \N{\mathbb{N}}
 \def \Z{\mathbb{Z}}
@@ -238,9 +244,42 @@ left=13mm, right=13mm, includefoot]{geometry}
 \end{hyphenrules}
 
 
-
-
 % \setcounter{secnumdepth}{0} % убираем нумерацию секций, подсекций и т.д.
+
+
+%%%%%%%%%%%
+% блок для тестов
+%%%%%%%%%%%
+% [1][3] 1 = one argument, 3 = value if missing
+% эта магия создаёт окружение answerlist
+% именно в окружении answerlist записаны варианты ответов в подключаемых exerciseXX
+% просто \begin{answerlist} сделает ответы в три столбца
+% если ответы длинные, то надо в них руками сделать
+% \begin{answerlist}[1] чтобы они шли в один столбец
+\newenvironment{answerlist}[1][3]{
+\begin{multicols}{#1}
+\begin{enumerate}[label=\fbox{\emph{\Alph*}},ref=\emph{\alph*}]
+}
+{
+\end{enumerate}
+\end{multicols}
+}
+
+
+\excludecomment{solution} % without solutions
+
+\theoremstyle{definition}
+\newtheorem{question}{Вопрос}
+% конец блока для тестов
+%%%%%%%%%%%%5
+
+
+
+
+
+
+
+
 
 \begin{document}
 \maketitle
@@ -313,7 +352,7 @@ left=13mm, right=13mm, includefoot]{geometry}
 \input{chapters/kr_01.tex}
 \input{chapters/kr_01_ip.tex}
 \input{chapters/kr_02.tex}
-% \input{chapters/midterm_exam.tex}
+\input{chapters/midterm_exam.tex}
 \input{chapters/kr_03.tex}
 \input{chapters/kr_03_ip.tex}
 \input{chapters/kr_04.tex}
@@ -329,7 +368,7 @@ left=13mm, right=13mm, includefoot]{geometry}
 \input{chapters/sol_kr_01.tex}
 \input{chapters/sol_kr_01_ip.tex}
 \input{chapters/sol_kr_02.tex}
-% \input{chapters/sol_midterm_exam.tex}
+\input{chapters/sol_midterm_exam.tex}
 \input{chapters/sol_kr_03.tex}
 \input{chapters/sol_kr_03_ip.tex}
 \input{chapters/sol_kr_04.tex}

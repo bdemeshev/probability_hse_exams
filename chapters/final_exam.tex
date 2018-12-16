@@ -1,26 +1,5 @@
 \section{Финальные экзамены}
 
-% [1][3] 1 = one argument, 3 = value if missing
-% эта магия создаёт окружение answerlist
-% именно в окружении answerlist записаны варианты ответов в подключаемых exerciseXX
-% просто \begin{answerlist} сделает ответы в три столбца
-% если ответы длинные, то надо в них руками сделать
-% \begin{answerlist}[1] чтобы они шли в один столбец
-\newenvironment{answerlist}[1][3]{
-\begin{multicols}{#1}
-\begin{enumerate}[label=\fbox{\emph{\Alph*}},ref=\emph{\alph*}]
-}
-{
-\end{enumerate}
-\end{multicols}
-}
-
-
-\excludecomment{solution} % without solutions
-
-\theoremstyle{definition}
-\newtheorem{question}{Вопрос}
-
 
 \subsection[2017-2018]{\hyperref[sec:sol_final_exam_2017_2018]{2017-2018}}
 \label{sec:final_exam_2017_2018}
