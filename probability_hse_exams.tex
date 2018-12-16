@@ -269,9 +269,14 @@ left=13mm, right=13mm, includefoot]{geometry}
 \excludecomment{solution} % without solutions
 
 \theoremstyle{definition}
-\newtheorem{question}{Вопрос}
+
+% опция [subsection] для сброса счётчика вопросов после каждой subsection
+\newtheorem{question}{Вопрос}[subsection]
+
+% чтобы номер вопроса был без номера секции:
+\renewcommand{\thequestion}{\arabic{question}}
 % конец блока для тестов
-%%%%%%%%%%%%5
+%%%%%%%%%%%%
 
 
 
