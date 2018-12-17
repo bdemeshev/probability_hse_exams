@@ -1,14 +1,14 @@
 Question
 ========
 Ковариационная матрица вектора $X=(X_1,X_2)$ имеет вид
-\[
+$$
 \begin{pmatrix}
 10 & 3 \\
 3 & 8
 \end{pmatrix}
-\]
+$$
 Дисперсия разности элементов вектора, $\Var(X_1-X_2)$, равняется
- 
+
 
 Answerlist
 ----------
@@ -23,11 +23,11 @@ Solution
 
 Answerlist
 ----------
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
-*  Отлично
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Good answer :)
 
 Meta-information
 ================

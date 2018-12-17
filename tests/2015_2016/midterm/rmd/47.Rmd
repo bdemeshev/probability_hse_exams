@@ -7,7 +7,7 @@ Question
 Крылов завтракает & 200 & 40 \\
 Крылов уже позавтракал & 25 & 100 \\
 \end{tabular}
- 
+
 
 Answerlist
 ----------
@@ -22,11 +22,11 @@ Solution
 
 Answerlist
 ----------
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
-*  Отлично
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Good answer :)
 
 Meta-information
 ================

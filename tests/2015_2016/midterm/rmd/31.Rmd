@@ -1,26 +1,26 @@
 Question
 ========
 Величины $X_1$, $X_2$, \ldots независимы и одинаково распределены с $\E(X_i)=\mu$, $\Var(X_i)=\sigma^2$. К стандартному нормальному распределению  сходится последовательность случайных величин
- 
+
 
 Answerlist
 ----------
-*  $\sqrtn(\bar X - \mu) /\sigma$ 
+*  $\sqrt{n}(\bar X - \mu) /\sigma$
 *  $\bar X$
 *  $(\bar X - \mu) /\sigma$
-*  $(\bar X - \mu) /(\sqrtn\sigma)$
-*  $(\bar X - n\mu) /(\sqrtn\sigma)$
+*  $(\bar X - \mu) /(\sqrt{n}\sigma)$
+*  $(\bar X - n\mu) /(\sqrt{n}\sigma)$
 
 Solution
 ========
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================

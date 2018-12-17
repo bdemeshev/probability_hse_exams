@@ -1,38 +1,36 @@
 Question
 ========
 Совместная функция плотности пары $X$ и $Y$ имеет вид
-\[
+$$
 f(x,y)=\begin{cases}
 (x+y)/3, \; \text{ если } x\in[0;1], y\in [0;2] \\
 0, \; \text{ иначе}
 \end{cases}
-\]
+$$
 
 \vspace{0.5cm} 
  
-Условная функция плотности  $f_{X|Y=1}(x)$ равна
- 
+ Условная функция плотности  $f_{X|Y=1}(x)$ равна
+
 
 Answerlist
 ----------
-*  $f_X|Y=1(x)=\begincases (2x+2)/3\, \text если  x\in [0;1] \\ 0, \text иначе     \endcases$
-*  $f_X|Y=1(x)=\begincases (x+2)/2\, \text если  x\in [0;1] \\ 0, \text иначе     \endcases$
-*  $f_X|Y=1(x)=\begincases (2x+1)/2\, \text если  x\in [0;1] \\ 0, \text иначе     \endcases$
-*  $f_X|Y=1(x)=\begincases (x+4)/2\, \text если  x\in [0;1] \\ 0, \text иначе     \endcases$
-*  $f_X|Y=1(x)=\begincases (4x+2)/3\, \text если  x\in [0;1] \\ 0, \text иначе     \endcases$
-
-
+*  $f_{X|Y=1}(x)=\begin{cases} (2x+2)/3\, \text{ если } x\in [0;1] \\ 0, \text{ иначе }    \end{cases}$
+*  $f_{X|Y=1}(x)=\begin{cases} (x+2)/2\, \text{ если } x\in [0;1] \\ 0, \text{ иначе }    \end{cases}$
+*  $f_{X|Y=1}(x)=\begin{cases} (2x+1)/2\, \text{ если } x\in [0;1] \\ 0, \text{ иначе }    \end{cases}$
+*  $f_{X|Y=1}(x)=\begin{cases} (x+4)/2\, \text{ если } x\in [0;1] \\ 0, \text{ иначе }    \end{cases}$
+*  $f_{X|Y=1}(x)=\begin{cases} (4x+2)/3\, \text{ если } x\in [0;1] \\ 0, \text{ иначе }    \end{cases}$
 
 Solution
 ========
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================

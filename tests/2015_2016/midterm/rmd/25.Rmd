@@ -4,8 +4,8 @@ Question
 
 \vspace{0.5cm} 
  
-Ковариация $\Cov(2X+Y,X-3Y)$ равна
- 
+ Ковариация $\Cov(2X+Y,X-3Y)$ равна
+
 
 Answerlist
 ----------
@@ -15,17 +15,16 @@ Answerlist
 *  $1$
 *  $-1$
 
-
 Solution
 ========
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================

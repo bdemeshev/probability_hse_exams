@@ -1,7 +1,7 @@
 Question
 ========
 Корреляция $\Corr((1-X)/2,(Y+5)/2)$ равна
- 
+
 
 Answerlist
 ----------
@@ -11,17 +11,16 @@ Answerlist
 *  $-1/8$
 *  $1$
 
-
 Solution
 ========
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================

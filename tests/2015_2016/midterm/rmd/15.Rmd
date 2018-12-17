@@ -4,7 +4,7 @@ Question
 
 \begin{center}
 \begin{tabular}{c|cc}
- & $Y=-2$ & $Y=1$ \\
+& $Y=-2$ & $Y=1$ \\
 \hline
 $X=-1$ & 0.1 & 0 \\
 $X=0$ & 0.1 & 0.3 \\
@@ -14,7 +14,7 @@ $X=1$ & 0.2 & 0.3 \\
 \vspace{0.2cm} 
  
  Дисперсия случайной величины $X$ равна
- 
+
 
 Answerlist
 ----------
@@ -24,17 +24,16 @@ Answerlist
 *  $0.6$
 *  $1.04$
 
-
 Solution
 ========
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================

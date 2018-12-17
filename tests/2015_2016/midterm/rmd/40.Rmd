@@ -2,6 +2,7 @@ Question
 ========
 Если P-значение (P-value) больше уровня значимости  $\alpha$, то гипотеза  $H_0: \; \sigma=1$
 
+
 Answerlist
 ----------
 *  Отвергается
@@ -15,11 +16,11 @@ Solution
 
 Answerlist
 ----------
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
-*  Отлично
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Good answer :)
 
 Meta-information
 ================

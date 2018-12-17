@@ -1,26 +1,26 @@
 Question
 ========
 Пусть $X_1$,\ldots, $X_n$ — выборка объема $n$ из равномерного на $[0, \theta]$ распределения. Оценка параметра $\theta$ методом моментов по $k$-му моменту имеет вид:
- 
+
 
 Answerlist
 ----------
-*  $\sqrt[k](k+1) \overlineX^k$
-*  $\sqrt[k](k+1) \overlineX^k$
-*  $\sqrt[k]k \overlineX^k$
-*  $\sqrt[k]k \overlineX^k$
-*  $\sqrt[k+1](k+1) \overlineX^k$
+*  $\sqrt[k]{(k+1) \overline{X^k}}$
+*  $\sqrt[k]{(k+1) \overline{X}^k}$
+*  $\sqrt[k]{k \overline{X^k}}$
+*  $\sqrt[k]{k \overline{X}^k}$
+*  $\sqrt[k+1]{(k+1) \overline{X}^k}$
 
 Solution
 ========
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================

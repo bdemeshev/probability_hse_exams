@@ -1,17 +1,16 @@
 Question
 ========
-  \AMCnoCompleteMulti
 Функция плотности случайной величины $X$ имеет вид
-\[
+$$
 f(x)=\frac{1}{\sqrt{8\pi}} e^{-(x-3)^2/8}
-\]
- \textbf{НЕВЕРНЫМ} является утверждение
- 
+$$
+\textbf{НЕВЕРНЫМ} является утверждение
+
 
 Answerlist
 ----------
-*  $\Var(X)=8$ 
-*  $\max f(x) = \frac1
+*  $\Var(X)=8$
+*  $\max f(x) = \frac{1}{2\sqrt{2\pi}}$
 *  $\E(X)=3$
 *  $\P(X>3)=0.5$
 *  $\P(X=0)=0$
@@ -22,12 +21,12 @@ Solution
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================

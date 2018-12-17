@@ -1,7 +1,7 @@
 Question
 ========
 Мощностью теста называется
- 
+
 
 Answerlist
 ----------
@@ -16,11 +16,11 @@ Solution
 
 Answerlist
 ----------
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
-*  Отлично
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Good answer :)
 
 Meta-information
 ================

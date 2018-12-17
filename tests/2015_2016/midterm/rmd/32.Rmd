@@ -1,7 +1,7 @@
 Question
 ========
 Пусть $X_1$, \ldots, $X_n$ — выборка объема $n$ из равномерного на $[a, b]$ распределения. Оценка $X_1+X_2$ параметра $c=a+b$ является
- 
+
 
 Answerlist
 ----------
@@ -16,11 +16,11 @@ Solution
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================

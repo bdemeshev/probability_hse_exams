@@ -1,26 +1,26 @@
 Question
 ========
 Пусть $X_1$, \ldots, $X_{2 n}$ — выборка объема $2 n$ из некоторого распределения. Какая из нижеперечисленных оценок математического ожидания имеет наименьшую дисперсию?
- 
+
 
 Answerlist
 ----------
 *  $X_1$
-*  $\fracX_1+X_2
-*  $\frac1
-*  $\frac1
-*  $\frac1
+*  $\frac{X_1+X_2}{2}$
+*  $\frac{1}{n} \sum_{i=1}^n X_i$
+*  $\frac{1}{n} \sum_{i=n+1}^{2 n} X_i$
+*  $\frac{1}{2 n} \sum_{i=1}^{2 n} X_i$
 
 Solution
 ========
 
 Answerlist
 ----------
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
-*  Отлично
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Good answer :)
 
 Meta-information
 ================

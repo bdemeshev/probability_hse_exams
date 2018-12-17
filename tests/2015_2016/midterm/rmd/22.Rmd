@@ -1,17 +1,17 @@
 Question
 ========
 Совместная функция плотности пары $X$ и $Y$ имеет вид
-\[
+$$
 f(x,y)=\begin{cases}
 (x+y)/3, \; \text{ если } x\in[0;1], y\in [0;2] \\
 0, \; \text{ иначе}
 \end{cases}
-\]
+$$
 
 \vspace{0.5cm} 
  
  Вероятность $\P(X<0.5, Y<1)$ равна
- 
+
 
 Answerlist
 ----------
@@ -21,17 +21,16 @@ Answerlist
 *  $5/8$
 *  $3/8$
 
-
 Solution
 ========
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================

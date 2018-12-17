@@ -4,8 +4,8 @@ Question
 
 \vspace{0.5cm} 
  
-Математическое ожидание $\E(Y)$ равно
- 
+ Математическое ожидание $\E(Y)$ равно
+
 
 Answerlist
 ----------
@@ -15,17 +15,16 @@ Answerlist
 *  $6/5$
 *  $13/7$
 
-
 Solution
 ========
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================

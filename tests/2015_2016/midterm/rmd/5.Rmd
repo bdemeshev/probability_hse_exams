@@ -1,6 +1,6 @@
 Question
 ========
-Если события $A$, $B$, $C$ попарно независимы, то
+
 
 Answerlist
 ----------
@@ -10,17 +10,16 @@ Answerlist
 *  События $A$, $B$, $C$ несовместны
 *  $\P(A\cap B\cap C)=\P(A)\P(B)\P(C)$
 
-
 Solution
 ========
 
 Answerlist
 ----------
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================

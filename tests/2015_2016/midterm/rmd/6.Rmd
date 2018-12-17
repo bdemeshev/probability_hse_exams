@@ -1,7 +1,7 @@
 Question
 ========
 Случайная величина $X$ равномерна на отрезке $[0;10]$. Вероятность $\P(X>3|X<7)$ равна
-     
+
 
 Answerlist
 ----------
@@ -11,17 +11,16 @@ Answerlist
 *  $3/7$
 *  $0.21$
 
-
 Solution
 ========
 
 Answerlist
 ----------
-*  Отлично
-*  Неверно
-*  Неверно
-*  Неверно
-*  Неверно
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
 
 Meta-information
 ================
