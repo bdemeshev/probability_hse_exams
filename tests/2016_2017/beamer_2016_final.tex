@@ -1,0 +1,2917 @@
+\documentclass[t]{beamer}
+
+\usetheme{Boadilla} 
+ \usecolortheme{seahorse} 
+
+\setbeamertemplate{footline}[frame number]{} 
+ \setbeamertemplate{navigation symbols}{} 
+ \setbeamertemplate{footline}{}
+\usepackage{cmap} 
+
+\usepackage{mathtext} 
+ \usepackage{booktabs} 
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools}
+\usepackage[T2A]{fontenc} 
+
+\usepackage[utf8]{inputenc} 
+
+\usepackage[english,russian]{babel} 
+
+\DeclareMathOperator{\Lin}{\mathrm{Lin}} 
+ \DeclareMathOperator{\Linp}{\Lin^{\perp}} 
+ \DeclareMathOperator*\plim{plim}
+
+ \DeclareMathOperator{\grad}{grad} 
+ \DeclareMathOperator{\card}{card} 
+ \DeclareMathOperator{\sgn}{sign} 
+ \DeclareMathOperator{\sign}{sign} 
+ \DeclareMathOperator*{\argmin}{arg\,min} 
+ \DeclareMathOperator*{\argmax}{arg\,max} 
+ \DeclareMathOperator*{\amn}{arg\,min} 
+ \DeclareMathOperator*{\amx}{arg\,max} 
+ \DeclareMathOperator{\cov}{Cov} 
+
+\DeclareMathOperator{\Var}{Var} 
+ \DeclareMathOperator{\Cov}{Cov} 
+ \DeclareMathOperator{\Corr}{Corr} 
+ \DeclareMathOperator{\E}{\mathbb{E}} 
+ \let\P\relax 
+
+\DeclareMathOperator{\P}{\mathbb{P}} 
+ \newcommand{\cN}{\mathcal{N}} 
+ \def \R{\mathbb{R}} 
+ \def \N{\mathbb{N}} 
+ \def \Z{\mathbb{Z}} 
+
+\title{Final 2016} 
+ \subtitle{Теория вероятностей и математическая статистика} 
+ \author{Обратная связь: \url{https://github.com/bdemeshev/probability_hse_exams}} 
+ \date{Последнее обновление: \today}
+\begin{document} 
+
+\frame[plain]{\titlepage}
+
+ \begin{frame} \label{1} 
+\begin{block}{1} 
+
+  При тестировании гипотезы о равенстве дисперсий по двум независимым нормальным выборкам размером $m$ и $n$ тестовая статистика может иметь распределение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{1-No}{\beamergotobutton{} $\chi^2_{m+n-2}$}
+\item[] \hyperlink{1-Yes}{\beamergotobutton{} $F_{m-1,n-1}$}
+\item[] \hyperlink{1-No}{\beamergotobutton{} $F_{m,n - 2}$}
+\item[] \hyperlink{1-No}{\beamergotobutton{} $F_{m+1,n+1}$}
+\item[] \hyperlink{1-No}{\beamergotobutton{} $t_{m+n-2}$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{2} 
+\begin{block}{2} 
+
+  Для построения доверительного интервала для разности математических ожиданий по двум независимым нормальным выборкам размера $m$ и $n$ в случае неизвестных равных дисперсий используется распределение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{2-Yes}{\beamergotobutton{} $t_{m+n-2}$}
+\item[] \hyperlink{2-No}{\beamergotobutton{} $t_{m-1,n-1}$}
+\item[] \hyperlink{2-No}{\beamergotobutton{} $t_{m+n}$}
+\item[] \hyperlink{2-No}{\beamergotobutton{} $\cN(0;m+n-2)$}
+\item[] \hyperlink{2-No}{\beamergotobutton{} $\chi^2_m+n-2$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{3} 
+\begin{block}{3} 
+
+  Для проверки гипотезы о равенстве дисперсий используются две независимые нормальные выборки размером 25 и 16 наблюдений. Несмещённая оценка дисперсии по первой выборке составила 36, по второй — 49. Тестовая статистика может быть равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{3-No}{\beamergotobutton{} $1.56$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $2.13$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $1.17$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $1.85$}
+\item[] \hyperlink{3-Yes}{\beamergotobutton{} $1.36$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{4} 
+\begin{block}{4} 
+
+  Для проверки гипотезы о равенстве математических ожиданий используются две нормальные выборки размером 25 и 16 наблюдений. Разница выборочных средних равна 1. Тестовая статистика НЕ может быть равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{4-No}{\beamergotobutton{} $1.17$}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $2.13$}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $1.56$}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $1.36$}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $1.85$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{5} 
+\begin{block}{5} 
+
+  Для построения доверительного интервала для разности математических ожиданий в двух нормальных выборках размеров $m$ и $n$ при известных и не равных дисперсиях тестовая статистика имеет распределение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{5-No}{\beamergotobutton{} $t_{m+n-2}$}
+\item[] \hyperlink{5-Yes}{\beamergotobutton{} $\cN(0;1)$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $t_{m-1,n-1}$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $\chi^2_{m+n-2}$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $t_{m+n}$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{6} 
+\begin{block}{6} 
+
+  При проверке гипотезы о равенстве долей можно использовать распределение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{6-No}{\beamergotobutton{} $t_{m+n}$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $t_{m+n-2}$}
+\item[] \hyperlink{6-Yes}{\beamergotobutton{} $\cN(0;1)$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $t_{m-1,n-1}$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $\chi^2_{m+n-2}$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{7} 
+\begin{block}{7} 
+
+   При проверке гипотезы о равенстве дисперсий в двух выборках размером в 3 и 5 наблюдений было получено значение тестовой статистики 10. Если оценка дисперсии по одной из выборок равна 8, то другая оценка дисперсии может быть равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{7-No}{\beamergotobutton{} $25$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $4/3$}
+\item[] \hyperlink{7-Yes}{\beamergotobutton{} $4/5$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $4$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $1/5$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{8} 
+\begin{block}{8} 
+
+  Пусть $\hat\sigma^2_1$ и  $\hat\sigma^2_2$ — несмещённые оценки дисперсий, полученные по независимым нормальным выборкам размером $m$ и $n$ соответственно. Тогда статистика $\hat\sigma^2_1/\hat\sigma^2_2$ имеет распределение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{8-No}{\beamergotobutton{} $F_{m,n-2}$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $t_{m+n-2}$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $F_{m+1, n+1}$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $F_{m,n}$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $\chi^2_{m+n-2}$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{9} 
+\begin{block}{9} 
+
+  Требуется проверить гипотезу о равенстве математических ожиданий по независимым нормальным выборкам размером 33 и 16 наблюдений. Истинные дисперсии по обеим выборкам известны, совпадают и равны 196. Разница выборочных средних равна 1. Тестовая статистика может быть равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{9-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{9-No}{\beamergotobutton{} $1/14$}
+\item[] \hyperlink{9-No}{\beamergotobutton{} $1/49$}
+\item[] \hyperlink{9-Yes}{\beamergotobutton{} $1/4$}
+\item[] \hyperlink{9-No}{\beamergotobutton{} $1/7$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{10} 
+\begin{block}{10} 
+
+  Требуется проверить гипотезу о равенстве математических ожиданий по двум нормальным выборкам размером 33 и 16 наблюдений. Истинные дисперсии по обеим выборкам известны, совпадают и равны 196. Разница выборочных средних равна 1. Тестовая статистика может быть равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{10-No}{\beamergotobutton{} $-1/4$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $-1/14$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $-1/7$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $-1/49$}
+\item[] \hyperlink{10-Yes}{\beamergotobutton{} $-1/2$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{11} 
+\begin{block}{11} 
+
+  В методе главных компонент
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{11-No}{\beamergotobutton{} выборочная дисперсия первой главной компоненты равна единице }
+\item[] \hyperlink{11-No}{\beamergotobutton{} выборочная дисперсия первой главной компоненты минимальна}
+\item[] \hyperlink{11-No}{\beamergotobutton{} первая главная компонента сильнее всего коррелирована с первой переменной}
+\item[] \hyperlink{11-No}{\beamergotobutton{} выборочная корреляция первой и второй главных компонент равна единице}
+\item[] \hyperlink{11-Yes}{\beamergotobutton{} выборочная корреляция первой и второй главных компонент равна нулю}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{12} 
+\begin{block}{12} 
+
+  Априорная функция плотности параметра $a$  пропорциональна $\exp(-a)$ при $a>0$. Функция правдоподобия пропорциональна $\exp(-a^2+a)$. При $a>0$ апостериорная плотность пропорциональна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{12-No}{\beamergotobutton{} $\exp(a^2+2a)$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $\exp(-a) - \exp(-a^2+a)$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $\exp(-a) + \exp(-a^2+a)$}
+\item[] \hyperlink{12-Yes}{\beamergotobutton{} $\exp(-a^2)$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $\exp(-a^2+a) - \exp(-a)$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{13} 
+\begin{block}{13} 
+
+  Величины $X_1$, $X_2$, \ldots, $X_{10}$ представляют собой случайную выборку с $\E(X_i) = 2\theta - 1$. Оказалось, что $\bar X_{10}=3$. Оценка $\hat\theta_{MM}$ метода моментов равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{13-No}{\beamergotobutton{} Недостаточно данных}
+\item[] \hyperlink{13-No}{\beamergotobutton{} $15.5$}
+\item[] \hyperlink{13-Yes}{\beamergotobutton{} $2$}
+\item[] \hyperlink{13-No}{\beamergotobutton{} $3$}
+\item[] \hyperlink{13-No}{\beamergotobutton{} $1$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{14} 
+\begin{block}{14} 
+
+    Величины $X_1$, $X_2$, \ldots, $X_{10}$ представляют собой случайную выборку с $\E(X_i) = 2\theta - 1$. Оказалось, что $\bar X_{10}=3$. Оценка $\hat\theta_{ML}$ метода максимального правдоподобия равна
+    
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{14-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{14-Yes}{\beamergotobutton{} Недостаточно данных}
+\item[] \hyperlink{14-No}{\beamergotobutton{} $3$}
+\item[] \hyperlink{14-No}{\beamergotobutton{} $2$}
+\item[] \hyperlink{14-No}{\beamergotobutton{} $15.5$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{15} 
+\begin{block}{15} 
+
+  Нелогарифмированная функция правдоподобия
+  
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{15-No}{\beamergotobutton{} асимпотитически распределена $\cN(0;1)$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} убывает по оцениваемому параметру $\theta$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} может принимать отрицательные значения}
+\item[] \hyperlink{15-Yes}{\beamergotobutton{} может принимать значения больше единицы}
+\item[] \hyperlink{15-No}{\beamergotobutton{} возрастает по оцениваемому параметру $\theta$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{16} 
+\begin{block}{16} 
+
+  Оценка метода моментов
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{16-No}{\beamergotobutton{} всегда несмещённая}
+\item[] \hyperlink{16-No}{\beamergotobutton{} эффективнее оценки максимального правдоподобия}
+\item[] \hyperlink{16-Yes}{\beamergotobutton{} не требует знания точного закона распределения}
+\item[] \hyperlink{16-No}{\beamergotobutton{} не может быть получена в малой выборке}
+\item[] \hyperlink{16-No}{\beamergotobutton{} не применима для дискретных случайных величин}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{17} 
+\begin{block}{17} 
+
+   По большой выборке была построена оценка  максимального правдоподобия $\hat a$. Оказалось, что $\ell''(\hat a) = -4$. Ширина 95\%-го доверительного интервала для параметра $a$ примерно равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{17-No}{\beamergotobutton{} $4$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $5$}
+\item[] \hyperlink{17-Yes}{\beamergotobutton{} $2$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $3$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $1$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{18} 
+\begin{block}{18} 
+
+  Величины $X_1$, $X_2$, \ldots, $X_n$ представляют собой случайную выборку из $\cN(\mu; \sigma^2)$. Вася оценивает оба параметра с помощью максимального правдоподобия. При этом
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{18-No}{\beamergotobutton{} $\E(\hat \mu)>\mu$, $\E(\hat\sigma^2) = \sigma^2$}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $\E(\hat \mu)<\mu$, $\E(\hat\sigma^2) = \sigma^2$}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $\E(\hat \mu)=\mu$, $\E(\hat\sigma^2) > \sigma^2$}
+\item[] \hyperlink{18-Yes}{\beamergotobutton{} $\E(\hat \mu)=\mu$, $\E(\hat\sigma^2) < \sigma^2$}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $\E(\hat \mu)=\mu$, $\E(\hat\sigma^2) = \sigma^2$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{19} 
+\begin{block}{19} 
+
+    Если величина $\hat\theta$ имеет нормальное распределение $\cN(3;0.01^2)$, то, согласно дельта-методу, $\hat\theta^3$ имеет примерно нормальное распределение
+    
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{19-Yes}{\beamergotobutton{} $\cN(27;27^2\cdot 0.01^2)$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $\cN(27;3\cdot 0.01^2)$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $\cN(4;16\cdot 0.01^2)$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $\cN(3;3\cdot 0.01^2)$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $\cN(27;27\cdot 0.01^2)$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{20} 
+\begin{block}{20} 
+
+    Есть два неизвестных параметра, $\theta$ и $\gamma$. Вася проверяет гипотезу $H_0$: $\theta = 1$ и $\gamma = 2$ против альтернативной гипотезы о том, что хотя бы одно из равенств нарушено. Выберите верное утверждение об асимптотическом распределении статистики отношения правдоподобия, $LR$:
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{20-Yes}{\beamergotobutton{} Если верна $H_0$, то $LR \sim \chi_2^2$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} Если верна $H_a$, то $LR \sim \chi_2^2$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} И при $H_0$, и при $H_a$, $LR \sim \chi_1^2$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} Если верна $H_0$, то $LR \sim \chi_1^2$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} И при $H_0$, и при $H_a$, $LR \sim \chi_2^2$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{21} 
+\begin{block}{21} 
+
+  Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из распределения Пуассона с параметром $\lambda > 0$. Информация Фишера о параметре $\lambda$, заключенная в~\textsc{одном} наблюдении случайной выборки, равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{21-No}{\beamergotobutton{}  $n / \lambda$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $e^-\lambda$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $\lambda / n$}
+\item[] \hyperlink{21-Yes}{\beamergotobutton{} $1 / \lambda$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $\lambda$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{22} 
+\begin{block}{22} 
+
+  Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из распределения Бернулли с параметром $p \in (0;\,1)$. Информация Фишера о параметре $p$, заключенная в~\textsc{одном} наблюдении случайной выборки, равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{22-No}{\beamergotobutton{} $p/n$}
+\item[] \hyperlink{22-Yes}{\beamergotobutton{} $\frac{1}{p(1-p)}$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $1/p$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $n/p$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $p$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{23} 
+\begin{block}{23} 
+
+  Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из нормального распределения с математическим ожиданием $\mu$ и дисперсией $\sigma^2 = 3$. Информация Фишера о параметре $\mu$, заключенная в \textsc{двух} наблюдениях случайной выборки, равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{23-Yes}{\beamergotobutton{} $2 / 3$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $3 / 2$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $\mu / 2$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $2 / \mu$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $2 \mu^2$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{24} 
+\begin{block}{24} 
+
+    Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из распределения с плотностью распределения
+  \[
+      f(x; \theta) =
+      \begin{cases}
+          \frac{1}{\theta} e^{-\frac{x}{\theta}}, \text{ при } x \geq 0, \\
+          0, \text{ при } x < 0
+      \end{cases},
+  \]
+  где $\theta > 0$ — неизвестный параметр распределения. Информация Фишера о параметре $\theta$, заключенная в \textsc{трёх} наблюдениях случайной выборки, равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{24-No}{\beamergotobutton{} $\theta^2$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} $1 / \theta$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} $\theta$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} $\theta^2 / 3$}
+\item[] \hyperlink{24-Yes}{\beamergotobutton{} $3 / \theta^2$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{25} 
+\begin{block}{25} 
+
+  Пусть $\hat{\theta}$ — несмещенная оценка для неизвестного параметра $\theta$, а также выполнены условия регулярности. Неравенство Крамера-Рао представимо в виде
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{25-No}{\beamergotobutton{} $\Var(\hat\theta) \cdot I_n(\theta) > 1$}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $I_n(\theta) \leq \Var(\hat\theta)$}
+\item[] \hyperlink{25-Yes}{\beamergotobutton{} $I_n^-1(\theta) \leq \Var(\hat\theta)$}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $\Var(\hat\theta) \leq I_n(\theta)$}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $\Var(\hat\theta) \cdot I_n(\theta) \leq 1$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{26} 
+\begin{block}{26} 
+
+    Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из дискретного распределения с таблицей распределения
+
+\begin{center}
+  \begin{tabular}{cccc}
+  \toprule
+    $X_i$  & $-2$    & $0$      & $1$  \\
+    \midrule
+    $\P(\cdot)$        & $1/2 - \theta$      & $1/2$    & $\theta$  \\
+  \bottomrule
+  \end{tabular}
+\end{center}
+
+Несмещённой является оценка
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{26-No}{\beamergotobutton{} $(\bar{X} - 1) / 3$}
+\item[] \hyperlink{26-Yes}{\beamergotobutton{} $(\bar{X} + 1) / 3$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $\bar{X} - 1$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $\bar{X}$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $\bar{X} + 1$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{27} 
+\begin{block}{27} 
+
+   Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из равномерного распределения на отрезке $[0; \, \theta]$, где $\theta > 0$ — неизвестный параметр. Несмещённой является оценка
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{27-Yes}{\beamergotobutton{} $2 \bar{X}$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $\bar{X} / 2$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $\bar{X}$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $X_1$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $X_{(1)}$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{28} 
+\begin{block}{28} 
+
+    Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из дискретного распределения с таблицей распределения
+    
+  \begin{center}
+  \begin{tabular}{cccc}
+    \toprule
+    $X_i$    & $-2$     & $0$   & $1$  \\
+    \midrule
+    $\P(\cdot)$        & $1/2 - \theta$      & $1/2$    & $\theta$  \\
+    \bottomrule
+  \end{tabular}
+\end{center}
+
+Состоятельной является оценка
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\bar{X} - 1$}
+\item[] \hyperlink{28-Yes}{\beamergotobutton{} $(\bar{X} + 1) / 3$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\bar{X}$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\bar{X} + 1$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $(\bar{X} - 1) / 3$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{29} 
+\begin{block}{29} 
+
+  Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из равномерного распределения на отрезке $[0; \, \theta]$, где $\theta > 0$ — неизвестный параметр.
+  Состоятельной является оценка
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{29-No}{\beamergotobutton{} $X_1$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $\bar{X}$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $\bar{X} / 2$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $X_{(1)}$}
+\item[] \hyperlink{29-Yes}{\beamergotobutton{} $2 \bar{X}$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{30} 
+\begin{block}{30} 
+
+  Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из нормального распределения с математическим ожиданием $\mu = 3$ и дисперсией $\sigma^2$. Несмещённой оценкой параметра $\sigma^2$ является
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{30-Yes}{\beamergotobutton{} $\frac{1}{n} \sum_{i=1}^{n}(X_i - 3)^2$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $\frac{1}{n} \sum_{i=1}^{n}(X_i - \bar{X})^2$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $\frac{1}{n+1} \sum_{i=1}^{n}(X_i - \bar{X})^2$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $\frac{1}{n-1} \sum_{i=1}^{n}(X_i - 3)^2$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $\frac{1}{n+1} \sum_{i=1}^{n}(X_i - 3)^2$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{31} 
+\begin{block}{31} 
+
+  Оценка  $\hat\theta_n$ называется состоятельной оценкой параметра $\theta$, если
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{31-No}{\beamergotobutton{} $\Var(\hat\theta_n) \to 0$}
+\item[] \hyperlink{31-No}{\beamergotobutton{} $\Var(\hat\theta_n)=\frac{\sigma^2}{n}$}
+\item[] \hyperlink{31-No}{\beamergotobutton{} $\E(\hat\theta_n)=\theta$}
+\item[] \hyperlink{31-Yes}{\beamergotobutton{} $\hat\theta_n \xrightarrow{P}\theta$}
+\item[] \hyperlink{31-No}{\beamergotobutton{} Для любой оценки $T$ из класса $\mathcal{K}$ и любого $\theta$ выполнено $\E((\hat\theta_n-\theta)^2)\leq \E((T-\theta)^2)$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{32} 
+\begin{block}{32} 
+
+    Оценка  $\hat\theta_n$ параметра $\theta$ называется эффективной в некотором классе оценок $\mathcal{K}$, если
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{32-No}{\beamergotobutton{} $\hat\theta_n \xrightarrow{P}\theta$}
+\item[] \hyperlink{32-No}{\beamergotobutton{} $\Var(\hat\theta_n) \to 0$}
+\item[] \hyperlink{32-Yes}{\beamergotobutton{} Для любой оценки $T$ из класса $\mathcal{K}$ и любого $\theta$ выполнено $\E((\hat\theta_n-\theta)^2)\leq \E((T-\theta)^2)$}
+\item[] \hyperlink{32-No}{\beamergotobutton{} $\Var(\hat\theta_n)=\frac{\sigma^2}{n}$}
+\item[] \hyperlink{32-No}{\beamergotobutton{} $\E(\hat\theta_n)=\theta$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{33} 
+\begin{block}{33} 
+
+  По выборке $X_1,\ldots,X_{4}$, имеющей нормальное распределение с известной дисперсией 1, проверяется гипотеза $H_0: \mu = 10$ против $H_a: \mu > 10$. Выборочное среднее оказалось равно 9. Тогда нулевая гипотеза
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{33-No}{\beamergotobutton{} отвергается при $\alpha = 0.05$, не отвергается при $\alpha = 0.01$}
+\item[] \hyperlink{33-No}{\beamergotobutton{} отвергается при $\alpha = 0.1$, не отвергается при $\alpha = 0.05$}
+\item[] \hyperlink{33-No}{\beamergotobutton{} Отвергается на любом разумном уровне значимости}
+\item[] \hyperlink{33-No}{\beamergotobutton{} отвергается при $\alpha = 0.01$, не отвергается при $\alpha = 0.05$}
+\item[] \hyperlink{33-Yes}{\beamergotobutton{} Не отвергается на любом разумном уровне значимости}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{34} 
+\begin{block}{34} 
+
+  По случайной выборке из 49 наблюдений было оценено выборочное среднее $\bar{X} = 8$  и несмещённая оценка дисперсии $\hat{\sigma}^2 = 4$ проверяется гипотеза $H_0: \mu = 7$ против $H_a: \mu \ne 7$. Тогда значение тестовой статистики
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{34-Yes}{\beamergotobutton{} 3.5}
+\item[] \hyperlink{34-No}{\beamergotobutton{} 3}
+\item[] \hyperlink{34-No}{\beamergotobutton{} 1.75}
+\item[] \hyperlink{34-No}{\beamergotobutton{} 1.5}
+\item[] \hyperlink{34-No}{\beamergotobutton{} -1.75}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{35} 
+\begin{block}{35} 
+
+  По выборке из 100 наблюдений $X_1,\ldots,X_{n}$, имеющей нормальное распределение с неизвестной дисперсией, был получен 95\% доверительный интервал для математического ожидания $[16,24]$. Значит, $\bar{X}$ был равен
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{35-No}{\beamergotobutton{} 20.5}
+\item[] \hyperlink{35-Yes}{\beamergotobutton{} 20}
+\item[] \hyperlink{35-No}{\beamergotobutton{} 18}
+\item[] \hyperlink{35-No}{\beamergotobutton{} 21}
+\item[] \hyperlink{35-No}{\beamergotobutton{} 19}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{36} 
+\begin{block}{36} 
+
+  По выборке из 100 наблюдений $X_1,\ldots,X_{n}$, имеющей нормальное распределение с неизвестной дисперсией, был получен 95\% доверительный интервал для математического ожидания $[16,24]$. Считая критическое значение t-статистики равным 2, несмещенная оценка дисперсии была равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{36-No}{\beamergotobutton{} -1.75}
+\item[] \hyperlink{36-No}{\beamergotobutton{} 18}
+\item[] \hyperlink{36-No}{\beamergotobutton{} 1.5}
+\item[] \hyperlink{36-No}{\beamergotobutton{} 3}
+\item[] \hyperlink{36-Yes}{\beamergotobutton{} 400}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{37} 
+\begin{block}{37} 
+
+  По выборке из 5 наблюдений $X_1,\ldots,X_{5}$, имеющей экспоненциальное распределение, для проверки гипотезы о математическом ожидании $H_0: \mu = \mu_0$ против $H_a: \mu \ne \mu_0$, можно считать, что величина $\frac{\bar{X} - \mu_0}{\sqrt{\hat{\sigma}^2 / n}}$ имеет распределение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{37-No}{\beamergotobutton{} $t_4$}
+\item[] \hyperlink{37-No}{\beamergotobutton{} $\chi^2_5$}
+\item[] \hyperlink{37-No}{\beamergotobutton{} $t_5$}
+\item[] \hyperlink{37-No}{\beamergotobutton{} $\chi^2_4$}
+\item[] \hyperlink{37-No}{\beamergotobutton{} $\cN(0,1)$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{38} 
+\begin{block}{38} 
+
+Вася 50 раз подбросил монетку, 23 раза она выпала «орлом», 27 раз — «решкой». При проверке гипотезы о том, что монетка — «честная», Вася будет пользоваться статистикой, имеющей распределение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{38-No}{\beamergotobutton{} $t_{50}$}
+\item[] \hyperlink{38-No}{\beamergotobutton{} $\chi^2_{49}$}
+\item[] \hyperlink{38-Yes}{\beamergotobutton{} $\cN(0,1)$}
+\item[] \hyperlink{38-No}{\beamergotobutton{} $t_{49}$}
+\item[] \hyperlink{38-No}{\beamergotobutton{} $t_{51}$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{39} 
+\begin{block}{39} 
+
+Вася 25 раз подбросил монетку, 10 раз она выпала «орлом», 15 раз — «решкой».
+При проверке гипотезы о том, что монетка — «честная»,
+Вася может получить следующее значение тестовой статистики
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{39-No}{\beamergotobutton{} -3.2}
+\item[] \hyperlink{39-No}{\beamergotobutton{} 2}
+\item[] \hyperlink{39-No}{\beamergotobutton{} 0.4}
+\item[] \hyperlink{39-Yes}{\beamergotobutton{} -1}
+\item[] \hyperlink{39-No}{\beamergotobutton{} 10.2}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{40} 
+\begin{block}{40} 
+
+По выборке $X_1,\ldots,X_{n}$, имеющей нормальное распределение с неизвестным математическим ожиданием, строится доверительный интервал для дисперсии. Он НЕ может иметь вид
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{40-No}{\beamergotobutton{} $(0, a)$}
+\item[] \hyperlink{40-No}{\beamergotobutton{} $(0, +\infty)$}
+\item[] \hyperlink{40-No}{\beamergotobutton{} $(b, +\infty)$}
+\item[] \hyperlink{40-No}{\beamergotobutton{} $(a, b)$}
+\item[] \hyperlink{40-Yes}{\beamergotobutton{} $(-\infty, a)$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{41} 
+\begin{block}{41} 
+
+По выборке $X_1,\ldots,X_{n}$, имеющей нормальное распределение с неизвестным математическим ожиданием, проверяется гипотеза о дисперсии $H_0: \sigma^2 = 30$ против $H_a: \sigma^2 \ne 30$. Известно, что $\sum_{i=1}^{n} (X_i - \bar{X})^2 = 270$. Тестовая статистика может быть равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{41-No}{\beamergotobutton{} 6}
+\item[] \hyperlink{41-No}{\beamergotobutton{} 27}
+\item[] \hyperlink{41-No}{\beamergotobutton{} Не хватает данных}
+\item[] \hyperlink{41-No}{\beamergotobutton{} 3}
+\item[] \hyperlink{41-Yes}{\beamergotobutton{} 9}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{42} 
+\begin{block}{42} 
+
+По выборке $X_1,\ldots,X_{n}$, имеющей нормальное распределение с неизвестным математическим ожиданием, проверяется гипотеза о дисперсии $H_0: \sigma^2 = 30$ против $H_a: \sigma^2 \ne 30$. Тестовая статистика будет иметь распределение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{42-No}{\beamergotobutton{} $t_{n-1}$}
+\item[] \hyperlink{42-No}{\beamergotobutton{} $\cN(0,1)$}
+\item[] \hyperlink{42-Yes}{\beamergotobutton{} $\chi^2_{n-1}$}
+\item[] \hyperlink{42-No}{\beamergotobutton{} $\chi^2_n$}
+\item[] \hyperlink{42-No}{\beamergotobutton{} $t_n$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{43} 
+\begin{block}{43} 
+
+Дана реализация выборки: 7, -1, 3, 0. Выборочный начальный момент второго порядка равен
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{43-No}{\beamergotobutton{} $0.75$}
+\item[] \hyperlink{43-Yes}{\beamergotobutton{} $19.75$}
+\item[] \hyperlink{43-No}{\beamergotobutton{} $2.25$}
+\item[] \hyperlink{43-No}{\beamergotobutton{} $-1$}
+\item[] \hyperlink{43-No}{\beamergotobutton{} $59$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{44} 
+\begin{block}{44} 
+
+Дана реализация выборки: 7, -1, 3, 0. Первая порядковая статистика принимает значение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{44-No}{\beamergotobutton{} $3$}
+\item[] \hyperlink{44-No}{\beamergotobutton{} $2.25$}
+\item[] \hyperlink{44-No}{\beamergotobutton{} $0$}
+\item[] \hyperlink{44-Yes}{\beamergotobutton{} $-1$}
+\item[] \hyperlink{44-No}{\beamergotobutton{} $7$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{45} 
+\begin{block}{45} 
+
+Дана реализация выборки: 7, -1, 3, 0.  Выборочная функция распределения в точке 0 принимает значение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{45-No}{\beamergotobutton{} $0$}
+\item[] \hyperlink{45-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{45-No}{\beamergotobutton{} $0.25$}
+\item[] \hyperlink{45-No}{\beamergotobutton{} $0.75$}
+\item[] \hyperlink{45-Yes}{\beamergotobutton{} $0.5$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{46} 
+\begin{block}{46} 
+
+Трёх случайно выбранных студентов 2-го курса попросили оценить сложность Теории вероятностей и Статистики по 100 балльной шкале
+
+\vspace{5mm}
+\begin{tabular}{lrrr}
+  \toprule
+   & Аким & Ариадна & Темуужин \\
+   \midrule
+   Теория вероятностей & 70 & 75 & 82 \\
+   Статистика & 64 & 69 & 100 \\
+  \bottomrule
+\end{tabular}
+\vspace{5mm}
+
+
+Тест знаков отвергает гипотезу о том, что Статистика и Теории вероятностей одинаково сложны в пользу альтернативы, что Статистика проще при уровне значимости
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{46-No}{\beamergotobutton{} $0.1$}
+\item[] \hyperlink{46-No}{\beamergotobutton{} $3/8$}
+\item[] \hyperlink{46-Yes}{\beamergotobutton{} $0.51$}
+\item[] \hyperlink{46-No}{\beamergotobutton{} $0.05$}
+\item[] \hyperlink{46-No}{\beamergotobutton{} $1/3$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{47} 
+\begin{block}{47} 
+
+Преподаватель в течение 10 лет ведет статистику о посещаемости лекций. Он заметил, что перед контрольной работой посещаемость улучшается. Преподаватель составил следующую таблицу сопряженности
+\small
+\begin{tabular}{lrr}
+  \toprule
+   & Контрольная будет & Контрольной не будет \\
+   \midrule
+   Пришло бол. пол. курса & 35 & 80 \\
+   Пришло мен. пол. курса & 5 & 200 \\
+  \bottomrule
+\end{tabular}
+\vspace{5mm}
+
+Если $T$ — статистика Пирсона, а $k$ — число степеней свободы её распределения, то
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{47-No}{\beamergotobutton{} $T>52$, $k=2$}
+\item[] \hyperlink{47-No}{\beamergotobutton{} $T<52$, $k=1$}
+\item[] \hyperlink{47-No}{\beamergotobutton{} $T<52$, $k=4$}
+\item[] \hyperlink{47-Yes}{\beamergotobutton{} $T>52$, $k=1$}
+\item[] \hyperlink{47-No}{\beamergotobutton{} $T>52$, $k=3$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{48} 
+\begin{block}{48} 
+
+Экзамен принимают два преподавателя: Б.Б.~Злой и Е.В.~Добрая. Они поставили следующие оценки:
+
+\vspace{5mm}
+\begin{tabular}{lccccc}
+  \toprule
+   Е.В. Добрая & 6 & 4 & 7  & 8 &   \\
+   Б.Б. Злой   & 2 & 3 & 10 & 8 & 3 \\
+  \bottomrule
+\end{tabular}
+\vspace{5mm}
+
+
+Значение статистики Вилкоксона для гипотезы о совпадении распределений оценок равно
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{48-No}{\beamergotobutton{} $20.5$}
+\item[] \hyperlink{48-No}{\beamergotobutton{} $20$}
+\item[] \hyperlink{48-Yes}{\beamergotobutton{} $22.5$}
+\item[] \hyperlink{48-No}{\beamergotobutton{} $7.5$}
+\item[] \hyperlink{48-No}{\beamergotobutton{} $19$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{1-Yes} 
+\begin{block}{1} 
+
+  При тестировании гипотезы о равенстве дисперсий по двум независимым нормальным выборкам размером $m$ и $n$ тестовая статистика может иметь распределение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{1-No}{\beamergotobutton{} $\chi^2_{m+n-2}$}
+\item[] \hyperlink{1-Yes}{\beamergotobutton{} $F_{m-1,n-1}$}
+\item[] \hyperlink{1-No}{\beamergotobutton{} $F_{m,n - 2}$}
+\item[] \hyperlink{1-No}{\beamergotobutton{} $F_{m+1,n+1}$}
+\item[] \hyperlink{1-No}{\beamergotobutton{} $t_{m+n-2}$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{2}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{2-Yes} 
+\begin{block}{2} 
+
+  Для построения доверительного интервала для разности математических ожиданий по двум независимым нормальным выборкам размера $m$ и $n$ в случае неизвестных равных дисперсий используется распределение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{2-Yes}{\beamergotobutton{} $t_{m+n-2}$}
+\item[] \hyperlink{2-No}{\beamergotobutton{} $t_{m-1,n-1}$}
+\item[] \hyperlink{2-No}{\beamergotobutton{} $t_{m+n}$}
+\item[] \hyperlink{2-No}{\beamergotobutton{} $\cN(0;m+n-2)$}
+\item[] \hyperlink{2-No}{\beamergotobutton{} $\chi^2_m+n-2$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{3}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{3-Yes} 
+\begin{block}{3} 
+
+  Для проверки гипотезы о равенстве дисперсий используются две независимые нормальные выборки размером 25 и 16 наблюдений. Несмещённая оценка дисперсии по первой выборке составила 36, по второй — 49. Тестовая статистика может быть равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{3-No}{\beamergotobutton{} $1.56$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $2.13$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $1.17$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $1.85$}
+\item[] \hyperlink{3-Yes}{\beamergotobutton{} $1.36$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{4}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{4-Yes} 
+\begin{block}{4} 
+
+  Для проверки гипотезы о равенстве математических ожиданий используются две нормальные выборки размером 25 и 16 наблюдений. Разница выборочных средних равна 1. Тестовая статистика НЕ может быть равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{4-No}{\beamergotobutton{} $1.17$}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $2.13$}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $1.56$}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $1.36$}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $1.85$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{5}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{5-Yes} 
+\begin{block}{5} 
+
+  Для построения доверительного интервала для разности математических ожиданий в двух нормальных выборках размеров $m$ и $n$ при известных и не равных дисперсиях тестовая статистика имеет распределение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{5-No}{\beamergotobutton{} $t_{m+n-2}$}
+\item[] \hyperlink{5-Yes}{\beamergotobutton{} $\cN(0;1)$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $t_{m-1,n-1}$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $\chi^2_{m+n-2}$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $t_{m+n}$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{6}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{6-Yes} 
+\begin{block}{6} 
+
+  При проверке гипотезы о равенстве долей можно использовать распределение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{6-No}{\beamergotobutton{} $t_{m+n}$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $t_{m+n-2}$}
+\item[] \hyperlink{6-Yes}{\beamergotobutton{} $\cN(0;1)$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $t_{m-1,n-1}$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $\chi^2_{m+n-2}$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{7}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{7-Yes} 
+\begin{block}{7} 
+
+   При проверке гипотезы о равенстве дисперсий в двух выборках размером в 3 и 5 наблюдений было получено значение тестовой статистики 10. Если оценка дисперсии по одной из выборок равна 8, то другая оценка дисперсии может быть равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{7-No}{\beamergotobutton{} $25$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $4/3$}
+\item[] \hyperlink{7-Yes}{\beamergotobutton{} $4/5$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $4$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $1/5$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{8}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{8-Yes} 
+\begin{block}{8} 
+
+  Пусть $\hat\sigma^2_1$ и  $\hat\sigma^2_2$ — несмещённые оценки дисперсий, полученные по независимым нормальным выборкам размером $m$ и $n$ соответственно. Тогда статистика $\hat\sigma^2_1/\hat\sigma^2_2$ имеет распределение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{8-No}{\beamergotobutton{} $F_m,n-2$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $t_m+n-2$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $F_m+1, n+1$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $F_m,n$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $\chi^2_m+n-2$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{9}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{9-Yes} 
+\begin{block}{9} 
+
+  Требуется проверить гипотезу о равенстве математических ожиданий по независимым нормальным выборкам размером 33 и 16 наблюдений. Истинные дисперсии по обеим выборкам известны, совпадают и равны 196. Разница выборочных средних равна 1. Тестовая статистика может быть равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{9-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{9-No}{\beamergotobutton{} $1/14$}
+\item[] \hyperlink{9-No}{\beamergotobutton{} $1/49$}
+\item[] \hyperlink{9-Yes}{\beamergotobutton{} $1/4$}
+\item[] \hyperlink{9-No}{\beamergotobutton{} $1/7$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{10}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{10-Yes} 
+\begin{block}{10} 
+
+  Требуется проверить гипотезу о равенстве математических ожиданий по двум нормальным выборкам размером 33 и 16 наблюдений. Истинные дисперсии по обеим выборкам известны, совпадают и равны 196. Разница выборочных средних равна 1. Тестовая статистика может быть равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{10-No}{\beamergotobutton{} $-1/4$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $-1/14$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $-1/7$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $-1/49$}
+\item[] \hyperlink{10-Yes}{\beamergotobutton{} $-1/2$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{11}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{11-Yes} 
+\begin{block}{11} 
+
+  В методе главных компонент
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{11-No}{\beamergotobutton{} выборочная дисперсия первой главной компоненты равна единице }
+\item[] \hyperlink{11-No}{\beamergotobutton{} выборочная дисперсия первой главной компоненты минимальна}
+\item[] \hyperlink{11-No}{\beamergotobutton{} первая главная компонента сильнее всего коррелирована с первой переменной}
+\item[] \hyperlink{11-No}{\beamergotobutton{} выборочная корреляция первой и второй главных компонент равна единице}
+\item[] \hyperlink{11-Yes}{\beamergotobutton{} выборочная корреляция первой и второй главных компонент равна нулю}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{12}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{12-Yes} 
+\begin{block}{12} 
+
+  Априорная функция плотности параметра $a$  пропорциональна $\exp(-a)$ при $a>0$. Функция правдоподобия пропорциональна $\exp(-a^2+a)$. При $a>0$ апостериорная плотность пропорциональна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{12-No}{\beamergotobutton{} $\exp(a^2+2a)$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $\exp(-a) - \exp(-a^2+a)$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $\exp(-a) + \exp(-a^2+a)$}
+\item[] \hyperlink{12-Yes}{\beamergotobutton{} $\exp(-a^2)$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $\exp(-a^2+a) - \exp(-a)$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{13}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{13-Yes} 
+\begin{block}{13} 
+
+  Величины $X_1$, $X_2$, \ldots, $X_{10}$ представляют собой случайную выборку с $\E(X_i) = 2\theta - 1$. Оказалось, что $\bar X_{10}=3$. Оценка $\hat\theta_{MM}$ метода моментов равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{13-No}{\beamergotobutton{} Недостаточно данных}
+\item[] \hyperlink{13-No}{\beamergotobutton{} $15.5$}
+\item[] \hyperlink{13-Yes}{\beamergotobutton{} $2$}
+\item[] \hyperlink{13-No}{\beamergotobutton{} $3$}
+\item[] \hyperlink{13-No}{\beamergotobutton{} $1$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{14}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{14-Yes} 
+\begin{block}{14} 
+
+    Величины $X_1$, $X_2$, \ldots, $X_{10}$ представляют собой случайную выборку с $\E(X_i) = 2\theta - 1$. Оказалось, что $\bar X_{10}=3$. Оценка $\hat\theta_{ML}$ метода максимального правдоподобия равна
+    
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{14-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{14-Yes}{\beamergotobutton{} Недостаточно данных}
+\item[] \hyperlink{14-No}{\beamergotobutton{} $3$}
+\item[] \hyperlink{14-No}{\beamergotobutton{} $2$}
+\item[] \hyperlink{14-No}{\beamergotobutton{} $15.5$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{15}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{15-Yes} 
+\begin{block}{15} 
+
+  Нелогарифмированная функция правдоподобия
+  
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{15-No}{\beamergotobutton{} асимпотитически распределена $\cN(0;1)$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} убывает по оцениваемому параметру $\theta$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} может принимать отрицательные значения}
+\item[] \hyperlink{15-Yes}{\beamergotobutton{} может принимать значения больше единицы}
+\item[] \hyperlink{15-No}{\beamergotobutton{} возрастает по оцениваемому параметру $\theta$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{16}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{16-Yes} 
+\begin{block}{16} 
+
+  Оценка метода моментов
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{16-No}{\beamergotobutton{} всегда несмещённая}
+\item[] \hyperlink{16-No}{\beamergotobutton{} эффективнее оценки максимального правдоподобия}
+\item[] \hyperlink{16-Yes}{\beamergotobutton{} не требует знания точного закона распределения}
+\item[] \hyperlink{16-No}{\beamergotobutton{} не может быть получена в малой выборке}
+\item[] \hyperlink{16-No}{\beamergotobutton{} не применима для дискретных случайных величин}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{17}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{17-Yes} 
+\begin{block}{17} 
+
+   По большой выборке была построена оценка  максимального правдоподобия $\hat a$. Оказалось, что $\ell''(\hat a) = -4$. Ширина 95\%-го доверительного интервала для параметра $a$ примерно равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{17-No}{\beamergotobutton{} $4$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $5$}
+\item[] \hyperlink{17-Yes}{\beamergotobutton{} $2$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $3$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $1$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{18}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{18-Yes} 
+\begin{block}{18} 
+
+  Величины $X_1$, $X_2$, \ldots, $X_n$ представляют собой случайную выборку из $\cN(\mu; \sigma^2)$. Вася оценивает оба параметра с помощью максимального правдоподобия. При этом
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{18-No}{\beamergotobutton{} $\E(\hat \mu)>\mu$, $\E(\hat\sigma^2) = \sigma^2$}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $\E(\hat \mu)<\mu$, $\E(\hat\sigma^2) = \sigma^2$}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $\E(\hat \mu)=\mu$, $\E(\hat\sigma^2) > \sigma^2$}
+\item[] \hyperlink{18-Yes}{\beamergotobutton{} $\E(\hat \mu)=\mu$, $\E(\hat\sigma^2) < \sigma^2$}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $\E(\hat \mu)=\mu$, $\E(\hat\sigma^2) = \sigma^2$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{19}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{19-Yes} 
+\begin{block}{19} 
+
+    Если величина $\hat\theta$ имеет нормальное распределение $\cN(3;0.01^2)$, то, согласно дельта-методу, $\hat\theta^3$ имеет примерно нормальное распределение
+    
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{19-Yes}{\beamergotobutton{} $\cN(27;27^2\cdot 0.01^2)$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $\cN(27;3\cdot 0.01^2)$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $\cN(4;16\cdot 0.01^2)$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $\cN(3;3\cdot 0.01^2)$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $\cN(27;27\cdot 0.01^2)$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{20}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{20-Yes} 
+\begin{block}{20} 
+
+    Есть два неизвестных параметра, $\theta$ и $\gamma$. Вася проверяет гипотезу $H_0$: $\theta = 1$ и $\gamma = 2$ против альтернативной гипотезы о том, что хотя бы одно из равенств нарушено. Выберите верное утверждение об асимптотическом распределении статистики отношения правдоподобия, $LR$:
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{20-Yes}{\beamergotobutton{} Если верна $H_0$, то $LR \sim \chi_2^2$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} Если верна $H_a$, то $LR \sim \chi_2^2$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} И при $H_0$, и при $H_a$, $LR \sim \chi_1^2$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} Если верна $H_0$, то $LR \sim \chi_1^2$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} И при $H_0$, и при $H_a$, $LR \sim \chi_2^2$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{21}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{21-Yes} 
+\begin{block}{21} 
+
+  Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из распределения Пуассона с параметром $\lambda > 0$. Информация Фишера о параметре $\lambda$, заключенная в~\textsc{одном} наблюдении случайной выборки, равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{21-No}{\beamergotobutton{}  $n / \lambda$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $e^-\lambda$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $\lambda / n$}
+\item[] \hyperlink{21-Yes}{\beamergotobutton{} $1 / \lambda$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $\lambda$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{22}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{22-Yes} 
+\begin{block}{22} 
+
+  Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из распределения Бернулли с параметром $p \in (0;\,1)$. Информация Фишера о параметре $p$, заключенная в~\textsc{одном} наблюдении случайной выборки, равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{22-No}{\beamergotobutton{} $p/n$}
+\item[] \hyperlink{22-Yes}{\beamergotobutton{} $\frac{1}{p(1-p)}$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $1/p$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $n/p$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $p$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{23}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{23-Yes} 
+\begin{block}{23} 
+
+  Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из нормального распределения с математическим ожиданием $\mu$ и дисперсией $\sigma^2 = 3$. Информация Фишера о параметре $\mu$, заключенная в \textsc{двух} наблюдениях случайной выборки, равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{23-Yes}{\beamergotobutton{} $2 / 3$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $3 / 2$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $\mu / 2$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $2 / \mu$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $2 \mu^2$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{24}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{24-Yes} 
+\begin{block}{24} 
+
+    Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из распределения с плотностью распределения
+  \[
+      f(x; \theta) =
+      \begin{cases}
+          \frac{1}{\theta} e^{-\frac{x}{\theta}}, \text{ при } x \geq 0, \\
+          0, \text{ при } x < 0
+      \end{cases},
+  \]
+  где $\theta > 0$ — неизвестный параметр распределения. Информация Фишера о параметре $\theta$, заключенная в \textsc{трёх} наблюдениях случайной выборки, равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{24-No}{\beamergotobutton{} $\theta^2$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} $1 / \theta$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} $\theta$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} $\theta^2 / 3$}
+\item[] \hyperlink{24-Yes}{\beamergotobutton{} $3 / \theta^2$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{25}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{25-Yes} 
+\begin{block}{25} 
+
+  Пусть $\hat{\theta}$ — несмещенная оценка для неизвестного параметра $\theta$, а также выполнены условия регулярности. Неравенство Крамера-Рао представимо в виде
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{25-No}{\beamergotobutton{} $\Var(\hat\theta) \cdot I_n(\theta) > 1$}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $I_n(\theta) \leq \Var(\hat\theta)$}
+\item[] \hyperlink{25-Yes}{\beamergotobutton{} $I_n^-1(\theta) \leq \Var(\hat\theta)$}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $\Var(\hat\theta) \leq I_n(\theta)$}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $\Var(\hat\theta) \cdot I_n(\theta) \leq 1$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{26}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{26-Yes} 
+\begin{block}{26} 
+
+    Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из дискретного распределения с таблицей распределения
+
+\begin{center}
+	\begin{tabular}{cccc}
+		\toprule
+		$X_i$  & $-2$    & $0$      & $1$  \\
+		\midrule
+		$\P(\cdot)$        & $1/2 - \theta$      & $1/2$    & $\theta$  \\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+Несмещённой является оценка
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{26-No}{\beamergotobutton{} $(\bar{X} - 1) / 3$}
+\item[] \hyperlink{26-Yes}{\beamergotobutton{} $(\bar{X} + 1) / 3$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $\bar{X} - 1$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $\bar{X}$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $\bar{X} + 1$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{27}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{27-Yes} 
+\begin{block}{27} 
+
+   Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из равномерного распределения на отрезке $[0; \, \theta]$, где $\theta > 0$ — неизвестный параметр. Несмещённой является оценка
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{27-Yes}{\beamergotobutton{} $2 \bar{X}$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $\bar{X} / 2$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $\bar{X}$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $X_1$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $X_{(1)}$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{28}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{28-Yes} 
+\begin{block}{28} 
+
+    Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из дискретного распределения с таблицей распределения
+
+  \begin{center}
+	\begin{tabular}{cccc}
+		\toprule
+		$X_i$    & $-2$     & $0$   & $1$  \\
+		\midrule
+		$\P(\cdot)$        & $1/2 - \theta$      & $1/2$    & $\theta$  \\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+Состоятельной является оценка
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\bar{X} - 1$}
+\item[] \hyperlink{28-Yes}{\beamergotobutton{} $(\bar{X} + 1) / 3$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\bar{X}$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\bar{X} + 1$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $(\bar{X} - 1) / 3$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{29}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{29-Yes} 
+\begin{block}{29} 
+
+  Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из равномерного распределения на отрезке $[0; \, \theta]$, где $\theta > 0$ — неизвестный параметр.
+  Состоятельной является оценка
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{29-No}{\beamergotobutton{} $X_1$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $\bar{X}$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $\bar{X} / 2$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $X_{(1)}$}
+\item[] \hyperlink{29-Yes}{\beamergotobutton{} $2 \bar{X}$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{30}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{30-Yes} 
+\begin{block}{30} 
+
+  Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из нормального распределения с математическим ожиданием $\mu = 3$ и дисперсией $\sigma^2$. Несмещённой оценкой параметра $\sigma^2$ является
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{30-Yes}{\beamergotobutton{} $\frac{1}{n} \sum_{i=1}^{n}(X_i - 3)^2$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $\frac{1}{n} \sum_{i=1}^{n}(X_i - \bar{X})^2$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $\frac{1}{n+1} \sum_{i=1}^{n}(X_i - \bar{X})^2$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $\frac{1}{n-1} \sum_{i=1}^{n}(X_i - 3)^2$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $\frac{1}{n+1} \sum_{i=1}^{n}(X_i - 3)^2$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{31}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{31-Yes} 
+\begin{block}{31} 
+
+  Оценка  $\hat\theta_n$ называется состоятельной оценкой параметра $\theta$, если
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{31-No}{\beamergotobutton{} $\Var(\hat\theta_n) \to 0$}
+\item[] \hyperlink{31-No}{\beamergotobutton{} $\Var(\hat\theta_n)=\frac{\sigma^2}{n}$}
+\item[] \hyperlink{31-No}{\beamergotobutton{} $\E(\hat\theta_n)=\theta$}
+\item[] \hyperlink{31-Yes}{\beamergotobutton{} $\hat\theta_n \xrightarrow{P}\theta$}
+\item[] \hyperlink{31-No}{\beamergotobutton{} Для любой оценки $T$ из класса $\mathcal{K}$ и любого $\theta$ выполнено $\E((\hat\theta_n-\theta)^2)\leq \E((T-\theta)^2)$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{32}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{32-Yes} 
+\begin{block}{32} 
+
+    Оценка  $\hat\theta_n$ параметра $\theta$ называется эффективной в некотором классе оценок $\mathcal{K}$, если
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{32-No}{\beamergotobutton{} $\hat\theta_n \xrightarrow{P}\theta$}
+\item[] \hyperlink{32-No}{\beamergotobutton{} $\Var(\hat\theta_n) \to 0$}
+\item[] \hyperlink{32-Yes}{\beamergotobutton{} Для любой оценки $T$ из класса $\mathcal{K}$ и любого $\theta$ выполнено $\E((\hat\theta_n-\theta)^2)\leq \E((T-\theta)^2)$}
+\item[] \hyperlink{32-No}{\beamergotobutton{} $\Var(\hat\theta_n)=\frac{\sigma^2}{n}$}
+\item[] \hyperlink{32-No}{\beamergotobutton{} $\E(\hat\theta_n)=\theta$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{33}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{33-Yes} 
+\begin{block}{33} 
+
+  По выборке $X_1,\ldots,X_{4}$, имеющей нормальное распределение с известной дисперсией 1, проверяется гипотеза $H_0: \mu = 10$ против $H_a: \mu > 10$. Выборочное среднее оказалось равно 9. Тогда нулевая гипотеза
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{33-No}{\beamergotobutton{} отвергается при $\alpha = 0.05$, не отвергается при $\alpha = 0.01$}
+\item[] \hyperlink{33-No}{\beamergotobutton{} отвергается при $\alpha = 0.1$, не отвергается при $\alpha = 0.05$}
+\item[] \hyperlink{33-No}{\beamergotobutton{} Отвергается на любом разумном уровне значимости}
+\item[] \hyperlink{33-No}{\beamergotobutton{} отвергается при $\alpha = 0.01$, не отвергается при $\alpha = 0.05$}
+\item[] \hyperlink{33-Yes}{\beamergotobutton{} Не отвергается на любом разумном уровне значимости}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{34}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{34-Yes} 
+\begin{block}{34} 
+
+  По случайной выборке из 49 наблюдений было оценено выборочное среднее $\bar{X} = 8$  и несмещённая оценка дисперсии $\hat{\sigma}^2 = 4$ проверяется гипотеза $H_0: \mu = 7$ против $H_a: \mu \ne 7$. Тогда значение тестовой статистики
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{34-Yes}{\beamergotobutton{} 3.5}
+\item[] \hyperlink{34-No}{\beamergotobutton{} 3}
+\item[] \hyperlink{34-No}{\beamergotobutton{} 1.75}
+\item[] \hyperlink{34-No}{\beamergotobutton{} 1.5}
+\item[] \hyperlink{34-No}{\beamergotobutton{} -1.75}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{35}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{35-Yes} 
+\begin{block}{35} 
+
+  По выборке из 100 наблюдений $X_1,\ldots,X_{n}$, имеющей нормальное распределение с неизвестной дисперсией, был получен 95\% доверительный интервал для математического ожидания $[16,24]$. Значит, $\bar{X}$ был равен
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{35-No}{\beamergotobutton{} 20.5}
+\item[] \hyperlink{35-Yes}{\beamergotobutton{} 20}
+\item[] \hyperlink{35-No}{\beamergotobutton{} 18}
+\item[] \hyperlink{35-No}{\beamergotobutton{} 21}
+\item[] \hyperlink{35-No}{\beamergotobutton{} 19}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{36}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{36-Yes} 
+\begin{block}{36} 
+
+  По выборке из 100 наблюдений $X_1,\ldots,X_{n}$, имеющей нормальное распределение с неизвестной дисперсией, был получен 95\% доверительный интервал для математического ожидания $[16,24]$. Считая критическое значение t-статистики равным 2, несмещенная оценка дисперсии была равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{36-No}{\beamergotobutton{} -1.75}
+\item[] \hyperlink{36-No}{\beamergotobutton{} 18}
+\item[] \hyperlink{36-No}{\beamergotobutton{} 1.5}
+\item[] \hyperlink{36-No}{\beamergotobutton{} 3}
+\item[] \hyperlink{36-Yes}{\beamergotobutton{} 400}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{37}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{37-Yes} 
+\begin{block}{37} 
+
+  По выборке из 5 наблюдений $X_1,\ldots,X_{5}$, имеющей экспоненциальное распределение, для проверки гипотезы о математическом ожидании $H_0: \mu = \mu_0$ против $H_a: \mu \ne \mu_0$, можно считать, что величина $\frac{\bar{X} - \mu_0}{\sqrt{\hat{\sigma}^2 / n}}$ имеет распределение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{37-No}{\beamergotobutton{} $t_4$}
+\item[] \hyperlink{37-No}{\beamergotobutton{} $\chi^2_5$}
+\item[] \hyperlink{37-No}{\beamergotobutton{} $t_5$}
+\item[] \hyperlink{37-No}{\beamergotobutton{} $\chi^2_4$}
+\item[] \hyperlink{37-No}{\beamergotobutton{} $\cN(0,1)$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{38}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{38-Yes} 
+\begin{block}{38} 
+
+Вася 50 раз подбросил монетку, 23 раза она выпала «орлом», 27 раз — «решкой». При проверке гипотезы о том, что монетка — «честная», Вася будет пользоваться статистикой, имеющей распределение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{38-No}{\beamergotobutton{} $t_{50}$}
+\item[] \hyperlink{38-No}{\beamergotobutton{} $\chi^2_{49}$}
+\item[] \hyperlink{38-Yes}{\beamergotobutton{} $\cN(0,1)$}
+\item[] \hyperlink{38-No}{\beamergotobutton{} $t_{49}$}
+\item[] \hyperlink{38-No}{\beamergotobutton{} $t_{51}$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{39}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{39-Yes} 
+\begin{block}{39} 
+
+Вася 25 раз подбросил монетку, 10 раз она выпала «орлом», 15 раз — «решкой».
+При проверке гипотезы о том, что монетка — «честная»,
+Вася может получить следующее значение тестовой статистики
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{39-No}{\beamergotobutton{} -3.2}
+\item[] \hyperlink{39-No}{\beamergotobutton{} 2}
+\item[] \hyperlink{39-No}{\beamergotobutton{} 0.4}
+\item[] \hyperlink{39-Yes}{\beamergotobutton{} -1}
+\item[] \hyperlink{39-No}{\beamergotobutton{} 10.2}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{40}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{40-Yes} 
+\begin{block}{40} 
+
+По выборке $X_1,\ldots,X_{n}$, имеющей нормальное распределение с неизвестным математическим ожиданием, строится доверительный интервал для дисперсии. Он НЕ может иметь вид
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{40-No}{\beamergotobutton{} $(0, a)$}
+\item[] \hyperlink{40-No}{\beamergotobutton{} $(0, +\infty)$}
+\item[] \hyperlink{40-No}{\beamergotobutton{} $(b, +\infty)$}
+\item[] \hyperlink{40-No}{\beamergotobutton{} $(a, b)$}
+\item[] \hyperlink{40-Yes}{\beamergotobutton{} $(-\infty, a)$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{41}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{41-Yes} 
+\begin{block}{41} 
+
+По выборке $X_1,\ldots,X_{n}$, имеющей нормальное распределение с неизвестным математическим ожиданием, проверяется гипотеза о дисперсии $H_0: \sigma^2 = 30$ против $H_a: \sigma^2 \ne 30$. Известно, что $\sum_{i=1}^{n} (X_i - \bar{X})^2 = 270$. Тестовая статистика может быть равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{41-No}{\beamergotobutton{} 6}
+\item[] \hyperlink{41-No}{\beamergotobutton{} 27}
+\item[] \hyperlink{41-No}{\beamergotobutton{} Не хватает данных}
+\item[] \hyperlink{41-No}{\beamergotobutton{} 3}
+\item[] \hyperlink{41-Yes}{\beamergotobutton{} 9}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{42}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{42-Yes} 
+\begin{block}{42} 
+
+По выборке $X_1,\ldots,X_{n}$, имеющей нормальное распределение с неизвестным математическим ожиданием, проверяется гипотеза о дисперсии $H_0: \sigma^2 = 30$ против $H_a: \sigma^2 \ne 30$. Тестовая статистика будет иметь распределение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{42-No}{\beamergotobutton{} $t_{n-1}$}
+\item[] \hyperlink{42-No}{\beamergotobutton{} $\cN(0,1)$}
+\item[] \hyperlink{42-Yes}{\beamergotobutton{} $\chi^2_{n-1}$}
+\item[] \hyperlink{42-No}{\beamergotobutton{} $\chi^2_n$}
+\item[] \hyperlink{42-No}{\beamergotobutton{} $t_n$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{43}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{43-Yes} 
+\begin{block}{43} 
+
+Дана реализация выборки: 7, -1, 3, 0. Выборочный начальный момент второго порядка равен
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{43-No}{\beamergotobutton{} $0.75$}
+\item[] \hyperlink{43-Yes}{\beamergotobutton{} $19.75$}
+\item[] \hyperlink{43-No}{\beamergotobutton{} $2.25$}
+\item[] \hyperlink{43-No}{\beamergotobutton{} $-1$}
+\item[] \hyperlink{43-No}{\beamergotobutton{} $59$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{44}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{44-Yes} 
+\begin{block}{44} 
+
+Дана реализация выборки: 7, -1, 3, 0. Первая порядковая статистика принимает значение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{44-No}{\beamergotobutton{} $3$}
+\item[] \hyperlink{44-No}{\beamergotobutton{} $2.25$}
+\item[] \hyperlink{44-No}{\beamergotobutton{} $0$}
+\item[] \hyperlink{44-Yes}{\beamergotobutton{} $-1$}
+\item[] \hyperlink{44-No}{\beamergotobutton{} $7$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{45}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{45-Yes} 
+\begin{block}{45} 
+
+Дана реализация выборки: 7, -1, 3, 0.  Выборочная функция распределения в точке 0 принимает значение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{45-No}{\beamergotobutton{} $0$}
+\item[] \hyperlink{45-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{45-No}{\beamergotobutton{} $0.25$}
+\item[] \hyperlink{45-No}{\beamergotobutton{} $0.75$}
+\item[] \hyperlink{45-Yes}{\beamergotobutton{} $0.5$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{46}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{46-Yes} 
+\begin{block}{46} 
+
+Трёх случайно выбранных студентов 2-го курса попросили оценить сложность Теории вероятностей и Статистики по 100 балльной шкале
+
+\vspace{5mm}
+\begin{tabular}{lrrr}
+  \toprule
+   & Аким & Ариадна & Темуужин \\
+   \midrule
+   Теория вероятностей & 70 & 75 & 82 \\
+   Статистика & 64 & 69 & 100 \\
+  \bottomrule
+\end{tabular}
+\vspace{5mm}
+
+
+Тест знаков отвергает гипотезу о том, что Статистика и Теории вероятностей одинаково сложны в пользу альтернативы, что Статистика проще при уровне значимости
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{46-No}{\beamergotobutton{} $0.1$}
+\item[] \hyperlink{46-No}{\beamergotobutton{} $3/8$}
+\item[] \hyperlink{46-Yes}{\beamergotobutton{} $0.51$}
+\item[] \hyperlink{46-No}{\beamergotobutton{} $0.05$}
+\item[] \hyperlink{46-No}{\beamergotobutton{} $1/3$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{47}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{47-Yes} 
+\begin{block}{47} 
+
+Преподаватель в течение 10 лет ведет статистику о посещаемости лекций. Он заметил, что перед контрольной работой посещаемость улучшается. Преподаватель составил следующую таблицу сопряженности
+
+\small
+\begin{tabular}{lrr}
+	\toprule
+	& Контрольная будет & Контрольной не будет \\
+	\midrule
+	Пришло бол. пол. курса & 35 & 80 \\
+	Пришло мен. пол. курса & 5 & 200 \\
+	\bottomrule
+\end{tabular}
+\vspace{5mm}
+
+Если $T$ — статистика Пирсона, а $k$ — число степеней свободы её распределения, то
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{47-No}{\beamergotobutton{} $T>52$, $k=2$}
+\item[] \hyperlink{47-No}{\beamergotobutton{} $T<52$, $k=1$}
+\item[] \hyperlink{47-No}{\beamergotobutton{} $T<52$, $k=4$}
+\item[] \hyperlink{47-Yes}{\beamergotobutton{} $T>52$, $k=1$}
+\item[] \hyperlink{47-No}{\beamergotobutton{} $T>52$, $k=3$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{48}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{48-Yes} 
+\begin{block}{48} 
+
+Экзамен принимают два преподавателя: Б.Б.~Злой и Е.В.~Добрая. Они поставили следующие оценки:
+
+\vspace{5mm}
+\begin{tabular}{lccccc}
+  \toprule
+   Е.В. Добрая & 6 & 4 & 7  & 8 &   \\
+   Б.Б. Злой   & 2 & 3 & 10 & 8 & 3 \\
+  \bottomrule
+\end{tabular}
+\vspace{5mm}
+
+
+Значение статистики Вилкоксона для гипотезы о совпадении распределений оценок равно
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{48-No}{\beamergotobutton{} $20.5$}
+\item[] \hyperlink{48-No}{\beamergotobutton{} $20$}
+\item[] \hyperlink{48-Yes}{\beamergotobutton{} $22.5$}
+\item[] \hyperlink{48-No}{\beamergotobutton{} $7.5$}
+\item[] \hyperlink{48-No}{\beamergotobutton{} $19$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{49}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{1-No} 
+\begin{block}{1} 
+
+  При тестировании гипотезы о равенстве дисперсий по двум независимым нормальным выборкам размером $m$ и $n$ тестовая статистика может иметь распределение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{1-No}{\beamergotobutton{} $\chi^2_{m+n-2}$}
+\item[] \hyperlink{1-Yes}{\beamergotobutton{} $F_{m-1,n-1}$}
+\item[] \hyperlink{1-No}{\beamergotobutton{} $F_{m,n - 2}$}
+\item[] \hyperlink{1-No}{\beamergotobutton{} $F_{m+1,n+1}$}
+\item[] \hyperlink{1-No}{\beamergotobutton{} $t_{m+n-2}$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{2-No} 
+\begin{block}{2} 
+
+  Для построения доверительного интервала для разности математических ожиданий по двум независимым нормальным выборкам размера $m$ и $n$ в случае неизвестных равных дисперсий используется распределение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{2-Yes}{\beamergotobutton{} $t_{m+n-2}$}
+\item[] \hyperlink{2-No}{\beamergotobutton{} $t_{m-1,n-1}$}
+\item[] \hyperlink{2-No}{\beamergotobutton{} $t_{m+n}$}
+\item[] \hyperlink{2-No}{\beamergotobutton{} $\cN(0;m+n-2)$}
+\item[] \hyperlink{2-No}{\beamergotobutton{} $\chi^2_m+n-2$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{3-No} 
+\begin{block}{3} 
+
+  Для проверки гипотезы о равенстве дисперсий используются две независимые нормальные выборки размером 25 и 16 наблюдений. Несмещённая оценка дисперсии по первой выборке составила 36, по второй — 49. Тестовая статистика может быть равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{3-No}{\beamergotobutton{} $1.56$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $2.13$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $1.17$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $1.85$}
+\item[] \hyperlink{3-Yes}{\beamergotobutton{} $1.36$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{4-No} 
+\begin{block}{4} 
+
+  Для проверки гипотезы о равенстве математических ожиданий используются две нормальные выборки размером 25 и 16 наблюдений. Разница выборочных средних равна 1. Тестовая статистика НЕ может быть равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{4-No}{\beamergotobutton{} $1.17$}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $2.13$}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $1.56$}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $1.36$}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $1.85$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{5-No} 
+\begin{block}{5} 
+
+  Для построения доверительного интервала для разности математических ожиданий в двух нормальных выборках размеров $m$ и $n$ при известных и не равных дисперсиях тестовая статистика имеет распределение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{5-No}{\beamergotobutton{} $t_{m+n-2}$}
+\item[] \hyperlink{5-Yes}{\beamergotobutton{} $\cN(0;1)$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $t_{m-1,n-1}$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $\chi^2_{m+n-2}$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $t_{m+n}$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{6-No} 
+\begin{block}{6} 
+
+  При проверке гипотезы о равенстве долей можно использовать распределение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{6-No}{\beamergotobutton{} $t_{m+n}$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $t_{m+n-2}$}
+\item[] \hyperlink{6-Yes}{\beamergotobutton{} $\cN(0;1)$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $t_{m-1,n-1}$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $\chi^2_{m+n-2}$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{7-No} 
+\begin{block}{7} 
+
+   При проверке гипотезы о равенстве дисперсий в двух выборках размером в 3 и 5 наблюдений было получено значение тестовой статистики 10. Если оценка дисперсии по одной из выборок равна 8, то другая оценка дисперсии может быть равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{7-No}{\beamergotobutton{} $25$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $4/3$}
+\item[] \hyperlink{7-Yes}{\beamergotobutton{} $4/5$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $4$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $1/5$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{8-No} 
+\begin{block}{8} 
+
+  Пусть $\hat\sigma^2_1$ и  $\hat\sigma^2_2$ — несмещённые оценки дисперсий, полученные по независимым нормальным выборкам размером $m$ и $n$ соответственно. Тогда статистика $\hat\sigma^2_1/\hat\sigma^2_2$ имеет распределение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{8-No}{\beamergotobutton{} $F_{m,n-2}$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $t_{m+n-2}$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $F_{m+1, n+1}$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $F_{m,n}$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $\chi^2_{m+n-2}$}
+\end{enumerate} 
+
+ \alert{Нет!}
+  \hyperlink{9}{\beamerbutton{Следующий вопрос}}
+ 
+\end{frame} 
+
+
+ \begin{frame} \label{9-No} 
+\begin{block}{9} 
+
+  Требуется проверить гипотезу о равенстве математических ожиданий по независимым нормальным выборкам размером 33 и 16 наблюдений. Истинные дисперсии по обеим выборкам известны, совпадают и равны 196. Разница выборочных средних равна 1. Тестовая статистика может быть равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{9-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{9-No}{\beamergotobutton{} $1/14$}
+\item[] \hyperlink{9-No}{\beamergotobutton{} $1/49$}
+\item[] \hyperlink{9-Yes}{\beamergotobutton{} $1/4$}
+\item[] \hyperlink{9-No}{\beamergotobutton{} $1/7$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{10-No} 
+\begin{block}{10} 
+
+  Требуется проверить гипотезу о равенстве математических ожиданий по двум нормальным выборкам размером 33 и 16 наблюдений. Истинные дисперсии по обеим выборкам известны, совпадают и равны 196. Разница выборочных средних равна 1. Тестовая статистика может быть равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{10-No}{\beamergotobutton{} $-1/4$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $-1/14$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $-1/7$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $-1/49$}
+\item[] \hyperlink{10-Yes}{\beamergotobutton{} $-1/2$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{11-No} 
+\begin{block}{11} 
+
+  В методе главных компонент
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{11-No}{\beamergotobutton{} выборочная дисперсия первой главной компоненты равна единице }
+\item[] \hyperlink{11-No}{\beamergotobutton{} выборочная дисперсия первой главной компоненты минимальна}
+\item[] \hyperlink{11-No}{\beamergotobutton{} первая главная компонента сильнее всего коррелирована с первой переменной}
+\item[] \hyperlink{11-No}{\beamergotobutton{} выборочная корреляция первой и второй главных компонент равна единице}
+\item[] \hyperlink{11-Yes}{\beamergotobutton{} выборочная корреляция первой и второй главных компонент равна нулю}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{12-No} 
+\begin{block}{12} 
+
+  Априорная функция плотности параметра $a$  пропорциональна $\exp(-a)$ при $a>0$. Функция правдоподобия пропорциональна $\exp(-a^2+a)$. При $a>0$ апостериорная плотность пропорциональна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{12-No}{\beamergotobutton{} $\exp(a^2+2a)$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $\exp(-a) - \exp(-a^2+a)$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $\exp(-a) + \exp(-a^2+a)$}
+\item[] \hyperlink{12-Yes}{\beamergotobutton{} $\exp(-a^2)$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $\exp(-a^2+a) - \exp(-a)$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{13-No} 
+\begin{block}{13} 
+
+  Величины $X_1$, $X_2$, \ldots, $X_{10}$ представляют собой случайную выборку с $\E(X_i) = 2\theta - 1$. Оказалось, что $\bar X_{10}=3$. Оценка $\hat\theta_{MM}$ метода моментов равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{13-No}{\beamergotobutton{} Недостаточно данных}
+\item[] \hyperlink{13-No}{\beamergotobutton{} $15.5$}
+\item[] \hyperlink{13-Yes}{\beamergotobutton{} $2$}
+\item[] \hyperlink{13-No}{\beamergotobutton{} $3$}
+\item[] \hyperlink{13-No}{\beamergotobutton{} $1$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{14-No} 
+\begin{block}{14} 
+
+    Величины $X_1$, $X_2$, \ldots, $X_{10}$ представляют собой случайную выборку с $\E(X_i) = 2\theta - 1$. Оказалось, что $\bar X_{10}=3$. Оценка $\hat\theta_{ML}$ метода максимального правдоподобия равна
+    
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{14-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{14-Yes}{\beamergotobutton{} Недостаточно данных}
+\item[] \hyperlink{14-No}{\beamergotobutton{} $3$}
+\item[] \hyperlink{14-No}{\beamergotobutton{} $2$}
+\item[] \hyperlink{14-No}{\beamergotobutton{} $15.5$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{15-No} 
+\begin{block}{15} 
+
+  Нелогарифмированная функция правдоподобия
+  
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{15-No}{\beamergotobutton{} асимпотитически распределена $\cN(0;1)$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} убывает по оцениваемому параметру $\theta$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} может принимать отрицательные значения}
+\item[] \hyperlink{15-Yes}{\beamergotobutton{} может принимать значения больше единицы}
+\item[] \hyperlink{15-No}{\beamergotobutton{} возрастает по оцениваемому параметру $\theta$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{16-No} 
+\begin{block}{16} 
+
+  Оценка метода моментов
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{16-No}{\beamergotobutton{} всегда несмещённая}
+\item[] \hyperlink{16-No}{\beamergotobutton{} эффективнее оценки максимального правдоподобия}
+\item[] \hyperlink{16-Yes}{\beamergotobutton{} не требует знания точного закона распределения}
+\item[] \hyperlink{16-No}{\beamergotobutton{} не может быть получена в малой выборке}
+\item[] \hyperlink{16-No}{\beamergotobutton{} не применима для дискретных случайных величин}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{17-No} 
+\begin{block}{17} 
+
+   По большой выборке была построена оценка  максимального правдоподобия $\hat a$. Оказалось, что $\ell''(\hat a) = -4$. Ширина 95\%-го доверительного интервала для параметра $a$ примерно равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{17-No}{\beamergotobutton{} $4$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $5$}
+\item[] \hyperlink{17-Yes}{\beamergotobutton{} $2$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $3$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $1$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{18-No} 
+\begin{block}{18} 
+
+  Величины $X_1$, $X_2$, \ldots, $X_n$ представляют собой случайную выборку из $\cN(\mu; \sigma^2)$. Вася оценивает оба параметра с помощью максимального правдоподобия. При этом
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{18-No}{\beamergotobutton{} $\E(\hat \mu)>\mu$, $\E(\hat\sigma^2) = \sigma^2$}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $\E(\hat \mu)<\mu$, $\E(\hat\sigma^2) = \sigma^2$}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $\E(\hat \mu)=\mu$, $\E(\hat\sigma^2) > \sigma^2$}
+\item[] \hyperlink{18-Yes}{\beamergotobutton{} $\E(\hat \mu)=\mu$, $\E(\hat\sigma^2) < \sigma^2$}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $\E(\hat \mu)=\mu$, $\E(\hat\sigma^2) = \sigma^2$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{19-No} 
+\begin{block}{19} 
+
+    Если величина $\hat\theta$ имеет нормальное распределение $\cN(3;0.01^2)$, то, согласно дельта-методу, $\hat\theta^3$ имеет примерно нормальное распределение
+    
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{19-Yes}{\beamergotobutton{} $\cN(27;27^2\cdot 0.01^2)$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $\cN(27;3\cdot 0.01^2)$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $\cN(4;16\cdot 0.01^2)$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $\cN(3;3\cdot 0.01^2)$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $\cN(27;27\cdot 0.01^2)$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{20-No} 
+\begin{block}{20} 
+
+    Есть два неизвестных параметра, $\theta$ и $\gamma$. Вася проверяет гипотезу $H_0$: $\theta = 1$ и $\gamma = 2$ против альтернативной гипотезы о том, что хотя бы одно из равенств нарушено. Выберите верное утверждение об асимптотическом распределении статистики отношения правдоподобия, $LR$:
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{20-Yes}{\beamergotobutton{} Если верна $H_0$, то $LR \sim \chi_2^2$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} Если верна $H_a$, то $LR \sim \chi_2^2$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} И при $H_0$, и при $H_a$, $LR \sim \chi_1^2$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} Если верна $H_0$, то $LR \sim \chi_1^2$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} И при $H_0$, и при $H_a$, $LR \sim \chi_2^2$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{21-No} 
+\begin{block}{21} 
+
+  Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из распределения Пуассона с параметром $\lambda > 0$. Информация Фишера о параметре $\lambda$, заключенная в~\textsc{одном} наблюдении случайной выборки, равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{21-No}{\beamergotobutton{}  $n / \lambda$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $e^-\lambda$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $\lambda / n$}
+\item[] \hyperlink{21-Yes}{\beamergotobutton{} $1 / \lambda$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $\lambda$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{22-No} 
+\begin{block}{22} 
+
+  Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из распределения Бернулли с параметром $p \in (0;\,1)$. Информация Фишера о параметре $p$, заключенная в~\textsc{одном} наблюдении случайной выборки, равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{22-No}{\beamergotobutton{} $p/n$}
+\item[] \hyperlink{22-Yes}{\beamergotobutton{} $\frac{1}{p(1-p)}$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $1/p$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $n/p$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $p$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{23-No} 
+\begin{block}{23} 
+
+  Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из нормального распределения с математическим ожиданием $\mu$ и дисперсией $\sigma^2 = 3$. Информация Фишера о параметре $\mu$, заключенная в \textsc{двух} наблюдениях случайной выборки, равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{23-Yes}{\beamergotobutton{} $2 / 3$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $3 / 2$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $\mu / 2$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $2 / \mu$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $2 \mu^2$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{24-No} 
+\begin{block}{24} 
+
+    Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из распределения с плотностью распределения
+  \[
+      f(x; \theta) =
+      \begin{cases}
+          \frac{1}{\theta} e^{-\frac{x}{\theta}}, \text{ при } x \geq 0, \\
+          0, \text{ при } x < 0
+      \end{cases},
+  \]
+  где $\theta > 0$ — неизвестный параметр распределения. Информация Фишера о параметре $\theta$, заключенная в \textsc{трёх} наблюдениях случайной выборки, равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{24-No}{\beamergotobutton{} $\theta^2$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} $1 / \theta$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} $\theta$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} $\theta^2 / 3$}
+\item[] \hyperlink{24-Yes}{\beamergotobutton{} $3 / \theta^2$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{25-No} 
+\begin{block}{25} 
+
+  Пусть $\hat{\theta}$ — несмещенная оценка для неизвестного параметра $\theta$, а также выполнены условия регулярности. Неравенство Крамера-Рао представимо в виде
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{25-No}{\beamergotobutton{} $\Var(\hat\theta) \cdot I_n(\theta) > 1$}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $I_n(\theta) \leq \Var(\hat\theta)$}
+\item[] \hyperlink{25-Yes}{\beamergotobutton{} $I_n^-1(\theta) \leq \Var(\hat\theta)$}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $\Var(\hat\theta) \leq I_n(\theta)$}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $\Var(\hat\theta) \cdot I_n(\theta) \leq 1$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{26-No} 
+\begin{block}{26} 
+
+    Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из дискретного распределения с таблицей распределения
+
+\begin{center}
+	\begin{tabular}{cccc}
+		\toprule
+		$X_i$  & $-2$    & $0$      & $1$  \\
+		\midrule
+		$\P(\cdot)$        & $1/2 - \theta$      & $1/2$    & $\theta$  \\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+Несмещённой является оценка
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{26-No}{\beamergotobutton{} $(\bar{X} - 1) / 3$}
+\item[] \hyperlink{26-Yes}{\beamergotobutton{} $(\bar{X} + 1) / 3$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $\bar{X} - 1$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $\bar{X}$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $\bar{X} + 1$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{27-No} 
+\begin{block}{27} 
+
+   Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из равномерного распределения на отрезке $[0; \, \theta]$, где $\theta > 0$ — неизвестный параметр. Несмещённой является оценка
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{27-Yes}{\beamergotobutton{} $2 \bar{X}$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $\bar{X} / 2$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $\bar{X}$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $X_1$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $X_{(1)}$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{28-No} 
+\begin{block}{28} 
+
+    Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из дискретного распределения с таблицей распределения
+
+  \begin{center}
+	\begin{tabular}{cccc}
+		\toprule
+		$X_i$    & $-2$     & $0$   & $1$  \\
+		\midrule
+		$\P(\cdot)$        & $1/2 - \theta$      & $1/2$    & $\theta$  \\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+Состоятельной является оценка
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\bar{X} - 1$}
+\item[] \hyperlink{28-Yes}{\beamergotobutton{} $(\bar{X} + 1) / 3$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\bar{X}$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\bar{X} + 1$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $(\bar{X} - 1) / 3$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{29-No} 
+\begin{block}{29} 
+
+  Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из равномерного распределения на отрезке $[0; \, \theta]$, где $\theta > 0$ — неизвестный параметр.
+  Состоятельной является оценка
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{29-No}{\beamergotobutton{} $X_1$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $\bar{X}$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $\bar{X} / 2$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $X_{(1)}$}
+\item[] \hyperlink{29-Yes}{\beamergotobutton{} $2 \bar{X}$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{30-No} 
+\begin{block}{30} 
+
+  Пусть $X = (X_1, \, \ldots, \, X_n)$ — случайная выборка из нормального распределения с математическим ожиданием $\mu = 3$ и дисперсией $\sigma^2$. Несмещённой оценкой параметра $\sigma^2$ является
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{30-Yes}{\beamergotobutton{} $\frac{1}{n} \sum_{i=1}^{n}(X_i - 3)^2$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $\frac{1}{n} \sum_{i=1}^{n}(X_i - \bar{X})^2$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $\frac{1}{n+1} \sum_{i=1}^{n}(X_i - \bar{X})^2$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $\frac{1}{n-1} \sum_{i=1}^{n}(X_i - 3)^2$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $\frac{1}{n+1} \sum_{i=1}^{n}(X_i - 3)^2$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{31-No} 
+\begin{block}{31} 
+
+  Оценка  $\hat\theta_n$ называется состоятельной оценкой параметра $\theta$, если
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{31-No}{\beamergotobutton{} $\Var(\hat\theta_n) \to 0$}
+\item[] \hyperlink{31-No}{\beamergotobutton{} $\Var(\hat\theta_n)=\frac{\sigma^2}{n}$}
+\item[] \hyperlink{31-No}{\beamergotobutton{} $\E(\hat\theta_n)=\theta$}
+\item[] \hyperlink{31-Yes}{\beamergotobutton{} $\hat\theta_n \xrightarrow{P}\theta$}
+\item[] \hyperlink{31-No}{\beamergotobutton{} Для любой оценки $T$ из класса $\mathcal{K}$ и любого $\theta$ выполнено $\E((\hat\theta_n-\theta)^2)\leq \E((T-\theta)^2)$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{32-No} 
+\begin{block}{32} 
+
+    Оценка  $\hat\theta_n$ параметра $\theta$ называется эффективной в некотором классе оценок $\mathcal{K}$, если
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{32-No}{\beamergotobutton{} $\hat\theta_n \xrightarrow{P}\theta$}
+\item[] \hyperlink{32-No}{\beamergotobutton{} $\Var(\hat\theta_n) \to 0$}
+\item[] \hyperlink{32-Yes}{\beamergotobutton{} Для любой оценки $T$ из класса $\mathcal{K}$ и любого $\theta$ выполнено $\E((\hat\theta_n-\theta)^2)\leq \E((T-\theta)^2)$}
+\item[] \hyperlink{32-No}{\beamergotobutton{} $\Var(\hat\theta_n)=\frac{\sigma^2}{n}$}
+\item[] \hyperlink{32-No}{\beamergotobutton{} $\E(\hat\theta_n)=\theta$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{33-No} 
+\begin{block}{33} 
+
+  По выборке $X_1,\ldots,X_{4}$, имеющей нормальное распределение с известной дисперсией 1, проверяется гипотеза $H_0: \mu = 10$ против $H_a: \mu > 10$. Выборочное среднее оказалось равно 9. Тогда нулевая гипотеза
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{33-No}{\beamergotobutton{} отвергается при $\alpha = 0.05$, не отвергается при $\alpha = 0.01$}
+\item[] \hyperlink{33-No}{\beamergotobutton{} отвергается при $\alpha = 0.1$, не отвергается при $\alpha = 0.05$}
+\item[] \hyperlink{33-No}{\beamergotobutton{} Отвергается на любом разумном уровне значимости}
+\item[] \hyperlink{33-No}{\beamergotobutton{} отвергается при $\alpha = 0.01$, не отвергается при $\alpha = 0.05$}
+\item[] \hyperlink{33-Yes}{\beamergotobutton{} Не отвергается на любом разумном уровне значимости}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{34-No} 
+\begin{block}{34} 
+
+  По случайной выборке из 49 наблюдений было оценено выборочное среднее $\bar{X} = 8$  и несмещённая оценка дисперсии $\hat{\sigma}^2 = 4$ проверяется гипотеза $H_0: \mu = 7$ против $H_a: \mu \ne 7$. Тогда значение тестовой статистики
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{34-Yes}{\beamergotobutton{} 3.5}
+\item[] \hyperlink{34-No}{\beamergotobutton{} 3}
+\item[] \hyperlink{34-No}{\beamergotobutton{} 1.75}
+\item[] \hyperlink{34-No}{\beamergotobutton{} 1.5}
+\item[] \hyperlink{34-No}{\beamergotobutton{} -1.75}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{35-No} 
+\begin{block}{35} 
+
+  По выборке из 100 наблюдений $X_1,\ldots,X_{n}$, имеющей нормальное распределение с неизвестной дисперсией, был получен 95\% доверительный интервал для математического ожидания $[16,24]$. Значит, $\bar{X}$ был равен
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{35-No}{\beamergotobutton{} 20.5}
+\item[] \hyperlink{35-Yes}{\beamergotobutton{} 20}
+\item[] \hyperlink{35-No}{\beamergotobutton{} 18}
+\item[] \hyperlink{35-No}{\beamergotobutton{} 21}
+\item[] \hyperlink{35-No}{\beamergotobutton{} 19}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{36-No} 
+\begin{block}{36} 
+
+  По выборке из 100 наблюдений $X_1,\ldots,X_{n}$, имеющей нормальное распределение с неизвестной дисперсией, был получен 95\% доверительный интервал для математического ожидания $[16,24]$. Считая критическое значение t-статистики равным 2, несмещенная оценка дисперсии была равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{36-No}{\beamergotobutton{} -1.75}
+\item[] \hyperlink{36-No}{\beamergotobutton{} 18}
+\item[] \hyperlink{36-No}{\beamergotobutton{} 1.5}
+\item[] \hyperlink{36-No}{\beamergotobutton{} 3}
+\item[] \hyperlink{36-Yes}{\beamergotobutton{} 400}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{37-No} 
+\begin{block}{37} 
+
+  По выборке из 5 наблюдений $X_1,\ldots,X_{5}$, имеющей экспоненциальное распределение, для проверки гипотезы о математическом ожидании $H_0: \mu = \mu_0$ против $H_a: \mu \ne \mu_0$, можно считать, что величина $\frac{\bar{X} - \mu_0}{\sqrt{\hat{\sigma}^2 / n}}$ имеет распределение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{37-No}{\beamergotobutton{} $t_4$}
+\item[] \hyperlink{37-No}{\beamergotobutton{} $\chi^2_5$}
+\item[] \hyperlink{37-No}{\beamergotobutton{} $t_5$}
+\item[] \hyperlink{37-No}{\beamergotobutton{} $\chi^2_4$}
+\item[] \hyperlink{37-No}{\beamergotobutton{} $\cN(0,1)$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{38-No} 
+\begin{block}{38} 
+
+Вася 50 раз подбросил монетку, 23 раза она выпала «орлом», 27 раз — «решкой». При проверке гипотезы о том, что монетка — «честная», Вася будет пользоваться статистикой, имеющей распределение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{38-No}{\beamergotobutton{} $t_{50}$}
+\item[] \hyperlink{38-No}{\beamergotobutton{} $\chi^2_{49}$}
+\item[] \hyperlink{38-Yes}{\beamergotobutton{} $\cN(0,1)$}
+\item[] \hyperlink{38-No}{\beamergotobutton{} $t_{49}$}
+\item[] \hyperlink{38-No}{\beamergotobutton{} $t_{51}$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{39-No} 
+\begin{block}{39} 
+
+Вася 25 раз подбросил монетку, 10 раз она выпала «орлом», 15 раз — «решкой».
+При проверке гипотезы о том, что монетка — «честная»,
+Вася может получить следующее значение тестовой статистики
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{39-No}{\beamergotobutton{} -3.2}
+\item[] \hyperlink{39-No}{\beamergotobutton{} 2}
+\item[] \hyperlink{39-No}{\beamergotobutton{} 0.4}
+\item[] \hyperlink{39-Yes}{\beamergotobutton{} -1}
+\item[] \hyperlink{39-No}{\beamergotobutton{} 10.2}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{40-No} 
+\begin{block}{40} 
+
+По выборке $X_1,\ldots,X_{n}$, имеющей нормальное распределение с неизвестным математическим ожиданием, строится доверительный интервал для дисперсии. Он НЕ может иметь вид
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{40-No}{\beamergotobutton{} $(0, a)$}
+\item[] \hyperlink{40-No}{\beamergotobutton{} $(0, +\infty)$}
+\item[] \hyperlink{40-No}{\beamergotobutton{} $(b, +\infty)$}
+\item[] \hyperlink{40-No}{\beamergotobutton{} $(a, b)$}
+\item[] \hyperlink{40-Yes}{\beamergotobutton{} $(-\infty, a)$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{41-No} 
+\begin{block}{41} 
+
+По выборке $X_1,\ldots,X_{n}$, имеющей нормальное распределение с неизвестным математическим ожиданием, проверяется гипотеза о дисперсии $H_0: \sigma^2 = 30$ против $H_a: \sigma^2 \ne 30$. Известно, что $\sum_{i=1}^{n} (X_i - \bar{X})^2 = 270$. Тестовая статистика может быть равна
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{41-No}{\beamergotobutton{} 6}
+\item[] \hyperlink{41-No}{\beamergotobutton{} 27}
+\item[] \hyperlink{41-No}{\beamergotobutton{} Не хватает данных}
+\item[] \hyperlink{41-No}{\beamergotobutton{} 3}
+\item[] \hyperlink{41-Yes}{\beamergotobutton{} 9}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{42-No} 
+\begin{block}{42} 
+
+По выборке $X_1,\ldots,X_{n}$, имеющей нормальное распределение с неизвестным математическим ожиданием, проверяется гипотеза о дисперсии $H_0: \sigma^2 = 30$ против $H_a: \sigma^2 \ne 30$. Тестовая статистика будет иметь распределение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{42-No}{\beamergotobutton{} $t_{n-1}$}
+\item[] \hyperlink{42-No}{\beamergotobutton{} $\cN(0,1)$}
+\item[] \hyperlink{42-Yes}{\beamergotobutton{} $\chi^2_{n-1}$}
+\item[] \hyperlink{42-No}{\beamergotobutton{} $\chi^2_n$}
+\item[] \hyperlink{42-No}{\beamergotobutton{} $t_n$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{43-No} 
+\begin{block}{43} 
+
+Дана реализация выборки: 7, -1, 3, 0. Выборочный начальный момент второго порядка равен
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{43-No}{\beamergotobutton{} $0.75$}
+\item[] \hyperlink{43-Yes}{\beamergotobutton{} $19.75$}
+\item[] \hyperlink{43-No}{\beamergotobutton{} $2.25$}
+\item[] \hyperlink{43-No}{\beamergotobutton{} $-1$}
+\item[] \hyperlink{43-No}{\beamergotobutton{} $59$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{44-No} 
+\begin{block}{44} 
+
+Дана реализация выборки: 7, -1, 3, 0. Первая порядковая статистика принимает значение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{44-No}{\beamergotobutton{} $3$}
+\item[] \hyperlink{44-No}{\beamergotobutton{} $2.25$}
+\item[] \hyperlink{44-No}{\beamergotobutton{} $0$}
+\item[] \hyperlink{44-Yes}{\beamergotobutton{} $-1$}
+\item[] \hyperlink{44-No}{\beamergotobutton{} $7$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{45-No} 
+\begin{block}{45} 
+
+Дана реализация выборки: 7, -1, 3, 0.  Выборочная функция распределения в точке 0 принимает значение
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{45-No}{\beamergotobutton{} $0$}
+\item[] \hyperlink{45-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{45-No}{\beamergotobutton{} $0.25$}
+\item[] \hyperlink{45-No}{\beamergotobutton{} $0.75$}
+\item[] \hyperlink{45-Yes}{\beamergotobutton{} $0.5$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{46-No} 
+\begin{block}{46} 
+
+Трёх случайно выбранных студентов 2-го курса попросили оценить сложность Теории вероятностей и Статистики по 100 балльной шкале
+
+\vspace{5mm}
+\begin{tabular}{lrrr}
+  \toprule
+   & Аким & Ариадна & Темуужин \\
+   \midrule
+   Теория вероятностей & 70 & 75 & 82 \\
+   Статистика & 64 & 69 & 100 \\
+  \bottomrule
+\end{tabular}
+\vspace{5mm}
+
+
+Тест знаков отвергает гипотезу о том, что Статистика и Теории вероятностей одинаково сложны в пользу альтернативы, что Статистика проще при уровне значимости
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{46-No}{\beamergotobutton{} $0.1$}
+\item[] \hyperlink{46-No}{\beamergotobutton{} $3/8$}
+\item[] \hyperlink{46-Yes}{\beamergotobutton{} $0.51$}
+\item[] \hyperlink{46-No}{\beamergotobutton{} $0.05$}
+\item[] \hyperlink{46-No}{\beamergotobutton{} $1/3$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{47-No} 
+\begin{block}{47} 
+
+Преподаватель в течение 10 лет ведет статистику о посещаемости лекций. Он заметил, что перед контрольной работой посещаемость улучшается. Преподаватель составил следующую таблицу сопряженности
+
+\small
+\begin{tabular}{lrr}
+	\toprule
+	& Контрольная будет & Контрольной не будет \\
+	\midrule
+	Пришло бол. пол. курса & 35 & 80 \\
+	Пришло мен. пол. курса & 5 & 200 \\
+	\bottomrule
+\end{tabular}
+
+\vspace{5mm}
+Если $T$ — статистика Пирсона, а $k$ — число степеней свободы её распределения, то
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{47-No}{\beamergotobutton{} $T>52$, $k=2$}
+\item[] \hyperlink{47-No}{\beamergotobutton{} $T<52$, $k=1$}
+\item[] \hyperlink{47-No}{\beamergotobutton{} $T<52$, $k=4$}
+\item[] \hyperlink{47-Yes}{\beamergotobutton{} $T>52$, $k=1$}
+\item[] \hyperlink{47-No}{\beamergotobutton{} $T>52$, $k=3$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{48-No} 
+\begin{block}{48} 
+
+Экзамен принимают два преподавателя: Б.Б.~Злой и Е.В.~Добрая. Они поставили следующие оценки:
+
+\vspace{5mm}
+\begin{tabular}{lccccc}
+  \toprule
+   Е.В. Добрая & 6 & 4 & 7  & 8 &   \\
+   Б.Б. Злой   & 2 & 3 & 10 & 8 & 3 \\
+  \bottomrule
+\end{tabular}
+\vspace{5mm}
+
+
+Значение статистики Вилкоксона для гипотезы о совпадении распределений оценок равно
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{48-No}{\beamergotobutton{} $20.5$}
+\item[] \hyperlink{48-No}{\beamergotobutton{} $20$}
+\item[] \hyperlink{48-Yes}{\beamergotobutton{} $22.5$}
+\item[] \hyperlink{48-No}{\beamergotobutton{} $7.5$}
+\item[] \hyperlink{48-No}{\beamergotobutton{} $19$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+\end{document}
