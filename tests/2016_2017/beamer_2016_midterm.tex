@@ -1,0 +1,2269 @@
+\documentclass[t]{beamer}
+
+\usetheme{Boadilla} 
+ \usecolortheme{seahorse} 
+
+\setbeamertemplate{footline}[frame number]{} 
+ \setbeamertemplate{navigation symbols}{} 
+ \setbeamertemplate{footline}{}
+\usepackage{cmap} 
+
+\usepackage{mathtext} 
+ \usepackage{booktabs} 
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools}
+\usepackage[T2A]{fontenc} 
+
+\usepackage[utf8]{inputenc} 
+
+\usepackage[english,russian]{babel} 
+
+\DeclareMathOperator{\Lin}{\mathrm{Lin}} 
+ \DeclareMathOperator{\Linp}{\Lin^{\perp}} 
+ \DeclareMathOperator*\plim{plim}
+
+ \DeclareMathOperator{\grad}{grad} 
+ \DeclareMathOperator{\card}{card} 
+ \DeclareMathOperator{\sgn}{sign} 
+ \DeclareMathOperator{\sign}{sign} 
+ \DeclareMathOperator*{\argmin}{arg\,min} 
+ \DeclareMathOperator*{\argmax}{arg\,max} 
+ \DeclareMathOperator*{\amn}{arg\,min} 
+ \DeclareMathOperator*{\amx}{arg\,max} 
+ \DeclareMathOperator{\cov}{Cov} 
+
+\DeclareMathOperator{\Var}{Var} 
+ \DeclareMathOperator{\Cov}{Cov} 
+ \DeclareMathOperator{\Corr}{Corr} 
+ \DeclareMathOperator{\E}{\mathbb{E}} 
+ \let\P\relax 
+
+\DeclareMathOperator{\P}{\mathbb{P}} 
+ \newcommand{\cN}{\mathcal{N}} 
+ \def \R{\mathbb{R}} 
+ \def \N{\mathbb{N}} 
+ \def \Z{\mathbb{Z}} 
+
+\title{Midterm 2016} 
+ \subtitle{Теория вероятностей и математическая статистика} 
+ \author{Обратная связь: \url{https://github.com/bdemeshev/probability_hse_exams}} 
+ \date{Последнее обновление: \today}
+\begin{document} 
+
+\frame[plain]{\titlepage}
+
+ \begin{frame} \label{1} 
+\begin{block}{1} 
+
+  Граф Сен-Жермен извлекает карты в случайном порядке из стандартной колоды в 52 карты без возвращения. Рассмотрим три события: $A$ — «первая карта — тройка»; $B$ — «вторая карта — семёрка»; $C$ — «третья карта — дама пик».
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{1-No}{\beamergotobutton{} События $A$ и $B$ зависимы, события $B$ и $C$ независимы.}
+\item[] \hyperlink{1-No}{\beamergotobutton{} События $A$ и $B$ независимы, события $B$ и $C$ зависимы.}
+\item[] \hyperlink{1-No}{\beamergotobutton{} События $A$ и $B$ независимы, события $B$ и $C$ независимы.}
+\item[] \hyperlink{1-No}{\beamergotobutton{} События $A$ и $С$ независимы, события $B$ и $C$ зависимы.}
+\item[] \hyperlink{1-Yes}{\beamergotobutton{} События $A$ и $B$ зависимы, события $B$ и $C$ зависимы.}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{2} 
+\begin{block}{2} 
+
+Монетку подбрасывают три раза. Рассмотрим три события: $A$ — «хотя бы один раз выпала решка»; $B$ — «хотя бы один раз выпал орёл»; $C$ — «все три раза выпал орёл».
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{2-No}{\beamergotobutton{} События $A$ и $B$ совместны, события $A$ и $C$ совместны.}
+\item[] \hyperlink{2-No}{\beamergotobutton{} События $A$ и $B$ несовместны, события $B$ и $C$ несовместны.}
+\item[] \hyperlink{2-Yes}{\beamergotobutton{} События $A$ и $B$ совместны, события $A$ и $C$ несовместны.}
+\item[] \hyperlink{2-No}{\beamergotobutton{} События $A$ и $B$ несовместны, события $A$ и $C$ совместны.}
+\item[] \hyperlink{2-No}{\beamergotobutton{} События $A$ и $B$ несовместны, события $B$ и $C$ совместны.}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{3} 
+\begin{block}{3} 
+
+  На шахматной доске в клетке A1 стоит белая ладья. На одну из оставшихся клеток случайным образом выставляется чёрная ладья. Вероятность того, что ладьи «бьют» друг друга равна
+  
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{3-No}{\beamergotobutton{} $14/64$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $16/64$}
+\item[] \hyperlink{3-Yes}{\beamergotobutton{} $14/63$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $16/63$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $15/64$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{4} 
+\begin{block}{4} 
+
+  В школе три девятых класса: 9А, 9Б и 9В. В 9А классе — 50\% отличники, в 9Б — 30\%, в 9В — 40\%. Если сначала равновероятно выбрать один из трёх классов, а затем внутри класса равновероятно выбрать школьника, то вероятность выбрать отличника равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{4-No}{\beamergotobutton{} $0.27$}
+\item[] \hyperlink{4-Yes}{\beamergotobutton{} $0.4$}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $0.3$}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $0.5$}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $3/(3+4+5)$}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $(3+4+5)/3$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{5} 
+\begin{block}{5} 
+
+  Если $\P(A)=0.2$, $\P(B)=0.5$, $\P(A | B) = 0.3$, то
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{5-Yes}{\beamergotobutton{} $\P(A \cap B) = 0.15$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $\P(A \cup B) = 0.7$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $\P(A \cap B) = 0.05$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $\P(A \cup B) = 0.8$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $\P(B \cup A) = 0.3$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{6} 
+\begin{block}{6} 
+
+  Традиционно себя называют Стрельцами люди, родившиеся с 22 ноября по 21 декабря. Из-за прецессии земной оси линия Солнце–Земля указывает в созведие Стрельца в наше время с 17 декабря по 20 января. Предположим, что все даты рождения равновероятны. Вероятность того, что человек, называющий себя Стрельцом, родился в день, когда линия Солнце–Земля указывала в созвездие Стрельца, равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{6-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $4/31$}
+\item[] \hyperlink{6-Yes}{\beamergotobutton{} $5/30$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $4/35$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $4/30$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{7} 
+\begin{block}{7} 
+
+  Монетка выпадает орлом с вероятностью $0.2$. Вероятность того, что при 10 подбрасываниях монетка выпадет орлом хотя бы один раз, равна
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{7-No}{\beamergotobutton{} $0.2^10$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $2/10$}
+\item[] \hyperlink{7-Yes}{\beamergotobutton{} $1 - 0.8^10$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $C_{10}^1 0.2^{1}0.8^9$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $C_{10}^1 0.8^{1}0.2^9$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{8} 
+\begin{block}{8} 
+
+  Среди покупателей магазина мужчин и женщин поровну. Женщины тратят больше 1000 рублей с вероятностью 60\%, а мужчины — с вероятностью 30\%. Только что был пробит чек на сумму 1234 рубля. Вероятность того, что покупателем была женщина равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{8-No}{\beamergotobutton{} $0.5$}
+\item[] \hyperlink{8-Yes}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $1/3$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $0.3$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $0.18$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{9} 
+\begin{block}{9} 
+
+  Если $F_X(x)$ — функция распределения случайной величины, то
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{9-No}{\beamergotobutton{} $F_X(x)$ может принимать отрицательные значения}
+\item[] \hyperlink{9-No}{\beamergotobutton{} величина $X$ дискретна}
+\item[] \hyperlink{9-No}{\beamergotobutton{} $\lim\limits_{x \rightarrow -\infty} F_X(x) = 1 $}
+\item[] \hyperlink{9-No}{\beamergotobutton{} величина $X$ непрерывна}
+\item[] \hyperlink{9-Yes}{\beamergotobutton{}  $\P(X \in (a;b] = F_X(b) - F_X(a)$}
+\item[] \hyperlink{9-No}{\beamergotobutton{} $F_X(x)$ может принимать значение 2016}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{10} 
+\begin{block}{10} 
+
+Функцией плотности случайной величины может являться функция
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{10-Yes}{\beamergotobutton{} $f(x) = \begin{cases}
+	\frac{1}{x^2}, x \in [1,+ \infty) \\
+	0,\text{ иначе}
+	\end{cases}$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $ f(x) = \begin{cases}
+	x - 1, x \in [0,1+\sqrt{3}] \\
+	0,\text{ иначе}
+	\end{cases}$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $ f(x) = \begin{cases}
+	x^2, x \in [0,2] \\
+	0,\text{ иначе}
+	\end{cases}$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $ f(x) = \begin{cases}
+	-1, x \in [-1, 0] \\
+	0,\text{ иначе}
+	\end{cases}$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $ f(x) = \frac{1}{\sqrt{2\pi}} e^{-x^2}$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{11} 
+\begin{block}{11} 
+
+  Известно, что $\E(X)=3$, $\E(Y)=2$, $\Var(X)=12$, $\Var(Y)=1$, $\Cov(X,Y)=2$. Ожидание $\E(XY)$ равно
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{11-Yes}{\beamergotobutton{} 8}
+\item[] \hyperlink{11-No}{\beamergotobutton{} 0}
+\item[] \hyperlink{11-No}{\beamergotobutton{} 5}
+\item[] \hyperlink{11-No}{\beamergotobutton{} 6}
+\item[] \hyperlink{11-No}{\beamergotobutton{} 2}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{12} 
+\begin{block}{12} 
+
+  Известно, что $\E(X)=3$, $\E(Y)=2$, $\Var(X)=12$, $\Var(Y)=1$, $\Cov(X,Y)=2$. Корреляция $\Corr(X,Y)$ равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{12-Yes}{\beamergotobutton{} $\frac{1}{\sqrt{3}}$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $\frac{2}{\sqrt{13}}$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $\frac{1}{12}$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $\frac{1}{\sqrt{12}}$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $\frac{2}{12}$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{13} 
+\begin{block}{13} 
+
+  Известно, что $\E(X)=3$, $\E(Y)=2$, $\Var(X)=12$, $\Var(Y)=1$, $\Cov(X,Y)=2$. Дисперсия $\Var(2X-Y+4)$ равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{13-No}{\beamergotobutton{} 57}
+\item[] \hyperlink{13-No}{\beamergotobutton{} 49}
+\item[] \hyperlink{13-No}{\beamergotobutton{} 45}
+\item[] \hyperlink{13-No}{\beamergotobutton{} 53}
+\item[] \hyperlink{13-Yes}{\beamergotobutton{} 41}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{14} 
+\begin{block}{14} 
+
+  Если случайные величины $X$ и $Y$ имеют совместное нормальное распределение с нулевыми математическими ожиданиями и единичной ковариационной матрицей, то
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{14-No}{\beamergotobutton{} $\Corr(X,Y)>0$}
+\item[] \hyperlink{14-No}{\beamergotobutton{} существует такое $a>0$, что $\P(X=a)>0$}
+\item[] \hyperlink{14-Yes}{\beamergotobutton{} $X$ и $Y$ независимы}
+\item[] \hyperlink{14-No}{\beamergotobutton{} $\Corr(X,Y)<0$}
+\item[] \hyperlink{14-No}{\beamergotobutton{} распределение $X$ может быть дискретным}
+\item[] \hyperlink{14-No}{\beamergotobutton{} $\forall \alpha \in [0,1]: \Var(\alpha X + (1-\alpha)Y) = 0$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{15} 
+\begin{block}{15} 
+
+  Если $\Corr(X, Y)= 0.5$ и $\Var(X)=\Var(Y)$, то $\Corr(X + Y, 2Y - 7)$ равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{15-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} $0$}
+\item[] \hyperlink{15-Yes}{\beamergotobutton{} $\sqrt{3}/2$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} $\sqrt{2}/3$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} $\sqrt{3}/3$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{16} 
+\begin{block}{16} 
+
+  Известно, что $\xi \sim U[0;\,1]$. Вероятность $\P(0.2<\xi<0.7)$ равна
+  
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{16-No}{\beamergotobutton{} $1/4$}
+\item[] \hyperlink{16-No}{\beamergotobutton{} $0.17$}
+\item[] \hyperlink{16-Yes}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{16-No}{\beamergotobutton{} $\int_{0.2}^{0.7}\frac{1}{\sqrt{2\pi}}\,e^{-t^2/2}\,dt$}
+\item[] \hyperlink{16-No}{\beamergotobutton{} $\int_{0}^{1}\frac{1}{\sqrt{2\pi}}\,e^{-t^2/2}\,dt$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{17} 
+\begin{block}{17} 
+
+    Cлучайные величины $\xi_1, \, \ldots, \, \xi_n, \, \ldots$ независимы и имеют таблицы распределения
+    \[
+    \begin{tabular}{c|c|c}
+      $\xi_i$                     & $-1$   & $1$   \\ \cline{1-3}
+      $\P_{\xi_i}$        & $1/2$       & $1/2$   \\
+    \end{tabular}
+    \]
+    Если $S_n = \xi_1 + \ldots + \xi_n$, то предел $\lim\limits_{n \rightarrow \infty}\P\Bigl(\frac{S_n - \E[S_n]}{\sqrt{\Var(S_n)}} > 1\Bigr)$ равен
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{17-No}{\beamergotobutton{} $\int_{-1}^{1}\frac{1}{\sqrt{2\pi}}\,e^{-t^2/2}\,dt$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $\int_{-\infty}^{1}\frac{1}{\sqrt{2\pi}}\,e^{-t^2/2}\,dt$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $0.5$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $\int_{1}^{+\infty}\frac{1}{2}\,e^{-t/2}\,dt$}
+\item[] \hyperlink{17-Yes}{\beamergotobutton{} $\int_{1}^{+\infty}\frac{1}{\sqrt{2\pi}}\,e^{-t^2/2}\,dt$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{18} 
+\begin{block}{18} 
+
+  Число посетителей сайта за один день является неотрицательной случайной величиной с математическим ожиданием 400 и дисперсией 400. Вероятность того, что за 100 дней общее число посетителей сайта превысит $40\,400$, приближённо равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{18-No}{\beamergotobutton{} $0.0553$}
+\item[] \hyperlink{18-Yes}{\beamergotobutton{} $0.0227$}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $0.3413$}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $0.9772$}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $0.1359$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{19} 
+\begin{block}{19} 
+
+Размер выплаты страховой компанией является неотрицательной случайной величиной с математическим ожиданием $10\,000$ рублей. Согласно неравенству Маркова, вероятность того, что очередная выплата превысит $50\,000$ рублей, ограничена сверху числом
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{19-Yes}{\beamergotobutton{} $0.2$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $0.5$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $0.3413$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $0.1359$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $0.4$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} неравенство Маркова здесь неприменимо}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{20} 
+\begin{block}{20} 
+
+  Размер выплаты страховой компанией является неотрицательной случайной величиной с математическим ожиданием $50\,000$ рублей и стандартным отклонением $10\,000$ рублей. Согласно неравенству Чебышёва, вероятность того, что очередная выплата будет отличаться от своего математического ожидания не более чем на 20\,000 рублей, ограничена снизу числом
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{20-Yes}{\beamergotobutton{} $3/4$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} $2/5$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} $1/4$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} $3/5$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} неравенство Чебышёва здесь неприменимо}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{21} 
+\begin{block}{21} 
+
+  Вероятность поражения мишени при одном выстреле равна $0.6$. Случайная величина $\xi_i$  равна $1$, если при $i$-ом выстреле было попадание, и равна $0$ в противном случае. Предел по вероятности последовательности $\frac{\xi_1^{2016} + \ldots + \xi_n^{2016}}{n}$ при $n \rightarrow \infty$ равен
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{21-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $3/4$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $0.6^2016$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $2/5$}
+\item[] \hyperlink{21-Yes}{\beamergotobutton{} $3/5$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{22} 
+\begin{block}{22} 
+
+  Правильный кубик подбрасывается 5 раз. Вероятность того, что ровно два раза выпадет шестерка равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{22-No}{\beamergotobutton{} $125/(2^4 3^5)$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $25/(2^5 3^5)$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $1/36$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $1/(2^5 3^5)$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $2/5$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{23} 
+\begin{block}{23} 
+
+Правильный кубик подбрасывается 5 раз. Математическое ожидание и дисперсия числа выпавших шестерок равны соответственно
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{23-No}{\beamergotobutton{} $5/6$ и $5/36$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $5/6$ и $1/5$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $5/6$ и $1/36$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $1$ и $5/6$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $0$ и $5/6$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $0$ и $1$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{24} 
+\begin{block}{24} 
+
+  Правильный кубик подбрасывается 5 раз. Наиболее вероятное число шестерок равняется
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{24-Yes}{\beamergotobutton{} $0$ и $1$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} $5$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} только $0$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} только $1$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} $5/6$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{25} 
+\begin{block}{25} 
+
+  Правильный кубик подбрасывается 5 раз. Математическое ожидание суммы выпавших очков равно
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{25-No}{\beamergotobutton{} $21$}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $3.5$}
+\item[] \hyperlink{25-Yes}{\beamergotobutton{} $17.5$}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $18$}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $18.5$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{26} 
+\begin{block}{26} 
+
+  Случайный вектор $(\xi, \eta)^T$ имеет нормальное распределение
+  $\cN \left(
+  \begin{pmatrix}
+    0 \\
+    0
+  \end{pmatrix};
+  \begin{pmatrix}
+    1 & 1/2 \\
+    1/2 & 1
+  \end{pmatrix}
+\right)$ и функцию плотности $f_{\xi, \eta}(x, y) = \frac{1}{2\pi a} \exp\left(-\frac{1}{2a^2}(x^2-bxy+y^2) \right)$. При этом
+
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{26-No}{\beamergotobutton{} $a=1$, $b=0$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $a=1$, $b=1$}
+\item[] \hyperlink{26-Yes}{\beamergotobutton{} $a=\sqrt3/2$, $b=1$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $a=\sqrt3/4$, $b=0$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $a=1/2$, $b=1$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{27} 
+\begin{block}{27} 
+
+    Случайный вектор $(\xi, \eta)^T$ имеет нормальное распределение
+    $\cN \left(
+    \begin{pmatrix}
+      0 \\
+      0
+    \end{pmatrix};
+    \begin{pmatrix}
+      1 & 1/2 \\
+      1/2 & 1
+    \end{pmatrix}
+  \right)$. Если случайный вектор $z$ определён как $z=(\xi - 0.5\eta, \eta)^T$, то
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{27-No}{\beamergotobutton{} компоненты вектора $z$ коррелированы}
+\item[] \hyperlink{27-No}{\beamergotobutton{} компоненты вектора $z$ зависимы}
+\item[] \hyperlink{27-Yes}{\beamergotobutton{} $z$ является двумерным нормальным вектором}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $z \sim \cN \left(
+      \begin{pmatrix}
+        0 \\
+        0
+      \end{pmatrix};
+      \begin{pmatrix}
+        1 & 0 \\
+        0 & 1
+      \end{pmatrix}
+    \right)$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $(\xi - 0.5\eta)^2 + 2\eta^2 \sim \chi_2^2$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $\xi - 0.5\eta \sim \cN(0;1)$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{28} 
+\begin{block}{28} 
+
+    Случайный вектор $(\xi, \eta)^T$ имеет нормальное распределение
+    $\cN \left(
+    \begin{pmatrix}
+      0 \\
+      0
+    \end{pmatrix};
+    \begin{pmatrix}
+      1 & 1/2 \\
+      1/2 & 1
+    \end{pmatrix}
+  \right)$. Условное математическое ожидание и условная дисперсия равны
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\E(\xi | \eta=1)=1$, $\Var(\xi | \eta=1)=1$}
+\item[] \hyperlink{28-Yes}{\beamergotobutton{} $\E(\xi | \eta=1)=1/2$, $\Var(\xi | \eta=1)=3/4$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\E(\xi | \eta=1)=1$, $\Var(\xi | \eta=1)=1/2$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\E(\xi | \eta=1)=0$, $\Var(\xi | \eta=1)=1$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\E(\xi | \eta=1)=1/2$, $\Var(\xi | \eta=1)=1$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\E(\xi | \eta=1)=1/2$, $\Var(\xi | \eta=1)=1/4$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{29} 
+\begin{block}{29} 
+
+  Математическое ожидание случайной величины $X$ при условии $Y=0$ равно
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{29-No}{\beamergotobutton{} $1/3$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $-1$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $0$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $1/6$}
+\item[] \hyperlink{29-Yes}{\beamergotobutton{} $1$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{30} 
+\begin{block}{30} 
+
+Вероятность того, что $X=0$ при условии $Y<1$ равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{30-Yes}{\beamergotobutton{} $1/4$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $0$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $3/4$
+}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $1/6$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{31} 
+\begin{block}{31} 
+
+  Дисперсия случайной величины $Y$ равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{31-No}{\beamergotobutton{} $1/3$}
+\item[] \hyperlink{31-No}{\beamergotobutton{} $-1$}
+\item[] \hyperlink{31-No}{\beamergotobutton{} $0$}
+\item[] \hyperlink{31-Yes}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{31-No}{\beamergotobutton{} $1$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{32} 
+\begin{block}{32} 
+
+ Ковариация случайных величин $X$ и $Y$ равна:
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{32-No}{\beamergotobutton{} $1/3$}
+\item[] \hyperlink{32-No}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{32-No}{\beamergotobutton{} $-2/3$}
+\item[] \hyperlink{32-Yes}{\beamergotobutton{} $-1/3$}
+\item[] \hyperlink{32-No}{\beamergotobutton{} $0$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{33} 
+\begin{block}{33} 
+
+ Вероятность того, что $X<0.5, Y<0.5$ равна:
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{33-No}{\beamergotobutton{} $1/4$}
+\item[] \hyperlink{33-No}{\beamergotobutton{} $1/96$}
+\item[] \hyperlink{33-No}{\beamergotobutton{} $1/16$}
+\item[] \hyperlink{33-Yes}{\beamergotobutton{} $1/64$}
+\item[] \hyperlink{33-No}{\beamergotobutton{} $1/128$}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{34} 
+\begin{block}{34} 
+
+  Условное распределение $X$ при условии $Y=1$ имеет вид
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{34-Yes}{\beamergotobutton{} $ f(x) = \begin{cases}
+	3 x^2 , x \in [0,1] \\
+	0,\text{ иначе}
+	\end{cases} $}
+\item[] \hyperlink{34-No}{\beamergotobutton{} Не определено}
+\item[] \hyperlink{34-No}{\beamergotobutton{} $ f(x) = \begin{cases}
+	3 x , x \in [0,1] \\
+	0,\text{ иначе}
+	\end{cases}  $}
+\item[] \hyperlink{34-No}{\beamergotobutton{} $ f(x) = \begin{cases}
+	9 x^2 , x \in [0,1] \\
+	0,\text{ иначе}
+	\end{cases}  $}
+\item[] \hyperlink{34-No}{\beamergotobutton{} $ f(x) = \begin{cases}
+	9 x , x \in [0,1] \\
+	0,\text{ иначе}
+	\end{cases}  $}
+\end{enumerate} 
+\end{frame} 
+
+
+ \begin{frame} \label{1-Yes} 
+\begin{block}{1} 
+
+  Граф Сен-Жермен извлекает карты в случайном порядке из стандартной колоды в 52 карты без возвращения. Рассмотрим три события: $A$ — «первая карта — тройка»; $B$ — «вторая карта — семёрка»; $C$ — «третья карта — дама пик».
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{1-No}{\beamergotobutton{} События $A$ и $B$ зависимы, события $B$ и $C$ независимы.}
+\item[] \hyperlink{1-No}{\beamergotobutton{} События $A$ и $B$ независимы, события $B$ и $C$ зависимы.}
+\item[] \hyperlink{1-No}{\beamergotobutton{} События $A$ и $B$ независимы, события $B$ и $C$ независимы.}
+\item[] \hyperlink{1-No}{\beamergotobutton{} События $A$ и $С$ независимы, события $B$ и $C$ зависимы.}
+\item[] \hyperlink{1-Yes}{\beamergotobutton{} События $A$ и $B$ зависимы, события $B$ и $C$ зависимы.}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{2}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{2-Yes} 
+\begin{block}{2} 
+
+Монетку подбрасывают три раза. Рассмотрим три события: $A$ — «хотя бы один раз выпала решка»; $B$ — «хотя бы один раз выпал орёл»; $C$ — «все три раза выпал орёл».
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{2-No}{\beamergotobutton{} События $A$ и $B$ совместны, события $A$ и $C$ совместны.}
+\item[] \hyperlink{2-No}{\beamergotobutton{} События $A$ и $B$ несовместны, события $B$ и $C$ несовместны.}
+\item[] \hyperlink{2-Yes}{\beamergotobutton{} События $A$ и $B$ совместны, события $A$ и $C$ несовместны.}
+\item[] \hyperlink{2-No}{\beamergotobutton{} События $A$ и $B$ несовместны, события $A$ и $C$ совместны.}
+\item[] \hyperlink{2-No}{\beamergotobutton{} События $A$ и $B$ несовместны, события $B$ и $C$ совместны.}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{3}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{3-Yes} 
+\begin{block}{3} 
+
+  На шахматной доске в клетке A1 стоит белая ладья. На одну из оставшихся клеток случайным образом выставляется чёрная ладья. Вероятность того, что ладьи «бьют» друг друга равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{3-No}{\beamergotobutton{} $14/64$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $16/64$}
+\item[] \hyperlink{3-Yes}{\beamergotobutton{} $14/63$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $16/63$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $15/64$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{4}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{4-Yes} 
+\begin{block}{4} 
+
+  В школе три девятых класса: 9А, 9Б и 9В. В 9А классе — 50\% отличники, в 9Б — 30\%, в 9В — 40\%. Если сначала равновероятно выбрать один из трёх классов, а затем внутри класса равновероятно выбрать школьника, то вероятность выбрать отличника равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{4-No}{\beamergotobutton{} $0.27$}
+\item[] \hyperlink{4-Yes}{\beamergotobutton{} $0.4$}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $0.3$}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $0.5$}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $3/(3+4+5)$}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $(3+4+5)/3$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{5}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{5-Yes} 
+\begin{block}{5} 
+
+  Если $\P(A)=0.2$, $\P(B)=0.5$, $\P(A | B) = 0.3$, то
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{5-Yes}{\beamergotobutton{} $\P(A \cap B) = 0.15$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $\P(A \cup B) = 0.7$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $\P(A \cap B) = 0.05$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $\P(A \cup B) = 0.8$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $\P(B \cup A) = 0.3$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{6}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{6-Yes} 
+\begin{block}{6} 
+
+  Традиционно себя называют Стрельцами люди, родившиеся с 22 ноября по 21 декабря. Из-за прецессии земной оси линия Солнце–Земля указывает в созведие Стрельца в наше время с 17 декабря по 20 января. Предположим, что все даты рождения равновероятны. Вероятность того, что человек, называющий себя Стрельцом, родился в день, когда линия Солнце–Земля указывала в созвездие Стрельца, равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{6-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $4/31$}
+\item[] \hyperlink{6-Yes}{\beamergotobutton{} $5/30$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $4/35$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $4/30$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{7}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{7-Yes} 
+\begin{block}{7} 
+
+  Монетка выпадает орлом с вероятностью $0.2$. Вероятность того, что при 10 подбрасываниях монетка выпадет орлом хотя бы один раз, равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{7-No}{\beamergotobutton{} $0.2^10$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $2/10$}
+\item[] \hyperlink{7-Yes}{\beamergotobutton{} $1 - 0.8^10$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $C_{10}^1 0.2^{1}0.8^9$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $C_{10}^1 0.8^{1}0.2^9$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{8}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{8-Yes} 
+\begin{block}{8} 
+
+  Среди покупателей магазина мужчин и женщин поровну. Женщины тратят больше 1000 рублей с вероятностью 60\%, а мужчины — с вероятностью 30\%. Только что был пробит чек на сумму 1234 рубля. Вероятность того, что покупателем была женщина равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{8-No}{\beamergotobutton{} $0.5$}
+\item[] \hyperlink{8-Yes}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $1/3$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $0.3$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $0.18$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{9}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{9-Yes} 
+\begin{block}{9} 
+
+  Если $F_X(x)$ — функция распределения случайной величины, то
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{9-No}{\beamergotobutton{} $F_X(x)$ может принимать отрицательные значения}
+\item[] \hyperlink{9-No}{\beamergotobutton{} величина $X$ дискретна}
+\item[] \hyperlink{9-No}{\beamergotobutton{} $\lim\limits_{x \rightarrow -\infty} F_X(x) = 1 $}
+\item[] \hyperlink{9-No}{\beamergotobutton{} величина $X$ непрерывна}
+\item[] \hyperlink{9-Yes}{\beamergotobutton{}  $\P(X \in (a;b] = F_X(b) - F_X(a)$}
+\item[] \hyperlink{9-No}{\beamergotobutton{} $F_X(x)$ может принимать значение 2016}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{10}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{10-Yes} 
+\begin{block}{10} 
+
+Функцией плотности случайной величины может являться функция
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{10-Yes}{\beamergotobutton{} $f(x) = \begin{cases}
+	\frac{1}{x^2}, x \in [1,+ \infty) \\
+	0,\text{ иначе}
+	\end{cases}$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $ f(x) = \begin{cases}
+	x - 1, x \in [0,1+\sqrt{3}] \\
+	0,\text{ иначе}
+	\end{cases}$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $ f(x) = \begin{cases}
+	x^2, x \in [0,2] \\
+	0,\text{ иначе}
+	\end{cases}$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $ f(x) = \begin{cases}
+	-1, x \in [-1, 0] \\
+	0,\text{ иначе}
+	\end{cases}$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $ f(x) = \frac{1}{\sqrt{2\pi}} e^{-x^2}$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{11}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{11-Yes} 
+\begin{block}{11} 
+
+  Известно, что $\E(X)=3$, $\E(Y)=2$, $\Var(X)=12$, $\Var(Y)=1$, $\Cov(X,Y)=2$. Ожидание $\E(XY)$ равно
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{11-Yes}{\beamergotobutton{} 8}
+\item[] \hyperlink{11-No}{\beamergotobutton{} 0}
+\item[] \hyperlink{11-No}{\beamergotobutton{} 5}
+\item[] \hyperlink{11-No}{\beamergotobutton{} 6}
+\item[] \hyperlink{11-No}{\beamergotobutton{} 2}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{12}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{12-Yes} 
+\begin{block}{12} 
+
+  Известно, что $\E(X)=3$, $\E(Y)=2$, $\Var(X)=12$, $\Var(Y)=1$, $\Cov(X,Y)=2$. Корреляция $\Corr(X,Y)$ равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{12-Yes}{\beamergotobutton{} $\frac{1}{\sqrt{3}}$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $\frac{2}{\sqrt{13}}$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $\frac{1}{12}$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $\frac{1}{\sqrt{12}}$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $\frac{2}{12}$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{13}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{13-Yes} 
+\begin{block}{13} 
+
+  Известно, что $\E(X)=3$, $\E(Y)=2$, $\Var(X)=12$, $\Var(Y)=1$, $\Cov(X,Y)=2$. Дисперсия $\Var(2X-Y+4)$ равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{13-No}{\beamergotobutton{} 57}
+\item[] \hyperlink{13-No}{\beamergotobutton{} 49}
+\item[] \hyperlink{13-No}{\beamergotobutton{} 45}
+\item[] \hyperlink{13-No}{\beamergotobutton{} 53}
+\item[] \hyperlink{13-Yes}{\beamergotobutton{} 41}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{14}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{14-Yes} 
+\begin{block}{14} 
+
+  Если случайные величины $X$ и $Y$ имеют совместное нормальное распределение с нулевыми математическими ожиданиями и единичной ковариационной матрицей, то
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{14-No}{\beamergotobutton{} $\Corr(X,Y)>0$}
+\item[] \hyperlink{14-No}{\beamergotobutton{} существует такое $a>0$, что $\P(X=a)>0$}
+\item[] \hyperlink{14-Yes}{\beamergotobutton{} $X$ и $Y$ независимы}
+\item[] \hyperlink{14-No}{\beamergotobutton{} $\Corr(X,Y)<0$}
+\item[] \hyperlink{14-No}{\beamergotobutton{} распределение $X$ может быть дискретным}
+\item[] \hyperlink{14-No}{\beamergotobutton{} $\forall \alpha \in [0,1]: \Var(\alpha X + (1-\alpha)Y) = 0$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{15}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{15-Yes} 
+\begin{block}{15} 
+
+  Если $\Corr(X, Y)= 0.5$ и $\Var(X)=\Var(Y)$, то $\Corr(X + Y, 2Y - 7)$ равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{15-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} $0$}
+\item[] \hyperlink{15-Yes}{\beamergotobutton{} $\sqrt{3}/2$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} $\sqrt{2}/3$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} $\sqrt{3}/3$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{16}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{16-Yes} 
+\begin{block}{16} 
+
+  Известно, что $\xi \sim U[0;\,1]$. Вероятность $\P(0.2<\xi<0.7)$ равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{16-No}{\beamergotobutton{} $1/4$}
+\item[] \hyperlink{16-No}{\beamergotobutton{} $0.17$}
+\item[] \hyperlink{16-Yes}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{16-No}{\beamergotobutton{} $\int_{0.2}^{0.7}\frac{1}{\sqrt{2\pi}}\,e^{-t^2/2}\,dt$}
+\item[] \hyperlink{16-No}{\beamergotobutton{} $\int_{0}^{1}\frac{1}{\sqrt{2\pi}}\,e^{-t^2/2}\,dt$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{17}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{17-Yes} 
+\begin{block}{17} 
+
+    Cлучайные величины $\xi_1, \, \ldots, \, \xi_n, \, \ldots$ независимы и имеют таблицы распределения
+    \[
+    \begin{tabular}{c|c|c}
+      $\xi_i$                     & $-1$   & $1$   \\ \cline{1-3}
+      $\P_{\xi_i}$        & $1/2$       & $1/2$   \\
+    \end{tabular}
+    \]
+    Если $S_n = \xi_1 + \ldots + \xi_n$, то предел $\lim\limits_{n \rightarrow \infty}\P\Bigl(\frac{S_n - \E[S_n]}{\sqrt{\Var(S_n)}} > 1\Bigr)$ равен
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{17-No}{\beamergotobutton{} $\int_{-1}^{1}\frac{1}{\sqrt{2\pi}}\,e^{-t^2/2}\,dt$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $\int_{-\infty}^{1}\frac{1}{\sqrt{2\pi}}\,e^{-t^2/2}\,dt$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $0.5$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $\int_{1}^{+\infty}\frac{1}{2}\,e^{-t/2}\,dt$}
+\item[] \hyperlink{17-Yes}{\beamergotobutton{} $\int_{1}^{+\infty}\frac{1}{\sqrt{2\pi}}\,e^{-t^2/2}\,dt$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{18}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{18-Yes} 
+\begin{block}{18} 
+
+  Число посетителей сайта за один день является неотрицательной случайной величиной с математическим ожиданием 400 и дисперсией 400. Вероятность того, что за 100 дней общее число посетителей сайта превысит $40\,400$, приближённо равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{18-No}{\beamergotobutton{} $0.0553$}
+\item[] \hyperlink{18-Yes}{\beamergotobutton{} $0.0227$}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $0.3413$}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $0.9772$}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $0.1359$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{19}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{19-Yes} 
+\begin{block}{19} 
+
+Размер выплаты страховой компанией является неотрицательной случайной величиной с математическим ожиданием $10\,000$ рублей. Согласно неравенству Маркова, вероятность того, что очередная выплата превысит $50\,000$ рублей, ограничена сверху числом
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{19-Yes}{\beamergotobutton{} $0.2$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $0.5$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $0.3413$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $0.1359$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $0.4$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} неравенство Маркова здесь неприменимо}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{20}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{20-Yes} 
+\begin{block}{20} 
+
+  Размер выплаты страховой компанией является неотрицательной случайной величиной с математическим ожиданием $50\,000$ рублей и стандартным отклонением $10\,000$ рублей. Согласно неравенству Чебышёва, вероятность того, что очередная выплата будет отличаться от своего математического ожидания не более чем на 20\,000 рублей, ограничена снизу числом
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{20-Yes}{\beamergotobutton{} $3/4$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} $2/5$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} $1/4$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} $3/5$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} неравенство Чебышёва здесь неприменимо}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{21}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{21-Yes} 
+\begin{block}{21} 
+
+  Вероятность поражения мишени при одном выстреле равна $0.6$. Случайная величина $\xi_i$  равна $1$, если при $i$-ом выстреле было попадание, и равна $0$ в противном случае. Предел по вероятности последовательности $\frac{\xi_1^{2016} + \ldots + \xi_n^{2016}}{n}$ при $n \rightarrow \infty$ равен
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{21-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $3/4$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $0.6^2016$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $2/5$}
+\item[] \hyperlink{21-Yes}{\beamergotobutton{} $3/5$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{22}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{22-Yes} 
+\begin{block}{22} 
+
+  Правильный кубик подбрасывается 5 раз. Вероятность того, что ровно два раза выпадет шестерка равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{22-No}{\beamergotobutton{} $125/(2^4 3^5)$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $25/(2^5 3^5)$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $1/36$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $1/(2^5 3^5)$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $2/5$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{23}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{23-Yes} 
+\begin{block}{23} 
+
+Правильный кубик подбрасывается 5 раз. Математическое ожидание и дисперсия числа выпавших шестерок равны соответственно
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{23-No}{\beamergotobutton{} $5/6$ и $5/36$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $5/6$ и $1/5$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $5/6$ и $1/36$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $1$ и $5/6$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $0$ и $5/6$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $0$ и $1$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{24}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{24-Yes} 
+\begin{block}{24} 
+
+  Правильный кубик подбрасывается 5 раз. Наиболее вероятное число шестерок равняется
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{24-Yes}{\beamergotobutton{} $0$ и $1$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} $5$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} только $0$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} только $1$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} $5/6$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{25}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{25-Yes} 
+\begin{block}{25} 
+
+  Правильный кубик подбрасывается 5 раз. Математическое ожидание суммы выпавших очков равно
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{25-No}{\beamergotobutton{} $21$}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $3.5$}
+\item[] \hyperlink{25-Yes}{\beamergotobutton{} $17.5$}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $18$}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $18.5$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{26}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{26-Yes} 
+\begin{block}{26} 
+
+  Случайный вектор $(\xi, \eta)^T$ имеет нормальное распределение
+  $\cN \left(
+  \begin{pmatrix}
+    0 \\
+    0
+  \end{pmatrix};
+  \begin{pmatrix}
+    1 & 1/2 \\
+    1/2 & 1
+  \end{pmatrix}
+\right)$ и функцию плотности $f_{\xi, \eta}(x, y) = \frac{1}{2\pi a} \exp\left(-\frac{1}{2a^2}(x^2-bxy+y^2) \right)$. При этом
+
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{26-No}{\beamergotobutton{} $a=1$, $b=0$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $a=1$, $b=1$}
+\item[] \hyperlink{26-Yes}{\beamergotobutton{} $a=\sqrt3/2$, $b=1$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $a=\sqrt3/4$, $b=0$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $a=1/2$, $b=1$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{27}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{27-Yes} 
+\begin{block}{27} 
+
+    Случайный вектор $(\xi, \eta)^T$ имеет нормальное распределение
+    $\cN \left(
+    \begin{pmatrix}
+      0 \\
+      0
+    \end{pmatrix};
+    \begin{pmatrix}
+      1 & 1/2 \\
+      1/2 & 1
+    \end{pmatrix}
+  \right)$. Если случайный вектор $z$ определён как $z=(\xi - 0.5\eta, \eta)^T$, то
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{27-No}{\beamergotobutton{} компоненты вектора $z$ коррелированы}
+\item[] \hyperlink{27-No}{\beamergotobutton{} компоненты вектора $z$ зависимы}
+\item[] \hyperlink{27-Yes}{\beamergotobutton{} $z$ является двумерным нормальным вектором}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $z \sim \cN \left(
+	\begin{pmatrix}
+		0 \\
+		0
+	\end{pmatrix};
+	\begin{pmatrix}
+		1 & 0 \\
+		0 & 1
+	\end{pmatrix}
+	\right)$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $(\xi - 0.5\eta)^2 + 2\eta^2 \sim \chi_2^2$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $\xi - 0.5\eta \sim \cN(0;1)$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{28}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{28-Yes} 
+\begin{block}{28} 
+
+    Случайный вектор $(\xi, \eta)^T$ имеет нормальное распределение
+    $\cN \left(
+    \begin{pmatrix}
+      0 \\
+      0
+    \end{pmatrix};
+    \begin{pmatrix}
+      1 & 1/2 \\
+      1/2 & 1
+    \end{pmatrix}
+  \right)$. Условное математическое ожидание и условная дисперсия равны
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\E(\xi | \eta=1)=1$, $\Var(\xi | \eta=1)=1$}
+\item[] \hyperlink{28-Yes}{\beamergotobutton{} $\E(\xi | \eta=1)=1/2$, $\Var(\xi | \eta=1)=3/4$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\E(\xi | \eta=1)=1$, $\Var(\xi | \eta=1)=1/2$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\E(\xi | \eta=1)=0$, $\Var(\xi | \eta=1)=1$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\E(\xi | \eta=1)=1/2$, $\Var(\xi | \eta=1)=1$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\E(\xi | \eta=1)=1/2$, $\Var(\xi | \eta=1)=1/4$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{29}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{29-Yes} 
+\begin{block}{29} 
+
+  Математическое ожидание случайной величины $X$ при условии $Y=0$ равно
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{29-No}{\beamergotobutton{} $1/3$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $-1$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $0$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $1/6$}
+\item[] \hyperlink{29-Yes}{\beamergotobutton{} $1$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{30}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{30-Yes} 
+\begin{block}{30} 
+
+Вероятность того, что $X=0$ при условии $Y<1$ равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{30-Yes}{\beamergotobutton{} $1/4$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $0$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $3/4$
+}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $1/6$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{31}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{31-Yes} 
+\begin{block}{31} 
+
+  Дисперсия случайной величины $Y$ равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{31-No}{\beamergotobutton{} $1/3$}
+\item[] \hyperlink{31-No}{\beamergotobutton{} $-1$}
+\item[] \hyperlink{31-No}{\beamergotobutton{} $0$}
+\item[] \hyperlink{31-Yes}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{31-No}{\beamergotobutton{} $1$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{32}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{32-Yes} 
+\begin{block}{32} 
+
+ Ковариация случайных величин $X$ и $Y$ равна:
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{32-No}{\beamergotobutton{} $1/3$}
+\item[] \hyperlink{32-No}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{32-No}{\beamergotobutton{} $-2/3$}
+\item[] \hyperlink{32-Yes}{\beamergotobutton{} $-1/3$}
+\item[] \hyperlink{32-No}{\beamergotobutton{} $0$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{33}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{33-Yes} 
+\begin{block}{33} 
+
+ Вероятность того, что $X<0.5, Y<0.5$ равна:
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{33-No}{\beamergotobutton{} $1/4$}
+\item[] \hyperlink{33-No}{\beamergotobutton{} $1/96$}
+\item[] \hyperlink{33-No}{\beamergotobutton{} $1/16$}
+\item[] \hyperlink{33-Yes}{\beamergotobutton{} $1/64$}
+\item[] \hyperlink{33-No}{\beamergotobutton{} $1/128$}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{34}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{34-Yes} 
+\begin{block}{34} 
+
+  Условное распределение $X$ при условии $Y=1$ имеет вид
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{34-Yes}{\beamergotobutton{} $ f(x) = \begin{cases}
+	3 x^2 , x \in [0,1] \\
+	0,\text{ иначе}
+	\end{cases} $}
+\item[] \hyperlink{34-No}{\beamergotobutton{} Не определено}
+\item[] \hyperlink{34-No}{\beamergotobutton{} $ f(x) = \begin{cases}
+	3 x , x \in [0,1] \\
+	0,\text{ иначе}
+	\end{cases}  $}
+\item[] \hyperlink{34-No}{\beamergotobutton{} $ f(x) = \begin{cases}
+	9 x^2 , x \in [0,1] \\
+	0,\text{ иначе}
+	\end{cases}  $}
+\item[] \hyperlink{34-No}{\beamergotobutton{} $ f(x) = \begin{cases}
+	9 x , x \in [0,1] \\
+	0,\text{ иначе}
+	\end{cases}  $}
+\end{enumerate} 
+
+ \textbf{Да!} 
+ \hyperlink{35}{\beamerbutton{Следующий вопрос}}\end{frame} 
+
+
+ \begin{frame} \label{1-No} 
+\begin{block}{1} 
+
+  Граф Сен-Жермен извлекает карты в случайном порядке из стандартной колоды в 52 карты без возвращения. Рассмотрим три события: $A$ — «первая карта — тройка»; $B$ — «вторая карта — семёрка»; $C$ — «третья карта — дама пик».
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{1-No}{\beamergotobutton{} События $A$ и $B$ зависимы, события $B$ и $C$ независимы.}
+\item[] \hyperlink{1-No}{\beamergotobutton{} События $A$ и $B$ независимы, события $B$ и $C$ зависимы.}
+\item[] \hyperlink{1-No}{\beamergotobutton{} События $A$ и $B$ независимы, события $B$ и $C$ независимы.}
+\item[] \hyperlink{1-No}{\beamergotobutton{} События $A$ и $С$ независимы, события $B$ и $C$ зависимы.}
+\item[] \hyperlink{1-Yes}{\beamergotobutton{} События $A$ и $B$ зависимы, события $B$ и $C$ зависимы.}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{2-No} 
+\begin{block}{2} 
+
+Монетку подбрасывают три раза. Рассмотрим три события: $A$ — «хотя бы один раз выпала решка»; $B$ — «хотя бы один раз выпал орёл»; $C$ — «все три раза выпал орёл».
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{2-No}{\beamergotobutton{} События $A$ и $B$ совместны, события $A$ и $C$ совместны.}
+\item[] \hyperlink{2-No}{\beamergotobutton{} События $A$ и $B$ несовместны, события $B$ и $C$ несовместны.}
+\item[] \hyperlink{2-Yes}{\beamergotobutton{} События $A$ и $B$ совместны, события $A$ и $C$ несовместны.}
+\item[] \hyperlink{2-No}{\beamergotobutton{} События $A$ и $B$ несовместны, события $A$ и $C$ совместны.}
+\item[] \hyperlink{2-No}{\beamergotobutton{} События $A$ и $B$ несовместны, события $B$ и $C$ совместны.}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{3-No} 
+\begin{block}{3} 
+
+  На шахматной доске в клетке A1 стоит белая ладья. На одну из оставшихся клеток случайным образом выставляется чёрная ладья. Вероятность того, что ладьи «бьют» друг друга равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{3-No}{\beamergotobutton{} $14/64$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $16/64$}
+\item[] \hyperlink{3-Yes}{\beamergotobutton{} $14/63$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $16/63$}
+\item[] \hyperlink{3-No}{\beamergotobutton{} $15/64$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{4-No} 
+\begin{block}{4} 
+
+  В школе три девятых класса: 9А, 9Б и 9В. В 9А классе — 50\% отличники, в 9Б — 30\%, в 9В — 40\%. Если сначала равновероятно выбрать один из трёх классов, а затем внутри класса равновероятно выбрать школьника, то вероятность выбрать отличника равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{4-No}{\beamergotobutton{} $0.27$}
+\item[] \hyperlink{4-Yes}{\beamergotobutton{} $0.4$}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $0.3$}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $0.5$}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $3/(3+4+5)$}
+\item[] \hyperlink{4-No}{\beamergotobutton{} $(3+4+5)/3$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{5-No} 
+\begin{block}{5} 
+
+  Если $\P(A)=0.2$, $\P(B)=0.5$, $\P(A | B) = 0.3$, то
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{5-Yes}{\beamergotobutton{} $\P(A \cap B) = 0.15$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $\P(A \cup B) = 0.7$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $\P(A \cap B) = 0.05$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $\P(A \cup B) = 0.8$}
+\item[] \hyperlink{5-No}{\beamergotobutton{} $\P(B \cup A) = 0.3$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{6-No} 
+\begin{block}{6} 
+
+  Традиционно себя называют Стрельцами люди, родившиеся с 22 ноября по 21 декабря. Из-за прецессии земной оси линия Солнце–Земля указывает в созведие Стрельца в наше время с 17 декабря по 20 января. Предположим, что все даты рождения равновероятны. Вероятность того, что человек, называющий себя Стрельцом, родился в день, когда линия Солнце–Земля указывала в созвездие Стрельца, равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{6-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $4/31$}
+\item[] \hyperlink{6-Yes}{\beamergotobutton{} $5/30$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $4/35$}
+\item[] \hyperlink{6-No}{\beamergotobutton{} $4/30$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{7-No} 
+\begin{block}{7} 
+
+  Монетка выпадает орлом с вероятностью $0.2$. Вероятность того, что при 10 подбрасываниях монетка выпадет орлом хотя бы один раз, равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{7-No}{\beamergotobutton{} $0.2^10$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $2/10$}
+\item[] \hyperlink{7-Yes}{\beamergotobutton{} $1 - 0.8^10$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $C_{10}^1 0.2^{1}0.8^9$}
+\item[] \hyperlink{7-No}{\beamergotobutton{} $C_{10}^1 0.8^{1}0.2^9$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{8-No} 
+\begin{block}{8} 
+
+  Среди покупателей магазина мужчин и женщин поровну. Женщины тратят больше 1000 рублей с вероятностью 60\%, а мужчины — с вероятностью 30\%. Только что был пробит чек на сумму 1234 рубля. Вероятность того, что покупателем была женщина равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{8-No}{\beamergotobutton{} $0.5$}
+\item[] \hyperlink{8-Yes}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $1/3$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $0.3$}
+\item[] \hyperlink{8-No}{\beamergotobutton{} $0.18$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{9-No} 
+\begin{block}{9} 
+
+  Если $F_X(x)$ — функция распределения случайной величины, то
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{9-No}{\beamergotobutton{} $F_X(x)$ может принимать отрицательные значения}
+\item[] \hyperlink{9-No}{\beamergotobutton{} величина $X$ дискретна}
+\item[] \hyperlink{9-No}{\beamergotobutton{} $\lim\limits_{x \rightarrow -\infty} F_X(x) = 1 $}
+\item[] \hyperlink{9-No}{\beamergotobutton{} величина $X$ непрерывна}
+\item[] \hyperlink{9-Yes}{\beamergotobutton{}  $\P(X \in (a;b] = F_X(b) - F_X(a)$}
+\item[] \hyperlink{9-No}{\beamergotobutton{} $F_X(x)$ может принимать значение 2016}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{10-No} 
+\begin{block}{10} 
+
+Функцией плотности случайной величины может являться функция
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{10-Yes}{\beamergotobutton{} $f(x) = \begin{cases}
+	\frac{1}{x^2}, x \in [1,+ \infty) \\
+	0,\text{ иначе}
+	\end{cases}$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $ f(x) = \begin{cases}
+	x - 1, x \in [0,1+\sqrt{3}] \\
+	0,\text{ иначе}
+	\end{cases}$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $ f(x) = \begin{cases}
+	x^2, x \in [0,2] \\
+	0,\text{ иначе}
+	\end{cases}$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $ f(x) = \begin{cases}
+	-1, x \in [-1, 0] \\
+	0,\text{ иначе}
+	\end{cases}$}
+\item[] \hyperlink{10-No}{\beamergotobutton{} $ f(x) = \frac{1}{\sqrt{2\pi}} e^{-x^2}$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{11-No} 
+\begin{block}{11} 
+
+  Известно, что $\E(X)=3$, $\E(Y)=2$, $\Var(X)=12$, $\Var(Y)=1$, $\Cov(X,Y)=2$. Ожидание $\E(XY)$ равно
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{11-Yes}{\beamergotobutton{} 8}
+\item[] \hyperlink{11-No}{\beamergotobutton{} 0}
+\item[] \hyperlink{11-No}{\beamergotobutton{} 5}
+\item[] \hyperlink{11-No}{\beamergotobutton{} 6}
+\item[] \hyperlink{11-No}{\beamergotobutton{} 2}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{12-No} 
+\begin{block}{12} 
+
+  Известно, что $\E(X)=3$, $\E(Y)=2$, $\Var(X)=12$, $\Var(Y)=1$, $\Cov(X,Y)=2$. Корреляция $\Corr(X,Y)$ равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{12-Yes}{\beamergotobutton{} $\frac{1}{\sqrt{3}}$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $\frac{2}{\sqrt{13}}$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $\frac{1}{12}$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $\frac{1}{\sqrt{12}}$}
+\item[] \hyperlink{12-No}{\beamergotobutton{} $\frac{2}{12}$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{13-No} 
+\begin{block}{13} 
+
+  Известно, что $\E(X)=3$, $\E(Y)=2$, $\Var(X)=12$, $\Var(Y)=1$, $\Cov(X,Y)=2$. Дисперсия $\Var(2X-Y+4)$ равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{13-No}{\beamergotobutton{} 57}
+\item[] \hyperlink{13-No}{\beamergotobutton{} 49}
+\item[] \hyperlink{13-No}{\beamergotobutton{} 45}
+\item[] \hyperlink{13-No}{\beamergotobutton{} 53}
+\item[] \hyperlink{13-Yes}{\beamergotobutton{} 41}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{14-No} 
+\begin{block}{14} 
+
+  Если случайные величины $X$ и $Y$ имеют совместное нормальное распределение с нулевыми математическими ожиданиями и единичной ковариационной матрицей, то
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{14-No}{\beamergotobutton{} $\Corr(X,Y)>0$}
+\item[] \hyperlink{14-No}{\beamergotobutton{} существует такое $a>0$, что $\P(X=a)>0$}
+\item[] \hyperlink{14-Yes}{\beamergotobutton{} $X$ и $Y$ независимы}
+\item[] \hyperlink{14-No}{\beamergotobutton{} $\Corr(X,Y)<0$}
+\item[] \hyperlink{14-No}{\beamergotobutton{} распределение $X$ может быть дискретным}
+\item[] \hyperlink{14-No}{\beamergotobutton{} $\forall \alpha \in [0,1]: \Var(\alpha X + (1-\alpha)Y) = 0$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{15-No} 
+\begin{block}{15} 
+
+  Если $\Corr(X, Y)= 0.5$ и $\Var(X)=\Var(Y)$, то $\Corr(X + Y, 2Y - 7)$ равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{15-No}{\beamergotobutton{} $1$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} $0$}
+\item[] \hyperlink{15-Yes}{\beamergotobutton{} $\sqrt{3}/2$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} $\sqrt{2}/3$}
+\item[] \hyperlink{15-No}{\beamergotobutton{} $\sqrt{3}/3$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{16-No} 
+\begin{block}{16} 
+
+  Известно, что $\xi \sim U[0;\,1]$. Вероятность $\P(0.2<\xi<0.7)$ равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{16-No}{\beamergotobutton{} $1/4$}
+\item[] \hyperlink{16-No}{\beamergotobutton{} $0.17$}
+\item[] \hyperlink{16-Yes}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{16-No}{\beamergotobutton{} $\int_{0.2}^{0.7}\frac{1}{\sqrt{2\pi}}\,e^{-t^2/2}\,dt$}
+\item[] \hyperlink{16-No}{\beamergotobutton{} $\int_{0}^{1}\frac{1}{\sqrt{2\pi}}\,e^{-t^2/2}\,dt$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{17-No} 
+\begin{block}{17} 
+
+    Cлучайные величины $\xi_1, \, \ldots, \, \xi_n, \, \ldots$ независимы и имеют таблицы распределения
+    \[
+    \begin{tabular}{c|c|c}
+      $\xi_i$                     & $-1$   & $1$   \\ \cline{1-3}
+      $\P_{\xi_i}$        & $1/2$       & $1/2$   \\
+    \end{tabular}
+    \]
+    Если $S_n = \xi_1 + \ldots + \xi_n$, то предел $\lim\limits_{n \rightarrow \infty}\P\Bigl(\frac{S_n - \E[S_n]}{\sqrt{\Var(S_n)}} > 1\Bigr)$ равен
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{17-No}{\beamergotobutton{} $\int_{-1}^{1}\frac{1}{\sqrt{2\pi}}\,e^{-t^2/2}\,dt$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $\int_{-\infty}^{1}\frac{1}{\sqrt{2\pi}}\,e^{-t^2/2}\,dt$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $0.5$}
+\item[] \hyperlink{17-No}{\beamergotobutton{} $\int_{1}^{+\infty}\frac{1}{2}\,e^{-t/2}\,dt$}
+\item[] \hyperlink{17-Yes}{\beamergotobutton{} $\int_{1}^{+\infty}\frac{1}{\sqrt{2\pi}}\,e^{-t^2/2}\,dt$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{18-No} 
+\begin{block}{18} 
+
+  Число посетителей сайта за один день является неотрицательной случайной величиной с математическим ожиданием 400 и дисперсией 400. Вероятность того, что за 100 дней общее число посетителей сайта превысит $40\,400$, приближённо равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{18-No}{\beamergotobutton{} $0.0553$}
+\item[] \hyperlink{18-Yes}{\beamergotobutton{} $0.0227$}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $0.3413$}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $0.9772$}
+\item[] \hyperlink{18-No}{\beamergotobutton{} $0.1359$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{19-No} 
+\begin{block}{19} 
+
+Размер выплаты страховой компанией является неотрицательной случайной величиной с математическим ожиданием $10\,000$ рублей. Согласно неравенству Маркова, вероятность того, что очередная выплата превысит $50\,000$ рублей, ограничена сверху числом
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{19-Yes}{\beamergotobutton{} $0.2$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $0.5$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $0.3413$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $0.1359$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} $0.4$}
+\item[] \hyperlink{19-No}{\beamergotobutton{} неравенство Маркова здесь неприменимо}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{20-No} 
+\begin{block}{20} 
+
+  Размер выплаты страховой компанией является неотрицательной случайной величиной с математическим ожиданием $50\,000$ рублей и стандартным отклонением $10\,000$ рублей. Согласно неравенству Чебышёва, вероятность того, что очередная выплата будет отличаться от своего математического ожидания не более чем на 20\,000 рублей, ограничена снизу числом
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{20-Yes}{\beamergotobutton{} $3/4$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} $2/5$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} $1/4$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} $3/5$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{20-No}{\beamergotobutton{} неравенство Чебышёва здесь неприменимо}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{21-No} 
+\begin{block}{21} 
+
+  Вероятность поражения мишени при одном выстреле равна $0.6$. Случайная величина $\xi_i$  равна $1$, если при $i$-ом выстреле было попадание, и равна $0$ в противном случае. Предел по вероятности последовательности $\frac{\xi_1^{2016} + \ldots + \xi_n^{2016}}{n}$ при $n \rightarrow \infty$ равен
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{21-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $3/4$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $0.6^2016$}
+\item[] \hyperlink{21-No}{\beamergotobutton{} $2/5$}
+\item[] \hyperlink{21-Yes}{\beamergotobutton{} $3/5$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{22-No} 
+\begin{block}{22} 
+
+  Правильный кубик подбрасывается 5 раз. Вероятность того, что ровно два раза выпадет шестерка равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{22-No}{\beamergotobutton{} $125/(2^4 3^5)$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $25/(2^5 3^5)$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $1/36$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $1/(2^5 3^5)$}
+\item[] \hyperlink{22-No}{\beamergotobutton{} $2/5$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{23-No} 
+\begin{block}{23} 
+
+Правильный кубик подбрасывается 5 раз. Математическое ожидание и дисперсия числа выпавших шестерок равны соответственно
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{23-No}{\beamergotobutton{} $5/6$ и $5/36$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $5/6$ и $1/5$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $5/6$ и $1/36$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $1$ и $5/6$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $0$ и $5/6$}
+\item[] \hyperlink{23-No}{\beamergotobutton{} $0$ и $1$}
+\end{enumerate} 
+
+ \alert{Нет!}
+ \hyperlink{24}{\beamerbutton{Следующий вопрос}}
+\end{frame} 
+
+
+ \begin{frame} \label{24-No} 
+\begin{block}{24} 
+
+  Правильный кубик подбрасывается 5 раз. Наиболее вероятное число шестерок равняется
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{24-Yes}{\beamergotobutton{} $0$ и $1$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} $5$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} только $0$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} только $1$}
+\item[] \hyperlink{24-No}{\beamergotobutton{} $5/6$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{25-No} 
+\begin{block}{25} 
+
+  Правильный кубик подбрасывается 5 раз. Математическое ожидание суммы выпавших очков равно
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{25-No}{\beamergotobutton{} $21$}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $3.5$}
+\item[] \hyperlink{25-Yes}{\beamergotobutton{} $17.5$}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $18$}
+\item[] \hyperlink{25-No}{\beamergotobutton{} $18.5$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{26-No} 
+\begin{block}{26} 
+
+  Случайный вектор $(\xi, \eta)^T$ имеет нормальное распределение
+  $\cN \left(
+  \begin{pmatrix}
+    0 \\
+    0
+  \end{pmatrix};
+  \begin{pmatrix}
+    1 & 1/2 \\
+    1/2 & 1
+  \end{pmatrix}
+\right)$ и функцию плотности $f_{\xi, \eta}(x, y) = \frac{1}{2\pi a} \exp\left(-\frac{1}{2a^2}(x^2-bxy+y^2) \right)$. При этом
+
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{26-No}{\beamergotobutton{} $a=1$, $b=0$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $a=1$, $b=1$}
+\item[] \hyperlink{26-Yes}{\beamergotobutton{} $a=\sqrt3/2$, $b=1$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $a=\sqrt3/4$, $b=0$}
+\item[] \hyperlink{26-No}{\beamergotobutton{} $a=1/2$, $b=1$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{27-No} 
+\begin{block}{27} 
+
+    Случайный вектор $(\xi, \eta)^T$ имеет нормальное распределение
+    $\cN \left(
+    \begin{pmatrix}
+      0 \\
+      0
+    \end{pmatrix};
+    \begin{pmatrix}
+      1 & 1/2 \\
+      1/2 & 1
+    \end{pmatrix}
+  \right)$. Если случайный вектор $z$ определён как $z=(\xi - 0.5\eta, \eta)^T$, то
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{27-No}{\beamergotobutton{} компоненты вектора $z$ коррелированы}
+\item[] \hyperlink{27-No}{\beamergotobutton{} компоненты вектора $z$ зависимы}
+\item[] \hyperlink{27-Yes}{\beamergotobutton{} $z$ является двумерным нормальным вектором}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $z \sim \cN \left(
+	\begin{pmatrix}
+	0 \\
+	0
+	\end{pmatrix};
+	\begin{pmatrix}
+	1 & 0 \\
+	0 & 1
+	\end{pmatrix}
+	\right)$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $(\xi - 0.5\eta)^2 + 2\eta^2 \sim \chi_2^2$}
+\item[] \hyperlink{27-No}{\beamergotobutton{} $\xi - 0.5\eta \sim \cN(0;1)$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{28-No} 
+\begin{block}{28} 
+
+    Случайный вектор $(\xi, \eta)^T$ имеет нормальное распределение
+    $\cN \left(
+    \begin{pmatrix}
+      0 \\
+      0
+    \end{pmatrix};
+    \begin{pmatrix}
+      1 & 1/2 \\
+      1/2 & 1
+    \end{pmatrix}
+  \right)$. Условное математическое ожидание и условная дисперсия равны
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\E(\xi | \eta=1)=1$, $\Var(\xi | \eta=1)=1$}
+\item[] \hyperlink{28-Yes}{\beamergotobutton{} $\E(\xi | \eta=1)=1/2$, $\Var(\xi | \eta=1)=3/4$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\E(\xi | \eta=1)=1$, $\Var(\xi | \eta=1)=1/2$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\E(\xi | \eta=1)=0$, $\Var(\xi | \eta=1)=1$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\E(\xi | \eta=1)=1/2$, $\Var(\xi | \eta=1)=1$}
+\item[] \hyperlink{28-No}{\beamergotobutton{} $\E(\xi | \eta=1)=1/2$, $\Var(\xi | \eta=1)=1/4$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{29-No} 
+\begin{block}{29} 
+
+  Математическое ожидание случайной величины $X$ при условии $Y=0$ равно
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{29-No}{\beamergotobutton{} $1/3$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $-1$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $0$}
+\item[] \hyperlink{29-No}{\beamergotobutton{} $1/6$}
+\item[] \hyperlink{29-Yes}{\beamergotobutton{} $1$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{30-No} 
+\begin{block}{30} 
+
+Вероятность того, что $X=0$ при условии $Y<1$ равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{30-Yes}{\beamergotobutton{} $1/4$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $0$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $3/4$
+}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $1/2$}
+\item[] \hyperlink{30-No}{\beamergotobutton{} $1/6$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{31-No} 
+\begin{block}{31} 
+
+  Дисперсия случайной величины $Y$ равна
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{31-No}{\beamergotobutton{} $1/3$}
+\item[] \hyperlink{31-No}{\beamergotobutton{} $-1$}
+\item[] \hyperlink{31-No}{\beamergotobutton{} $0$}
+\item[] \hyperlink{31-Yes}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{31-No}{\beamergotobutton{} $1$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{32-No} 
+\begin{block}{32} 
+
+ Ковариация случайных величин $X$ и $Y$ равна:
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{32-No}{\beamergotobutton{} $1/3$}
+\item[] \hyperlink{32-No}{\beamergotobutton{} $2/3$}
+\item[] \hyperlink{32-No}{\beamergotobutton{} $-2/3$}
+\item[] \hyperlink{32-Yes}{\beamergotobutton{} $-1/3$}
+\item[] \hyperlink{32-No}{\beamergotobutton{} $0$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{33-No} 
+\begin{block}{33} 
+
+ Вероятность того, что $X<0.5, Y<0.5$ равна:
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{33-No}{\beamergotobutton{} $1/4$}
+\item[] \hyperlink{33-No}{\beamergotobutton{} $1/96$}
+\item[] \hyperlink{33-No}{\beamergotobutton{} $1/16$}
+\item[] \hyperlink{33-Yes}{\beamergotobutton{} $1/64$}
+\item[] \hyperlink{33-No}{\beamergotobutton{} $1/128$}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+
+ \begin{frame} \label{34-No} 
+\begin{block}{34} 
+
+  Условное распределение $X$ при условии $Y=1$ имеет вид
+  
+
+
+ \end{block} 
+\begin{enumerate} 
+\item[] \hyperlink{34-Yes}{\beamergotobutton{} $ f(x) = \begin{cases}
+	3 x^2 , x \in [0,1] \\
+	0,\text{ иначе}
+	\end{cases} $}
+\item[] \hyperlink{34-No}{\beamergotobutton{} Не определено}
+\item[] \hyperlink{34-No}{\beamergotobutton{} $ f(x) = \begin{cases}
+	3 x , x \in [0,1] \\
+	0,\text{ иначе}
+	\end{cases}  $}
+\item[] \hyperlink{34-No}{\beamergotobutton{} $ f(x) = \begin{cases}
+	9 x^2 , x \in [0,1] \\
+	0,\text{ иначе}
+	\end{cases}  $}
+\item[] \hyperlink{34-No}{\beamergotobutton{} $ f(x) = \begin{cases}
+	9 x , x \in [0,1] \\
+	0,\text{ иначе}
+	\end{cases}  $}
+\end{enumerate} 
+
+ \alert{Нет!} 
+\end{frame} 
+
+\end{document}
