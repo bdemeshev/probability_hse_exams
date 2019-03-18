@@ -1,5 +1,4 @@
 .DS_Store
-chapters/.DS_Store
 *.amc
 *.xdv
 *.aux
@@ -8,3 +7,4 @@ chapters/.DS_Store
 *.log
 *.out
 _minted-probability_hse_exams/
+materials/2018_2019/ha_dvfu/received/
