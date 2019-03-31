@@ -1,0 +1,47 @@
+Question
+========
+
+Случайная величина $X$ имеет равномерное распределение. Возможной функцией плотности величины $X$ является
+
+
+Answerlist
+----------
+*  $f(x) = \begin{cases}
+1/20, x \in [30;50] \\
+0, x\notin [30;50]
+\end{cases}$
+*  $f(x) = \begin{cases}
+1/30, x \in [30;50] \\
+0, x\notin [30;50]
+\end{cases}$
+*  $f(x) = \begin{cases}
+x/30, x \in [30;50] \\
+0, x\notin [30;50]
+\end{cases}$
+*  $f(x) = \begin{cases}
+1/50, x \in [30;50] \\
+0, x\notin [30;50]
+\end{cases}$
+*  $f(x) = \begin{cases}
+1/5, x \in [-5;5] \\
+0, x\notin [-5;5]
+\end{cases}$
+
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: bs_06_possible_uniform
+extype: schoice
+exsolution: 10000
+exshuffle: 5

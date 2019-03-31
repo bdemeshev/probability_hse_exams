@@ -1,0 +1,30 @@
+Question
+========
+
+Про независимые случайные величины $X$ и $Y$ известно, что $\Var(X)=8$, $\Var(Y)=1$. Корреляция $\Corr(X,-2Y)$ равна
+
+Answerlist
+----------
+*  $0$
+*  $0.5$ 
+*  $-0.5$ 
+*  $0.25$ 
+*  $-0.025$ 
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: np9_correlation_from_variance
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,33 @@
+Question
+========
+
+Величина $X$ имеет биномиальное распределение с параметрами $n$ и $p$. 
+Дисперсия величины $X$ максимальна при $p$ равном
+
+
+Answerlist
+----------
+*  $0.5$
+*  $0.25$
+*  $0.2$
+*  $0.75$
+*  $0.9$
+
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: bs_10_max_variance
+extype: schoice
+exsolution: 10000
+exshuffle: 5

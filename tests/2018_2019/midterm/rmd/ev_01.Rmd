@@ -1,0 +1,31 @@
+Question
+========
+
+Величина $X$ с равными вероятностями принимает только два значения, $-1$ и $1$, и $\E(Y|X=x)=x-1$. 
+Ожидание $\E(Y)$ равно
+
+Answerlist
+----------
+*  $-1$
+*  $0$
+*  $2$
+*  $1$
+*  $x-1$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: t1_x_minus_one
+extype: schoice
+exsolution: 10000
+exshuffle: 5

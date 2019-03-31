@@ -1,0 +1,31 @@
+Question
+========
+
+Про линейно связанные случайные величины $X$ и $Y$, известно, что $\Var(X)=1$, $\Var(Y)=4$. Дисперсия их суммы может быть равна
+
+
+Answerlist
+----------
+*  $1$ 
+*  $2$ 
+*  $3$ 
+*  $4$ 
+*  $5$ 
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: np1_variance
+extype: schoice
+exsolution: 10000
+exshuffle: 5

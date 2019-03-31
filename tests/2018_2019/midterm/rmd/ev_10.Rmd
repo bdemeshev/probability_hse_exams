@@ -1,0 +1,30 @@
+Question
+========
+
+Можно утверждать, что величины $X$ и $Y$ независимы, если
+
+Answerlist
+----------
+*  $\P(X\le x, Y\le y)=\P(X\le x)\P(Y\le y)$ для любых $x$ и $y$
+*  $\E(YX)=\E(Y)\E(X)$
+*  $\Cov(Y,X)=0$
+*  $\Var(Y+X)=\Var(Y)+\Var(X)$
+*  существуют такие $x$ и $y$, что $\P(X\le x, Y\le y)=\P(X\le x)\P(Y\le y)$ 
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: t10_independence
+extype: schoice
+exsolution: 10000
+exshuffle: 5

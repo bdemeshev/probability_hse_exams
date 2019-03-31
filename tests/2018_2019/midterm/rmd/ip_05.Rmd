@@ -1,0 +1,31 @@
+Question
+========
+
+Для любой дискретной случайной величины с функцией распределения $F_X(x)$ верно, что 
+
+
+Answerlist
+----------
+*  нет верного ответа  
+*  $\P(X = 1) = 0$
+*  $\P(X = 1) = F_X(1)$
+*  $\P(X = 1) = \int_0^1 F_X(x) dx$
+*  $\P(X = 1) = \int_{- \infty}^1 F_X(x) dx$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: ip5_discrete
+extype: schoice
+exsolution: 10000
+exshuffle: 5

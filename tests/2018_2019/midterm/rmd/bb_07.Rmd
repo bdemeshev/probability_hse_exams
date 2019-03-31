@@ -1,0 +1,33 @@
+Question
+========
+
+Случайная величина $X$ равна единице, если событие $A$ наступило, и нулю иначе. 
+Случайная величина $Y$ равна единице, если событие $B$ наступило, и нулю иначе.
+Если $\Cov(X, Y) > 0$, то 
+
+
+Answerlist
+----------
+*  $\P(A|B) > P(A)$
+*  $\P(A) > \P(B)$
+*  $\P(A|B) > \P(B|A)$
+*  $\P(A\cap B) > \P(A)$
+*  $\P(A\cap B) > \P(A|B)$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: bb_7_covariance_and_probabilities
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,38 @@
+Question
+========
+
+Величины $\xi_1$, $\xi_2$, \ldots\ независимы и имеют таблицы распределения
+\begin{tabular}{ccc}
+\toprule
+  $x$                     & $-1$   & $1$   \\ 
+  $\P(\xi_i = x)$        & $1/2$       & $1/2$   \\
+\bottomrule
+\end{tabular}
+Рассмотрим их сумму $S_n = \xi_1 + \ldots + \xi_n$. 
+Предел $\lim_{n \to \infty}\P\Bigl(\frac{S_n - \E(S_n)}{\sqrt{\Var(S_n)}} > 2\Bigr)$ равен
+
+Answerlist
+----------
+* $\int_{2}^{+\infty}\frac{1}{\sqrt{2\pi}}\,e^{-t^2/2}\,dt$
+* $\int_{-\infty}^{2}\frac{1}{\sqrt{2\pi}}\,e^{-t^2/2}\,dt$
+* $0.5$
+* $1$
+* $\int_{2}^{+\infty} e^{-t^2/2}\,dt$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: da_02_limit
+extype: schoice
+exsolution: 10000
+exshuffle: 5

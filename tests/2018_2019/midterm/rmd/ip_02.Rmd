@@ -1,0 +1,31 @@
+Question
+========
+
+Если $F_X(x)$ — функция распределения случайной величины $X$, то для любых $a$ и $b$
+
+
+Answerlist
+----------
+*  $\P (X > a) = 1 - F_X(a)$
+*  $\P (X < a) = 1 - F_X(a)$  
+*  $\P (X > a) = F_X(a)$ 
+*  $\P (a<X\le b) = F_X(a)-F_X(b)$
+*  $\P (X = a) =  F_X(a)$ 
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: ip2_distribution
+extype: schoice
+exsolution: 10000
+exshuffle: 5

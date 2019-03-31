@@ -1,0 +1,31 @@
+Question
+========
+
+Величина $Y$ имеет экспоненциальное (показательное) распределение с параметром $\lambda=0.5$. 
+Величины $X$ и $Y$ независимы. Ожидание $\E(Y|X=3/4)$ равно
+
+Answerlist
+----------
+*  $2$
+*  $\frac{3}{4}$
+*  $\frac{1}{8}$
+*  $\frac{1}{2}$
+*  $1$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: t11_exponential_conditional
+extype: schoice
+exsolution: 10000
+exshuffle: 5

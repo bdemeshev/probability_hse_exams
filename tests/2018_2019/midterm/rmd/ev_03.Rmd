@@ -1,0 +1,30 @@
+Question
+========
+
+Величины $X$ и $Y$ одинаково распределены и равновероятно принимают только два значения, $-1$ и $1$, при этом $\P(Y=1|X=1)=0.5$. Ожидание $\E(Y|X=1)$ равно
+
+Answerlist
+----------
+*  $0$
+*  $-1$
+*  $-0.5$
+*  $0.5$
+*  $1$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: t3_pair_of_rw
+extype: schoice
+exsolution: 10000
+exshuffle: 5

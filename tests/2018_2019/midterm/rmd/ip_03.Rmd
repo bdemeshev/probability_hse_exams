@@ -1,0 +1,31 @@
+Question
+========
+
+Для любой функции распределения $F_X(x)$ верно, что
+
+
+Answerlist
+----------
+*  она не убывает 
+*  $F_X(x) > 0$  
+*  она возрастает 
+*  $F_{X}(x)$ принимает любые значения на $[0, +\infty)$  
+*  она не возрастает 
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: ip3_distribution
+extype: schoice
+exsolution: 10000
+exshuffle: 5

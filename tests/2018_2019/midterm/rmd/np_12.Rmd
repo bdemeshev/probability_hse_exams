@@ -1,0 +1,30 @@
+Question
+========
+
+Известно, что $\Var(X)=1$ и $\Var(Y)=9$. Ковариация $\Cov(X+Y, X-Y)$ равна
+
+Answerlist
+----------
+*  $-8$
+*  $10$ 
+*  $8$ 
+*  $4$ 
+*  $-4$ 
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: np12_covariance
+extype: schoice
+exsolution: 10000
+exshuffle: 5

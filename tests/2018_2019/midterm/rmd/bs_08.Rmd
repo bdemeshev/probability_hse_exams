@@ -1,0 +1,33 @@
+Question
+========
+
+Случайная величина $X$ имеет непрерывное распределение, при этом $\P(X\leq 3)=0.25$ и $\P(X>0.25)=0.8$. 
+Квантиль порядка $0.25$ величины $X$ может быть равен
+
+
+Answerlist
+----------
+*  $3$
+*  $0.25$
+*  $0.8$
+*  $0.2$
+*  $0.75$
+
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: bs_08_quantile
+extype: schoice
+exsolution: 10000
+exshuffle: 5

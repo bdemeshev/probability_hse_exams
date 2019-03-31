@@ -1,0 +1,31 @@
+Question
+========
+
+Величины $X$ и $Y$ одинаково распределены и равновероятно принимают только два значения, $-1$ и $1$, при этом $\P(Y=1|X=1)=0.4$. 
+Вероятность $\P(Y=-1,X=1)$ равна
+
+Answerlist
+----------
+*  $0.3$
+*  $0.4$
+*  $0.5$
+*  $0.6$
+*  $1$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: t4_conditional_probability
+extype: schoice
+exsolution: 10000
+exshuffle: 5

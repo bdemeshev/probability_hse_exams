@@ -1,0 +1,30 @@
+Question
+========
+
+Про независимые случайные величины $X, Y, Z$ известно, что $\E(X)=1$, $\E(Y)=2$, $\E(Z)=3$.  Ожидание $E(XYZ)$ равно
+
+Answerlist
+----------
+*  $6$
+*  $-6$ 
+*  $1$ 
+*  $0$ 
+*  $3$ 
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: np6_expected_product
+extype: schoice
+exsolution: 10000
+exshuffle: 5

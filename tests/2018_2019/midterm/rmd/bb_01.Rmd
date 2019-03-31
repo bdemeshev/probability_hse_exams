@@ -1,0 +1,32 @@
+Question
+========
+
+Джульетта загадывает случайное число $X$ от $1$ до $5$. 
+Единицу Джульетта загадывает с вероятностью $0.5$, а остальные четыре числа — равновероятно.
+Энтропия $H(X)$ в битах равна
+
+Answerlist
+----------
+*  $2$
+*  $\log_2 3$
+*  $\log_2 5 - 1$
+*  $1.75$
+*  $\log 2 5 + 0.5$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: bb01_entropy
+extype: schoice
+exsolution: 10000
+exshuffle: 5

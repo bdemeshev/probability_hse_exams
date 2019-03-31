@@ -1,4 +1,7 @@
 .DS_Store
+*-cache.yaml
+*.synctex.gz
+*.toc
 *.amc
 *.xdv
 *.aux

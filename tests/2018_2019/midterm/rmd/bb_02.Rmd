@@ -1,0 +1,30 @@
+Question
+========
+
+Для энтропий пары случайных величин выполнено соотношение
+
+Answerlist
+----------
+*  $H(Y|X) + H(X) = H(X, Y)$
+*  $H(X) + H(Y) = H(X, Y)$
+*  $H(X) \cdot H(Y) = H(X, Y)$
+*  $H(X\cdot Y) / H(X) = H(Y|X)$ 
+*  $H(Y|X) + H(X|Y) = H(X, Y)$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: bb02_entropy
+extype: schoice
+exsolution: 10000
+exshuffle: 5

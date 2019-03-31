@@ -1,0 +1,31 @@
+Question
+========
+
+Известно, что $\P(A)= 0.3$, $\P(B|A)=0.7$. Вероятность того, что
+событие $A$ произойдет, а событие $B$ не произойдёт, равна
+
+Answerlist
+----------
+*  $0.09$
+*  $0.4$
+*  $3/7$
+*  $4/7$
+*  $7/9$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: bb_11_conditional
+extype: schoice
+exsolution: 10000
+exshuffle: 5

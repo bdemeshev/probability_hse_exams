@@ -1,0 +1,30 @@
+Question
+========
+
+Известно, что $\Var(X)=4$, $\Var(Y)=9$, $\Cov(X, Y)=6$. Дисперсия $\Var(X-2Y)$ равна
+
+Answerlist
+----------
+*  $16$
+*  $24$ 
+*  $8$ 
+*  $12$ 
+*  $20$ 
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: np10_variance_difference
+extype: schoice
+exsolution: 10000
+exshuffle: 5

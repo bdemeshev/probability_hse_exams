@@ -1,0 +1,30 @@
+Question
+========
+
+Величины $X$ и $Y$ независимы. Величина $\frac{1}{X}$ распределена экспоненциально с $\lambda=5$, величина  $Y$ распределена экспоненциально с $\lambda=10$. Ожидание случайной величины $Y/X$ равно 
+
+Answerlist
+----------
+*  $\frac{1}{50}$
+*  $2$
+*  $\frac{1}{2}$
+*  $50$
+*  $1$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: bs_01_expo_XXXX
+extype: schoice
+exsolution: 10000
+exshuffle: 5

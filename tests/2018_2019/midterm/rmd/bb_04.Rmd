@@ -1,0 +1,32 @@
+Question
+========
+
+Маша подбрасывает кубик два раза. Рассмотрим события $A = \{\text{в первый раз выпало чётное число}\}$,
+$B = \{\text{в сумме выпало чётное число}\}$ и $C=\{\text{в сумме выпало нечётное число}\}$. 
+Независимыми являются пары событий:
+
+Answerlist
+----------
+*  $A$ и $B$; $A$ и $C$
+*  $A$ и $B$; $B$ и $C$
+*  $A$ и $C$; $B$ и $C$
+*  только $A$ и $C$
+*  только $A$ и $B$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: bb04_independent_dice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

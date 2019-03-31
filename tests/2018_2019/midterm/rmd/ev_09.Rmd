@@ -1,0 +1,33 @@
+Question
+========
+
+Величины $X_1$, \ldots, $X_n$ независимы и одинаково распределены, 
+$\E(X)=1$, $\Var(X)=1$. 
+
+По распределению к стандартной нормальной величине сходится последовательность
+
+Answerlist
+----------
+*  $\sqrt{n}(1/\bar X-1)$
+*  $1/\bar X -1$
+*  $\bar X \sqrt{n}$
+*  $\bar X-1$
+*  $1/\bar X$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: t8_normal_convergence
+extype: schoice
+exsolution: 10000
+exshuffle: 5

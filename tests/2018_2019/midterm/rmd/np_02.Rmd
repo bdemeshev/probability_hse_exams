@@ -1,0 +1,30 @@
+Question
+========
+
+Про независимые случайные величины $X$ и $Y$, известно, что $\E(X+Y)=2$, $\E(X-Y)=-2$. Математическое ожидание их произведения $\E(XY)$ равно
+
+Answerlist
+----------
+*  $0$ 
+*  $-2$ 
+*  $-1$ 
+*  $1$ 
+*  $2$ 
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: np2_independent_E
+extype: schoice
+exsolution: 10000
+exshuffle: 5

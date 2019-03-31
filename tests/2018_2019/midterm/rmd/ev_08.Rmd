@@ -1,0 +1,50 @@
+Question
+========
+
+Плотность величины $X$ имеет вид $f(x)=2x$ при $0<x<1$ и $f(x)=0$ при остальных $x$. Условная плотность величины $Y$ задаётся формулой $f_{Y|X}(y|x)=\begin{cases} 
+\frac{1}{x}, \text{ если } 0<y\le x; \\
+0, \text{ иначе }
+\end{cases}.$
+Совместная плотность величин $X$ и $Y$ равна
+
+Answerlist
+----------
+* $f(x,y)=\begin{cases}
+2, \text{ если } 0<y\le x<1; \\
+0, \text{ иначе}
+\end{cases}$
+* $f(x,y)=\begin{cases}
+2, \text{ если } 0<y<1, 0 < x<1; \\
+0, \text{ иначе}
+\end{cases}$
+* $f(x,y)=\begin{cases}
+1, \text{ если } 0<y\le x<1; \\
+0, \text{ иначе}
+\end{cases}$
+* $f(x,y)=\begin{cases}
+1/x, \text{ если } 0<y\le x<1; \\
+0, \text{ иначе}
+\end{cases}$
+* $f(x,y)=\begin{cases}
+1/x, \text{ если } 0<y<1, 0 < x<1; \\
+0, \text{ иначе}
+\end{cases}$
+
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: t8_joint_density
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,30 @@
+Question
+========
+
+Про случайные величины $X, Y$ известно, что $\Var(X)=1$, $\Var(Y)=4$, $\Cov(X,Y)=-1$.  Корреляция $\Corr(X,-2Y)$ равна
+
+Answerlist
+----------
+*  $0.5$
+*  $-0.5$ 
+*  $-0.25$ 
+*  $0$ 
+*  $1$ 
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: np7_correlation
+extype: schoice
+exsolution: 10000
+exshuffle: 5

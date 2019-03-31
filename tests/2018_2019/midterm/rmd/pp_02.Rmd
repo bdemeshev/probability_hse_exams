@@ -1,0 +1,38 @@
+Question
+========
+
+Распределение случайной величины $X$ задано табличкой:
+\begin{tabular}{cccc}
+\toprule
+$x$       &   $-1$  &  $0$    &  $1$ \\
+$\P(X=x)$ &   $0.2$ &  $0.3$  &   ?  \\
+\bottomrule
+\end{tabular}
+
+Ожидание $\E(\exp(X))$ равно 
+
+Answerlist
+----------
+*  $(0.2 + 0.3e + 0.5e^2)/e$ 
+*  $e^{0.3}$
+*  $1$ 
+*  $0.3$ 
+*  $e^{-0.3}$ 
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: pp1_continuous_expected_value
+extype: schoice
+exsolution: 10000
+exshuffle: 5

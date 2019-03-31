@@ -1,0 +1,40 @@
+Question
+========
+
+Cовместная функция плотности случайных величин $X$ и $Y$ имеет вид
+$$
+f(x,y)=\begin{cases}
+\frac{1}{4}xy, \; \text{ если } x\in[0;2], y\in [0;2] \\
+0, \; \text{ иначе}
+\end{cases}
+$$
+
+Найдите вероятность $\P(Y = X)$
+
+
+Answerlist
+----------
+*  $0$  
+*  $1/2$ 
+*  $3/4$
+*  $1/4$
+*  невозможно вычислить на основе имеющихся данных
+
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: ip11_zero_probability
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,32 @@
+Question
+========
+
+Количество скачиваний за день мобильного приложения распределено по Пуассону. В среднем приложение скачивают $12$ раз за день. Вероятность того, что приложение будет скачено за день ровно $5$ раз, равна
+
+
+Answerlist
+----------
+*  ${e}^{-12}\frac{12^5}{5!}$
+*  $e^{-12}\frac{5^{12}}{12!}$
+*  $\frac{5}{12}$
+*  $e^{-5}\frac{5^{12}}{12!}$
+*  $e^{-5}$
+
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: bs_12_poisson_download
+extype: schoice
+exsolution: 10000
+exshuffle: 5

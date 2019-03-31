@@ -1,0 +1,32 @@
+Question
+========
+
+Маша берёт себе две карты из хорошо перемешанной колоды в 52 карты. Рассмотрим события $A = \{\text{первая карта — туз}\}$,
+$B = \{\text{вторая карта — дама}\}$ и $C=\{\text{вторая карта — пики}\}$. 
+Независимыми являются пары событий:
+
+Answerlist
+----------
+*  $A$ и $C$; $B$ и $C$
+*  $A$ и $B$; $B$ и $C$
+*  $A$ и $B$; $A$ и $C$
+*  только $A$ и $C$
+*  только $A$ и $B$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: bb03_independent
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,30 @@
+Question
+========
+
+Дисперсию случайной величины $X$ можно найти, зная
+
+Answerlist
+----------
+*  $\E(X^2)$ и $\E(X)$
+*  $(\E(X))^2$ и $\E(X)$ 
+*  $\Cov(X,Y)$ и $\Var(Y)$ 
+*  $\E(XY)$ и $\E(Y)$ 
+*  $F_Y(x)$ 
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: np3_variance
+extype: schoice
+exsolution: 10000
+exshuffle: 5

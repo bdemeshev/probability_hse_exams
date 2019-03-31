@@ -1,0 +1,30 @@
+Question
+========
+
+Про случайные величины $X, Y, Z$ известно, что $\E(X)=1$, $\E(Y)=2$, $\E(Z)=3$.  Ожидание $\E(X-Y+2Z)$ равно
+
+Answerlist
+----------
+*  $5$
+*  $1$ 
+*  $2$ 
+*  $3$ 
+*  $4$ 
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: np5_expected
+extype: schoice
+exsolution: 10000
+exshuffle: 5

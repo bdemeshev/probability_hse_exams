@@ -1,0 +1,43 @@
+Question
+========
+
+Совместное распределение величин $X$ и $Y$ задано таблицей:
+
+\begin{tabular}{cccc}
+\toprule
+          & $Y=0$   & $Y=3$   \\ 
+\midrule          
+      $X=0$    & $1/6$ & $1/12$ \\
+      $X=1$      & 0 & $c$   \\
+      $X=10$     & $1/2$ & 0   \\
+\bottomrule 
+\end{tabular}
+
+Константа $c$ равна
+
+Answerlist
+----------
+*  $1/4$  
+*  $1/2$ 
+*  $1/12$
+*  $1/6$
+*  $1/8$
+
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: ip12_constant
+extype: schoice
+exsolution: 10000
+exshuffle: 5

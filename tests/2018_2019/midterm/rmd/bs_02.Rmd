@@ -1,0 +1,31 @@
+Question
+========
+
+В урне лежат $7$ белых и $5$ черных шаров. Из урны достают $5$ шаров. Вероятность того, что хотя бы $3$ из них окажутся белыми, равна
+
+
+Answerlist
+----------
+*  $\frac{C_7^3 C_5^2+C_7^4 C_5^1+C_7^5 C_5^0}{C_{12}^5}$
+*  $C_5^3\left( \frac{7}{12} \right)^2\left( \frac{5}{12} \right)^3$
+*  $\frac{3}{5} \cdot \frac{7}{12}$
+*  $C_5^3 \left( \frac{7}{12} \right)^3 \left( \frac{5}{12} \right)^2$
+*  $\frac{C_5^3 C_7^2 + C_5^4 C_7^1 + C_5^5 C_7^0}{C_{12}^5}$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: bs_02_black_and_white
+extype: schoice
+exsolution: 10000
+exshuffle: 5

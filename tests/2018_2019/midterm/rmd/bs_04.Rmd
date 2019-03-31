@@ -1,0 +1,31 @@
+Question
+========
+
+Случайная величина $X$ равномерно распределена на отрезке от $-2$ до $2$. Вероятность $\P(X^2>0.64)$ равна
+
+
+Answerlist
+----------
+*  $0.6$
+*  $0.2$
+*  $0.1$
+*  $0.8$
+*  $\frac{1}{2\sqrt{2}}$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: bs_04
+extype: schoice
+exsolution: 10000
+exshuffle: 5

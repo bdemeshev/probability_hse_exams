@@ -1,0 +1,46 @@
+Question
+========
+
+Функцией плотности случайной величины может являться функция
+
+Answerlist
+----------
+*  $$f(x)=\begin{cases}
+          \frac{1}{x^2}, x \in [1,+ \infty) \\
+            0,\text{ иначе}
+         \end{cases}$$
+*  $$f(x)=\begin{cases}
+            \frac{1}{x^2}, x \in [0,+ \infty) \\
+            0,\text{ иначе}
+        \end{cases}$$
+*  $$f(x)=\begin{cases}
+     				x - 1, x \in [0,1+\sqrt{3}] \\
+     				0,\text{ иначе}
+ 				\end{cases}$$
+*  $$f(x)=\begin{cases}
+     				x, x \in [1,1+\sqrt{3}] \\
+     				0,\text{ иначе}
+ 				\end{cases}$$
+*  $$f(x)=\begin{cases}
+     				-1, x \in [-1, 0] \\
+     				0,\text{ иначе}
+ 				\end{cases}$$
+    
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: ip6_density
+extype: schoice
+exsolution: 10000
+exshuffle: 5

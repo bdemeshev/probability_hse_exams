@@ -1,0 +1,30 @@
+Question
+========
+
+Про случайные величины $X$ и $Y$ известно, что $\E(X)=1$, $\E(XY)=4$, $\Cov(X,-2Y)=-4$. Ожидание $\E(Y)$ равно
+
+Answerlist
+----------
+*  $2$ 
+*  $0$
+*  $1$ 
+*  $3$ 
+*  $4$ 
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: np8_expected_from_covariance
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,31 @@
+Question
+========
+
+Для дискретной случайной величины функция распределения 
+
+
+Answerlist
+----------
+*  имеет разрывы 
+*  не определена 
+*  непрерывна
+*  вырождена
+*  строго возрастает 
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: ip_01_discrete
+extype: schoice
+exsolution: 10000
+exshuffle: 5

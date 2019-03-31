@@ -1,0 +1,32 @@
+Question
+========
+
+Мода экспоненциального распределения с параметром $\lambda=5$ равна
+
+
+Answerlist
+----------
+*  $0$
+*  $0.2$
+*  $5$
+*  $e^{-5}$
+*  $1-e^{-5}$
+
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: bs_11_expo_mode
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,33 @@
+Question
+========
+
+Случайная величина $X$ равна единице, если событие $A$ наступило, и нулю иначе. 
+Случайная величина $Y$ равна единице, если событие $B$ наступило, и нулю иначе.
+Если $\P(B|A) > \P(B)$, то 
+
+
+Answerlist
+----------
+*  $\Cov(X, Y) > 0$
+*  $\Var(X) > \Var(Y)$
+*  $\E(XY) > \E(X)$
+*  $\E(XY) > \E(Y)$
+*  $\E(X) > \E(Y)$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: bb_8_covariance_and_probabilities
+extype: schoice
+exsolution: 10000
+exshuffle: 5

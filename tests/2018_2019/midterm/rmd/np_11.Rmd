@@ -1,0 +1,30 @@
+Question
+========
+
+Известно, что $\Var(X)=4$, $\Var(Y)=9$, $\Cov(X, Y)=6$. Корреляция $\Corr(X, Y)$ равна
+
+Answerlist
+----------
+*  $1$
+*  $0.25$ 
+*  $-0.25$ 
+*  $0.5$ 
+*  $-0.5$ 
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: np11_correlation_linear
+extype: schoice
+exsolution: 10000
+exshuffle: 5

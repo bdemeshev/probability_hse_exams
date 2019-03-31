@@ -1,0 +1,51 @@
+Question
+========
+
+Функция плотности величины $X$ равна 
+$f(x)=\begin{cases}
+3x^2,\text{ при } 0<x<1 \\
+0, \text{ иначе}\\
+\end{cases}.$ 
+
+Плотность величины $Y=\ln X$ равна
+
+Answerlist
+----------
+* $g_Y(y)=\begin{cases}
+3\exp(3y), \text{ если } y<0,\\
+0, \text{иначе}
+\end{cases}$
+* $g_Y(y)=\begin{cases}
+3|y|\exp(2y), \text{ если } y<0,\\
+0, \text{иначе}
+\end{cases}$
+* $g_Y(y)=\begin{cases}
+3\exp(2y)/|y|, \text{ если } y<0,\\
+0, \text{иначе}
+\end{cases}$
+* $g_Y(y)=\begin{cases}
+3(\ln |y|)^2, \text{ если } y<0,\\
+0, \text{иначе}
+\end{cases}$
+* $g_Y(y)=\begin{cases}
+3(\ln |y|)^2/|y|, \text{ если } y<0,\\
+0, \text{иначе}
+\end{cases}$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: t6_density_transformation
+extype: schoice
+exsolution: 10000
+exshuffle: 5

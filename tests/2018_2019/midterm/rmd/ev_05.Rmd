@@ -1,0 +1,41 @@
+Question
+========
+
+Совместное распределение величин $X$ и $Y$ задано таблицей
+
+\begin{tabular}{ccc}
+\toprule
+      & $X=-1$ & $X=1$ \\
+\midrule      
+$Y=1$ & $0.3$    & $0.2$ \\
+$Y=2$ & $0.2$    & $0.3$ \\
+\bottomrule
+\end{tabular}
+
+Для функции $g(x,y)=x/y$ ожидание $\E(g(X,Y))$ равно
+
+Answerlist
+----------
+*  $-0.05$ 
+*  $0.05$ 
+*  $0.1$ 
+*  $0$ 
+*  $-1$ 
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: t5_gxy_function
+extype: schoice
+exsolution: 10000
+exshuffle: 5

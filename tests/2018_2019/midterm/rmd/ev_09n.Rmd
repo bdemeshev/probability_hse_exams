@@ -1,0 +1,30 @@
+Question
+========
+
+Сумма независимых абсолютно непрерывной и дискретной случайных величин имеет распределение
+
+Answerlist
+----------
+*  абсолютно непрерывное
+*  нормальное
+*  вырожденное
+*  дискретное
+*  сингулярное
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: t9n_sum_of_two_variables
+extype: schoice
+exsolution: 10000
+exshuffle: 5

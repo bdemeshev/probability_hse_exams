@@ -1,0 +1,31 @@
+Question
+========
+
+Для непрерывной случайной величины с функцией плотности $f_X(x)$ и функцией распределения $F_X(x)$ верно равенство
+
+
+Answerlist
+----------
+*  $\P(X = 1) = 0$ 
+*  $\P(X = 1) = f(1)$ 
+*  $\P(X = 1) = F(1)$ 
+*  $F_X(x) = \int_{-\infty}^{\infty} f_X(x) dx$
+*  $\P(X = 1) = \int_0^1 f_X(x) dx$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: ip4_continuous
+extype: schoice
+exsolution: 10000
+exshuffle: 5

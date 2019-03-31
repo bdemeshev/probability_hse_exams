@@ -1,0 +1,30 @@
+Question
+========
+
+Cлучайная величина $\xi$ распределена равномерно $U[0;\,1]$. Вероятность $\P(0.5<\xi<0.7)$ равна
+
+Answerlist
+----------
+* $0.2$
+* $5/7$
+* $0.5$
+* $\Phi(0.7) - \Phi(0.2)$
+* $\int_{0}^{1}\frac{1}{\sqrt{2\pi}}\,e^{-t^2/2}\,dt$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: da_01_uniform
+extype: schoice
+exsolution: 10000
+exshuffle: 5

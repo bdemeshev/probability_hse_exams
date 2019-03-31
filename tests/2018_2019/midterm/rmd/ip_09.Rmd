@@ -1,0 +1,58 @@
+Question
+========
+
+Cовместная функция плотности случайных величин $X$ и $Y$ имеет вид
+$$
+f(x,y)=\begin{cases}
+\frac{1}{4}xy, \; \text{ если } x\in[0;2], y\in [0;2] \\
+0, \; \text{ иначе}
+\end{cases}
+$$
+
+Найдите функцию распределения $F_Y(y)$
+
+
+Answerlist
+----------
+* $$F_Y(y)=\begin{cases}
+0, \;  y < 0 \\
+\frac{1}{4}y^2, \; y\in [0;2] \\
+1, \; y > 2
+\end{cases}$$  
+* $$F_Y(y)=\begin{cases}
+0, \;  y < 0 \\
+y^2, \; y\in [0;2] \\
+0, \; y > 2
+\end{cases}$$ 
+* $$F_Y(y)=\begin{cases}
+\frac{1}{4}y^2, \; \text{ если } y\in [0;2] \\
+0, \; \text{ иначе}
+\end{cases}$$ 
+* $$F_Y(y)=\begin{cases}
+0, \;  y < 0 \\
+\frac{1}{2}y^2, \; y\in [0;2] \\
+0, \; y > 2
+\end{cases}$$ 
+* $$F_Y(y)=\begin{cases}
+y^2, \; \text{ если } y\in [0;2] \\
+0, \; \text{ иначе}
+\end{cases}$$ 
+
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: ip9_marginal_distribution
+extype: schoice
+exsolution: 10000
+exshuffle: 5

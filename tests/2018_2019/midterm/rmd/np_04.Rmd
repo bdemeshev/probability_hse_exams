@@ -1,0 +1,30 @@
+Question
+========
+
+Математическое ожидание неотрицательной случайной величины $X$ можно найти, зная только
+
+Answerlist
+----------
+*  $\Var(X)$ и $\E(X^2)$
+*  $\Cov(X,Y)$ и $\E(XY)$
+*  $\E(Y)$ и $\E(XY)$
+*  $\E(X+Y)$ и $\E(X+Z)$
+*  $\E(X^2)$ и $\E(X^3)$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: np4_expected
+extype: schoice
+exsolution: 10000
+exshuffle: 5

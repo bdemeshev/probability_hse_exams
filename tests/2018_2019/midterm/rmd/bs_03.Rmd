@@ -1,0 +1,31 @@
+Question
+========
+
+Гена с $6$ лет ждет письмо из школы волшебников. Время ожидания письма в годах экспоненциально распределено с параметром $\lambda=\frac{1}{2}$. Вероятность того, что Гена получит письмо до $18$ лет, если за $10$ лет ожидания ему пока ничего не пришло, равна
+
+
+Answerlist
+----------
+*  $1-e^{-1}$
+*  $1-e^{-5}$
+*  $1-e^{-6}$
+*  $1-e^{-2}$
+*  $6e^{-6}$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: bs_03_gena_letter_expo
+extype: schoice
+exsolution: 10000
+exshuffle: 5

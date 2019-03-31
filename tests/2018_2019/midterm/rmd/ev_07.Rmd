@@ -1,0 +1,31 @@
+Question
+========
+
+Величина  $X$ распределена равномерно на отрезке $[0,1]$, и $\E(Y|X=x)=x^2$. 
+Ожидание $\E(Y)$ равно:
+
+Answerlist
+----------
+*  $\frac{1}{3}$
+*  $\frac{1}{2}$
+*  $0$
+*  $1$
+*  $\frac{3}{2}$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: t7_conditional_uniform
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,33 @@
+Question
+========
+
+Случайная величина $X$ имеет равномерное распределение $X\sim U[0,\alpha]$ и медиана $X$ равна $1$.
+Параметр $\alpha$ равен
+
+
+Answerlist
+----------
+*  $2$
+*  $0.5$
+*  $1$
+*  $1.5$
+*  $0$
+
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: bs_07_median
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,55 @@
+Question
+========
+
+Cовместная функция плотности случайных величин $X$ и $Y$ имеет вид
+$$
+f(x,y)=\begin{cases}
+\frac{1}{4}xy, \; \text{ если } x\in[0;2], y\in [0;2] \\
+0, \; \text{ иначе}
+\end{cases}
+$$
+
+Найдите функцию плотности $f_Y(y)$
+
+
+Answerlist
+----------
+* $$f_Y(y)=\begin{cases}
+\frac{1}{2}(y), \; \text{ если } y\in [0;2] \\
+0, \; \text{ иначе}
+\end{cases}$$ 
+* $$f_Y(y)=\begin{cases}
+\frac{1}{4}(y), \; \text{ если } y\in [0;2] \\
+0, \; \text{ иначе}
+\end{cases}$$ 
+* $$f_Y(y)=\begin{cases}
+\frac{1}{2}(y), \; \text{ если } y\in [0;1] \\
+0, \; \text{ иначе}
+\end{cases}$$ 
+* $$f_Y(y)=\begin{cases}
+\frac{1}{4}(y), \; \text{ если } y\in [0;4] \\
+0, \; \text{ иначе}
+\end{cases}$$ 
+* $$f_Y(y)=\begin{cases}
+\frac{1}{4}(x), \; \text{ если } y\in [0;2] \\
+0, \; \text{ иначе}
+\end{cases}$$ 
+
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: ip8_marginal_from_joint
+extype: schoice
+exsolution: 10000
+exshuffle: 5
