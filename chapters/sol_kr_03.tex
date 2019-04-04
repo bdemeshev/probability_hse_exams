@@ -564,6 +564,156 @@ $t_{obs} = \frac{9.5-9.8}{0.56\sqrt{\frac{1}{20}+ \frac{1}{25}}} = -1.79$, $\tex
 \subsection[2010-2011]{\hyperref[sec:kr_03_2010_2011]{2010-2011}}
 \label{sec:sol_kr_03_2010_2011}
 
+
+\begin{enumerate}
+\item
+\begin{enumerate}
+\item Введём обозначения для событий:
+\begin{itemize}
+  \item $A$ — заболеть
+  \item $\bar A$ — не заболеть
+  \item $B$ — привиться
+  \item $\bar B$ — не привиться
+\end{itemize}
+
+Тогда вероятность заболеть можно получить по формуле полной вероятности:
+\[
+\P(A) = \P(A | B) \cdot \P(B)  + \P(A | \bar B) \cdot \P(\bar B) = 0.15 \cdot 0.1 + 0.2 \cdot 0.9 = 0.195
+\]
+Значит, во время эпидемии заболевает $19.5\%$ людей.
+\item Пусть всё население составляет $n$ человек.
+Тогда доля заболевших — $0.195 n$.
+Доля привитых заболевших — $0.015 n$.
+Значит, среди заболевших
+\[
+\frac{0.015 n}{0.195 n} \cdot 100 \% \approx 7.7 \%
+\]
+привитых.
+\end{enumerate}
+\item
+\begin{enumerate}
+\item
+\begin{align*}
+\P(X > 4) &= \P\left(\frac{X - 3}{\sqrt{25}} > \frac{4 - 3}{\sqrt{25}} \right) = \P\left(\cN(0,1) > 0.2\right) \approx 0.42 \\
+\P(4 < X \leq 5) &= \P \left(\frac{4 - 3}{\sqrt{25}} < \frac{X - 3}{\sqrt{25}} \leq \frac{5 - 3}{\sqrt{25}} \right)  \\
+&= \P(0.2 < \cN(0,1) \leq 0.4) \approx 0.076
+\end{align*}
+\item Найдём математическое ожидание и дисперсию случайной величины $S = X - 2Y$:
+\begin{align*}
+\E(S) &= \E(X) - 2\E(Y) = 3 - 2 \cdot 1 = 1 \\
+\Var(S) &= \Var(S)  + 4 \Var(Y) - 4 \Cov(X, Y) = 57
+\end{align*}
+Теперь можно посчитать вероятность:
+\[
+\P(X - 2Y < 4) = \P \left(\frac{S - 1}{\sqrt{57}} < \frac{4 - 1}{\sqrt{57}} \right) = \P(\cN(0, 1) < 0.4) \approx 0.66
+\]
+\item
+\end{enumerate}
+\item
+\begin{enumerate}
+\item Сначала найдём среднее и несмещённую оценку дисперсии по выборке $Y$:
+\[
+\bar Y = \frac{480}{12} 40, \quad \hat{\sigma}^2_Y = \frac{358.3 \cdot 12}{11} \approx 391
+\]
+Доверительный интервал для математического ожидания при неизвестной дисперсии имеет вид:
+\begin{align*}
+\bar Y - t_{\frac{\alpha}{2}, n-1} \frac{\hat{\sigma}_Y}{\sqrt{n}} < \mu_Y < \bar Y + t_{\frac{\alpha}{2}, n-1} \frac{\hat{\sigma}_Y}{\sqrt{n}}
+\end{align*}
+Критическое значение $t_{0.95, 11} \approx 1.8$:
+\[
+40 - 1.8 \cdot \sqrt{\frac{391}{12}} < \mu_Y < 40 + 1.8 \cdot \sqrt{\frac{391}{12}}
+\]
+\item Найдём также среднее и несмещённую оценку дисперсии по выборке $X$:
+\[
+\bar X = \frac{540}{15} = 36, \quad \hat{\sigma}^2_X = \frac{410.264 \cdot 15}{14} \approx 440
+\]
+И посчитаем оценку общей дисперсии:
+\[
+\hat{\sigma}^2_0 = \frac{\sum_{i=1}^{n_X} \left(X_i - \bar X\right)^2 + \sum_{i=1}^{n_Y} \left(Y_i - \bar Y\right)^2}{n_X + n_Y - 2} =  \frac{410.264 \cdot 15 + 358.3 \cdot 12}{15 + 12 - 2} \approx 418
+\]
+Тогда, проверяя гипотезу $H_0: \mu_X = \mu_Y$ против альтернативной $H_a: \mu_X < \mu_Y$,
+получим следующие наблюдаемое и критическое значения статистики:
+\begin{align*}
+t_{obs} &= \frac{\mu_X - \mu_Y}{\sqrt{\sigma^2_0 \left(\frac{1}{n_X} + \frac{1}{n_Y}\right)}} = \frac{36 - 40}{\sqrt{418 \cdot \left(\frac{1}{15} + \frac{1}{12}\right)}} \approx -0.51 \\
+t_{crit, 0.05, 25} &\approx -1.7
+\end{align*}
+Так как $t_{obs} > t_{crit}$, нет оснований отвергать $H_0$.
+\item Выпишем вариационный ряд по двум выборкам, выделяя наблюдения, относящиеся к
+Юго-Западному округу, и присвоим им ранги:
+
+\begin{center}
+\begin{tabular}{@{}lcccccccccc@{}}
+\toprule
+Наблюдение & $8.4$           & $\textbf{14.4}$ & $15.2$          & $15.6$          & $\textbf{18.0}$ & $19.1$          & $21.2$          & $\textbf{22.0}$ & $\textbf{23.9}$ & $\textbf{26.6}$ \\
+Ранг       & $1$             & $2$             & $3$             & $4$             & $5$             & $6$             & $7$             & $8$             & $9$             & $10$            \\ \midrule
+Наблюдение & $28.2$          & $28.3$          & $\textbf{32.0}$ & $33.8$          & $34.5$          & $38.2$          & $\textbf{43.3}$ & $44.1$          & $45.0$          & $\textbf{46.7}$ \\
+Ранг       & $11$            & $12$            & $13$            & $14$            & $15$            & $16$            & $17$            & $18$            & $19$            & $20$            \\ \midrule
+Наблюдение & $\textbf{54.8}$ & $56.0$          & $\textbf{64.0}$ & $\textbf{65.1}$ & $68.2$          & $\textbf{69.2}$ & $84.2$ \\
+Ранг       & $21$            & $22$            & $23$            & $24$            & $25$            & $26$            & $27$   \\ \bottomrule
+\end{tabular}
+\end{center}
+
+Теперь посчитаем сумму рангов по выборке меньшего размера, то есть по Юго-Западному округу:
+\[
+T = \sum_{i=1}^{n_Y} R_i = 2 + 5 + 8 + 9 + 10 + 13 + 17 + 20 + 21 + 23 + 24 + 26 = 178
+\]
+Осталось найти значение наблюдаемой статистики и критическое значение:
+\begin{align*}
+\gamma_{obs} &= \frac{T - \frac{1}{2} n_X (n_X + n_Y + 1)}{\sqrt{\frac{1}{12} n_X n_Y (n_X + n_Y)} } = \frac{178 - \frac{1}{2} \cdot 12 (12 + 15 + 1)}{\sqrt{\frac{1}{12} \cdot 12 \cdot 15 \cdot(12 + 15)}} \approx 0.5 \\
+\gamma_{crit} &= 1.96
+\end{align*}
+Так как $\gamma_{obs} < |\gamma_{crit}|$, нет оснований отвергать $H_0$.
+\end{enumerate}
+\item Будем проверять гипотезу о том, что вероятность падения маслом вверх равна $0.5$:
+\[
+\begin{cases}
+H_0: p = 0.5 \\
+H_a: p \neq 0.5
+\end{cases}
+\]
+Найдём наблюдаемое и критическое значения статистики:
+\begin{align*}
+z_{obs} &= \frac{\hat p - p_0}{\sqrt{\frac{\hat p (1 - \hat p)}{n}}} = \frac{\frac{105}{200} - \frac{1}{2}}{\sqrt{\frac{\frac{105}{200} \cdot \frac{95}{200}}{200}}} \approx 0.71 \\
+z_{crit} &= 1.96
+\end{align*}
+Так как $z_{obs} < |z_{crit}|$, нет оснований отвергать $H_0$.
+
+\item
+\begin{enumerate}
+\item
+\begin{align*}
+\bar X &= \E(X_1) |_{\mu_1 = \hat{\mu}_1} = \hat{\mu}_1 \\
+S^2 &= \Var(X_1) |_{\mu_1 = \hat{\mu}_1, \mu_2= \hat{\mu}_2} = \hat{\mu}_2 - \hat{\mu}_1^2 \Rightarrow \hat{\mu}_2 = \bar{X^2}
+\end{align*}
+\item Найдём максимум логарифмической функции правдоподобия по параметру $\theta$:
+\begin{align*}
+L &= \prod_{i=1}^n \frac{1}{\sqrt{2\pi}} \exp \left(-\frac{1}{2} (x_i - \theta)^2\right) \\
+\ell &= \frac{n}{2} \ln 2\pi - \frac{1}{2} \sum_{i=1}^n (x_i - \theta)^2 \\
+\frac{\partial \ell}{\partial \theta} &= \left. \sum_{i=1}^n (x_i - \theta) \right|_{\theta = \hat \theta} = 0 \\
+\hat \theta &= \bar X
+\end{align*}
+Для проверки эффективности достаточно показать, что неравенство Рао-Крамера
+для полученной оценки выполняется как равенство.
+
+Найдём информацию Фишера:
+\begin{align*}
+\frac{\partial^2 \ell}{\partial \theta^2} &= -n \\
+I(\theta) &= n
+\end{align*}
+и дисперсию оценки $\hat \theta$:
+\[
+\Var\left(\hat \theta \right) = \frac{1}{n}
+\]
+Подставив полученные значения в неравенство Рао-Крамера
+\[
+\Var\left(\hat \theta \right) \geq \frac{1}{I(\theta)},
+\]
+получим равенство, значит, найденная оценка является эффективной.
+\end{enumerate}
+\end{enumerate}
+
+
+
 \subsection[2009-2010]{\hyperref[sec:kr_03_2009_2010]{2009-2010}}
 \label{sec:sol_kr_03_2009_2010}
 
