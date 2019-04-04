@@ -841,5 +841,260 @@ $\Var\left(\frac{X_{1}+X_{2}}{2}\right)=\frac{1}{2}\sigma^{2}$
 \subsection[2006-2007]{\hyperref[sec:kr_03_2006_2007]{2006-2007}}
 \label{sec:sol_kr_03_2006_2007}
 
+Верный ответ на первый вопрос теста — нет! Некоррелированные одномерные нормальные распределения
+могут быть не нормальными в совокупности.
+
+\begin{enumerate}
+\item
+\begin{enumerate}
+\item $\P(X=-1) = \frac{5}{12}\cdot\frac{4}{11} = \frac{5}{33}$
+
+$\E(X) = -1 \cdot \frac{5}{33} + 0 \cdot 2 \cdot \frac{5}{12}\cdot\frac{7}{11} + 1 \cdot \frac{7}{12}\cdot\frac{6}{11} = \frac{1}{6}$
+
+$\E(X^2) = (-1)^2 \cdot \frac{5}{33} + 1^2 \cdot \frac{7}{12}\cdot\frac{6}{11} = \frac{31}{66}$
+
+$\Var(X) = \frac{175}{396}$
+\item $F(x) = \begin{cases}
+0, & x < -1 \\
+\frac{5}{33}, & -1 \leq x < 0 \\
+\frac{15}{22}, & 0 \leq x < 1 \\
+1, & x \geq 1
+\end{cases}$
+\end{enumerate}
+\item
+\begin{enumerate}
+\item $c=1$, $\P(0.5<X<2) = 0.75$, $0.5$
+\item $\E(X) = \frac{2}{3}$, $\Var(X) = \frac{1}{18}$, $\Cov(X,-X) = - \frac{1}{18}$,
+$\Corr(2X,3X) = 1$
+\item $f(x) = \begin{cases}
+0, & t < 0, t \geq 1 \\
+2t, & 0 \leq t < 1
+\end{cases}$
+\end{enumerate}
+\item
+\begin{enumerate}
+\item $\Corr(X,Y)=-\frac{1}{3}$
+\item $\alpha=\frac{11}{17}$
+\item Нет
+\item Да
+\end{enumerate}
+\item
+\begin{enumerate}
+\item $\hat{p} = \frac{1}{20}$
+
+$\left[\frac{1}{20} - 1.65 \cdot \sqrt{\frac{\frac{1}{20}\cdot\frac{19}{20}}{40}}; \frac{1}{20} + 1.65 \cdot \sqrt{\frac{\frac{1}{20}\cdot\frac{19}{20}}{40}}  \right]$
+\item $\P(\vert \hat{p} - p \vert \leq 0.1) = 0.9 \Rightarrow \P\left(\frac{\vert \hat{p} - p \vert}{\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}} \leq \frac{0.1}{\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}} \right) = 0.9 \Rightarrow \frac{0.1}{\sqrt{\frac{\frac{1\cdot19}{20^2}}{n}}} = 1.65 \Rightarrow n \approx 13$
+\end{enumerate}
+\item
+\begin{enumerate}
+\item $\gamma_{obs} = \frac{\hat{\sigma}^2_Y}{\hat{\sigma}^2_X} \approx 1.32$, $\gamma_{crit, 0.95} \approx 1.64$,
+оснований отвергать $H_0$ нет
+\item $X_1, \ldots, X_n \sim \cN(\mu_X, \sigma^2_X)$, $Y_1, \ldots, Y_n \sim \cN(\mu_Y, \sigma^2_Y)$ — независимые выборки
+\item $\left[17.51 - 1.66 \cdot 59.4 \sqrt{\frac{1}{40}+ \frac{1}{60}}; 17.51 + 1.66 \cdot 59.4 \sqrt{\frac{1}{40}+ \frac{1}{60}} \right]$
+
+$[-2.61; 37.64]$
+
+$\hat{\sigma}_0^2 = \frac{\hat{\sigma}^2_X(n_X-1) + \hat{\sigma}^2_Y(n_Y-1)}{n_X+n_Y-2} \approx 59.4$
+\item Оснований считать новую методику более эффективной нет, так как $0$ входит в доверительный интервал.
+\end{enumerate}
+\item $\hat{p}_1 = \frac{57}{159}$, $\hat{p}_2 = \frac{48}{159}$, $\hat{p}_3 = \frac{54}{159}$
+
+$Q_{obs} = \sum_{i=1}^n \frac{(n_i - n \cdot p_i)^2}{n \cdot p_i} = \frac{42}{53}$. $Q_{crit} = 3.84$.
+Оснований отвергать нулевую гипотезу нет.
+\item $\gamma_{obs} = \sum_{i=1}^s \sum_{j=1}^m \frac{\left(n_{ij} - \frac{n_{i\cdot}n_{\cdot j}}{n}\right)^2}{\frac{n_{i\cdot}n_{\cdot j}}{n}} \approx 1.15$,
+$\gamma_{crit} = 3.84$, оснований отвергать $H_0$ нет.
+\item
+\begin{enumerate}
+\item \begin{align*}
+L(x_1, \ldots, x_n, \theta) &= \prod_{i=1}^n \frac{1}{\sqrt{2\pi\theta}}e^{-\frac{1}{2}\cdot\frac{x_i^2}{\theta}} = \frac{1}{(\sqrt{2\pi\theta})^n} e^{-\frac{1}{2\theta} \sum_{i=1}^n x_i^2} \\
+l(x_1, \ldots, x_n, \theta) &= -\frac{n}{2} \ln (2\pi) - \frac{n}{2} \ln \theta -\frac{1}{2\theta} \sum_{i=1}^n x_i^2 \to \max_{\theta} \\
+\frac{\partial l}{\partial \theta} &= - \frac{n}{2 \theta} + \frac{1}{2\theta^2} \sum_{i=1}^n x_i^2 \\
+\hat{\theta}_{ML} &= \frac{\sum_{i=1}^n x_i^2}{n}
+\end{align*}
+\item $\E(\hat{\theta}_{ML}) = \E\left(\frac{\sum_{i=1}^n x_i^2}{n}\right) = \frac{1}{n}\cdot n \E(x_1^2) = \theta$,
+оценка несмещённая.
+
+$\Var(\hat{\theta}_{ML}) = \Var\left(\frac{\sum_{i=1}^n x_i^2}{n}\right) = \frac{1}{n^2}\cdot n \Var(x_1^2) = \frac{3\theta^2 - \theta^2}{n}\to_{n\to\infty} 0$,
+оценка состоятельная.
+
+$\frac{\partial^2 l}{\partial \theta^2} = \frac{n}{2 \theta^2} - \frac{1}{\theta^3}\sum_{i=1}^n x_i^2$
+
+$-\E\left(\frac{\partial^2 l}{\partial \theta^2}\right) = -\frac{n}{2 \theta^2} + \frac{1}{\theta^3} \cdot n \theta = \frac{n}{2 \theta^2}$
+
+$\Var(\hat{\theta}_{ML}) = \frac{2\theta^2}{n} = \frac{1}{\frac{n}{2 \theta^2}} = I(\theta)$,
+оценка эффективная.
+\end{enumerate}
+\item
+\begin{enumerate}
+\item O1Р: выбрали $H_a$, но верна $H_0$, то есть $X \sim [0, 100]$, но при этом $X \geq c$.
+
+О2Р: выбрали $H_0$, но верна $H_a$, то есть $X \sim [50, 150]$, но при этом $X > c$.
+\item $\alpha = \begin{cases}
+1, & c < 0 \\
+\frac{100-c}{100}, & 0 \leq c \leq 100 \\
+0, & c > 100
+\end{cases}$
+
+$\beta = \begin{cases}
+0, & c < 50 \\
+\frac{c-50}{100}, & 50 \leq c \leq 150 \\
+1, & c > 150
+\end{cases}$
+\end{enumerate}
+\item Считаем через сумму рангов, $T = 2 + 4 + 6 + 8 + 10 = 30$.
+
+$\E(T) = \frac{1}{2}(n_x(n_x+n_y+1)) = 37.5$.
+
+$\Var(T) = \frac{1}{12}(n_x n_y(n_x + n_y)) = \frac{75}{6}$
+
+$\gamma_{obs} = \frac{30-37.5}{\sqrt{\frac{75}{6}}} \approx -2.12$,
+$\gamma_{crit, 0.05} = -1.65$, основная гипотеза отвергается.
+
+Можно было бы считать через $U$-статистику, у неё было бы другое ожидание, $n_x n_y/2$,
+но после стандартизации снова вышло бы $-2.12$.
+
+\end{enumerate}
+
+
 \subsection[2005-2006]{\hyperref[sec:kr_03_2005_2006]{2005-2006}}
 \label{sec:sol_kr_03_2005_2006}
+
+Нет, Нет, Да, Да, Да, Нет, Нет, Нет, Да, Нет, Нет, Да, Нет, Да, Нет, Да
+
+
+
+\begin{enumerate}
+
+\item
+\begin{enumerate}
+\item
+\item $\E(\hat{\theta})=1\cdot \P(X<3)+0\cdot \P(X \ge 3)=\theta$, да является
+\item $\E\left(\left(\hat{\theta }-\theta \right)^{2} \right)=\E\left(\hat{\theta}^{2}-2\theta\hat{\theta}+\theta^{2}\right) \stackrel{\hat{\theta}^{2}=\hat{\theta}}{=} \theta-2\theta^{2}+\theta^{2}=\theta-\theta^{2}$
+\end{enumerate}
+\item
+\begin{enumerate}
+\item  $L=(k+1)^{n}(x_{1}\cdot x_{2} \cdot \ldots \cdot x_{n})^{k}$
+
+$l=\ln{L}=n\ln(k+1)+k(\sum \ln{x_{i}})$
+
+$\frac{\partial l}{\partial k}=\frac{n}{k+1}+\sum \ln{x_{i}}$
+
+$\frac{n}{\hat{k}+1}+\sum \ln{x_{i}}=0$
+
+$\hat{k}=-\left(1+\frac{n}{\sum \ln{x_{i}}} \right)$
+\item  $\E(X_{i})=\int t\cdot p(t)dt=\int_{0}^{1} (k+1)t^{k+1}=\frac{k+1}{k+2}$
+
+$\frac{\hat{k}+1}{\hat{k}+2}=\bar{X}$
+
+$\hat{k}=\frac{2\bar{X}-1}{1-\bar{X}}$
+\end{enumerate}
+\item $C=\sum \frac{(X_{i,j}-n \hat{p}_{i,j})^{2}}{n\hat{p}_{i,j}}\sim \chi_{(r-1)(c-1)}^{2}$
+
+$C\sim \chi_{1}^{2}$
+
+$C=35$
+
+Если $\alpha=0.1$, то $C_{crit}=2.706$.
+
+Вывод: $H_{0}$ (гипотеза о независимости признаков) отвергается.
+\item
+\begin{enumerate}
+\item Число наблюдений велико, используем нормальное распределение.
+
+$\P\left(-1,65<\frac{\bar{X}-\bar{Y}-\triangle}{\sqrt{\frac{\hat{\sigma}_{x}^{2}}{40}+\frac{\hat{\sigma}_{y}^{2}}{50}}}<1,65\right)=0.9$
+
+$\triangle \in 4 \pm 1.65\sqrt{\frac{49}{40}+\frac{64}{50}}$
+
+$\triangle \in [1.4;6.6]$
+\item Используем результат предыдущего пункта: $H_{0}$ отвергается, так как число 0 не входит в доверительный интервал.
+\item $Z=2.505$ и $P_{value}=0.0114$
+\end{enumerate}
+\item
+\begin{enumerate}
+\item $\chi_{9}^{2}=\frac{9\hat{\sigma}^{2}}{\sigma^{2}} \in [4.17; 14.69]$
+
+$\sigma^{2} \in [8822.3; 31080]$
+
+$\sigma \in [93.9; 176.3] $
+\item  $\P(|\hat{\sigma}^{2}-\sigma^{2}|<0.4\sigma^{2})=\P(0.6<\frac{\hat{\sigma}^{2}}{\sigma^{2}}<1.4)=\P(11.4<\chi_{19}^{2}<26.6)\approx 0.8$
+\end{enumerate}
+\item
+\begin{enumerate}
+\item $W_{1}=2+4+6+8=20$ или $W_{2}=1+3+5+7+9+10=35$
+
+$U_{1}=10$ или $U_{2}=14$
+
+$Z_{1}=-0.43=-Z_{2}$
+
+Вывод: $H_{0}$ (гипотеза об отсутствии сдвига между законами распределения) не отвергается
+\item Нет, т.к. наблюдения не являются парными.
+\end{enumerate}
+\item  $\P(-2.13<t_{4}<2.13)=0.9$
+
+$\mu \in 1560 \pm 2.13\cdot \sqrt{\frac{670^{2}}{5}}$
+
+$\mu \in [921.8;2198.2]$
+\item
+\begin{enumerate}
+\item
+\item  $\P(\text{1 type error})=\P(X>c|X\sim U[0;100])= \left\{
+\begin{array}{ll}
+  1, & c<0 \\
+  1-\frac{c}{100}, & c \in [0;100] \\
+  0, & c>100 \\
+\end{array}
+\right.$
+
+$\P(\text{2 type error})=\P(X<c|X\sim U[50;150])= \left\{
+\begin{array}{ll}
+  0, & c<50 \\
+  \frac{c-50}{100}, & c \in [50;150] \\
+  1, & c>150 \\
+\end{array}
+\right.$
+
+Построение оставлено читателю в качестве самостоятельного
+упражнения :)
+\end{enumerate}
+\item $\P(\sqrt{X^{2}+Y^{2}}>2.45)=\P(X^{2}+Y^{2}>2.45^{2})=\P(\chi_{2}^{2}>6)=0.05$
+\item
+\begin{enumerate}
+\item  $A$ = конспект забыт в 8-ой аудитории
+
+$B$ = конспект был забыт в другом месте (не в аудиториях)
+
+$C$ = конспект не был найден в первых 7-и
+
+$\P(A|C)=\frac{\P(A)}{\P(C)}=\frac{0.3\cdot 0.1}{0.3\cdot 0.3+0.7}=\frac{3}{79}$
+\item $\P(B|C)=\frac{\P(B)}{\P(C)}=\frac{0.7}{0.79}=\frac{70}{79}$
+\end{enumerate}
+
+\item[11-А.] О чем молчал учебник биологии 9 класса\ldots
+
+Если:
+\begin{enumerate}
+  \item  ген имеет всего две аллели;
+  \item  в популяции бесконечное число организмов;
+  \item  одна аллель потомка выбирается наугад из аллелей матери, другая
+— из аллелей отца;
+\end{enumerate}
+то распределение генотипов стабилизируется уже в первом поколении (!!!).
+
+То есть $AA_{1}=AA_{2}=\ldots$ и $Aa_{1}=Aa_{2}=\ldots$.
+
+Вероятность получить 'A' от родителя для рождающихся в поколении 1
+равна: $p_{1}=0.3\cdot 1+0.6\cdot 0.5 + 0,1\cdot 0=0.6$.
+
+В общем виде: $p_{1}=AA_{0}+0.5\cdot Aa_{0}$
+
+$AA_{1}=p_{1}^{2}=0.36$, $Aa_{1}=2p_{1}(1-p_{1})=0.48$.
+
+$p_{2}=AA_{1}+0.5\cdot Aa_{1}=p_{1}^{2}+p_{1}(1-p_{1})=p_{1}$
+\item[11-Б.]
+\begin{enumerate}
+\item Безразлично.
+Если я решил попробовать угадать $n$ букв, то выигрыш вырастает, а
+вероятность падает в 2 раза по сравнению c попыткой угадать $(n-1)$-у букву.
+\item В силу предыдущего пункта: $\E(X)=\frac{1}{2}\cdot 50=25$.
+\end{enumerate}
+\end{enumerate}
