@@ -733,9 +733,110 @@ I(\theta) &= n
 \subsection[2008-2009]{\hyperref[sec:kr_03_2008_2009]{2008-2009}}
 \label{sec:sol_kr_03_2008_2009}
 
+\subsection[2007-2008. Демо]{\hyperref[sec:kr_03_2007_2008_demo]{2007-2008. Демо}}
+\label{sec:sol_kr_03_2007_2008_demo}
+
+
+Заметим, что $\hat{a}_{n}\geq a$.
+
+$\P(|\hat{a}_{n}-a|>\varepsilon)=\P(\hat{a}_{n} a>\varepsilon)=
+\P(\hat{a}_{n}>a+\varepsilon)=\P(\min\{X_{1},X_{2},\ldots,X_{n}\}>a+\varepsilon)= \\
+=\P(X_{1}>a+\varepsilon \cap X_{2}> a+\varepsilon\cap \ldots)=
+\P(X_{1}>a+\varepsilon)\cdot \P(X_{2}>a+\varepsilon)\cdot \ldots=
+\left(\int_{a+\varepsilon}^{\infty}e^{a-t}dt\right)^{n}=\left(e^{-\varepsilon}\right)^{n}=e^{-n\varepsilon}$
+
+$\lim_{n\to\infty} e^{-n\varepsilon} =0$
+
+Оценка смещена при любых $n$, хотя смещение с ростом $n$ убывает
 
 \subsection[2007-2008]{\hyperref[sec:kr_03_2007_2008]{2007-2008}}
 \label{sec:sol_kr_03_2007_2008}
+
+Да, Нет, Да, Нет, Нет, Да, Нет, Да, Да, Нет
+
+
+\begin{enumerate}
+\item
+\begin{enumerate}
+\item $[13.61;14.39]$
+\item Отвергается ($t_{obs} = -2.12$, $t_{crit} = -1.29$)
+\item $P_{value} \approx 0.017$
+\end{enumerate}
+\item Заменяем числа на цифры 0 и 1 (0 — меньше 19 цветков), (1 — больше).
+
+$\hat{p}=\frac{8}{25}=0.32$
+
+$H_{0}$: $p=0.5$
+
+$H_{a}$: $p\neq 0.5$
+
+$Z=\frac{0.32-0.5}{\sqrt{\frac{0.5\cdot 0.5}{25}}}=-1.8$
+
+При уровне значимости 5\%, $Z_{critical}=1.96$. Значит, гипотеза $H_{0}$ не отвергается.
+\item
+\begin{enumerate}
+\item $\hat{a}=\frac{5-\bar{X}}{10}$
+\item Да, является
+\end{enumerate}
+\item $L=-\frac{n}{2}\ln(a)-\frac{na}{8}-\frac{\sum X_{i}^{2}}{8a}+c$
+
+$L'=0$ равносильно $\hat{a}^{2}+4\hat{a}+4=4+\frac{\sum X_{i}^{2}}{n}$
+
+$\hat{a}=-2+\sqrt{4+\frac{\sum X_{i}^{2}}{n}}$
+\item $F_{29.39}=\frac{32}{20}=1.6$
+
+$F_{crit}=1.74$
+
+Гипотеза о том, что дисперсия одинакова не отвергается.
+\item $\chi^{2}_{observed}=1.15$
+
+$\chi^{2}_{2,5\%}=5.99$
+
+Правдоподобно.
+\item
+\begin{enumerate}
+\item $p=0.7\cdot 0.8+ 0.3\cdot 0.7=0.77$
+\item $p=\frac{0.7\cdot0.8\cdot0.2}{0.7\cdot 0.8\cdot 0.2 + 0.7\cdot 0.2 \cdot 0.3}=\frac{8}{11}$
+\end{enumerate}
+\item
+\begin{enumerate}
+\item Заметим, что $\hat{a}_{n}\leq a$.
+\begin{multline*}
+\P(|\hat{a}_{n}-a|>\varepsilon)=\P(-(\hat{a}_{n}-a)>\varepsilon)=\P(\hat{a}_{n}<a-\varepsilon)=
+\P(\max\{X_{1},X_{2}, \ldots, X_{n}\}<a-\varepsilon)= \\
+=\P(X_{1}<a-\varepsilon \cap X_{2}< a-\varepsilon\cap \ldots)=
+\P(X_{1}<a-\varepsilon)\cdot \P(X_{2}<a-\varepsilon)\cdot \ldots=(1-\varepsilon)^{n}
+\end{multline*}
+$\lim_{n\to\infty} (1-\varepsilon)^{n} =0$
+\item Нет, не является ни при каких $n$, хотя смещение с ростом $n$ убывает.
+\end{enumerate}
+\item[9-А.] Да, \url{http://en.wikipedia.org/wiki/Simpson's_paradox}
+\item[9-Б.]
+\begin{enumerate}
+\item Пусть истинные веса слитков равны $x$, $y$ и $z$.
+
+Назовем оценку буквой $\hat{x}$, $\hat{x}=aX+bY+cZ$.
+
+Несмещённость: $\E(\hat{x})=a\E(X)+b\E(Y)+c\E(Z)=ax+by+c(x+y)=x$
+
+$a+c=1$, $b+c=0$
+
+$\hat{x}=(1-c)X+(-c)Y+cZ$
+
+Эффективность: $\Var(\hat{x})=((1-c)^{2}+c^{2}+c^{2})\cdot \sigma^{2}=(3c^{2}-2c+1)\sigma^{2}$
+
+Чтобы минимизировать дисперсию, нужно выбрать $c=1/3$.
+
+То есть $\hat{x}=\frac{2}{3}X-\frac{1}{3}Y+\frac{1}{3}Z$.
+\item $\Var(\hat{x})=\frac{2}{3}\sigma^{2}$
+
+$\Var\left(\frac{X_{1}+X_{2}}{2}\right)=\frac{1}{2}\sigma^{2}$
+
+Усреднение двух взвешиваний первого слитка лучше.
+\end{enumerate}
+\end{enumerate}
+
+
 
 \subsection[2006-2007]{\hyperref[sec:kr_03_2006_2007]{2006-2007}}
 \label{sec:sol_kr_03_2006_2007}
