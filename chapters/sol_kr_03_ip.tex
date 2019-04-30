@@ -7,7 +7,112 @@
 \subsection[2018-2019]{\hyperref[sec:kr_03_ip_2018_2019]{2018-2019}}
 \label{sec:sol_kr_03_ip_2018_2019}
 
+\begin{enumerate}
+\item
+\begin{enumerate}
+\item[a)] Пары ортогональных величин: $(X_1,X_2);(X_2,X_3);(X_1,X_3);(S_2,X_3)$.
+\item[б)] В качестве примера можно взять величину $X_2-X_1$, поскольку 
+\begin{align*}\Cov(X_2-X_1,S_3)=\Cov(X_2-X_1,X_1+X_2+X_3)=\\=\Var(X_1)-\Var(X_1)=0\end{align*}
+\item[в)] Как известно из линейной алгебры, если вектор $X^-_1$ – проекция $X_1$ на $S_3$, a $X^{\perp}_1$ – соответствующая ортогональная составляющая, то $X^{\perp}_1=X_1-X^-_1=X_1-\alpha S_3$, причем 
+\[\langle X^{\perp}_1,S_3\rangle=\Cov(X^{\perp}_1,S_3)=\Cov(X^{\perp}_1,X_1-\alpha S_3)=0,\] 
+откуда 
+\[\alpha=\frac{\Cov(X_1,S_3)}{\Var(S_3)}.\]
+Тогда искомая проекция равна 
+\[\frac{\Cov(X_1,S_3)}{S_3}\cdot S_3\]
+\item[г)] Искомая проекция равна ортогональной составляющей из предыдущего пункта:
+\[X^{\perp}_1=X_1-\frac{\Cov(X_1,S_3)}{S_3}\cdot S_3\]
+\item[д)] Пусть соответствующие проекции равны $X^-_1=\alpha S_3$, $X^-_2=\beta S_3$. Тогда 
+\begin{align*}\Cov(X^-_1,X^-_2)=\Cov(X_1-\alpha S_3,X_2 - \beta S_3)=\\=-\alpha\Var(X_1)-\beta\Var(X_2)+3\alpha\beta\Var(X_1)
+\end{align*}
+\begin{align*}\Var(X^-_1)=\Var(X_1-\alpha S_3)=\Var(X_1)+3\alpha^2\Var(X_1)-\\-2\alpha\Var(X_1)\end{align*}
 
+Заметим, что дисперсии величин $X_1$ и $X_2$ равны, поэтому
+\begin{align*}\Var(X^-_2)=\Var(X_2-\beta S_3)=\Var(X_1)+3\beta^2\Var(X_1)-\\-2\beta\Var(X_1)\end{align*}
+
+Таким образом, искомая частная корреляция равна
+\[\frac{(3\alpha\beta-\alpha-\beta)\Var(X_1)}{\Var(X_1)\sqrt{(1-2\alpha+3\alpha^2)(1-2\beta+3\beta^2)}}\]
+
+Вспоминаем, что 
+\begin{align*}\alpha=\frac{\Cov(X_1,S_3)}{\Var(S_3)}=\frac{\Var(X_1)}{3\Var(X_1)}=\\ \frac{1}{3}=\beta,\end{align*}
+
+откуда искомая частная корреляция равна -1/2.
+\end{enumerate}
+\item 
+\begin{enumerate}
+\item[a)] Как видно по графику, $x-1\geq \ln x$.
+\begin{minipage}{0.6\textwidth}
+\begin{center}
+\includegraphics[scale=0.5]{images/sol_kr_3_ip.png}
+\end{center}
+\end{minipage}
+\item[б)] По свойству из предыдущего пункта, 
+\[\frac{q(x)}{p(x)}-1\geq\ln \left(\frac{q(x)}{p(x)}\right)\]
+\[g(x)-p(x)\geq\ p(x)\ln q(x)-p(x)\ln p(x)\]
+\[-p(x)\ln q(x)\geq -p(x)\ln p(x)+p(x)-q(x)\]
+Интегрируем:
+\begin{align*}-\int^{+\infty}_{-\infty}p(x)\ln q(x) \; dx \geq -\int^{+\infty}_{-\infty}p(x)\ln p(x) \; dx +\\+ \int^{+\infty}_{-\infty}p(x) \; dx - \int^{+\infty}_{-\infty}q(x) \; dx\end{align*}
+Поскольку $p(x)$, $q(x)$ – функции плотности, интегрирование каждой из них дает единицу, а значит, последние два слагаемых в сумме равны нулю:
+\[-\int^{+\infty}_{-\infty}p(x)\ln q(x) \; dx \geq -\int^{+\infty}_{-\infty}p(x)\ln p(x) \; dx\]
+\item[в)] Функция плотности для величины $X \sim \cN(\mu;\sigma^2)$ есть
+\[q(x)=\frac{1}{\sqrt{2\pi\sigma^2}}\exp{\left(\frac{-(x-\mu)^2}{2\sigma^2}\right)}\]
+\[\ln q(x)=-\frac{1}{2}\ln 2\pi-\ln \sigma-\frac{(x-\mu)^2}{2\sigma^2}\]
+\[H(q)=-\int^{+\infty}_{-\infty}q(x)\ln q(x) \; dx\]
+\begin{align*}H(q)=\int^{+\infty}_{-\infty}q(x)\left(\frac{1}{2}\ln 2\pi+\ln \sigma+\frac{(x-\mu)^2}{2\sigma^2}\right) \; dx=\\
+=\frac{1}{2}\ln 2\pi + \ln \sigma+\int^{+\infty}_{-\infty}q(x)\frac{(x-\mu)^2}{2\sigma^2} \; dx=\\\frac{1}{2}\ln 2\pi + \ln \sigma+\int^{+\infty}_{-\infty}\frac{\left(q(x)x^2-2x\mu q(x)+\mu^2q(x)\right)}{2\sigma^2} \; dx=\\
+=\frac{1}{2}\ln 2\pi + \ln \sigma+\frac{1}{2\sigma^2}\left(\E(X^2)-2\mu\E(X)+\mu^2\right)=\\
+=\frac{1}{2}\ln 2\pi + \ln \sigma+\frac{1}{2\sigma^2}\left(\sigma^2+\mu^2-2\mu^2+\mu^2\right)=\\=\frac{1}{2}\ln 2\pi + \ln \sigma+\frac{1}{2}\end{align*}
+\item[г)] Пусть $Y \sim \cN(\mu_N;\sigma^2_N)$, ее функция плотности равна $q(x)$. Тогда, аналогично пункту в), получаем:
+\begin{align*}CE_p(q)=\frac{1}{2}\ln 2\pi + \ln \sigma_N+\\+\int^{+\infty}_{-\infty}\frac{\left(p(x)x^2-2x\mu_N p(x)+\mu^2_Np(x)\right)}{2\sigma^2_N} \; dx=\\
+=\frac{1}{2}\ln 2\pi + \ln \sigma_N+\frac{1}{2\sigma^2_N}\left(\sigma^2+\mu^2-2\mu\mu_N+\mu^2_N\right)\end{align*}
+\end{enumerate}
+\item
+\begin{enumerate}
+\item[a)] 
+\[L=\lambda e^{-\lambda x_1}\lambda e^{-\lambda x_2}\]
+\[\ln L=2\ln \lambda-\lambda(x_1+x_2)\]
+\[(\ln L)'_\lambda=\frac{2}{\hat{\lambda}}-(x_1+x_2)=0\]
+\[\hat{\lambda}=\frac{2}{x_1+x_2}=\frac{1}{15}\]
+\item[б)] Пусть $X$ – время обслуживания одного клиента, тогда
+\[\P(X>30)=\int^{+\infty}_{30}\lambda e^{-\lambda x} \; dx \Rightarrow\]
+\[L=\lambda e^{-\lambda x_1}\lambda e^{-\lambda x_2}\prod^{10}_{i=3}\int^{+\infty}_{30}\lambda e^{-\lambda x_i} \; dx_i\]
+\begin{align*}\int^{+\infty}_{30}\lambda e^{-\lambda x} \; dx=-e^{-\lambda x}|^{+\infty}_{30}=e^{-30\lambda}
+\end{align*}
+\[L=\lambda e^{-\lambda x_1}\lambda e^{-\lambda x_2}\prod^{10}_{i=3}e^{-30\lambda}\]
+\[\ln L=2\ln \lambda-\lambda(x_1+x_2)-240\lambda\]
+\[(\ln L)'_\lambda=\frac{2}{\hat{\lambda}}-(x_1+x_2)-240=0\]
+\[\hat{\lambda}=\frac{1}{135}\]
+\item[в)] 
+\[\P(X<30)=1-\int^{+\infty}_{30}\lambda e^{-\lambda x} \; dx=1-e^{-30\lambda} \Rightarrow\]
+\[L=\prod^{2}_{i=1}(1-e^{-30\lambda})\prod^{10}_{i=3}e^{-30\lambda}\]
+\[\ln L=2\ln (1-e^{-30\lambda})-240\lambda\]
+\[(\ln L)'_\lambda=\frac{2\cdot30e^{-30\hat{\lambda}}}{1-e^{-30\hat{\lambda}}}-240=0\]
+\[\hat{\lambda}\approx0,0074\]
+\item[г)]
+\[L=\lambda e^{-\lambda x_1}\lambda e^{-\lambda x_2}\prod^{10}_{i=3}e^{-20\lambda}\]
+\[\ln L=2\ln \lambda-\lambda(x_1+x_2)-160\lambda\]
+\[\hat{\lambda}=\frac{1}{95}\]
+\end{enumerate}
+\item У всех одинаковые шансы стать Самым Главным, что можно доказать методом математической индукции. Пусть всего метеорологов двое. Тогда, если у них монеты упали одной стороной, они оба выбывают, если разными, то игра продолжается. Если метеорологов трое и у всех монеты выпали одной стороной, то все выходят из игры; если у одного из них выпала решка, а у остальных – орлы, то первый выбывает, получаем ситуацию для двух и т.д.
+\item 
+\begin{enumerate}
+\item[a)] Обозначим количества орлов в соответствующие дни за $S_1$, $S_2$, $S_3$, а количества бросков – за $n_1$, $n_2$, $n_3$. По своим данным Анна может построить оценку $\hat{p}_a=(S_1+S_2)/(n_1+n_2)$, а Белла – $\hat{p}_b=(S_2+S_3)/(n_2+n_3)$. Наша цель – минимизировать по $\alpha$ дисперсию взвешенной оценки:
+\[\Var(\hat{p})=\Var(\alpha\hat{p}_a+(1-\alpha)\hat{p}_b)\]
+Или явно:
+\begin{align*}
+    p(1-p)\left(\frac{\alpha}{n_1+n_2}+\frac{(1-\alpha)^2}{n_2+n_3}+\frac{2\alpha(1-\alpha)n_2}{(n_1+n_2)(n_2+n_3)}\right)
+\end{align*}
+\[\alpha^*=\frac{n_1}{n_1+n_3}\]
+Оценки: $\hat{p}_a=0.4$, $\hat{p}_b=0.5$, $\alpha=0.4$, $\hat{p}=0.46$.
+
+\item[б)] Подставим найденную $\alpha^*$ в формулу для дисперсии и получим
+\[\frac{n_1n_2+n_2n_3+n_1n_3}{(n_1+n_2)(n_1+n_3)(n_2+n_3)}p(1-p)\]
+При наших данных $\hat{\Var}(\hat{p})\approx0.0458$.
+
+\item[в)] Используя стандартную формулу, получим:
+\[[\hat{p}-1.96se(\hat{p});\hat{p}+1.96se(\hat{p})],\]
+где $\hat{p}=0.46$ и $se(\hat{p})\approx0.214$.
+\end{enumerate}
+\end{enumerate}
 
 \subsection[2017-2018]{\hyperref[sec:kr_03_ip_2017_2018]{2017-2018}}
 \label{sec:sol_kr_03_ip_2017_2018}
