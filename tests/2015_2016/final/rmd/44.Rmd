@@ -1,12 +1,12 @@
 Question
 ========
-Последовательность оценок $\hat{\theta}_1, \hat{\theta}_2, ...$ называется состоятельной, если
+Последовательность оценок $\hat{\theta}_1, \hat{\theta}_2, \ldots$ называется состоятельной, если
   
 
 Answerlist
 ----------
-*  $P(|\hat\theta_n - \theta | > t) \to 0$ для всех $t > 0$
-*  $\Var(\hat\theta_n) \geq Var(\hat\theta_n + 1)$
+*  $\P(|\hat\theta_n - \theta | > t) \to 0$ для всех $t > 0$
+*  $\Var(\hat\theta_n) \geq \Var(\hat\theta_n + 1)$
 *  $\Var(\hat\theta_n) \to 0$
 *  $\E(\hat\theta_n) = \theta$
 *  $\E(\hat\theta_n) \to \theta$

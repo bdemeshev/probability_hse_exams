@@ -5,10 +5,10 @@ Question
 
 Answerlist
 ----------
-*  $(0,A)$, где $A$ таково, что $F_\chi^2_n-1 (A) =\alpha$
-*  $(0,A)$, где $A$ таково, что $F_\chi^2_n-1 (A) =1-\alpha$
-*  $(-\infty,A)$, где $A$ таково, что $F_\chi^2_n-1 (A) =\alpha$
-*  $(A,+\infty)$, где $A$ таково, что $F_\chi^2_n-1 (A) =1-\alpha$
+*  $(0,A)$, где $A$ таково, что $F_{\chi^2_n-1} (A) =\alpha$
+*  $(0,A)$, где $A$ таково, что $F_{\chi^2_n-1} (A) =1-\alpha$
+*  $(-\infty,A)$, где $A$ таково, что $F_{\chi^2_n-1} (A) =\alpha$
+*  $(A,+\infty)$, где $A$ таково, что $F_{\chi^2_n-1} (A) =1-\alpha$
 
 Solution
 ========

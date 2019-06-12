@@ -7,7 +7,7 @@ options(texi2dvi = latex_executable)
 
 files_all <- list.files('rmd/', pattern = "*.Rmd", full.names = TRUE)
 files_all
-useful = 1:min(60, length(files_all))
+useful = 1:min(55, length(files_all))
 files_sample = files_all[useful]
 files_sample
 

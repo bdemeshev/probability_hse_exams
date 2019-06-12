@@ -1,23 +1,23 @@
 Question
 ========
 Пусть $X = (X_1, \ldots , X_n)$ — случайная выборка из экспоненциального распределения с плотностью
-\[
+$$
 f(x; \theta) =
 \begin{cases}
 \frac{1}{\theta}\exp(-\frac{x}{\theta}) \text{ при } x \geq 0,  \\
 0 \text{ при } x < 0.
 \end{cases}
-\]
+$$
 Информация Фишера $I_n(p)$ равна:
   
 
 Answerlist
 ----------
-*  $\fracn
+*  $\frac{n}{\theta^2}$
 *  $n \theta^2$
-*  $\frac\theta^2
-*  $\frac\theta
-*  $\fracn
+*  $\frac{\theta^2}{n}$
+*  $\frac{\theta}{n}$
+*  $\frac{n}{\theta}$
 
 Solution
 ========
