@@ -1,10 +1,110 @@
-\newpage
-\thispagestyle{empty}
-\section{Контрольная работа 4. ИП}
+\documentclass[12pt]{article}
+
+\usepackage{tikz} % картинки в tikz
+\usepackage{microtype} % свешивание пунктуации
+
+\usepackage{array} % для столбцов фиксированной ширины
+
+\usepackage{indentfirst} % отступ в первом параграфе
+
+\usepackage{sectsty} % для центрирования названий частей
+\allsectionsfont{\centering}
+
+\usepackage{amsmath} % куча стандартных математических плюшек
+
+\usepackage{comment}
+\usepackage{amsfonts}
+
+\usepackage[top=2cm, left=1cm, right=1cm, bottom=2cm]{geometry} % размер текста на странице
+
+\usepackage{lastpage} % чтобы узнать номер последней страницы
+
+\usepackage{enumitem} % дополнительные плюшки для списков
+%  например \begin{enumerate}[resume] позволяет продолжить нумерацию в новом списке
+\usepackage{caption}
+
+\usepackage{hyperref} % гиперссылки
+
+\usepackage{multicol} % текст в несколько столбцов
 
 
-\subsection[2018-2019]{\hyperref[sec:sol_kr_04_ip_2018_2019]{2018-2019}}
-\label{sec:kr_04_ip_2018_2019}
+\usepackage{fancyhdr} % весёлые колонтитулы
+\pagestyle{fancy}
+\lhead{Теория вероятностей-ВШЭ}
+\chead{2019-06-01}
+\rhead{Контрольная 4. Бери от жизни всё :)}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+\usepackage{todonotes} % для вставки в документ заметок о том, что осталось сделать
+% \todo{Здесь надо коэффициенты исправить}
+% \missingfigure{Здесь будет Последний день Помпеи}
+% \listoftodos --- печатает все поставленные \todo'шки
+
+
+% более красивые таблицы
+\usepackage{booktabs}
+% заповеди из докупентации:
+% 1. Не используйте вертикальные линни
+% 2. Не используйте двойные линии
+% 3. Единицы измерения - в шапку таблицы
+% 4. Не сокращайте .1 вместо 0.1
+% 5. Повторяющееся значение повторяйте, а не говорите "то же"
+
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+
+\setmainlanguage{russian}
+\setotherlanguages{english}
+
+% download "Linux Libertine" fonts:
+% http://www.linuxlibertine.org/index.php?id=91&L=1
+\setmainfont{Linux Libertine O} % or Helvetica, Arial, Cambria
+% why do we need \newfontfamily:
+% http://tex.stackexchange.com/questions/91507/
+\newfontfamily{\cyrillicfonttt}{Linux Libertine O}
+
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ} % для списков с русскими буквами
+\setlist[enumerate, 2]{label=\asbuk*),ref=\asbuk*}
+
+%% эконометрические сокращения
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\E}{E}
+\DeclareMathOperator{\plim}{plim}
+\def \hb{\hat{\beta}}
+\def \hs{\hat{\sigma}}
+\def \htheta{\hat{\theta}}
+\def \s{\sigma}
+\def \hy{\hat{y}}
+\def \hY{\hat{Y}}
+\def \v1{\vec{1}}
+\def \e{\varepsilon}
+\def \he{\hat{\e}}
+\def \z{z}
+\def \hVar{\widehat{\Var}}
+\def \hCorr{\widehat{\Corr}}
+\def \hCov{\widehat{\Cov}}
+\def \cN{\mathcal{N}}
+\def \P{\mathbb{P}}
+
+
+\begin{document}
+
+
+\fbox{
+  \begin{minipage}{42em}
+    Имя, фамилия и номер группы:\vspace*{3ex}\par
+    \noindent\dotfill\vspace{2mm}
+  \end{minipage}
+}
 
 Ровно 189 лет назад, 1 июня 1830 британский учёный Джон Росс открыл северный магнитный полюс :)
 
@@ -33,8 +133,7 @@
 
 \begin{enumerate}
     \item Докажите формулу.
-    \item Нарисуйте картинку к этой формуле. На картинке подпишите прямой угол, катеты и гипотенузу. 
-    Явно запишите каждый вектор. Объясните, почему треугольник, действительно, прямоугольный. 
+    \item Нарисуйте картинку к этой формуле. На картинке подпишите прямой угол, катеты и гипотенузу.
 \end{enumerate}
 
 
@@ -93,63 +192,4 @@ $\tilde \ell(a)=\E(\ell(a))$.
 
 \end{enumerate}
 
-
-
-\subsection[2017-2018]{\hyperref[sec:sol_kr_04_ip_2017_2018]{2017-2018}}
-\label{sec:kr_04_ip_2017_2018}
-
-
-Напутствие в добрый путь:
-
-\begin{enumerate}
-\item Работа сдаётся только в виде запроса pull-request на гитхаб-репозиторий.
-
-\item Имя файла должно быть вида \verb|ivanov_ivan_161_kr_4.Rmd|.
-
-\item Также фамилию и имя нужно указать в шапке документа в поле \verb|author| :)
-
-\item Если нужно, то установите пакеты \verb|tidyverse|, \verb|maxLik|, \verb|nycflights13|.
-\end{enumerate}
-
-
-\begin{enumerate}
-\item Симулируем бурную деятельность!
-В качестве параметра $k$ в задаче используй число букв в своей фамилии в именительном падеже :)
-
-Каждый день Василий съедает случайное количество булочек, которое распределено по Пуассону с параметром $10$. Логарифм затрат в рублях на каждую булочку распределён нормально $N(2, 1)$.
-Андрей каждый день съедает биномиальное количество булочек $Bin(2k, 0.5)$. Затраты Андрей на каждую булочку распределены равномерно на отрезке $[2;20]$.
-
-\begin{enumerate}
-\item Сколько в среднем тратит Василий на булочки за день?
-\item Чему равна дисперсия дневных расходов Василия?
-\item Какова вероятность того, что за один день Василий потратит больше денег,
-чем Андрей?
-\item Какова условная вероятность того,
-что Василий за день съел больше булочек, чем Андрей,
-если известно, что Василий потратил больше денег?
-\end{enumerate}
-
-
-\item Сражаемся с реальностью!
-В пакете \verb|nycflights13| встроен набор данных \verb|weather| о погоде в разные дни в разных аэропортах.
-\begin{enumerate}
-	\item Постройте гистограмму переменной влажность, \verb|humid|.
-	У графика подпишите оси!
-
-\item Постройте диаграмму рассеяния переменных влажность и количество осадков,
-precip. У графика подпишите оси!
-
-Посчитайте выборочное среднее и выборочную дисперсию влажности и количества осадков.
-
-\item С помощью максимального правдоподобия оцените параметр $\mu$,
-предположив, что наблюдения за влажностью имеют нормальное $N\left(\mu, 370\right)$-распределение и независимы.
-Постройте 95\%-ый доверительный интервал для $\mu$.
-
-\item С помощью максимального правдоподобия оцените параметр $\sigma^2$,
-предположив, что наблюдения за влажностью имеют нормальное $N\left(60, \sigma^2\right)$-распределение и независимы.
-Постройте 95\%-ый доверительный интервал для $\sigma^2$.
-
-Если при численной оптимизации параметр $\sigma^2$ становится отрицательным,
-можно задать параметры по-другому, например, $\sigma^2 = \exp(\gamma)$.
-\end{enumerate}
-\end{enumerate}
+\end{document}
