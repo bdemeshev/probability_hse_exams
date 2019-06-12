@@ -4,11 +4,11 @@ Question
 
 Answerlist
 ----------
-*  $\hat \mu_ML = -23$, $\hat\mu_MM = -23$
-*  $\hat \mu_ML > -23$, $\hat\mu_MM = -23$
-*  $\hat \mu_ML = -23$, $\hat\mu_MM > -23$
-*  $\hat \mu_ML < -23$, $\hat\mu_MM = -23$
-*  $\hat \mu_ML = -23$, $\hat\mu_MM < -23$
+*  $\hat \mu_{ML} = -23$, $\hat\mu_{MM} = -23$
+*  $\hat \mu_{ML} > -23$, $\hat\mu_{MM} = -23$
+*  $\hat \mu_{ML} = -23$, $\hat\mu_{MM} > -23$
+*  $\hat \mu_{ML} < -23$, $\hat\mu_{MM} = -23$
+*  $\hat \mu_{ML} = -23$, $\hat\mu_{MM} < -23$
 
 Solution
 ========

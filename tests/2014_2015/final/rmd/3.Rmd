@@ -5,11 +5,11 @@ Question
 
 Answerlist
 ----------
-*  $\sqrt[k](k+1) \overlineX^k$
-*  $\sqrt[k](k+1) \overlineX^k$
-*  $\sqrt[k]k \overlineX^k$
-*  $\sqrt[k]k \overlineX^k$
-*  $\sqrt[k+1](k+1) \overlineX^k$
+*  $\sqrt[k](k+1) \overline{X^k}$
+*  $\sqrt[k](k+1) \overline{X}^k$
+*  $\sqrt[k]k \overline{X}^k$
+*  $\sqrt[k]k \overline{X^k}$
+*  $\sqrt[k+1](k+1) \overline{X}^k$
 
 Solution
 ========

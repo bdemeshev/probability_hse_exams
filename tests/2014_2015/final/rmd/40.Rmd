@@ -5,11 +5,11 @@ Question
 
 Answerlist
 ----------
-*  $(\theta+1)x^n\theta$
-*  $\sum (\theta+1)x_i^\theta$
-*  $(\theta+1)^\sum x_i$
-*  $(\sum x_i)^\theta$
-*  $(\theta+1)^n\prod x_i^\theta$
+*  $(\theta+1)^n\prod x_i^{\theta}$
+*  $\sum (\theta+1)x_i^{\theta}$
+*  $(\theta+1)x^{n\theta}$
+*  $(\theta+1)^{\sum x_i}$
+*  $(\sum x_i)^{\theta}$
 
 Solution
 ========
@@ -26,5 +26,5 @@ Meta-information
 ================
 exname: 40
 extype: schoice
-exsolution: 00001
+exsolution: 10000
 exshuffle: 5

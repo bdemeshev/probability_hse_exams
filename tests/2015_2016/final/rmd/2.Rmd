@@ -5,11 +5,11 @@ Question
 
 Answerlist
 ----------
-*  $t_m+n-2$
-*  $F_m+1,n+1$
-*  $F_m,n$
-*  $F_m-1,n-1$
-*  $t_m+n-1$
+*  $t_{m+n-2}$
+*  $F_{m+1,n+1}$
+*  $F_{m,n}$
+*  $F_{m-1,n-1}$
+*  $t_{m+n-1}$
 
 Solution
 ========
