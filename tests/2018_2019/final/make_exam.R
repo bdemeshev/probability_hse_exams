@@ -8,7 +8,7 @@ options(texi2dvi = latex_executable)
 files_all <- list.files('rmd/', pattern = "*.Rmd", full.names = TRUE)
 files_all
 useful = 1:min(60, length(files_all))
-files_sample = files_all[useful]
+files_sample = files_all[c(2, 3, 5, 8, 9, 11, 12, 17, 18, 20, 21, 23, 26, 27, 29, 33, 35, 36, 37, 38, 39, 40, 46, 47, 48, 54, 55, 56, 59, 60)]
 files_sample
 
 exams2pdf_source = function(files_sample, n_vars = 1, add_seed = 777, 
@@ -76,5 +76,6 @@ exams2pdf_source = function(files_sample, n_vars = 1, add_seed = 777,
   return(TRUE)
 }
 
-exams2pdf_source(files_sample, n_vars = 1, title = "Теория вероятностей!", institution = "Поехали :)", nops = FALSE, shuffle = FALSE)
+exams2pdf_source(files_sample, date = "2019-06-18",
+                 n_vars = 4, title = "Теория вероятностей!", institution = "Поехали :)", nops = TRUE, shuffle = TRUE)
 
