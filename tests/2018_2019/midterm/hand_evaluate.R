@@ -88,6 +88,8 @@ answers = nops_scanned2tibble(res_vector)
 
 
 ans_files <- c('nops_pdf_cpy/2017_18_pr201_final_the___4.rds', 'nops_pdf_cpy/2017_18_pr201_final_the___3.rds', 'nops_pdf_cpy/2017_18_pr201_final_the___2.rds', 'nops_pdf_cpy/2017_18_pr201_final_the___1.rds')
+
+ans_files = c("pdf_01/the_exam.rds", "pdf_02/the_exam.rds", "pdf_03/the_exam.rds", "pdf_04/the_exam.rds")
 etalon <- NULL
 for (ans_file in ans_files) {
   true_ans <- read_rds(ans_file)
