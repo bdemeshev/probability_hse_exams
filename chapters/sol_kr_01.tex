@@ -148,12 +148,14 @@ x^3, x \in [0, 1]\\
 \]
 
 \item
-$\P(\xi \in [\frac{1}{3}, \frac{3}{2}]) = \int_{\frac{1}{3}}^{1} 3x^2 dx = x^3 |_\frac{1}{3}^{1}  = 1 - \frac{1}{27} = \frac{26}{27}$
-
+\[
+  \P\left(\xi \in \left[\frac{1}{3}, \frac{3}{2}\right]\right) = F(3/2) - F(1/3) = 1 - \frac{1}{27} = \frac{26}{27}
+\]
 \item
-$\P(\xi \le \frac{1}{2} |  \xi \ge \frac{1}{3}) = \frac{\P(\xi \le \frac{1}{2} ,  \xi \ge \frac{1}{3})}{\P(\xi \ge \frac{1}{3})}$
+\[
+	\P\left(\xi \le \frac{1}{2} \mid  \xi \ge \frac{1}{3}\right) = \frac{\P(\xi \le \frac{1}{2} ,  \xi \ge \frac{1}{3})}{\P(\xi \ge \frac{1}{3})} = \frac{(1/2)^3 - (1/3)^3}{1 - (1/3)^3}
+\]
 
-$\P(\xi \in [\frac{1}{3}, \frac{1}{2}])  = \int_{\frac{1}{3}}^{\frac{1}{2}} 3x^2 dx = x^3 |_\frac{1}{3}^{\frac{1}{2}} = \frac{1}{8} - \frac{1}{27} \approx 0.087$
 
 \item
 Так как функция плотности — парабола ветвями вверх $[0, 1]$, на котором она определена,
