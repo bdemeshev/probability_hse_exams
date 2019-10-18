@@ -30,8 +30,7 @@
 в два раза.
 
 \begin{align*}
-\P &= \frac{C^{K-1}_{23}}{C^{K-1}_{25}} \cdot \frac{2}{25-K+1} +  \frac{2 \cdot C^{K-2}_{23}}{C^{K-1}_{25}} \cdot \frac{1}{25-K+1} \\
-&= \frac{23! \cdot (K-1)! \cdot (26-K)! \cdot2}{(K-1)! \cdot (24-K)! \cdot 25! \cdot (26-K)} \\
+\P(\text{Васе повезёт}) &= \frac{C^{K-1}_{23}}{C^{K-1}_{25}} \cdot \frac{2}{25-K+1} +  \frac{2 \cdot C^{K-2}_{23}}{C^{K-1}_{25}} \cdot \frac{1}{25-K+1} \\
 &= \frac{2(25 - K)}{25 \cdot 24} + \frac{2(K-1)}{25 \cdot 24} \\
 &= \frac{48}{25 \cdot 24} = \frac{2}{25}
 \end{align*}
@@ -142,7 +141,7 @@ $\P(\xi = \frac{1}{2}) = 0$ по определению.
 \[
 F_\xi(x) =
 \begin{cases}
-0 x < 0\\
+0, x < 0\\
 x^3, x \in [0, 1]\\
 1, x > 1
 \end{cases}
@@ -219,15 +218,14 @@ $\P(\text{Семь судей проголосуют верно}) = \frac{12!}{7
 \P(A\cap B)= \left(\frac{3}{11}\right)^{11}
 \]
 
-Вероятность условия равна вероятности того, что никто не выйдет на первых пяти
-этажах,
+Вероятность условия равна вероятности того, что никто не выйдет со 2-го по 6-ой этажи,
 \[
-\P(B) = \left(\frac{5}{11}\right)^{11}
+\P(B) = \left(\frac{6}{11}\right)^{11}
 \]
 
 Тогда условная вероятность равна
 \[
-\P(A|B) = \frac{\left(\frac{3}{11}\right)^{11}}{\left(\frac{5}{11}\right)^{11}} =  \left(\frac{3}{5}\right)^{11} \approx 0.003
+\P(A|B) = \frac{\left(\frac{3}{11}\right)^{11}}{\left(\frac{6}{11}\right)^{11}} =  \left(\frac{1}{2}\right)^{11} \approx 0.0005
 \]
 \end{enumerate}
 \end{enumerate}
