@@ -3,6 +3,32 @@
 \thispagestyle{empty}
 \section{Решения контрольной работы 2}
 
+\subsection[2018-2019]{\hyperref[sec:kr_02_2018_2019]{2018-2019}}
+\label{sec:sol_kr_02_2018_2019}
+
+\begin{enumerate}
+\item[2.]
+\begin{enumerate}
+    \item Пусть $A$ - количество очков 1-го стрелка, $B$ - количество очков 2-го, тогда $\E(A) = 50 \cdot 0.5 = 25$, $\Var(A) = 50 \cdot 0.5 \cdot (1 - 0.5) = 12.5$.
+        
+    $$\P(A \ge 15) = \P\biggl(\dfrac{A - \E(A)}{\sqrt{\Var(A)}} \ge \dfrac{15 - \E(A)}{\sqrt{\Var(A)}}\biggl) 
+    = \P\biggl(\dfrac{A - 25}{\sqrt{12.5}} \ge -2.83\biggl)$$
+    
+    Согласно ЦПТ, $\dfrac{A - 25}{\sqrt{12.5}} \sim N(0, 1)$, значит $\P\biggl(\dfrac{A - 25}{\sqrt{12.5}} \ge -2.83\biggl) = 0.9977$
+    
+    \item $\P(A > B) = \P(A - B > 0)$.~~Пусть $Z = A - B$.
+    
+    \[\E(Z) = \E(A) - \E(B) = 25 - 30 = -5\] 
+    
+    \[\Var(Z) = \Var(A) + \Var(B) - 2\cov(A, B) = 12.5 + 12 = 24.5\] 
+    
+    \[\P(A - B > 0) = \P(Z > 0) = \P\biggl(\frac{Z + 5}{\sqrt{24.5}} > \frac{5}{\sqrt{24.5}}\biggl) = \P\biggl(\frac{Z + 5}{\sqrt{24.5}} > 1.01\biggl)\]
+    
+    Согласно ЦПТ, $\dfrac{Z + 5}{\sqrt{24.5}} \sim N(0, 1)$, значит $\P\biggl(\dfrac{Z + 5}{\sqrt{24.5}} > 1.01\biggl) = 0.1562$
+\end{enumerate}
+
+\end{enumerate}
+
 \subsection[2017-2018]{\hyperref[sec:kr_02_2017_2018]{2017-2018}}
 \label{sec:sol_kr_02_2017_2018}
 
