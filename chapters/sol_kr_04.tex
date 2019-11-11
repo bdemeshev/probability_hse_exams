@@ -5,6 +5,93 @@
 \subsection[2018-2019]{\hyperref[sec:kr_04_2018_2019]{2018-2019}}
 \label{sec:sol_kr_04_2018_2019}
 
+\begin{enumerate} 
+	2. \ \ а$)$
+	\par\bigskip
+	$\gamma = 95\% \Rightarrow \alpha / 2 = 0.025$ \ \ \ \ $1 - \alpha / 2 = 0.975$ 
+	\par\bigskip
+	$T=\frac{\bar x - p}{\sqrt{\frac{\bar x \cdot (1 - \bar x) }{n}}}\backsim N(0;1)$ \ \ \ \ \ $\bar x = \frac{10}{100} = 0.1$
+	\par\bigskip
+	$\bar x - B \cdot \sqrt{\frac{\bar x \cdot (1 - \bar x) }{n}} \le p \le \bar x - A \cdot \sqrt{\frac{\bar x \cdot (1 - \bar x) }{n}}$
+	\par\bigskip
+	$0.1 - 1.96 \cdot \sqrt{\frac{0.1 \cdot 0.9}{100}} \le p \le 0.1 + 1.96 \cdot \sqrt{\frac{0.1 \cdot 0.9}{100}}$
+	\par\bigskip
+	$0.0412 \le p \le 0.1588$
+	\par\bigskip
+	б$)$
+	
+	$\alpha = 0.05$
+	
+	\[
+	\left\{
+	\begin{array}{ll}
+	H_0: p = \frac{1}{100} \\
+	H_1: p > \frac{1}{100}
+	\end{array}
+	\right.
+	\]
+	
+	$T_{\mbox{табл}} = 1.64$
+	\par\bigskip
+	$T_{\mbox{расчёт}} = \frac{\bar x - p}{\sqrt{\frac{\bar x \cdot (1 - \bar x) }{n}}} = \frac{0.1 - 0.01}{\sqrt{\frac{0.1 \cdot 0.9}{100}}} = 3$ 
+	\par\bigskip
+	$T_{\mbox{табл}} < T_{\mbox{расчёт}} \Rightarrow$ Гипотеза $H_0$ отвергается 
+	\par\bigskip
+	$P-value = 1 - 0.9987 = 0.0013 \approx 0$
+	\par\bigskip
+	в$)$
+	
+	$\alpha = 0.1$
+	
+	\[
+	\left\{
+	\begin{array}{ll}
+	H_0: p_1 = \frac{3}{7}, p_2 = \frac{3}{7}, p_3 = \frac{1}{7} \\
+	H_1: p_1 \neq \frac{3}{7}, p_2 \neq \frac{3}{7}, p_3 \neq \frac{1}{7} 
+	\end{array}
+	\right.
+	\]
+	
+	$LR = -2 \cdot (l(\hat \theta_R)-l(\hat \theta_{UR})) \backsim \chi^2 (r)$ \ \ \ здесь $\chi_3^2$
+	\par\bigskip
+	$\Lambda(x_1, ...,x_n;\theta) = \prod\nolimits_{i=1}^n P_\theta (\{X_i = x_i\})= p_1^{40} \cdot p_2^{50} \cdot p_3^{10}$
+	\par\bigskip
+	$l((x_1, ...,x_n;\theta)= 40\ln {p_1} + 50\ln {p_2} + 10\ln {p_3} $
+	\par\bigskip
+	$\frac{\delta l}{\delta p} = \frac{40}{p_1} + \frac{50}{p_2} + \frac{10}{p_3}$ \ \ \ \ \ \ получаем: \ \ $\hat p_i = \frac{a_i}{n}$
+	\par\bigskip
+	$l(\hat \theta_R) = 40\ln {\frac{3}{7}} + 50\ln {\frac{3}{7}} + 10\ln {\frac{1}{7}} \approx -95.7$
+	\par\bigskip
+	$l(\hat \theta_{UR}) = 40\ln {\frac{4}{10}} + 50\ln {\frac{5}{10}} + 10\ln {\frac{1}{10}} \approx -94.3$
+	\par\bigskip
+	$LR_{\mbox{расчёт}} = -2 \cdot (-1.4) = 2.8$
+	\par\bigskip
+	$LR_{\mbox{табл}} = 6.25$
+	\par\bigskip
+	$LR_{\mbox{табл}} > LR_{\mbox{расчёт}} \Rightarrow$ Гипотеза $H_0$ не отвергается
+	\par\bigskip
+	г$)$
+	
+	$\alpha = 0.1$
+	
+	\[
+	\left\{
+	\begin{array}{ll}
+	H_0: p_1 = \frac{3}{7}, p_2 = \frac{3}{7}, p_3 = \frac{1}{7} \\
+	H_1: p_1 \neq \frac{3}{7}, p_2 \neq \frac{3}{7}, p_3 \neq \frac{1}{7} 
+	\end{array}
+	\right.
+	\]
+	
+	$W_n = \sum_{i=1}^r\frac{(\nu_i - n \cdot p_i)^2}{n \cdot p_i}\backsim \chi^2 (r-1)$ \ \ \ здесь $\chi_2^2$
+	\par\bigskip
+	$W_{\mbox{расчёт}} = \frac{(40 - 100 \cdot \frac{3}{7})^2}{100 \cdot \frac{3}{7}} + \frac{(50 - 100 \cdot \frac{3}{7})^2}{100 \cdot \frac{3}{7}} + \frac{(10 - 100 \cdot \frac{1}{7})^2}{100 \cdot \frac{1}{7}} \approx 2.58 $
+	\par\bigskip
+	$W_{\mbox{табл}} = 4.61$
+	\par\bigskip
+	$W_{\mbox{табл}} > W_{\mbox{расчёт}} \Rightarrow$ Гипотеза $H_0$ не отвергается
+	
+\end{enumerate} 
 
 
 \subsection[2017-2018]{\hyperref[sec:kr_04_2017_2018]{2017-2018}}
