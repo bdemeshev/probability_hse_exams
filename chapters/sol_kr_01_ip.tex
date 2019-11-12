@@ -9,7 +9,74 @@
 \begin{enumerate}
   \item xxx
   \item xxx
-  \item xxx
+  \item 
+  
+  \begin{minipage}{0.3\textwidth}
+\begin{tikzpicture}[thick]
+	\draw [color=gray, fill=gray!15] circle(2.5cm);
+	\draw (0,0) coordinate [label= below:$O$] (D);
+	\draw[color=teal] (0:-0.4) arc (140:90:0.68cm);
+    \draw[color=teal] (-1.2cm:-0.8cm) node {$\pi - 2\alpha$};
+    \draw[color=purple] (0:-2) arc (17:50:0.5cm);
+    \draw[color=purple] (-8:-1.8) node {$\alpha$};
+    \path[draw] (-2.5,0) coordinate [label= left:$I$] (A)
+            -- node [above] {$x$} (1,2.29)  coordinate [label=above:$X$] (B)
+            -- ( 2.5,0)  coordinate [label=right:$F$] (F);
+    \path[draw] (0.72,2.12) -- (0.91, 1.84) -- (1.17, 2.01);
+    \path[draw] (B) -- (D);
+    \draw (-0.7,2.4) coordinate [label= above:$G$] (G);
+    \path[draw, color=Salmon] (A) -- node [left] {$L$} (G);
+    \path[draw] ( 2.5,0)  coordinate (F)
+            -- (-2.5,0) coordinate [label= left:$I$] (A);
+    \foreach \point in {A,B,D,F,G}
+           \fill [black] (\point) circle (2pt);
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.64\textwidth}
+	\begin{enumerate}
+	\item[$a)$] Пусть $I -$ точка, куда приземлился Илон Маск, \\$G -$ точка, куда приземлилась Грета Тунберг.
+	
+	Так как точки, куда приземлились ребята выбираются судьбой независимо, мы можем зафиксировать $I$ и менять только~$G$.
+	
+	$L \le x \Leftrightarrow$ длина меньшей дуги~$\breve{IG} \le$ длина меньшей дуги~$\breve{IX}$
+	
+	Так как координата Греты распределена равномерно, то:
+	\[
+	F_L (x) = \P(L \le x) =\P(\breve{IG} \le \breve{IX}) = \frac{\breve{IX}}{\breve{IF}} = \frac{\pi r \cdot \frac{\pi - 2\alpha}{\pi}}{\pi r} = \frac{\pi - 2\alpha}{\pi},
+	\] \\[-1.6cm]
+	\begin{flushright}
+	если $x \in [0,1]$
+	\end{flushright}
+	\end{enumerate}
+\end{minipage}
+	
+	\[
+	\cos \alpha = x \Rightarrow \alpha = \arccos x \Rightarrow F_L (x) = \frac{\pi - 2\arccos x}{\pi}, \, \text{если $x \in [0,1]$} \Rightarrow f_L(x)~=~\left\{\begin{array}{rl}
+	\frac{2}{\pi \sqrt{1-x^2}}, & x \in [0,1) \\
+	0, & \text{иначе} \\
+	\end{array}
+	\right.
+	\]
+	
+	Мы рассмотрели только верхнюю часть Луны. Если мы будем рассматривать возможность копать туннель также в нижней части Луны, то в дроби $\P(L \le x) = \frac{\breve{IX}}{\breve{IF}}$ нам нужно будет удвоить и числитель, и знаменатель - отношение, которое мы ищем не изменится $\Rightarrow$ не изменится вероятность.
+	
+	Причем в данной задаче оказалось неважно, какой длины диаметр Луны.
+
+\begin{enumerate}
+	\item[$b)$] В случае объёмной Луны мы будем искать отношение площадей поверхностей.
+	
+	Илон Маск сидит в центре некоторой поляны Луны.
+	Она образована точками, до которых туннель~$L$ не длиннее $x$.
+	\[
+	F_L (x) = \P(L \le x) = \frac{\text{площадь поляны}}{\text{площадь поверхности сферы}} = \frac{2\pi r x^2}{4\pi r^2} = \frac{x^2}{2r} = x^2, \, \text{если $x \in [0,1]$}
+	\]
+	
+	Тогда $f_L(x)~=~\left\{\begin{array}{rl}
+	2x, & x \in [0,1] \\
+	0, & \text{иначе} \\
+	\end{array}
+	\right.$
+\end{enumerate}
   \item xxx
   \item xxx
 \end{enumerate}
