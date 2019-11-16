@@ -29,6 +29,37 @@
     Согласно ЦПТ, $\frac{Z + 5}{\sqrt{24.5}} \sim \cN(0, 1)$, значит $\P\Bigl(\frac{Z + 5}{\sqrt{24.5}} > 1.01\Bigl) = 0.1562$
 \end{enumerate}
 
+\item Известно:
+
+$X$ — сколько рублей тратит Вася на обед
+
+$\E(X) = 300$
+
+$\sqrt{\Var(X)} = 30$
+
+
+\begin{enumerate}
+	\item Воспользуемся неравенством Маркова:
+	
+	\[
+	\P(X \ge a) \le \frac{\E(X)}{a}
+	\]
+	
+	\[
+	\P(X \ge 1000) \le \frac{300}{1000} = 0.3
+	\]
+	
+	\item Воспользуемся неравенством Чебышёва:
+	
+	\[
+	\P(|X - \E(X)| \ge a) \le \frac{\Var(X)}{a^{2}}
+	\]
+	
+	\[
+	\P(|X - 300| \ge 100) \le \frac{900}{10000} = 0.09
+	\]
+\end{enumerate}
+
 \end{enumerate}
 
 \subsection[2017-2018]{\hyperref[sec:kr_02_2017_2018]{2017-2018}}
