@@ -1,0 +1,30 @@
+Question
+========
+  
+Пусть $X_1, \, \ldots, \, X_n$ — случайная выборка и $\ell(\theta)$ — её логарифмическая функция правдоподобия. Тестируется гипотеза $H_0: \theta = 1$. Известно, что $\max_{\theta}\ell(\theta) = -3$, а $\ell(1) = -6$. Чему равно значение статистики отношения правдоподобия?
+
+Answerlist
+----------
+* $6$
+* $0$
+* $3$
+* $-3$
+* $-6$
+
+Solution
+========
+  
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+        
+Meta-information
+================
+exname: bor_14
+extype: schoice
+exsolution: 10000
+exshuffle: 5

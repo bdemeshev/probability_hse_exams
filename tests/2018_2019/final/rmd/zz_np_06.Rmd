@@ -1,0 +1,31 @@
+﻿Question
+========
+
+Для выборки из 100 наблюдений был построен симметричный по вероятности доверительный интервал для доли [0.402,0.598]. Для какого уровня доверия был построен этот доверительный интервал?
+
+
+Answerlist
+----------
+*  0.95
+*  0.99  
+*  0.9
+*  0.8
+*  0.85 
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: np6_di
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,31 @@
+Question
+========
+
+Если функция правдоподобия пропорциональна $a^2(1-a)^6$, априорная плотность пропорциональна $\exp(-a)$, то 
+апостериорная плотность параметра $a$ пропорциональна
+
+Answerlist
+----------
+*  $\frac{a^2(1-a)^6}{\exp(a)}$
+*  $\frac{a^2(1-a)^6}{\exp(-a)}$
+*  $0.5 a^2(1-a)^6 +0.5\exp(a)$
+*  $0.5 a^2(1-a)^6 +0.5\exp(-a)$
+*  $\frac{\exp(-a)}{a^2(1-a)^6}$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: bb01_posterior
+extype: schoice
+exsolution: 10000
+exshuffle: 5

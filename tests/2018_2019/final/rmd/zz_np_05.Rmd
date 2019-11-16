@@ -1,0 +1,31 @@
+Question
+========
+
+Для выборки 1, 2, 3, 4, 5 границы 95%-го доверительного интервала для математического ожидания равны
+
+
+Answerlist
+----------
+*  $[1.04, 4.96]$
+*  $[0.86, 5.14]$
+*  $[3.08, 5.92]$
+*  $[-4.02, 1,02]$
+*  $[1.54, 5.46]$ 
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: np5_di
+extype: schoice
+exsolution: 10000
+exshuffle: 5

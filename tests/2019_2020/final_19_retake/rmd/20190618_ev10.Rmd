@@ -1,0 +1,32 @@
+Question
+========
+
+Математическое ожидание оценки дисперсии $\hat \sigma^2=\frac{1}{n-1}\sum_{i=1}^{n}(X_i - \bar X)^2$ для выборки из распределения Пуассона с $\lambda = 3$, равняется
+
+
+Answerlist
+----------
+* $3$
+* $3/n$ 
+* $1$
+* $9$
+* $9/n$
+
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: ev10
+extype: schoice
+exsolution: 10000
+exshuffle: 5

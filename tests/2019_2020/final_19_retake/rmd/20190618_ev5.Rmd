@@ -1,0 +1,30 @@
+Question
+========
+
+Дана выборка объёма n из стандартного нормального распределения. Математическое ожидание выборочного среднего равняется 
+
+Answerlist
+----------
+*  $0$
+*  $-1$
+*  $1/2$
+*  $1/4$
+*  $1$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: ev5
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,30 @@
+Question
+========
+
+Нормальные случайные величины $X\sim \cN (2,5)$ и $Y\sim\cN (5,2)$ имеют совместное нормальное распределение. Они независимы, если:
+
+Answerlist
+----------
+*  $\E(XY)=10$
+*  $\Corr(X,Y)=1$
+*  $\Corr(X,Y)=-1$
+*  $\Var(XY)=\Cov(X,Y)$
+*  $\P(X>Y)=\P(Y>X)$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: normnezavis
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,37 @@
+Question
+========
+
+Компоненты вектора $X=(X_{1},X_{2},X_{3})$ имеют совместное нормальное распределение: 
+$$
+X\sim\cN \left(
+\begin{bmatrix}1\\1\\1\end{bmatrix},
+\begin{bmatrix}3 & 0.5 & 0.5\\0.5 & 2 & 0.5\\0.5 & 0.5 & 3\end{bmatrix}
+\right).
+$$
+Вероятность $\P(X_{1}>X_{2}+X_{3} )$ равна
+
+Answerlist
+----------
+*  $0.369$
+*  $0.215$
+*  $0.688$
+*  $0.701$
+*  $0.593$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: chiclt
+extype: schoice
+exsolution: 10000
+exshuffle: 5

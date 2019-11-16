@@ -1,0 +1,32 @@
+Question
+========
+  
+Пусть $X_1, \, \ldots, \, X_n$ — случайная выборка из распределения Пуассона с параметром $\lambda > 0$. Известно, что оценка максимального правдоподобия параметра $\lambda$ равна $\bar{X}$. Чему равна оценка максимального правдоподобия для $1 / \lambda$?
+
+Answerlist
+----------
+
+* $1 / \bar{X}$
+* $\bar{X}$
+* $e^{\bar{X}}$
+* $\bar{X} / n$
+* $\ln  \bar{X}$
+
+
+Solution
+========
+  
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+        
+Meta-information
+================
+exname: bor_06
+extype: schoice
+exsolution: 10000
+exshuffle: 5

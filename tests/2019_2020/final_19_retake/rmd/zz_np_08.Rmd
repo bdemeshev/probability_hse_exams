@@ -1,0 +1,31 @@
+﻿Question
+========
+
+Правой границей симметричного по вероятности 95% доверительного интервала для математического ожидания при известной дисперсии 100 по выборке из 121 неотрицательного наблюдения может быть
+
+
+Answerlist
+----------
+*  2.11
+*  1.23  
+*  0.94 
+*  -0.12
+*  1.45 
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: np8_di
+extype: schoice
+exsolution: 10000
+exshuffle: 5

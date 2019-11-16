@@ -1,0 +1,278 @@
+\documentclass[12pt]{article}
+
+\usepackage{tikz} % картинки в tikz
+\usepackage{microtype} % свешивание пунктуации
+\usepackage{array} % для столбцов фиксированной ширины
+\usepackage{comment} % для комментирования целых окружений
+\usepackage{indentfirst} % отступ в первом параграфе
+
+\usepackage{sectsty} % для центрирования названий частей
+\allsectionsfont{\centering}
+
+\usepackage{amsmath, amssymb, amsthm, amsfonts} % куча стандартных математических плюшек
+
+\usepackage[top=2cm, left=1cm, right=1cm, bottom=2cm]{geometry} % размер текста на странице
+\usepackage{lastpage} % чтобы узнать номер последней страницы
+ 
+\usepackage{enumitem} % дополнительные плюшки для списков
+%  например \begin{enumerate}[resume] позволяет продолжить нумерацию в новом списке
+
+\usepackage{caption} % подписи к рисункам
+\usepackage{hyperref} % гиперссылки
+\usepackage{multicol} % текст в несколько столбцов
+
+
+\usepackage{fancyhdr} % весёлые колонтитулы
+\pagestyle{fancy}
+\lhead{Теория вероятностей и математическая статистика, ВШЭ}
+\chead{}
+\rhead{2019-09-20}
+\lfoot{Вариант $\mu$}
+\cfoot{Паниковать запрещается!}
+% \rfoot{Тест}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\usepackage{ifthen} % для написания условий
+
+\usepackage{todonotes} % для вставки в документ заметок о том, что осталось сделать
+% \todo{Здесь надо коэффициенты исправить}
+% \missingfigure{Здесь будет Последний день Помпеи}
+% \listoftodos --- печатает все поставленные \todo'шки
+
+
+% более красивые таблицы
+\usepackage{booktabs}
+% заповеди из докупентации:
+% 1. Не используйте вертикальные линни
+% 2. Не используйте двойные линии
+% 3. Единицы измерения - в шапку таблицы
+% 4. Не сокращайте .1 вместо 0.1
+% 5. Повторяющееся значение повторяйте, а не говорите "то же"
+
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+
+\setmainlanguage{russian}
+\setotherlanguages{english}
+
+% download "Linux Libertine" fonts:
+% http://www.linuxlibertine.org/index.php?id=91&L=1
+\setmainfont{Linux Libertine O} % or Helvetica, Arial, Cambria
+% why do we need \newfontfamily:
+% http://tex.stackexchange.com/questions/91507/
+\newfontfamily{\cyrillicfonttt}{Linux Libertine O}
+
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ} % для списков с русскими буквами
+\setlist[enumerate, 2]{label=\asbuk*),ref=\asbuk*}
+
+%% эконометрические сокращения
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\E}{E}
+\def \hb{\hat{\beta}}
+\def \hs{\hat{\sigma}}
+\def \htheta{\hat{\theta}}
+\def \s{\sigma}
+\def \hy{\hat{y}}
+\def \hY{\hat{Y}}
+\def \v1{\vec{1}}
+\def \e{\varepsilon}
+\def \he{\hat{\e}}
+\def \z{z}
+\def \hVar{\widehat{\Var}}
+\def \hCorr{\widehat{\Corr}}
+\def \hCov{\widehat{\Cov}}
+\def \cN{\mathcal{N}}
+\def \P{\mathbb{P}}
+
+
+\def \putyourname{\fbox{
+    \begin{minipage}{42em}
+      Фамилия, имя, номер группы:\vspace*{3ex}\par
+      \noindent\dotfill\vspace{2mm}
+    \end{minipage}
+  }
+}
+
+\def \checktable{
+
+	\vspace{5pt}
+	Табличка для проверяющих работу:
+
+\vspace{5pt}
+
+	\begin{tabular}{|m{2cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{2cm}|}
+\toprule
+		Тест & 1 &  2 & 3 & 4 & 5 & Итого \\
+\midrule
+		&  &  & & & & \\
+		&  &  & & & & \\
+ \bottomrule
+\end{tabular}
+}
+
+
+
+\def \testtable{
+
+	\vspace{5pt}
+	Внесите сюда ответы на тест:
+
+\vspace{5pt}
+
+\begin{tabular}{|m{2cm}|m{0.6cm}|m{0.6cm}|m{0.6cm}|m{0.6cm}|m{0.6cm}|m{0.6cm}|m{0.6cm}|m{0.6cm}|m{0.6cm}|m{0.6cm}|}
+\toprule
+		Вопрос & 1 &  2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+\midrule
+		Ответ &  &  & & & & & & & & \\
+ \bottomrule
+\end{tabular}
+}
+
+
+
+
+% [1][3] 1 = one argument, 3 = value if missing
+% эта магия создаёт окружение answerlist
+% именно в окружении answerlist записаны варианты ответов в подключаемых exerciseXX
+% просто \begin{answerlist} сделает ответы в три столбца
+% если ответы длинные, то надо в них руками сделать
+% \begin{answerlist}[1] чтобы они шли в один столбец
+\newenvironment{answerlist}[1][3]{
+\begin{multicols}{#1}
+
+\begin{enumerate}[label=\fbox{\emph{\Alph*}},ref=\emph{\alph*}]
+}
+{
+\item Нет верного ответа.
+\end{enumerate}
+\end{multicols}
+}
+
+% BB: unicol version. don't know why \ifthenelse fails in second part of new-env
+\newenvironment{answerlistu}{
+\begin{enumerate}[label=\fbox{\emph{\Alph*}},ref=\emph{\alph*}]
+}
+{
+\item Нет верного ответа.
+\end{enumerate}
+}
+
+
+
+\excludecomment{solution} % without solutions
+
+\theoremstyle{definition}
+\newtheorem{question}{Вопрос}
+
+
+
+\begin{document}
+
+\putyourname
+
+
+%\testtable
+
+%\checktable
+
+\input{tex_01/exercise01}
+\input{tex_01/exercise02}
+\input{tex_01/exercise03}
+\input{tex_01/exercise04}
+\newpage
+\input{tex_01/exercise05}
+\input{tex_01/exercise06}
+\input{tex_01/exercise07}
+\input{tex_01/exercise08}
+\input{tex_01/exercise09}
+\input{tex_01/exercise10}
+\newpage
+\input{tex_01/exercise11}
+\input{tex_01/exercise12}
+\input{tex_01/exercise13}
+\input{tex_01/exercise14}
+\input{tex_01/exercise15}
+\newpage
+\input{tex_01/exercise16}
+\input{tex_01/exercise17}
+\input{tex_01/exercise18}
+\input{tex_01/exercise19}
+\input{tex_01/exercise20}
+\newpage
+\input{tex_01/exercise21}
+\input{tex_01/exercise22}
+\input{tex_01/exercise23}
+\input{tex_01/exercise24}
+\input{tex_01/exercise25}
+\newpage
+\input{tex_01/exercise26}
+\input{tex_01/exercise27}
+\input{tex_01/exercise28}
+\input{tex_01/exercise29}
+\input{tex_01/exercise30}
+ 
+
+
+
+
+
+
+\newpage
+\lfoot{Вариант $\kappa$}
+\setcounter{question}{0}
+
+
+\putyourname
+
+%\testtable
+
+%\checktable
+
+\input{tex_02/exercise01}
+\input{tex_02/exercise02}
+\input{tex_02/exercise03}
+\input{tex_02/exercise04}
+\input{tex_02/exercise05}
+\newpage
+\input{tex_02/exercise06}
+\input{tex_02/exercise07}
+\input{tex_02/exercise08}
+\input{tex_02/exercise09}
+\input{tex_02/exercise10}
+\newpage
+\input{tex_02/exercise11}
+\input{tex_02/exercise12}
+\input{tex_02/exercise13}
+\input{tex_02/exercise14}
+\input{tex_02/exercise15}
+\newpage
+\input{tex_02/exercise16}
+\input{tex_02/exercise17}
+\input{tex_02/exercise18}
+\input{tex_02/exercise19}
+\input{tex_02/exercise20}
+\newpage
+\input{tex_02/exercise21}
+\input{tex_02/exercise22}
+\input{tex_02/exercise23}
+\input{tex_02/exercise24}
+\input{tex_02/exercise25}
+\newpage
+\input{tex_02/exercise26}
+\input{tex_02/exercise27}
+\input{tex_02/exercise28}
+\input{tex_02/exercise29}
+\input{tex_02/exercise30}
+
+
+
+
+
+
+ 
+
+\end{document}

@@ -1,0 +1,38 @@
+Question
+========
+  
+Случайная выборка состоит из одного наблюдения $X_1$, которое имеет плотность распределения
+$$
+  f(x; \, \theta) = \begin{cases}
+    \tfrac{1}{\theta} x e^{-x/\sqrt{\theta}} & \text{при } x > 0,  \\
+    0 & \text{при } x \leq 0,
+  \end{cases}
+$$
+где $\theta > 0$. Чему равна оценка неизвестного параметра $\theta$, найденная с помощью метода максимального правдоподобия?
+
+Answerlist
+----------
+* $X_1^2 / 4$
+* $\ln ^2 X_1$
+* $1 / \ln ^2 X_1$
+* $X_1^2$
+* $X_1^2 / 2$
+
+
+Solution
+========
+  
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+        
+Meta-information
+================
+exname: bor_04
+extype: schoice
+exsolution: 10000
+exshuffle: 5

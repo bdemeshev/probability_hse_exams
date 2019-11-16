@@ -1,0 +1,30 @@
+Question
+========
+
+Пусть $X\sim\mathcal{N}(0,1)$ и $Y\sim\chi^{2}(4)$ — независимые стандартная нормальная и хи-квадрат с четырьмя степенями свободы случайные величины соответственно. Вероятность $\P(X^2>Y)$ равна
+
+Answerlist
+----------
+*  $0.643$
+*  $0.322$
+*  $0.679$
+*  $0.592$
+*  $0.791$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: normchistudent
+extype: schoice
+exsolution: 10000
+exshuffle: 5

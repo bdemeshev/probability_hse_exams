@@ -1,0 +1,32 @@
+Question
+========
+  
+Пусть $X_1, \, \ldots, \, X_n$ — случайная выборка из распределения Бернулли с параметром $p \in (0;\,1)$. Чему равна информация Фишера о параметре $p$, заключенная в двух наблюдениях случайной выборки?
+
+Answerlist
+----------
+* $\tfrac{2}{p(1-p)}$
+* $2p$
+* $2(1 - p)$
+* $2p(1-p)$
+* $\tfrac{2}{p}$
+
+
+
+Solution
+========
+  
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+        
+Meta-information
+================
+exname: bor_07
+extype: schoice
+exsolution: 10000
+exshuffle: 5

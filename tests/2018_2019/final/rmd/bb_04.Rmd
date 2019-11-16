@@ -1,0 +1,31 @@
+Question
+========
+
+Если априорная плотность пропорциональна $\exp(-3a)$,  
+апостериорная плотность параметра $a$ пропорциональна $\exp(-a)$, то логарифм функции правдподобия имеет вид
+
+Answerlist
+----------
+*  $2a + const$
+*  $-4a + const$
+*  $-a + const$
+*  $-3a + const$
+*  $4a + const$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: bb04_posterior_2
+extype: schoice
+exsolution: 10000
+exshuffle: 5

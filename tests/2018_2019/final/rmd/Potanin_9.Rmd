@@ -1,0 +1,31 @@
+Question
+========
+
+Пусть $t_n$ — случайная величина, распределенная по Стьюденту с $n$ степенями свободы. 
+Предел $\lim\limits_{n\to\infty}\P\left(t_{n}^2>1\right)$ равен
+
+Answerlist
+----------
+*  $0.317$
+*  $0.841$
+*  $0.253$
+*  $0.788$
+*  $0.102$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: limstudent
+extype: schoice
+exsolution: 10000
+exshuffle: 5

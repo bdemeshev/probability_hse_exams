@@ -1,0 +1,39 @@
+Question
+========
+  
+Пусть $X_1, \, \ldots, \, X_n$ — случайная выборка из распределения с плотностью распределения
+$$
+  f(x; \, \theta) = \begin{cases}
+    \tfrac{1}{\theta} e^{-x/\theta} & \text{при } x > 0,  \\
+    0 & \text{при } x \leq 0,
+   \end{cases}
+$$
+где $\theta > 0$. Чему равна дисперсия эффективной оценки неизвестного параметра $\theta$?
+
+Answerlist
+----------
+* $\tfrac{\theta^2}{n}$
+* $\theta$
+* $\theta (1 - \theta)$
+* $\theta^2$
+* $\tfrac{n}{\theta^2}$
+
+
+
+Solution
+========
+  
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+        
+Meta-information
+================
+exname: bor_08
+extype: schoice
+exsolution: 10000
+exshuffle: 5

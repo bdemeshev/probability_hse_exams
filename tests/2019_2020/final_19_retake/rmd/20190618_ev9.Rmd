@@ -1,0 +1,32 @@
+Question
+========
+
+Оценка $\hat \theta_n$ называется несмещённой оценкой параметра $\theta$, если
+
+
+Answerlist
+----------
+* $E(\hat \theta_n)=\theta$
+* $E((\hat \theta_n - \theta)^2) \leq E((\tilde \theta - \theta)^2)$ для всех $\tilde \theta \in K$
+* $\hat \theta_n \stackrel{P}{\to} \theta$ при $n\stackrel{}{\to} \infty$
+* $E((\hat \theta_n - \theta)^2) \stackrel{}{\to} 0$ при $n\stackrel{}{\to} \infty$
+* $Var(\hat \theta_n)=(\theta)^2/n$
+
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: ev9
+extype: schoice
+exsolution: 10000
+exshuffle: 5

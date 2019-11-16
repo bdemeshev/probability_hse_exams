@@ -1,0 +1,31 @@
+Question
+========
+
+
+P-value теста и мощность теста
+
+Answerlist
+----------
+*  Не связаны никаким строгим соотношением
+*  P-значение всегда больше мощности
+*  P-значение всегда меньше мощности
+*  Равны
+*  Дают в сумме $1$ 
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: is_q9
+extype: schoice
+exsolution: 10000
+exshuffle: 5
