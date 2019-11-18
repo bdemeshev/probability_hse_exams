@@ -34,7 +34,7 @@
 \end{minipage}
 \begin{minipage}{0.64\textwidth}
 	\begin{enumerate}
-	\item[$a)$] Пусть $I -$ точка, куда приземлился Илон Маск, \\$G -$ точка, куда приземлилась Грета Тунберг.
+	\item Пусть $I$ -- точка, куда приземлился Илон Маск, \\$G$ -- точка, куда приземлилась Грета Тунберг.
 	
 	Так как точки, куда приземлились ребята выбираются судьбой независимо, мы можем зафиксировать $I$ и менять только~$G$.
 	
@@ -42,8 +42,7 @@
 	
 	Так как координата Греты распределена равномерно, то:
 	\[
-	F_L (x) = \P(L \le x) =\P(\breve{IG} \le \breve{IX}) = \frac{\breve{IX}}{\breve{IF}} = \frac{\pi r \cdot \frac{\pi - 2\alpha}{\pi}}{\pi r} = \frac{\pi - 2\alpha}{\pi},
-	\] \\[-1.6cm]
+	F_L (x) = \P(L \le x) =\P(\breve{IG} \le \breve{IX}) = \frac{\breve{IX}}{\breve{IF}} = \frac{\pi r \cdot \frac{\pi - 2\alpha}{\pi}}{\pi r} = \frac{\pi - 2\alpha}{\pi},\]\\[-15mm]
 	\begin{flushright}
 	если $x \in [0,1]$
 	\end{flushright}
@@ -51,11 +50,11 @@
 \end{minipage}
 	
 	\[
-	\cos \alpha = x \Rightarrow \alpha = \arccos x \Rightarrow F_L (x) = \frac{\pi - 2\arccos x}{\pi}, \, \text{если $x \in [0,1]$} \Rightarrow f_L(x)~=~\left\{\begin{array}{rl}
-	\frac{2}{\pi \sqrt{1-x^2}}, & x \in [0,1) \\
-	0, & \text{иначе} \\
-	\end{array}
-	\right.
+	\cos \alpha = x \Rightarrow \alpha = \arccos x \Rightarrow F_L (x) = \frac{\pi - 2\arccos x}{\pi}, \, \text{если $x \in [0,1]$} \Rightarrow f_L(x)
+	= \begin{cases}
+	\frac{2}{\pi \sqrt{1-x^2}}, \text{ если } x \in [0,1] \\
+	0, \text{ иначе}
+	\end{cases}
 	\]
 	
 	Мы рассмотрели только верхнюю часть Луны. Если мы будем рассматривать возможность копать туннель также в нижней части Луны, то в дроби $\P(L \le x) = \frac{\breve{IX}}{\breve{IF}}$ нам нужно будет удвоить и числитель, и знаменатель - отношение, которое мы ищем не изменится $\Rightarrow$ не изменится вероятность.
@@ -63,7 +62,7 @@
 	Причем в данной задаче оказалось неважно, какой длины диаметр Луны.
 
 \begin{enumerate}
-	\item[$b)$] В случае объёмной Луны мы будем искать отношение площадей поверхностей.
+	\item В случае объёмной Луны мы будем искать отношение площадей поверхностей.
 	
 	Илон Маск сидит в центре некоторой поляны Луны.
 	Она образована точками, до которых туннель~$L$ не длиннее $x$.
@@ -71,11 +70,10 @@
 	F_L (x) = \P(L \le x) = \frac{\text{площадь поляны}}{\text{площадь поверхности сферы}} = \frac{2\pi r x^2}{4\pi r^2} = \frac{x^2}{2r} = x^2, \, \text{если $x \in [0,1]$}
 	\]
 	
-	Тогда $f_L(x)~=~\left\{\begin{array}{rl}
-	2x, & x \in [0,1] \\
-	0, & \text{иначе} \\
-	\end{array}
-	\right.$
+	Тогда $f_L(x)= \begin{cases}
+	2x, \text{ если } x \in [0,1] \\
+	0, \text{ иначе} \\
+	\end{cases}$
 \end{enumerate}
   \item xxx
   \item xxx
