@@ -1,0 +1,30 @@
+Question
+========
+
+Последовательность оценок $\hat \theta_n$ называется состоятельной для параметра $\theta$, если
+
+Answerlist
+----------
+* $\hat \theta_n \stackrel{P}{\to} \theta$ при $n\stackrel{}{\to} \infty$
+* $\E((\hat \theta_n - \theta)^2) \stackrel{}{\to} 0$ при $n\stackrel{}{\to} \infty$
+* $\E(\hat \theta_n)=\theta$
+* $\Var(\hat \theta_n)=(\theta)^2/n$
+* $\E((\hat \theta_n - \theta)^2) \leq \E((\tilde \theta - \theta)^2)$ для всех $\tilde \theta \in K$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: ev7
+extype: schoice
+exsolution: 10000
+exshuffle: 5

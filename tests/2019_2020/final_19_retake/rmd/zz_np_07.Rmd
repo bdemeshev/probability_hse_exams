@@ -1,0 +1,31 @@
+﻿Question
+========
+
+В 90% симметричный по вероятности доверительный интервал для дисперсии, построенный по выборке из 31 наблюдений с несмещенной оценкой дисперсией 20 попадают следующие значения:    
+
+
+Answerlist
+----------
+*  16, 21, 26
+*  4, 9, 14  
+*  7, 12, 17 
+*  10, 15, 20
+*  13, 18, 23 
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: ip2_distribution
+extype: schoice
+exsolution: 10000
+exshuffle: 5

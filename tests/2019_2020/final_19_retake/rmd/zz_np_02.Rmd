@@ -1,0 +1,31 @@
+﻿Question
+========
+
+При построении доверительного интервала для разности долей при больших выборках размеров $m$ и $n$ используется распределение
+
+
+Answerlist
+----------
+* $N(0;1)$
+* $t_{m+n-2}$
+* $F_{m-1, n-1}$
+* $t_{m+n}$
+* $F_{n,m}$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: np2_di
+extype: schoice
+exsolution: 10000
+exshuffle: 5

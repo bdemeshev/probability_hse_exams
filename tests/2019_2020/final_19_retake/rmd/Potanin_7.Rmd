@@ -1,0 +1,30 @@
+Question
+========
+
+Случайные величины $X$ и $Y$ имеют совместное нормальное распределение, а $x\in[1,2]$ — константа. При любом $x$ верно неравенство
+
+Answerlist
+----------
+*  $\Var(Y|X=x)\leq \Var(Y)$
+*  $\Var(Y|X=x)\geq \Var(Y)$
+*  $\E(Y|X=x)\leq \E(Y)$
+*  $\E(Y|X=x)\geq \E(Y)$
+*  $\Corr(X,Y)\ne0$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: varcond
+extype: schoice
+exsolution: 10000
+exshuffle: 5

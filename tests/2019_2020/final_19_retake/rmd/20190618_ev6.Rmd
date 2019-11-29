@@ -1,0 +1,30 @@
+Question
+========
+
+Дана выборка 100 наблюдений из стандартного нормального распределения. Дисперсия выборочного среднего равняется 
+
+Answerlist
+----------
+*  $1/100$
+*  $1/10$
+*  $1$
+*  $1/2$
+*  $1/12$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: ev6
+extype: schoice
+exsolution: 10000
+exshuffle: 5

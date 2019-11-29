@@ -1,0 +1,34 @@
+Question
+========
+  
+Истинное значение параметра $\theta$ равно $2$, в случайной выборке 100 наблюдений, а информация Фишера о параметре $\theta$, заключенная в одном наблюдении равна $I_1(\theta) = 9$.
+Распределение оценки максимального правдоподобия $\hat{\theta}$ похоже на
+
+Answerlist
+----------
+
+* $\cN(2, \, 1/900)$
+* $\cN(2, \, 9)$
+* $\cN(2, \, 1/9)$
+* $\cN(2, \, 1/3)$
+* $\cN(2, \, 1/30)$
+
+
+
+Solution
+========
+  
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+        
+Meta-information
+================
+exname: bor_09
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,31 @@
+﻿Question
+========
+
+При расчете доверительного интервала с помощью дельта метода по выборке из распределения Стьюдента, состоящей из 100 наблюдений, используется следующее распределение
+
+
+Answerlist
+----------
+* $\cN(0, 1)$
+* $t_{98}$
+* $F_{99, 99}$
+* $t_{96}$
+* $t_{100}$ 
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: np10_di
+extype: schoice
+exsolution: 10000
+exshuffle: 5

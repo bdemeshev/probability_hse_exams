@@ -1,0 +1,30 @@
+Question
+========
+
+Дана выборка объёма n из равномерного на отрезке [0,2] распределения. Эмпирическая (выборочная) функция распределения в точке $x=1.5$ стремится по вероятности при $n \stackrel{}{\to} \infty$ к 
+
+Answerlist
+----------
+*  $0.75$
+*  $0.25$
+*  $0.5$
+*  $0$
+*  $1$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: ev3
+extype: schoice
+exsolution: 10000
+exshuffle: 5

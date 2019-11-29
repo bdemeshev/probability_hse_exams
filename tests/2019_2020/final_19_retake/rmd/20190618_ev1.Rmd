@@ -1,0 +1,30 @@
+Question
+========
+
+Дана реализация выборки: -1, 1, 0, 2. Выборочный начальный момент второго порядка равен
+
+Answerlist
+----------
+*  $1.5$
+*  $0.5$
+*  $0$
+*  $1$
+*  $1.2$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: ev1
+extype: schoice
+exsolution: 10000
+exshuffle: 5

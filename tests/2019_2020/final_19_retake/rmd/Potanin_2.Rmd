@@ -1,0 +1,30 @@
+Question
+========
+
+Длины катетов в сантиметрах прямоугольного треугольника являются модулями независимых стандартных нормальных случайных величин. Какую длину не превысит гипотенуза этого треугольника с вероятностью $0.95$?
+
+Answerlist
+----------
+*  $5.99$
+*  $0.1$
+*  $4.61$
+*  $0.21$
+*  $0.68$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: treugolnik
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,32 @@
+Question
+========
+
+При построения доверительного интервала для разности математических ожиданий в двух нормальных независимых выборках размером $m$ и $n$ в случае равных известных дисперсий используется распределение
+
+
+Answerlist
+----------
+
+* $\cN(0, 1)$
+* $t_{m+n-2}$
+* $F_{m-1, n-1}$
+* $F_{m,n}$
+* $t_{m+n}$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: np1_di
+extype: schoice
+exsolution: 10000
+exshuffle: 5

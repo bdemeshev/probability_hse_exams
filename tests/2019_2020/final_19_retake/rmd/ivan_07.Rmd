@@ -1,0 +1,30 @@
+Question
+========
+
+Монетку подбросили 100 раз, 60 раз выпал орёл. Значение тестовой статистики при проверке гипотезы $H_0: p = 0.5$ может быть равно 
+
+Answerlist
+----------
+*  $2$
+*  $0.2$
+*  $0.5$
+*  $0.6$
+*  $0.4$
+
+Solution
+========
+
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+
+Meta-information
+================
+exname: is_q7
+extype: schoice
+exsolution: 10000
+exshuffle: 5

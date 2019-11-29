@@ -1,0 +1,477 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage{graphicx,color}
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{verbatim,url,fancyvrb,ae}
+\usepackage{multicol,a4wide,pdfpages}
+\usepackage{booktabs,longtable,eurosym,textcomp}
+\IfFileExists{sfmath.sty}{
+  \RequirePackage[helvet]{sfmath}
+}{}
+
+\DefineVerbatimEnvironment{Sinput}{Verbatim}{fontshape=sl}
+\DefineVerbatimEnvironment{Soutput}{Verbatim}{}
+\DefineVerbatimEnvironment{Scode}{Verbatim}{fontshape=sl}
+\newenvironment{Schunk}{}{}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\renewcommand{\rmdefault}{phv}
+\renewcommand{\sfdefault}{phv}
+
+\setlength{\parskip}{0.7ex plus0.1ex minus0.1ex}
+\setlength{\parindent}{0em}
+\setlength{\textheight}{29.6cm} 
+\setlength{\oddsidemargin}{-2.54cm} 
+\setlength{\evensidemargin}{-2.54cm} 
+\setlength{\topmargin}{-2.54cm} 
+\setlength{\headheight}{0cm} 
+\setlength{\headsep}{0cm} 
+\setlength{\footskip}{0cm} 
+\setlength{\unitlength}{1mm} 
+\usepackage{chngpage}
+
+%% compatibility with pandoc
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%% to support different lengths of registration numbers
+\newif\ifregseven
+\newif\ifregeight
+\newif\ifregnine
+\newif\ifregten
+
+\regseventrue
+\regeightfalse
+\regninefalse
+\regtenfalse
+
+\ifregseven
+  \def\namecenter{72.5}
+  \def\namewidth{105}
+  \def\namechecked{123}
+  \def\nameline{90}
+  \def\regcenter{159}
+  \def\regleft{131}
+  \def\regleftt{139}
+  \def\regleftb{133}
+  \def\regleftn{129}
+  \def\regwidth{56}
+  \def\regwidthn{60}
+  \def\regnum{7}
+  \def\regnumt{6}
+\fi
+
+\ifregeight
+  \def\namecenter{65.0}
+  \def\namewidth{90}
+  \def\namechecked{108}
+  \def\nameline{90}
+  \def\regcenter{155}
+  \def\regleft{123}
+  \def\regleftt{131}
+  \def\regleftb{125}
+  \def\regleftn{121}
+  \def\regwidth{64}
+  \def\regwidthn{68}
+  \def\regnum{8}
+  \def\regnumt{7}
+\fi
+
+\ifregnine
+  \def\namecenter{62.5}
+  \def\namewidth{85}
+  \def\namechecked{103}
+  \def\nameline{85}
+  \def\regcenter{151}
+  \def\regleft{115}
+  \def\regleftt{123}
+  \def\regleftb{117}
+  \def\regleftn{113}
+  \def\regwidth{72}
+  \def\regwidthn{76}
+  \def\regnum{9}
+  \def\regnumt{8}
+\fi
+
+\ifregten
+  \def\namecenter{60.0}
+  \def\namewidth{80}
+  \def\namechecked{98}
+  \def\nameline{80}
+  \def\regcenter{147}
+  \def\regleft{107}
+  \def\regleftt{115}
+  \def\regleftb{109}
+  \def\regleftn{105}
+  \def\regwidth{80}
+  \def\regwidthn{84}
+  \def\regnum{10}
+  \def\regnumt{9}
+\fi
+
+%% for exams2pdf
+\newenvironment{question}{\item}{}
+\newenvironment{solution}{\comment}{\endcomment}
+\newenvironment{answerlist}{\renewcommand{\labelenumi}{(\alph{enumi})}\begin{samepage}\begin{enumerate}}{\end{enumerate}\end{samepage}}
+
+%% additional header commands
+\makeatletter
+\newcommand{\ID}[1]{\def\@ID{#1}}
+\newcommand{\Date}[1]{\def\@Date{#1}}
+%
+\newcommand{\nopsinstitution}[1]{\def\@nopsinstitution{#1}}
+\newcommand{\nopstitle}[1]{\def\@nopstitle{#1}}
+\newcommand{\nopscourse}[1]{\def\@nopscourse{#1}}
+%
+\newcommand{\PersonalData}[1]{\def\@PersonalData{#1}}
+\newcommand{\FamilyName}[1]{\def\@FamilyName{#1}}
+\newcommand{\GivenName}[1]{\def\@GivenName{#1}}
+\newcommand{\Signature}[1]{\def\@Signature{#1}}
+\newcommand{\RegistrationNumber}[1]{\def\@RegistrationNumber{#1}}
+\newcommand{\Checked}[1]{\def\@Checked{#1}}
+\newcommand{\NoChanges}[1]{\def\@NoChanges{#1}}
+\newcommand{\DocumentType}[1]{\def\@DocumentType{#1}}
+\newcommand{\DocumentID}[1]{\def\@DocumentID{#1}}
+\newcommand{\Scrambling}[1]{\def\@Scrambling{#1}}
+\newcommand{\Replacement}[1]{\def\@Replacement{#1}}
+\newcommand{\MarkCarefully}[1]{\def\@MarkCarefully{#1}}
+\newcommand{\NotMarked}[1]{\def\@NotMarked{#1}}
+\newcommand{\Or}[1]{\def\@Or{#1}}
+\newcommand{\MarkExampleA}[1]{\def\@MarkExampleA{#1}}
+\newcommand{\MarkExampleB}[1]{\def\@MarkExampleB{#1}}
+\newcommand{\MarkExampleC}[1]{\def\@MarkExampleC{#1}}
+\newcommand{\MarkExampleD}[1]{\def\@MarkExampleD{#1}}
+\newcommand{\MarkExampleE}[1]{\def\@MarkExampleE{#1}}
+\newcommand{\Warning}[1]{\def\@Warning{#1}}
+\newcommand{\Answers}[1]{\def\@Answers{#1}}
+\newcommand{\FillAnswers}[1]{\def\@FillAnswers{#1}}
+\newcommand{\Point}[1]{\def\@Point{#1}}
+\newcommand{\Points}[1]{\def\@Points{#1}}
+
+\ID{YYMMDD00001}
+\Date{YYYY-MM-DD}
+%
+\nopsinstitution{R University}
+\nopstitle{Exam}
+\nopscourse{}
+%
+\PersonalData{Personal Data}
+\FamilyName{Family Name}
+\GivenName{Given Name}
+\Signature{Signature}
+\RegistrationNumber{Registration Number}
+\Checked{checked}
+\NoChanges{In this section no modifications of the data must be made!}
+\DocumentType{Type}
+\DocumentID{Exam ID}
+\Scrambling{Scrambling}
+\Replacement{Replacement}
+\MarkCarefully{Please mark the boxes carefully}
+\NotMarked{Not marked}
+\Or{or}
+\MarkExampleA{72}
+\MarkExampleB{80}
+\MarkExampleC{102}
+\MarkExampleD{109}
+\MarkExampleE{115}
+\Warning{This document is scanned automatically. Please keep clean and do not bend or fold. For filling in the document please use a \textbf{blue or black pen}. \\ \textbf{Only clearly marked and positionally accurate crosses will be processed!}}
+\Answers{Answers}
+\FillAnswers{In the following please fill in your answers.}
+\Point{point}
+\Points{points}
+
+\Date{2019-09-27}
+\ID{19092700778}
+\nopsinstitution{Поехали :)}
+\nopstitle{Теория вероятностей!}
+\nopscourse{}
+\newcommand{\mylogo}{}
+\PersonalData{Личные данные}
+\FamilyName{Фамилия}
+\GivenName{Имя}
+\Signature{Подпись}
+\RegistrationNumber{Идентификационный номер}
+\Checked{Проверено}
+\NoChanges{В этом блоке \textbf{не нужно} ничего менять.\\}
+\DocumentType{Тип}
+\DocumentID{Код экзамена}
+\Scrambling{Перемешивание}
+\Replacement{{\footnotesize Замена}}
+\MarkCarefully{Отмечайте ответы аккуратно крестиком}
+\NotMarked{Не отмечено}
+\Or{или}
+\MarkExampleA{88}
+\MarkExampleB{96}
+\MarkExampleC{119}
+\MarkExampleD{125}
+\MarkExampleE{132}
+\Warning{Этот лист будет сканироваться. Не сгибайте и не пачкайте лист. Используйте \textbf{синюю или чёрную ручку}. \\ \textbf{Засчитываются только корректно расположенные крестики!}}
+\Answers{Ответы}
+\FillAnswers{Внесите ответы}
+\Point{б.}
+\Points{б.}
+\usepackage[OT2]{fontenc}
+\usepackage[russian]{babel}
+\renewcommand{\rmdefault}{wncyss}
+\renewcommand{\sfdefault}{wncyss}
+\input{../header.tex}
+
+\newcommand{\myID}{\@ID}
+\newcommand{\myDate}{\@Date}
+%
+\newcommand{\myinstitution}{\@nopsinstitution}
+\newcommand{\mytitle}{\@nopstitle}
+\newcommand{\mycourse}{\@nopscourse}
+%
+\newcommand{\myPersonalData}{\@PersonalData}
+\newcommand{\myFamilyName}{\@FamilyName}
+\newcommand{\myGivenName}{\@GivenName}
+\newcommand{\mySignature}{\@Signature}
+\newcommand{\myRegistrationNumber}{\@RegistrationNumber}
+\newcommand{\myChecked}{\@Checked}
+\newcommand{\myNoChanges}{\@NoChanges}
+\newcommand{\myDocumentType}{\@DocumentType}
+\newcommand{\myDocumentID}{\@DocumentID}
+\newcommand{\myScrambling}{\@Scrambling}
+\newcommand{\myReplacement}{\@Replacement}
+\newcommand{\myMarkCarefully}{\@MarkCarefully}
+\newcommand{\myNotMarked}{\@NotMarked}
+\newcommand{\myOr}{\@Or}
+\newcommand{\myMarkExampleA}{\@MarkExampleA}
+\newcommand{\myMarkExampleB}{\@MarkExampleB}
+\newcommand{\myMarkExampleC}{\@MarkExampleC}
+\newcommand{\myMarkExampleD}{\@MarkExampleD}
+\newcommand{\myMarkExampleE}{\@MarkExampleE}
+\newcommand{\myWarning}{\@Warning}
+\newcommand{\myAnswers}{\@Answers}
+\newcommand{\myFillAnswers}{\@FillAnswers}
+\newcommand{\myPoint}{\@Point}
+\newcommand{\myPoints}{\@Points}
+
+\makeatother
+
+\markboth{\textsf{{\mytitle}: {\myID}}}{\textsf{{\mytitle}: {\myID}}}
+\pagestyle{myheadings}
+\begin{document} 
+
+
+\thispagestyle{empty}
+\begin{picture}(210,290) 
+\thicklines 
+
+% position marks for scanning
+\put(17.5,13){\line(1,0){5}} \put(20,10.5){\line(0,1){5}} 
+\put(187.5,13){\line(1,0){5}} \put(190,10.5){\line(0,1){5}} 
+\put(157.5,270){\line(1,0){5}} \put(160,267.5){\line(0,1){5}} 
+\put(27.5,270){\line(1,0){5}} \put(30,267.5){\line(0,1){5}} 
+
+% personal data box
+\put(\namecenter,244){\makebox(0,0){\textsf{\myPersonalData}}} 
+\put(20,198){\framebox(\namewidth,43){}} \thinlines 
+\multiput(20,217)(0,12){2}{\line(1,0){\nameline}} \thicklines 
+\put(21,236){\makebox(0,5)[l]{\textsf{\myFamilyName:}}} 
+\put(21,224){\makebox(0,5)[l]{\textsf{\myGivenName:}}} 
+\put(21,212){\makebox(0,5)[l]{\textsf{\mySignature:}}} 
+\put(\namechecked,200){\makebox(0,0)[rb]{\scriptsize{\textsf{\myChecked}}}} 
+
+% registration number box
+\put(\regcenter,244){\makebox(0,0){\textsf{\myRegistrationNumber}}} 
+\put(\regleft,233){\framebox(\regwidth,8){}} \thinlines 
+\multiput(\regleftt,233)(8,0){\regnumt}{\line(0,1){1.5}} \thicklines 
+\multiput(\regleftb,163)(8,0){\regnum}{\begin{picture}(0,0) 
+\multiput(0,0)(0,7){10}{\framebox(4,4){}}\end{picture}}
+\newcounter{nr3}
+
+\multiput(\regleftn,228)(0,-7){10}{\begin{picture}(0,0) 
+\multiput(0,0)(\regwidthn,0){2}{\makebox(0,0){\textsf{\arabic{nr3}}}}
+\end{picture} \stepcounter{nr3}} 
+% general instructions and logo
+\IfFileExists{\mylogo}{\put(175,251){\includegraphics[height=2.51cm,keepaspectratio]{\mylogo}}}{}
+\put(40,270){\makebox(0,0)[bl]{\textsf{\textbf{\LARGE{\myinstitution}}}}}
+\put(20,147){\parbox{170mm}{\textsf{\myWarning}}} 
+
+% mark examples
+\put(20,158){\makebox(0,0)[l]{\textsf{\myMarkCarefully:}}}
+\put(\myMarkExampleB,158){\makebox(0,0)[l]{\textsf{\myNotMarked:}}}
+\put(\myMarkExampleD,158){\makebox(0,0)[l]{\textsf{\myOr}}}
+\put(\myMarkExampleA,157){\framebox(4,4){}} 
+\put(\myMarkExampleA,157){\line(1,1){4}} \put(\myMarkExampleA,161){\line(1,-1){4}} 
+\put(\myMarkExampleA.2,157){\line(1,1){3.8}} \put(\myMarkExampleA.2,161){\line(1,-1){3.8}} 
+\put(\myMarkExampleA,157.2){\line(1,1){3.8}} \put(\myMarkExampleA,160.8){\line(1,-1){3.8}} 
+\put(\myMarkExampleC,157){\framebox(4,4){}} 
+\put(\myMarkExampleE,158){\colorbox{black}{\framebox(2,2){}}} 
+
+
+% title and date
+\put(40,262){\parbox[t]{120mm}{\large{\textsf{\textbf{{\mytitle} {\myDate}}}}}}
+
+% boxes for answers (inlcuding labels and separators)
+
+\put(43,138){\makebox(0,0){\textsf{{\myAnswers} 1 - 15}}}
+\put(27,132){\makebox(0,0)[b]{\textsf{a}}}
+\put(35,132){\makebox(0,0)[b]{\textsf{b}}}
+\put(43,132){\makebox(0,0)[b]{\textsf{c}}}
+\put(51,132){\makebox(0,0)[b]{\textsf{d}}}
+\put(59,132){\makebox(0,0)[b]{\textsf{e}}}
+\put(27,18){\makebox(0,0)[b]{\textsf{a}}}
+\put(35,18){\makebox(0,0)[b]{\textsf{b}}}
+\put(43,18){\makebox(0,0)[b]{\textsf{c}}}
+\put(51,18){\makebox(0,0)[b]{\textsf{d}}}
+\put(59,18){\makebox(0,0)[b]{\textsf{e}}}
+
+\put(72,18){\line(0,1){121}}
+\put(107,138){\makebox(0,0){\textsf{{\myAnswers} 16 - 30}}}
+\put(91,132){\makebox(0,0)[b]{\textsf{a}}}
+\put(99,132){\makebox(0,0)[b]{\textsf{b}}}
+\put(107,132){\makebox(0,0)[b]{\textsf{c}}}
+\put(115,132){\makebox(0,0)[b]{\textsf{d}}}
+\put(123,132){\makebox(0,0)[b]{\textsf{e}}}
+\put(91,18){\makebox(0,0)[b]{\textsf{a}}}
+\put(99,18){\makebox(0,0)[b]{\textsf{b}}}
+\put(107,18){\makebox(0,0)[b]{\textsf{c}}}
+\put(115,18){\makebox(0,0)[b]{\textsf{d}}}
+\put(123,18){\makebox(0,0)[b]{\textsf{e}}}
+\put(21,128){\makebox(0,0){\textsf{1}}}
+\multiput(25,126)(8,0){5}{\framebox(4,4){}}
+\put(21,121){\makebox(0,0){\textsf{2}}}
+\multiput(25,119)(8,0){5}{\framebox(4,4){}}
+\put(21,114){\makebox(0,0){\textsf{3}}}
+\multiput(25,112)(8,0){5}{\framebox(4,4){}}
+\put(21,107){\makebox(0,0){\textsf{4}}}
+\multiput(25,105)(8,0){5}{\framebox(4,4){}}
+\put(21,100){\makebox(0,0){\textsf{5}}}
+\multiput(25,98)(8,0){5}{\framebox(4,4){}}
+\put(21,90){\makebox(0,0){\textsf{6}}}
+\multiput(25,88)(8,0){5}{\framebox(4,4){}}
+\put(21,83){\makebox(0,0){\textsf{7}}}
+\multiput(25,81)(8,0){5}{\framebox(4,4){}}
+\put(21,76){\makebox(0,0){\textsf{8}}}
+\multiput(25,74)(8,0){5}{\framebox(4,4){}}
+\put(21,69){\makebox(0,0){\textsf{9}}}
+\multiput(25,67)(8,0){5}{\framebox(4,4){}}
+\put(21,62){\makebox(0,0){\textsf{10}}}
+\multiput(25,60)(8,0){5}{\framebox(4,4){}}
+\put(21,52){\makebox(0,0){\textsf{11}}}
+\multiput(25,50)(8,0){5}{\framebox(4,4){}}
+\put(21,45){\makebox(0,0){\textsf{12}}}
+\multiput(25,43)(8,0){5}{\framebox(4,4){}}
+\put(21,38){\makebox(0,0){\textsf{13}}}
+\multiput(25,36)(8,0){5}{\framebox(4,4){}}
+\put(21,31){\makebox(0,0){\textsf{14}}}
+\multiput(25,29)(8,0){5}{\framebox(4,4){}}
+\put(21,24){\makebox(0,0){\textsf{15}}}
+\multiput(25,22)(8,0){5}{\framebox(4,4){}}
+\put(85,128){\makebox(0,0){\textsf{16}}}
+\multiput(89,126)(8,0){5}{\framebox(4,4){}}
+\put(85,121){\makebox(0,0){\textsf{17}}}
+\multiput(89,119)(8,0){5}{\framebox(4,4){}}
+\put(85,114){\makebox(0,0){\textsf{18}}}
+\multiput(89,112)(8,0){5}{\framebox(4,4){}}
+\put(85,107){\makebox(0,0){\textsf{19}}}
+\multiput(89,105)(8,0){5}{\framebox(4,4){}}
+\put(85,100){\makebox(0,0){\textsf{20}}}
+\multiput(89,98)(8,0){5}{\framebox(4,4){}}
+\put(85,90){\makebox(0,0){\textsf{21}}}
+\multiput(89,88)(8,0){5}{\framebox(4,4){}}
+\put(85,83){\makebox(0,0){\textsf{22}}}
+\multiput(89,81)(8,0){5}{\framebox(4,4){}}
+\put(85,76){\makebox(0,0){\textsf{23}}}
+\multiput(89,74)(8,0){5}{\framebox(4,4){}}
+\put(85,69){\makebox(0,0){\textsf{24}}}
+\multiput(89,67)(8,0){5}{\framebox(4,4){}}
+\put(85,62){\makebox(0,0){\textsf{25}}}
+\multiput(89,60)(8,0){5}{\framebox(4,4){}}
+\put(85,52){\makebox(0,0){\textsf{26}}}
+\multiput(89,50)(8,0){5}{\framebox(4,4){}}
+\put(85,45){\makebox(0,0){\textsf{27}}}
+\multiput(89,43)(8,0){5}{\framebox(4,4){}}
+\put(85,38){\makebox(0,0){\textsf{28}}}
+\multiput(89,36)(8,0){5}{\framebox(4,4){}}
+\put(85,31){\makebox(0,0){\textsf{29}}}
+\multiput(89,29)(8,0){5}{\framebox(4,4){}}
+\put(85,24){\makebox(0,0){\textsf{30}}}
+\multiput(89,22)(8,0){5}{\framebox(4,4){}}
+
+% block with id, scrambling, type, replacement box
+\linethickness{0.5mm} \put(20,164){\framebox(\namewidth,28){}} \thicklines  
+\put(32,177){\makebox(0,0)[t]{\textsf{\myDocumentType}}} 
+\put(25,166){\framebox(14,7){}} 
+\put(67,177){\makebox(0,0)[t]{\textsf{\myDocumentID \mycourse}}}
+\put(46,166){\framebox(42,7){}} \put(25,183.5){\parbox{70mm}{%
+\textsf{\myNoChanges}}}
+\ifregseven
+\thinlines \put(113,180){\line(0,1){1.5}} \thicklines 
+\put(113,191){\makebox(0,0)[t]{\textsf{\textbf{\myScrambling}}}} 
+\put(106,180){\framebox(14,7){}}
+% scrambling is currently always zero
+\put(109.5,183.5){\makebox(0,0){\Large{\fontencoding{T1}\fontfamily{phv}\selectfont 0}}}
+\put(116.5,183.5){\makebox(0,0){\Large{\fontencoding{T1}\fontfamily{phv}\selectfont 0}}}
+\fi
+\put(67,169.5){\makebox(0,0){\Large{\fontencoding{T1}\fontfamily{phv}\selectfont \myID}}}
+\put(32,169.5){\makebox(0,0){\Large{\fontencoding{T1}\fontfamily{phv}\selectfont 030}}}
+
+\end{picture}
+
+
+\newpage
+\thispagestyle{empty}
+\phantom{.}
+
+
+
+\setlength{\textheight}{24cm} 
+\newpage
+
+\setcounter{page}{1}
+
+\setlength{\oddsidemargin}{0cm} 
+\setlength{\evensidemargin}{0cm} 
+\setlength{\topmargin}{0cm} 
+\setlength{\headheight}{0cm} 
+\setlength{\headsep}{1cm} 
+\setlength{\footskip}{1cm} 
+
+\newpage
+
+
+\begin{enumerate}
+
+\input{exercise01}
+\input{exercise02}
+\input{exercise03}
+\input{exercise04}
+\input{exercise05}
+\input{exercise06}
+\input{exercise07}
+\input{exercise08}
+\input{exercise09}
+\input{exercise10}
+\input{exercise11}
+\input{exercise12}
+\input{exercise13}
+\input{exercise14}
+\input{exercise15}
+\input{exercise16}
+\input{exercise17}
+\input{exercise18}
+\input{exercise19}
+\input{exercise20}
+\input{exercise21}
+\input{exercise22}
+\input{exercise23}
+\input{exercise24}
+\input{exercise25}
+\input{exercise26}
+\input{exercise27}
+\input{exercise28}
+\input{exercise29}
+\input{exercise30}
+
+\end{enumerate}
+
+
+
+
+\end{document}
+

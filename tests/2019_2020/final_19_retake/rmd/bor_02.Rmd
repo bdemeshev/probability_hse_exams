@@ -1,0 +1,37 @@
+Question
+========
+  
+Пусть $X_1, \, \ldots, \, X_n$ — случайная выборка из распределения с плотностью распределения
+$$
+  f(x; \, \theta) = \begin{cases}
+     \frac{3x^2}{\theta^3} & \text{при } x \in [0;\,\theta],  \\
+    0 & \text{при } x \not\in [0;\,\theta],
+\end{cases}
+$$
+где $\theta > 0$. Используя начальный момент 2-го порядка, при помощи метода моментов найдите оценку неизвестного параметра $\theta$.
+
+Answerlist
+----------
+* $\sqrt{\tfrac{5}{3n}\sum_{i=1}^{n}X_i^2}$
+* $\tfrac{4}{3}\bar{X}$
+* $\tfrac{3}{4}\bar{X}$
+* $\sqrt{\sum_{i=1}^{n}X_i^2}$
+* $\sqrt{\tfrac{3n}{5}\sum_{i=1}^{n}X_i^2}$
+
+Solution
+========
+  
+Answerlist
+----------
+*  Good answer :)
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+*  Bad answer :(
+        
+Meta-information
+================
+exname: bor_03
+extype: schoice
+exsolution: 10000
+exshuffle: 5
