@@ -6,6 +6,118 @@
 \label{sec:sol_kr_04_2018_2019}
 
 
+\begin{enumerate} 
+\item	
+Из $\gamma = 0.95$ следует, что $\alpha / 2 = 0.025$ и $1 - \alpha / 2 = 0.975$.
+	 
+$T=\frac{\bar x - p}{\sqrt{\frac{\bar x \cdot (1 - \bar x) }{n}}}\sim \cN (0;1)$
+	
+$\bar x = \frac{10}{100} = 0.1$
+
+\[
+\bar x - B \cdot \sqrt{\frac{\bar x \cdot (1 - \bar x) }{n}} \le p \le \bar x - A \cdot \sqrt{\frac{\bar x \cdot (1 - \bar x) }{n}}
+\]
+
+\[	
+0.1 - 1.96 \cdot \sqrt{\frac{0.1 \cdot 0.9}{100}} \le p \le 0.1 + 1.96 \cdot \sqrt{\frac{0.1 \cdot 0.9}{100}}
+\]
+
+\[
+0.0412 \le p \le 0.1588
+\]
+	
+\item
+$\alpha = 0.05$
+\[
+\begin{cases}
+H_0: p = \frac{1}{100} \\
+H_1: p > \frac{1}{100}
+\end{cases}
+\]
+	
+\[	
+T_{crit} = 1.64
+\]
+
+\[
+T_{obs} = \frac{\bar x - p}{\sqrt{\frac{\bar x \cdot (1 - \bar x) }{n}}} = \frac{0.1 - 0.01}{\sqrt{\frac{0.1 \cdot 0.9}{100}}} = 3 
+\]
+
+Заметим, что $T_{crit} < T_{obs}$, поэтому гипотеза $H_0$ отвергается.
+
+\[
+P-value = 1 - 0.9987 = 0.0013 \approx 0
+\]
+\item	
+$\alpha = 0.1$	
+\[
+\begin{cases}
+H_0: p_1 = \frac{3}{7}, p_2 = \frac{3}{7}, p_3 = \frac{1}{7} \\
+H_1: p_1 \neq \frac{3}{7}, p_2 \neq \frac{3}{7}, p_3 \neq \frac{1}{7} 
+\end{cases}
+\]
+
+\[	
+LR = -2 \cdot (\ell(\hat \theta_R)-\ell(\hat \theta_{UR})) \sim \chi_3^2
+\]
+
+\[
+\Lambda(x_1, \dots ,x_n;\theta) = \prod\nolimits_{i=1}^n P_\theta (\{X_i = x_i\})= p_1^{40} \cdot p_2^{50} \cdot p_3^{10}
+\]
+
+\[
+\ell((x_1, \dots ,x_n;\theta)= 40\ln p_1 + 50\ln p_2 + 10\ln p_3
+\]
+
+\[
+\frac{\delta \ell}{\delta p} = \frac{40}{p_1} + \frac{50}{p_2} + \frac{10}{p_3} 
+\]
+
+Таким образом, решая уравнение мы получаем $\hat p_i = \frac{a_i}{n}$
+
+\[
+\ell(\hat \theta_R) = 40\ln {\frac{3}{7}} + 50\ln {\frac{3}{7}} + 10\ln {\frac{1}{7}} \approx -95.7
+\]
+
+\[
+\ell(\hat \theta_{UR}) = 40\ln {\frac{4}{10}} + 50\ln {\frac{5}{10}} + 10\ln {\frac{1}{10}} \approx -94.3
+\]
+
+\[
+LR_{obs} = -2 \cdot (-1.4) = 2.8
+\]
+
+\[
+LR_{crit} = 6.25
+\]
+	
+Заметим, что $LR_{crit} > LR_{obs}$, поэтому гипотеза $H_0$ не отвергается.
+
+\item
+$\alpha = 0.1$
+	
+\[
+\begin{cases}
+H_0: p_1 = \frac{3}{7}, p_2 = \frac{3}{7}, p_3 = \frac{1}{7} \\
+H_1: p_1 \neq \frac{3}{7}, p_2 \neq \frac{3}{7}, p_3 \neq \frac{1}{7} 
+\end{cases}
+\]
+
+\[	
+W_n = \sum_{i=1}^r\frac{(\nu_i - n \cdot p_i)^2}{n \cdot p_i}\sim \chi_2^2
+\]
+
+\[
+W_{obs} = \frac{(40 - 100 \cdot \frac{3}{7})^2}{100 \cdot \frac{3}{7}} + \frac{(50 - 100 \cdot \frac{3}{7})^2}{100 \cdot \frac{3}{7}} + \frac{(10 - 100 \cdot \frac{1}{7})^2}{100 \cdot \frac{1}{7}} \approx 2.58 
+\]
+
+\[
+W_{crit} = 4.61
+\]
+
+Заметим, что $W_{crit} > W_{obs}$, поэтому гипотеза $H_0$ не отвергается.	
+\end{enumerate} 
+
 
 \subsection[2017-2018]{\hyperref[sec:kr_04_2017_2018]{2017-2018}}
 \label{sec:sol_kr_04_2017_2018}
