@@ -8,6 +8,42 @@
 
 \begin{enumerate}
 \item
+\begin{enumerate}
+\item Таблица:
+	
+\begin{center}
+\begin{tabular}{ccc}
+	& $\xi = 1$ & $\xi = 0$  \\
+	\hline
+	$\eta = 1$ & 0 & 0.25 \\
+	\hline
+	$\eta = 0$ & 0.25 & 0.5 \\
+	\hline
+\end{tabular}
+\end{center}
+	
+\item $\E(\xi) = 0.25 + 0 = 0.25$
+	
+$\E(\eta) = 0.25 + 0 = 0.25$
+	
+\item $\Cov(\xi, \, \eta) = \E(\xi\cdot \eta) - \E(\xi)\cdot \E(\eta) = 0 \cdot 1 + 0 \cdot 0,25 + 0 \cdot 0,2 + 0 \cdot 0,5 - 0,25 \cdot 0,25 = 0 - \frac{1}{16} = -\frac{1}{16}$
+	
+\item $\P\left(\xi = 1 | \eta = 0\right) = \frac{0,25}{0,75} = \frac{1}{3}$
+	
+$\P\left(\xi = 0 | \eta = 0\right) = \frac{0,5}{0,75} = \frac{2}{3}$
+	
+\item $\E\left(\xi | \eta = 0 \right) = \frac{1}{3} \cdot 1 + \frac{2}{3} \cdot 0 = \frac{1}{3}$
+	
+\item Таблица:
+	
+\begin{center}
+\begin{tabular}{ccc}
+	$\E(\xi|\eta)$ & 0 & $\frac{1}{3}$  \\
+	\hline
+	$\P$ & 0.25 & 0.75 \\
+	\hline
+\end{tabular}
+\end{center}
 
 \item
 \begin{enumerate}
