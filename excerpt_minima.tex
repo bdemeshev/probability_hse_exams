@@ -1,31 +1,117 @@
 \documentclass[12pt]{article}
 
-\usepackage{tikz} % картинки в tikz
-\usepackage{microtype} % свешивание пунктуации
+\usepackage{fontspec}
+\usepackage{polyglossia}
 
-\usepackage{array} % для столбцов фиксированной ширины
+% \setdefaultlanguage{russian}
+\setmainlanguage{russian}
+\setotherlanguages{english}
 
-\usepackage{indentfirst} % отступ в первом параграфе
+% download "Linux Libertine" OTF-fonts:
+% http://www.linuxlibertine.org/index.php?id=91&L=1
+\setmainfont{Linux Libertine O} % or Helvetica, Arial, Cambria
+% why do we need \newfontfamily:
+% http://tex.stackexchange.com/questions/91507/
+\newfontfamily{\cyrillicfonttt}{Linux Libertine O}
+\newfontfamily{\cyrillicfont}{Linux Libertine O}
+\newfontfamily{\cyrillicfontsf}{Linux Libertine O}
+ 
+\usepackage{etoolbox} % to use ifdef, must be after babel
 
-\usepackage{sectsty} % для центрирования названий частей
-\allsectionsfont{\centering}
+\newtoggle{excerpt}
+\togglefalse{excerpt}  % помечаем, что это не отрывок, а далее в тексте может использовать
+ 
 
-\usepackage{amsmath} % куча стандартных математических плюшек
+\usepackage[paper=a4paper,
+top=15mm,
+bottom=13.5mm,
+left=13mm, right=13mm, includefoot]{geometry}
 
-\usepackage{comment}
-\usepackage{amsfonts}
+\usepackage{etex} % расширение классического tex
+% в частности позволяет подгружать гораздо больше пакетов, чем мы и займёмся далее
 
-\usepackage[top=2cm, left=1.2cm, right=1.2cm, bottom=2cm]{geometry} % размер текста на странице
 
-\usepackage{lastpage} % чтобы узнать номер последней страницы
 
-\usepackage{enumitem} % дополнительные плюшки для списков
-%  например \begin{enumerate}[resume] позволяет продолжить нумерацию в новом списке
-\usepackage{caption}
 
-\usepackage{hyperref} % гиперссылки
+\usepackage{makeidx} % для создания предметных указателей
+\usepackage{verbatim} % для многострочных комментариев
+%\usepackage[pdftex]{graphicx} % для вставки графики
+% omit pdftex option if not using pdflatex
 
-\usepackage{multicol} % текст в несколько столбцов
+\usepackage{comment} % для команды excludecomment
+
+
+%\usepackage{dsfont} % шрифт для единички с двойной палочкой (для индикатора события)
+\usepackage{bbm} % шрифт - двойные буквы
+
+
+\usepackage[usenames, dvipsnames, svgnames, table, rgb]{xcolor}
+
+\usepackage{colortbl}
+
+
+% пакет для тестов:
+% \usepackage[box, % запрет на перенос вопросов
+% nopage, % убираем колонтитулы страницы
+% insidebox, % ставим буквы в квадратики
+% separateanswersheet, % добавляем бланк ответов
+% nowatermark, % отсутствие надписи "Черновик"
+% indivanswers,  % показываем верные ответы
+% answers,
+% lang=RU, % локализация слов "нет верных ответов", "вопрос" и тд
+% completemulti % добавлять "нет правильного ответа" во всех вопросах множественного выбора
+% ]{automultiplechoice}
+
+
+\usepackage[colorlinks, hyperindex, unicode, breaklinks]{hyperref} % гиперссылки в pdf
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{epsfig}
+\usepackage{bm}
+\usepackage{color}
+
+\usepackage{multicol}
+\usepackage{multirow} % Слияние строк в таблице
+
+\usepackage{textcomp}  % Чтобы в формулах можно было русские буквы писать через \text{}
+
+%\usepackage{embedfile} % Чтобы код LaTeXа включился как приложение в PDF-файл
+
+\usepackage{subfigure} % для создания нескольких рисунков внутри одного
+
+\usepackage{tikz, pgfplots} % язык для рисования графики из latex'a
+\usetikzlibrary{trees} % прибамбас в нем для рисовки деревьев
+\usetikzlibrary{arrows} % прибамбас в нем для рисовки стрелочек подлиннее
+\usepackage{tikz-qtree} % прибамбас в нем для рисовки деревьев
+
+\usepackage{enumitem} % развернутые списки
+
+% свешиваем пунктуацию (т.е. знаки пунктуации могут вылезать за правую границу текста, при этом текст выглядит ровнее)
+\usepackage{microtype}
+
+% более красивые таблицы
+\usepackage{booktabs}
+% заповеди из докупентации:
+% 1. Не используйте вертикальные линни
+% 2. Не используйте двойные линии
+% 3. Единицы измерения - в шапку таблицы
+% 4. Не сокращайте .1 вместо 0.1
+% 5. Повторяющееся значение повторяйте, а не говорите "то же"
+
+\usepackage[cache=false]{minted} % вставка кода, нужен питон :)
+% опция cache=false включена, чтобы избегать необходимости
+% чистить кэш при ошибках компиляции
+% возможно вообще подумать об устранении этого пакета:
+% вставок кода мало, а эта зависимость (pygmentize + python)
+% резко затрудняет редактирование новичкам
+% может обойтись listings?
+
+\usepackage{epigraph}
+
+\usepackage{titleps} % заголовки страниц
+
 
 
 \usepackage{fancyhdr} % весёлые колонтитулы
@@ -47,28 +133,6 @@
 % \listoftodos --- печатает все поставленные \todo'шки
 
 
-% более красивые таблицы
-\usepackage{booktabs}
-% заповеди из докупентации:
-% 1. Не используйте вертикальные линни
-% 2. Не используйте двойные линии
-% 3. Единицы измерения - в шапку таблицы
-% 4. Не сокращайте .1 вместо 0.1
-% 5. Повторяющееся значение повторяйте, а не говорите "то же"
-
-
-\usepackage{fontspec}
-\usepackage{polyglossia}
-
-\setmainlanguage{russian}
-\setotherlanguages{english}
-
-% download "Linux Libertine" fonts:
-% http://www.linuxlibertine.org/index.php?id=91&L=1
-\setmainfont{Linux Libertine O} % or Helvetica, Arial, Cambria
-% why do we need \newfontfamily:
-% http://tex.stackexchange.com/questions/91507/
-\newfontfamily{\cyrillicfonttt}{Linux Libertine O}
 
 \AddEnumerateCounter{\asbuk}{\russian@alph}{щ} % для списков с русскими буквами
 \setlist[enumerate, 2]{label=\asbuk*),ref=\asbuk*}
