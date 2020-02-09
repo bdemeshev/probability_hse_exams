@@ -1244,12 +1244,65 @@ $\E(X) = \int_0^1 f_X (x) \cdot x dx = \int_0^1 (x^2 + 0.5x) dx = 7/12$
 \[
 \P(2X+Y > 3) = \P\left(\frac{2X+Y-0}{6} > \frac{3-0}{6} \right) = \P(\cN(0, 1) > 0.5) = 0.31
 \]
-\item $ \P(2X+Y > 3 | X=1) = \P(Y > 1) = \P \left(\frac{Y-0}{2} > \frac{1}{2} \right) = \P(\cN(0, 1) > 0.5) = 0.31$
+\item Воспользуемся формулами для условного нормального распределения:
+\[
+	\E(Y|X=x) = \mu_{y} + \Corr(X, Y)\cdot \sigma_{y}\cdot \frac{x-\mu_{x}}{\sigma_{x}}
+\]
+\[
+	\Var(Y|X=x) = \sigma^{2}_{y}\cdot (1 - \Corr^{2}(X, Y))
+\]
+
+Посчитаем\ldots
+
+\[
+	\E(Y|X=x) = 0 - \frac{1}{6}\cdot 2 \cdot \frac{1-0}{3} = -\frac{1}{9}
+\]
+\[
+	\Var(Y|X=x) =4\cdot (1 - \frac{1}{36}) = \frac{35}{9} 
+\]
+
+А теперь стандартизируем:
+
+\[
+	\P(2X + Y >3|X=1) = 
+	\P(Y>1|X=1) = \P(\frac{Y - (-1/9)}{\sqrt{35/9}}>\frac{1 - (-1/9)}{\sqrt{35/9}})
+\]
+
+\[
+	\P(Y>1|X=1) = \P(\cN(0,1)>  \approx 0.56) = 1-\phi(0.56) = 1 - 0.56 = 0.44
+\]
 \item Заметим, что $\frac{X^2}{9}+\frac{Y^2}{4} \sim \chi^2_2$,
 и тогда по таблице находим, что $\P\left(\frac{X^2}{9}+\frac{Y^2}{4} >12\right) = 0.0025$
-\item Совместная функция плотности имеет вид:
+
+\item В общем виде:
+
 \[
-f(x, y) = \frac{1}{2\pi}\cdot \frac{1}{2\cdot 3\sqrt{1- \left(-\frac{1}{6}\right)^2}}\cdot \exp \left(- \frac{1}{2} \cdot \frac{1}{4\cdot9} \left(1- \left(-\frac{1}{6}\right)^2\right) \left(9x^2 + 2xy + 4y^2 \right) \right)
+	f(x,y) = \frac{1}{2\pi}\cdot\frac{1}{\sigma^{2}_{x}\cdot\sigma^{2}_{y}(1-\Corr^{2})}
+	  \cdot 
+	\exp^{-0.5(x-\mu_{x}, y - \mu_{y})\cdot C^{-1}\cdot (x-\mu_{x}, y - \mu_{y})^{T}}, 
+\]
+где $C$ — ковариационная матрица.
+
+Подставляем и получаем:
+
+\[
+	f(x,y) = \frac{1}{2\pi}\cdot \frac{1}{\sqrt{35}}
+	    \cdot 
+	\exp^{-0.5\cdot (X,Y)\cdot C^{-1} \cdot (X,Y)^{T}}, 
+\]
+где 
+\[
+C^{-1} =
+\begin{pmatrix}
+  \frac{4}{35} & \frac{1}{35}\\
+  \frac{1}{35} & \frac{9}{35}
+\end{pmatrix}
+\]
+
+В итоге получаем:
+\[
+	f(x,y) = \frac{1}{2\pi}\cdot \frac{1}{\sqrt{35}}\cdot 
+	\exp^{\frac{1}{70}\cdot(4x^{2}+2xy+9y^{2})}
 \]
 \end{enumerate}
 \item
