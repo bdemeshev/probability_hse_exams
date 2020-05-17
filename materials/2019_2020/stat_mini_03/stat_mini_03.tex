@@ -1,0 +1,532 @@
+\documentclass[12pt]{article}
+
+\usepackage{tikz} % картинки в tikz
+\usepackage{microtype} % свешивание пунктуации
+
+\usepackage{array} % для столбцов фиксированной ширины
+
+\usepackage{indentfirst} % отступ в первом параграфе
+
+\usepackage{sectsty} % для центрирования названий частей
+\allsectionsfont{\centering}
+
+\usepackage{amsmath} % куча стандартных математических плюшек
+
+\usepackage{comment}
+\usepackage{amsfonts}
+
+\usepackage{verbatim}
+
+\usepackage{graphicx} % for png images
+
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+
+\usepackage[top=2cm, left=1cm, right=1cm, bottom=2cm]{geometry} % размер текста на странице
+
+\usepackage{lastpage} % чтобы узнать номер последней страницы
+
+\usepackage{enumitem} % дополнительные плюшки для списков
+%  например \begin{enumerate}[resume] позволяет продолжить нумерацию в новом списке
+\usepackage{caption}
+
+\usepackage{hyperref} % гиперссылки
+
+\usepackage{multicol} % текст в несколько столбцов
+
+
+\usepackage{fancyhdr} % весёлые колонтитулы
+\pagestyle{fancy}
+\lhead{Теория вероятностей и математическая статистика-ВШЭ}
+\chead{}
+\rhead{Миниконтрольная №3}
+\lfoot{2020-04-23}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+\usepackage{todonotes} % для вставки в документ заметок о том, что осталось сделать
+% \todo{Здесь надо коэффициенты исправить}
+% \missingfigure{Здесь будет Последний день Помпеи}
+% \listoftodos --- печатает все поставленные \todo'шки
+
+
+% более красивые таблицы
+\usepackage{booktabs}
+% заповеди из докупентации:
+% 1. Не используйте вертикальные линни
+% 2. Не используйте двойные линии
+% 3. Единицы измерения - в шапку таблицы
+% 4. Не сокращайте .1 вместо 0.1
+% 5. Повторяющееся значение повторяйте, а не говорите "то же"
+
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+
+\setmainlanguage{russian}
+\setotherlanguages{english}
+
+% download "Linux Libertine" fonts:
+% http://www.linuxlibertine.org/index.php?id=91&L=1
+\setmainfont{Linux Libertine O} % or Helvetica, Arial, Cambria
+% why do we need \newfontfamily:
+% http://tex.stackexchange.com/questions/91507/
+\newfontfamily{\cyrillicfonttt}{Linux Libertine O}
+
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ} % для списков с русскими буквами
+\setlist[enumerate, 2]{label=\asbuk*),ref=\asbuk*}
+
+%% эконометрические сокращения
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\E}{E}
+\def \hb{\hat{\beta}}
+\def \hs{\hat{\sigma}}
+\def \htheta{\hat{\theta}}
+\def \s{\sigma}
+\def \hy{\hat{y}}
+\def \hY{\hat{Y}}
+\def \v1{\vec{1}}
+\def \e{\varepsilon}
+\def \he{\hat{\e}}
+\def \z{z}
+\def \hVar{\widehat{\Var}}
+\def \hCorr{\widehat{\Corr}}
+\def \hCov{\widehat{\Cov}}
+\def \cN{\mathcal{N}}
+\def \P{\mathbb{P}}
+\newcommand \id {\mathrm{id}\_\mathrm{for}\_\mathrm{online}}
+
+\begin{document}
+
+
+\section*{Требования к оформлению:}
+
+\begin{enumerate}
+\item Подпишите работу сверху: \verb|id_for_online|, фамилию, имя, номер группы.
+\item Должно быть выписано решение задачи, только ответ не засчитывается.
+\item Для каждого пункта задания обведите полученный численный ответ или формулу в торжественную рамочку.
+\end{enumerate}
+
+\section*{Requirements:}
+
+\begin{enumerate}
+\item State your identity at the top of the sheet: \verb|id_for_online|, first name, last name, group number.
+\item Full solutions are required, answer without explanations is not graded. 
+\item You should draw a pretty box around every final numeric answer or formula.
+\end{enumerate}
+
+
+\begin{center}
+  \begin{minipage}{5cm}
+    \includegraphics[height=30ex]{cheshire_cat.png}
+  \end{minipage}
+\end{center}
+  
+
+
+\newpage
+
+Номер выполняемого варианта $n$ определяется как $n=(\id \mod 3)+1$. 
+
+Во всех задачах $k=\id$.
+
+\section*{Вариант 1}
+\begin{enumerate}
+
+\item  Пусть $X_1$, $X_2$, $X_3$, \ldots, $X_n$ — случайная выборка из дискретного распределения, 
+заданного с помощью таблицы
+
+\begin{tabular}{@{}llll@{}}
+  \toprule
+   $x$           & $-k$ & $0$ & $k$ \\ 
+   $\P(X_i = x)$ & $0.5-\theta$ & $0.5$ & $\theta$ \\
+  \bottomrule
+\end{tabular}
+			
+Рассмотрите оценку $\hat \theta = \bar X$.
+\begin{enumerate}
+\item Найдите $\E(\hat \theta)$. 
+Является ли оценка $\hat \theta$ несмещенной оценкой неизвестного параметра $\theta$?
+\item Подберите константы $a$ и $b$ так, 
+чтобы оценка $\tilde \theta = a + b\bar X$ оказалась несмещенной оценкой неизвестного параметра $\theta$.
+\end{enumerate} 
+
+
+\item Пусть $X_1$, $X_2$, $X_3$, \ldots, $X_n$ — 
+случайная выборка из распределения с плотностью распределения
+\[
+f(x, \theta) = \begin{cases}
+  6x(\theta - x)/\theta^3, \text{ при } x\in [0;\theta]; \\
+  0, \text{ иначе}
+\end{cases},
+\]
+
+где $\theta$ — неизвестный параметр распределения. 
+Является ли оценка $\hat\theta_n = \frac{2n+1}{n}\bar X_n$ состоятельной оценкой неизвестного параметра $\theta$?
+
+\item Пусть $X_1$, $X_2$, $X_3$, \ldots, $X_n$ — случайная выборка из распределения с плотностью
+\[
+  f(x, \theta) = \begin{cases}
+    \frac{1}{\theta}\exp\left(-\frac{x-k}{\theta}\right), \text{ при } x\geq k; \\
+    0, \text{ иначе}
+  \end{cases},    
+\]
+где $\theta$ — неизвестный параметр. Проверьте, будет ли оценка $\hat\theta = \bar X - k$ эффективной?
+
+\item  Время от начала контрольной работы до её загрузки в систему lms  подчинено закону с функцией плотности
+\[
+  f(x, \theta) = \begin{cases}
+    \frac{1}{\theta}\exp\left(-\frac{x-40}{\theta}\right), \text{ при } x\geq 40; \\
+    0, \text{ иначе}
+  \end{cases},    
+\]
+По случайной выборке $X_1$, $X_2$, $X_3$, \ldots, $X_n$ оценивают параметр $\theta$. 
+
+\begin{enumerate}
+\item Найдите такие константы $a$ и $b$, чтобы оценка  $\hat \theta_1 = a + b\min\{X_1, \ldots, X_n\}$ была несмещённой.
+\item Какая из двух несмещённых оценок $\hat \theta_1$ или $\hat \theta_2 = \bar X - 40$ является более эффективной? Обоснуйте ответ.
+\end{enumerate}
+
+\end{enumerate}
+
+\newpage
+Номер выполняемого варианта $n$ определяется как $n=(\id \mod 3)+1$. 
+
+Во всех задачах $k=\id$.
+
+
+\section*{Вариант 2}
+\begin{enumerate}
+
+\item Пусть $X_1$, $X_2$, $X_3$, \ldots, $X_n$ — 
+случайная выборка из распределения с плотностью распределения
+\[
+f(x, \theta) = \begin{cases}
+  6x(\theta - x)/\theta^3, \text{ при } x\in [0;\theta]; \\
+  0, \text{ иначе}
+\end{cases},
+\]
+
+где $\theta$ — неизвестный параметр распределения. 
+
+\begin{enumerate}
+\item Является ли оценка $\hat\theta=\bar X$ несмещенной оценкой неизвестного параметра $\theta$?
+\item Подберите константу $c$ так, 
+чтобы оценка $\tilde \theta = c\bar X$ оказалась несмещенной оценкой неизвестного параметра $\theta$. 
+\end{enumerate}
+
+
+\item Пусть $X_1$, $X_2$, $X_3$, \ldots, $X_n$ — случайная выборка из распределения с плотностью
+\[
+  f(x, \theta) = \begin{cases}
+    \frac{1}{\theta}\exp\left(-\frac{x-k}{\theta}\right), \text{ при } x\geq k; \\
+    0, \text{ иначе}
+  \end{cases},    
+\]
+где $\theta$ — неизвестный параметр.
+
+Является ли оценка $\hat\theta_n = \frac{X_1 + X_2 + \ldots + X_n}{n+1} - k$ состоятельной оценкой неизвестного параметра $\theta$?
+
+
+
+\item  Пусть $X_1$, $X_2$, $X_3$, \ldots, $X_n$ — 
+случайная выборка из распределения Бернулли с неизвестным параметром $p\in (0;1)$. 
+Проверьте, будет ли эффективной оценка $\hat p = \bar X$.
+
+
+
+
+\item  Время от начала контрольной работы до её загрузки в систему lms  подчинено закону с функцией плотности
+\[
+  f(x, \theta) = \begin{cases}
+    \frac{1}{\theta}\exp\left(-\frac{x-30}{\theta}\right), \text{ при } x\geq 30; \\
+    0, \text{ иначе}
+  \end{cases},    
+\]
+По случайной выборке $X_1$, $X_2$, $X_3$, \ldots, $X_n$ оценивают параметр $\theta$. 
+
+\begin{enumerate}
+\item Найдите такие константы $a$ и $b$, чтобы оценка  $\hat \theta_1 = a + b\min\{X_1, \ldots, X_n\}$ была несмещённой.
+\item Какая из двух несмещённых оценок $\hat \theta_1$ или $\hat \theta_2 = \bar X - 30$ является более эффективной? Обоснуйте ответ.
+\end{enumerate}
+
+\end{enumerate}
+
+\newpage
+Номер выполняемого варианта $n$ определяется как $n=(\id \mod 3)+1$. 
+
+Во всех задачах $k=\id$.
+
+
+\section*{Вариант 3}
+\begin{enumerate}
+
+\item  Пусть $X_1$, $X_2$, $X_3$, \ldots, $X_n$ — случайная выборка из дискретного распределения, 
+заданного с помощью таблицы
+
+\begin{tabular}{@{}llll@{}}
+  \toprule
+   $x$           & $-k$ & $0$ & $k$ \\ 
+   $\P(X_i = x)$ & $0.5-\theta$ & $0.5$ & $\theta$ \\
+  \bottomrule
+\end{tabular}
+			
+Рассмотрите оценку $\hat \theta = \bar X$.
+\begin{enumerate}
+\item Найдите $\E(\hat \theta)$. 
+Является ли оценка $\hat \theta$ несмещенной оценкой неизвестного параметра $\theta$?
+\item Подберите константы $a$ и $b$ так, 
+чтобы оценка $\tilde \theta = a + b\bar X$ оказалась несмещенной оценкой неизвестного параметра $\theta$.
+\end{enumerate} 
+
+
+
+\item Пусть $X_1$, $X_2$, $X_3$, \ldots, $X_n$ — случайная выборка из распределения с плотностью
+\[
+  f(x, \theta) = \begin{cases}
+    \frac{1}{\theta}\exp\left(-\frac{x-k}{\theta}\right), \text{ при } x\geq k; \\
+    0, \text{ иначе}
+  \end{cases},    
+\]
+где $\theta$ — неизвестный параметр.
+
+Является ли оценка $\hat\theta_n = \frac{X_1 + X_2 + \ldots + X_n}{n+1} - k$ состоятельной оценкой неизвестного параметра $\theta$?
+
+
+\item Пусть $X_1$, $X_2$, $X_3$, \ldots, $X_n$ 
+— случайная выборка из распределения Пуассона
+\[
+\P(X_i = m) = \exp(-\lambda)\frac{\lambda^m}{m!}, \text{ если } m \in \{0, 1, 2, \ldots\},
+\]
+где $\lambda$ — неизвестный параметр. 
+Проверьте, будет ли эффективной оценка $\hat\lambda = \bar X$?
+
+
+\item  Время от начала контрольной работы до её загрузки в систему lms  подчинено закону с функцией плотности
+\[
+  f(x, \theta) = \begin{cases}
+    \frac{1}{\theta}\exp\left(-\frac{x-20}{\theta}\right), \text{ при } x\geq 20; \\
+    0, \text{ иначе}
+  \end{cases},    
+\]
+По случайной выборке $X_1$, $X_2$, $X_3$, \ldots, $X_n$ оценивают параметр $\theta$. 
+
+\begin{enumerate}
+\item Найдите такие константы $a$ и $b$, чтобы оценка  $\hat \theta_1 = a + b\min\{X_1, \ldots, X_n\}$ была несмещённой.
+\item Какая из двух несмещённых оценок $\hat \theta_1$ или $\hat \theta_2 = \bar X - 20$ является более эффективной? Обоснуйте ответ.
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+
+\newpage
+
+The variant $n$ is defined as $n=(\id \mod 3)+1$. 
+
+In all problems $k=\id$.
+
+\section*{Variant 1}
+\begin{enumerate}
+
+\item  Let $X_1$, $X_2$, $X_3$, \ldots, $X_n$ — be a random sample from 
+discrete distribution given by the table
+
+\begin{tabular}{@{}llll@{}}
+  \toprule
+   $x$           & $-k$ & $0$ & $k$ \\ 
+   $\P(X_i = x)$ & $0.5-\theta$ & $0.5$ & $\theta$ \\
+  \bottomrule
+\end{tabular}
+			
+Consider the estimator $\hat \theta = \bar X$.
+\begin{enumerate}
+  \item Find $\E(\hat \theta)$. 
+  Check whether the estimator $\hat \theta$ is unbiased for the parameter $\theta$?
+  \item Find $a$ and $b$ such, 
+  that $\tilde \theta = a + b\bar X$ is unbiased for the parameter $\theta$.
+  \end{enumerate} 
+  
+
+\item Let $X_1$, $X_2$, $X_3$, \ldots, $X_n$ 
+ be a random sample from a distribution with density
+\[
+f(x, \theta) = \begin{cases}
+  6x(\theta - x)/\theta^3, \text{ if } x\in [0;\theta]; \\
+  0, \text{ otherwise}
+\end{cases},
+\]
+where $\theta$  is the unknown paramater. 
+Is the estimator $\hat\theta_n = \frac{2n+1}{n}\bar X_n$ consistent for the parameter $\theta$?
+
+\item Let $X_1$, $X_2$, $X_3$, \ldots, $X_n$  be a random sample from a distribution with density
+\[
+  f(x, \theta) = \begin{cases}
+    \frac{1}{\theta}\exp\left(-\frac{x-k}{\theta}\right), \text{ if } x\geq k; \\
+    0, \text{ otherwise}
+  \end{cases},    
+\]
+where $\theta$  is the unknown paramater. 
+Check whether the estimator $\hat\theta = \bar X - k$ is efficient?
+
+\item  The time between the beginning of the test and the upload to the lms system
+has the density
+\[
+  f(x, \theta) = \begin{cases}
+    \frac{1}{\theta}\exp\left(-\frac{x-40}{\theta}\right), \text{ if } x\geq 40; \\
+    0, \text{ otherwise}
+  \end{cases},    
+\]
+Given the random sample $X_1$, $X_2$, $X_3$, \ldots, $X_n$ we estimate $\theta$. 
+
+\begin{enumerate}
+\item Find the constants  $a$ and $b$ such that the estimator  $\hat \theta_1 = a + b\min\{X_1, \ldots, X_n\}$ is unbiased.
+\item Which estimator $\hat \theta_1$ or $\hat \theta_2 = \bar X - 40$ is more efficient? Justify.
+\end{enumerate}
+
+\end{enumerate}
+
+\newpage
+
+The variant $n$ is defined as $n=(\id \mod 3)+1$. 
+
+In all problems $k=\id$.
+
+\section*{Variant 2}
+\begin{enumerate}
+
+\item Let $X_1$, $X_2$, $X_3$, \ldots, $X_n$ — 
+be a random sample from distribution with density
+\[
+f(x, \theta) = \begin{cases}
+  6x(\theta - x)/\theta^3, \text{ if } x\in [0;\theta]; \\
+  0, \text{ otherwise}
+\end{cases},
+\]
+
+where $\theta$ — is the unknown parameter. 
+
+\begin{enumerate}
+\item Check whether $\hat\theta=\bar X$ is unbiased for the parameter $\theta$?
+\item Find the constant $c$ such, 
+that the estimator $\tilde \theta = c\bar X$ is unbiased for the parameter $\theta$. 
+\end{enumerate}
+
+
+\item Let $X_1$, $X_2$, $X_3$, \ldots, $X_n$ be a random sample from distribution with density
+
+\[
+  f(x, \theta) = \begin{cases}
+    \frac{1}{\theta}\exp\left(-\frac{x-k}{\theta}\right), \text{ if } x\geq k; \\
+    0, \text{ otherwise}
+  \end{cases},    
+\]
+where $\theta$ is the unknown parameter.
+
+Check whether the estimator $\hat\theta_n = \frac{X_1 + X_2 + \ldots + X_n}{n+1} - k$ is consistent for $\theta$?
+
+
+
+\item  Let $X_1$, $X_2$, $X_3$, \ldots, $X_n$ — 
+be a random sample from Bernoulli distribution with unknown parameter $p\in (0;1)$. 
+Check whether the estimator $\hat p = \bar X$ is efficient.
+
+
+
+
+\item  The time between the beginning of the test and the upload to the lms system
+has the density
+\[
+  f(x, \theta) = \begin{cases}
+    \frac{1}{\theta}\exp\left(-\frac{x-30}{\theta}\right), \text{ if } x\geq 30; \\
+    0, \text{ otherwise}
+  \end{cases},    
+\]
+Given the random sample $X_1$, $X_2$, $X_3$, \ldots, $X_n$ we estimate $\theta$. 
+
+\begin{enumerate}
+\item Find the constants  $a$ and $b$ such that the estimator  $\hat \theta_1 = a + b\min\{X_1, \ldots, X_n\}$ is unbiased.
+\item Which estimator $\hat \theta_1$ or $\hat \theta_2 = \bar X - 30$ is more efficient? Justify.
+\end{enumerate}
+
+\end{enumerate}
+
+\newpage
+
+The variant $n$ is defined as $n=(\id \mod 3)+1$. 
+
+In all problems $k=\id$.
+
+\section*{Variant 3}
+\begin{enumerate}
+
+\item  Let $X_1$, $X_2$, $X_3$, \ldots, $X_n$  be a random sample from 
+discrete distribution given by the table
+
+\begin{tabular}{@{}llll@{}}
+  \toprule
+   $x$           & $-k$ & $0$ & $k$ \\ 
+   $\P(X_i = x)$ & $0.5-\theta$ & $0.5$ & $\theta$ \\
+  \bottomrule
+\end{tabular}
+			
+Consider the estimator $\hat \theta = \bar X$.
+\begin{enumerate}
+\item Find $\E(\hat \theta)$. 
+Check whether the estimator $\hat \theta$ is unbiased for the parameter $\theta$?
+\item Find $a$ and $b$ such, 
+that $\tilde \theta = a + b\bar X$ is unbiased for the parameter $\theta$.
+\end{enumerate} 
+
+
+
+\item Пусть $X_1$, $X_2$, $X_3$, \ldots, $X_n$ случайная выборка из распределения с плотностью
+\[
+  f(x, \theta) = \begin{cases}
+    \frac{1}{\theta}\exp\left(-\frac{x-k}{\theta}\right), \text{ при } x\geq k; \\
+    0, \text{ иначе}
+  \end{cases},    
+\]
+where $\theta$  is the unknown parameter. 
+
+Is the estimator $\hat\theta_n = \frac{X_1 + X_2 + \ldots + X_n}{n+1} - k$ consistent?
+
+
+\item Let $X_1$, $X_2$, $X_3$, \ldots, $X_n$ 
+be a random sample from Poisson distribution
+\[
+\P(X_i = m) = \exp(-\lambda)\frac{\lambda^m}{m!}, \text{ если } m \in \{0, 1, 2, \ldots\},
+\]
+where $\lambda$  is the unknown parameter. 
+Check whether the estimator $\hat\lambda = \bar X$ is efficient?
+
+
+\item  The time between the beginning of the test and the upload to the lms system
+has the density
+\[
+  f(x, \theta) = \begin{cases}
+    \frac{1}{\theta}\exp\left(-\frac{x-20}{\theta}\right), \text{ if } x\geq 20; \\
+    0, \text{ otherwise}
+  \end{cases},    
+\]
+Given the random sample $X_1$, $X_2$, $X_3$, \ldots, $X_n$ we estimate $\theta$. 
+
+\begin{enumerate}
+\item Find the constants  $a$ and $b$ such that the estimator  $\hat \theta_1 = a + b\min\{X_1, \ldots, X_n\}$ is unbiased.
+\item Which estimator $\hat \theta_1$ or $\hat \theta_2 = \bar X - 20$ is more efficient? Justify.
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+
+
+
+\end{document}

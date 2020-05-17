@@ -1,0 +1,193 @@
+\documentclass[12pt]{article}
+
+\usepackage{tikz} % картинки в tikz
+\usepackage{microtype} % свешивание пунктуации
+
+\usepackage{array} % для столбцов фиксированной ширины
+
+\usepackage{indentfirst} % отступ в первом параграфе
+
+\usepackage{sectsty} % для центрирования названий частей
+\allsectionsfont{\centering}
+
+\usepackage{amsmath} % куча стандартных математических плюшек
+
+\usepackage{comment}
+\usepackage{amsfonts}
+
+\usepackage{verbatim}
+
+\usepackage{graphicx} % for png images
+
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+
+\usepackage[top=2cm, left=1cm, right=1cm, bottom=2cm]{geometry} % размер текста на странице
+
+\usepackage{lastpage} % чтобы узнать номер последней страницы
+
+\usepackage{enumitem} % дополнительные плюшки для списков
+%  например \begin{enumerate}[resume] позволяет продолжить нумерацию в новом списке
+\usepackage{caption}
+
+\usepackage{hyperref} % гиперссылки
+
+\usepackage{multicol} % текст в несколько столбцов
+
+
+\usepackage{fancyhdr} % весёлые колонтитулы
+\pagestyle{fancy}
+\lhead{Теория вероятностей и математическая статистика-ВШЭ}
+\chead{}
+\rhead{Миниконтрольная №2}
+\lfoot{2020-04-16}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+\usepackage{todonotes} % для вставки в документ заметок о том, что осталось сделать
+% \todo{Здесь надо коэффициенты исправить}
+% \missingfigure{Здесь будет Последний день Помпеи}
+% \listoftodos --- печатает все поставленные \todo'шки
+
+
+% более красивые таблицы
+\usepackage{booktabs}
+% заповеди из докупентации:
+% 1. Не используйте вертикальные линни
+% 2. Не используйте двойные линии
+% 3. Единицы измерения - в шапку таблицы
+% 4. Не сокращайте .1 вместо 0.1
+% 5. Повторяющееся значение повторяйте, а не говорите "то же"
+
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+
+\setmainlanguage{russian}
+\setotherlanguages{english}
+
+% download "Linux Libertine" fonts:
+% http://www.linuxlibertine.org/index.php?id=91&L=1
+\setmainfont{Linux Libertine O} % or Helvetica, Arial, Cambria
+% why do we need \newfontfamily:
+% http://tex.stackexchange.com/questions/91507/
+\newfontfamily{\cyrillicfonttt}{Linux Libertine O}
+
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ} % для списков с русскими буквами
+\setlist[enumerate, 2]{label=\asbuk*),ref=\asbuk*}
+
+%% эконометрические сокращения
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\E}{E}
+\def \hb{\hat{\beta}}
+\def \hs{\hat{\sigma}}
+\def \htheta{\hat{\theta}}
+\def \s{\sigma}
+\def \hy{\hat{y}}
+\def \hY{\hat{Y}}
+\def \v1{\vec{1}}
+\def \e{\varepsilon}
+\def \he{\hat{\e}}
+\def \z{z}
+\def \hVar{\widehat{\Var}}
+\def \hCorr{\widehat{\Corr}}
+\def \hCov{\widehat{\Cov}}
+\def \cN{\mathcal{N}}
+\def \P{\mathbb{P}}
+\def \id {\mathrm{id}\_\mathrm{for}\_\mathrm{online}}
+
+\begin{document}
+
+
+\section*{Требования к оформлению:}
+
+\begin{enumerate}
+\item Подпишите работу сверху: \verb|id_for_online|, фамилию, имя, номер группы.
+\item Должно быть выписано решение задачи, только ответ не засчитывается.
+\item Для каждого пункта задания обведите полученный численный ответ или формулу в торжественную рамочку.
+\end{enumerate}
+
+\section*{Requirements:}
+
+\begin{enumerate}
+\item State your identity at the top of the sheet: \verb|id_for_online|, first name, last name, group number.
+\item Full solutions are required, answer without explanations is not graded. 
+\item You should draw a pretty box around every final numeric answer or formula.
+\end{enumerate}
+
+
+
+\newpage
+
+Каждый студент в качестве значения $k$ выбирает свой \verb|id_for_online|.
+
+
+\section*{Задача:}
+
+Имеется случайная выборка $X_1$, \ldots, $X_n$ из распределения с функцией плотности
+\[
+f(x) = \begin{cases}
+  \lambda e^{-\lambda(x-k)}, \text{ если } x > k; \\
+  0, \text{ иначе.}  
+\end{cases}
+\]
+  
+\begin{enumerate}
+\item Методом моментов, используя первый начальный момент, найдите оценку параметра $\lambda$.
+\item Методом максимального правдоподобия найдите:
+\begin{enumerate}
+\item оценку параметра $\lambda$;
+\item оценку вероятности $\P(X_1 > k + 1)$.
+\end{enumerate}
+\item Вычислите информацию Фишера о параметре $\lambda$, содержащуюся во всей выборке.
+\item Вычислите асимптотическую дисперсию оценки максимального правдоподобия $\hat\lambda$.
+\item Вычислите асимптотическую дисперсию оценки максимального правдоподобия $\hat\P(X_1 > k+1)$.
+\item Найдите оценку максимального правдоподобия асимптотической дисперсии оценки максимального правдоподобия  
+$\hat\P(X_1 > k+1)$.
+\end{enumerate}
+\begin{center}
+\begin{minipage}{3cm}
+  \includegraphics[height=20ex]{cheshire_cat.png}
+\end{minipage}
+\end{center}
+  
+\newpage
+You should use your \verb|id_for_online| as the value of constant $k$.
+
+\section*{Problem:}
+
+We have a random sample $X_1$, \ldots, $X_n$ from a distribution with the density function
+\[
+f(x) = \begin{cases}
+  \lambda e^{-\lambda(x-k)}, \text{ if } x > k; \\
+  0, \text{ otherwise.}  
+\end{cases}
+\]
+  
+\begin{enumerate}
+\item Estimate the parameter $\lambda$ using method of moments with first moment.
+\item Using maximum likelihood estimate:
+\begin{enumerate}
+\item the parameter $\lambda$;
+\item the probability $\P(X_1 > k + 1)$.
+\end{enumerate}
+\item Finde the theoretical Fisher information on $\lambda$ in the whole sample.
+\item Find the asymptotic variance of maximum likelihood estimator $\hat\lambda$.
+\item Find the asymptotic variance of maximum likelihood estimator $\hat\P(X_1 > k+1)$.
+\item Find the maximum likelihood estimator for asymptotic variance of maximum likelihood estimator   
+$\hat\P(X_1 > k+1)$.
+\end{enumerate}
+\begin{center}
+\begin{minipage}{3cm}
+  \includegraphics[height=20ex]{cheshire_cat.png}
+\end{minipage}
+\end{center}
+
+
+
+\end{document}
