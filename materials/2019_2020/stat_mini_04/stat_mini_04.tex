@@ -1,0 +1,877 @@
+\documentclass[12pt]{article}
+
+\usepackage{tikz} % картинки в tikz
+\usepackage{microtype} % свешивание пунктуации
+
+\usepackage{array} % для столбцов фиксированной ширины
+
+\usepackage{indentfirst} % отступ в первом параграфе
+
+\usepackage{sectsty} % для центрирования названий частей
+\allsectionsfont{\centering}
+
+\usepackage{amsmath} % куча стандартных математических плюшек
+
+\usepackage{comment}
+\usepackage{amsfonts}
+
+\usepackage{verbatim}
+
+\usepackage{graphicx} % for png images
+
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+
+\usepackage[top=2cm, left=1cm, right=1cm, bottom=2cm]{geometry} % размер текста на странице
+
+\usepackage{lastpage} % чтобы узнать номер последней страницы
+
+\usepackage{enumitem} % дополнительные плюшки для списков
+%  например \begin{enumerate}[resume] позволяет продолжить нумерацию в новом списке
+\usepackage{caption}
+
+\usepackage{hyperref} % гиперссылки
+
+\usepackage{multicol} % текст в несколько столбцов
+
+
+\usepackage{fancyhdr} % весёлые колонтитулы
+\pagestyle{fancy}
+\lhead{Теория вероятностей и математическая статистика-ВШЭ}
+\chead{}
+\rhead{Миниконтрольная №4}
+\lfoot{2020-05-14}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+\usepackage{todonotes} % для вставки в документ заметок о том, что осталось сделать
+% \todo{Здесь надо коэффициенты исправить}
+% \missingfigure{Здесь будет Последний день Помпеи}
+% \listoftodos --- печатает все поставленные \todo'шки
+
+
+% более красивые таблицы
+\usepackage{booktabs}
+% заповеди из докупентации:
+% 1. Не используйте вертикальные линни
+% 2. Не используйте двойные линии
+% 3. Единицы измерения - в шапку таблицы
+% 4. Не сокращайте .1 вместо 0.1
+% 5. Повторяющееся значение повторяйте, а не говорите "то же"
+
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+
+\setmainlanguage{russian}
+\setotherlanguages{english}
+
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Sans CJK JP}
+
+% download "Linux Libertine" fonts:
+% http://www.linuxlibertine.org/index.php?id=91&L=1
+\setmainfont{Linux Libertine O} % or Helvetica, Arial, Cambria
+% why do we need \newfontfamily:
+% http://tex.stackexchange.com/questions/91507/
+\newfontfamily{\cyrillicfonttt}{Linux Libertine O}
+
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ} % для списков с русскими буквами
+\setlist[enumerate, 2]{label=\asbuk*),ref=\asbuk*}
+
+%% эконометрические сокращения
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\E}{E}
+\def \hb{\hat{\beta}}
+\def \hs{\hat{\sigma}}
+\def \htheta{\hat{\theta}}
+\def \s{\sigma}
+\def \hy{\hat{y}}
+\def \hY{\hat{Y}}
+\def \v1{\vec{1}}
+\def \e{\varepsilon}
+\def \he{\hat{\e}}
+\def \z{z}
+\def \hVar{\widehat{\Var}}
+\def \hCorr{\widehat{\Corr}}
+\def \hCov{\widehat{\Cov}}
+\def \cN{\mathcal{N}}
+\def \P{\mathbb{P}}
+\newcommand \id {\mathrm{id}\_\mathrm{for}\_\mathrm{online}}
+
+\begin{document}
+
+
+
+\vspace{20mm}
+
+\textbf{Буси-до, 武士道, кодекс чести самурая:}
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item Подпишите работу сверху: \verb|id_for_online|, фамилию, имя, номер группы.
+\item Должно быть выписано решение задачи, только ответ не засчитывается.
+\item Для каждого пункта задания обведите полученный результат в торжественную рамочку.
+\item Загрузите свою работу в лмс или на гитхаб в виде одного \verb|.pdf| файла.
+
+Ссылка на гитхаб: \url{https://classroom.github.com/a/tciY6H9J}.
+\item Имя файла должно иметь вид \verb|kr4_NNN.pdf| где вместо цифр \verb|NNN| следует написать \verb|id_for_online|.
+\item При загрузке версий работы и на гитхаб, и в лмс, проверяется версия из лмс. 
+\item Начало контрольной: 13:00. 
+
+Дедлайны: 13:40 — без штрафа, 13.45 — со штрафом 30\%, 13:50 — со штрафом 60\%.
+\item Оперативные важные сообщения будут в телеграм-канале \verb|@room112|.
+\end{enumerate}
+
+\vspace{20mm}
+
+\textbf{Bushido, 武士道, samurai code of honour:}
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item State your identity at the top of the sheet: \verb|id_for_online|, first name, last name, group number.
+\item Full solutions are required, answer without explanations is not graded. 
+\item You should draw a pretty box around every final numeric answer or formula.
+\item Upload your work to the lms or gihtub as a unique \verb|.pdf| file.
+
+Github link: \url{https://classroom.github.com/a/tciY6H9J}.
+\item The filename should be of the form \verb|kr4_NNN.pdf| with your \verb|id_for_online| instead of \verb|NNN|.
+\item If you submit your work on github and in lms, then the version in lms is checked.
+\item Start time: 13:00. Deadlines: 13:40 — without penalty, 13:45 — 30\% penalty, 13:50 — 60\% penalty.
+\item For prompt and important messages read the telegram channel \verb|@room112|.
+\end{enumerate}
+
+
+
+
+
+\begin{center}
+  \begin{minipage}{5cm}
+    \includegraphics[height=30ex]{cheshire_cat.png}
+  \end{minipage}
+\end{center}
+  
+\newpage
+
+Номер выполняемого варианта $n$ определяется как $n=(\id \mod 7)+1$. 
+
+
+\section*{Вариант 1}
+\begin{enumerate}
+
+  \item {[5 баллов]} Монета подбрасывается 100 раз. По выборке из распределения Бернулли
+  постройте 90\% доверительный интервал для вероятности выпадения орла в общем виде и найдите его
+  реализацию, если выпал 61 орел.
+  
+  \item Рассмотрим выборку $X_1$, $X_2$, \ldots, $X_n$ из нормального распределения $\cN(1, \theta)$, 
+  где $\theta$ — неизвестная дисперсия:
+  
+  \[
+  \sum_{i=1}^{100} X_i = 150, \quad \sum_{i=1}^{100} X_i^2 = 600, \quad \sum_{i=1}^{100} (X_i - 1)^2 = 400.  
+  \]
+  
+  С помощью метода максимального правдоподобия 
+  постройте асимптотические доверительные интервалы с уровнем доверия 95\% в общем виде и найдите их реализации для  
+  
+  \begin{enumerate}
+    \item параметра $\theta$ {[7 баллов]};
+    \item стандартного отклонения $X_1$ {[8 баллов]};
+    \item вероятности $\P(X_1 < 3)$ {[бонусный пункт в 10 баллов]}.
+  \end{enumerate}
+  
+  
+  
+\end{enumerate}
+
+
+\textbf{Буси-до, 武士道, кодекс чести самурая:}
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item Подпишите работу сверху: \verb|id_for_online|, фамилию, имя, номер группы.
+\item Должно быть выписано решение задачи, только ответ не засчитывается.
+\item Для каждого пункта задания обведите полученный результат в торжественную рамочку.
+\item Загрузите свою работу в лмс или на гитхаб в виде одного \verb|.pdf| файла.
+
+Ссылка на гитхаб: \url{https://classroom.github.com/a/tciY6H9J}.
+\item Имя файла должно иметь вид \verb|kr4_NNN.pdf| где вместо цифр \verb|NNN| следует написать \verb|id_for_online|.
+\item При загрузке версий работы и на гитхаб, и в лмс, проверяется версия из лмс. 
+\item Начало контрольной: 13:00. 
+
+Дедлайны: 13:40 — без штрафа, 13.45 — со штрафом 30\%, 13:50 — со штрафом 60\%.
+\item Оперативные важные сообщения будут в телеграм-канале \verb|@room112|.
+\end{enumerate}
+
+
+\newpage
+Номер выполняемого варианта $n$ определяется как $n=(\id \mod 7)+1$. 
+
+\section*{Вариант 2}
+
+
+\begin{enumerate}
+
+\item {[5 баллов]} Монета подбрасывается 196 раз. По выборке из распределения Бернулли
+постройте 95\% доверительный интервал для вероятности выпадения орла в общем виде и найдите его
+реализацию, если выпало 54 орла.
+
+\item Рассмотрим выборку $X_1$, $X_2$, \ldots, $X_n$ из нормального распределения $\cN(1, \theta^2)$, 
+где $\theta^2$ — неизвестная дисперсия:
+
+\[
+\sum_{i=1}^{100} X_i = 150, \quad \sum_{i=1}^{100} X_i^2 = 600, \quad \sum_{i=1}^{100} (X_i - 1)^2 = 400.  
+\]
+
+С помощью метода максимального правдоподобия 
+постройте асимптотические доверительные интервалы с уровнем доверия 90\% в общем виде и найдите их реализации для  
+
+\begin{enumerate}
+\item параметра $\theta$ {[7 баллов]}; \textit{Обратите внимание, именно $\theta$!}
+\item дисперсии $X_1$ {[8 баллов]};
+\item вероятности $\P(X_1 < 2)$ {[бонусный пункт в 10 баллов]}.
+\end{enumerate}
+
+\end{enumerate}
+
+\textbf{Буси-до, 武士道, кодекс чести самурая:}
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item Подпишите работу сверху: \verb|id_for_online|, фамилию, имя, номер группы.
+\item Должно быть выписано решение задачи, только ответ не засчитывается.
+\item Для каждого пункта задания обведите полученный результат в торжественную рамочку.
+\item Загрузите свою работу в лмс или на гитхаб в виде одного \verb|.pdf| файла.
+
+Ссылка на гитхаб: \url{https://classroom.github.com/a/tciY6H9J}.
+\item Имя файла должно иметь вид \verb|kr4_NNN.pdf| где вместо цифр \verb|NNN| следует написать \verb|id_for_online|.
+\item При загрузке версий работы и на гитхаб, и в лмс, проверяется версия из лмс. 
+\item Начало контрольной: 13:00. 
+
+Дедлайны: 13:40 — без штрафа, 13.45 — со штрафом 30\%, 13:50 — со штрафом 60\%.
+\item Оперативные важные сообщения будут в телеграм-канале \verb|@room112|.
+\end{enumerate}
+
+
+
+\newpage
+Номер выполняемого варианта $n$ определяется как $n=(\id \mod 7)+1$. 
+
+\section*{Вариант 3}
+
+
+\begin{enumerate}
+
+\item {[5 баллов]} Монета подбрасывается 169 раз. По выборке из распределения Бернулли
+постройте 99\% доверительный интервал для вероятности выпадения орла в общем виде и найдите его
+реализацию, если выпало 58 орлов.
+
+\item Рассмотрим выборку $X_1$, $X_2$, \ldots, $X_n$ из нормального распределения $\cN(2, \theta)$, 
+где $\theta$ — неизвестная дисперсия:
+
+\[
+\sum_{i=1}^{100} X_i = 125, 
+\quad \sum_{i=1}^{100} X_i^2 = 200, 
+\quad \sum_{i=1}^{100} (X_i - 2)^2 = 100.  
+\]
+
+С помощью метода максимального правдоподобия 
+постройте асимптотические доверительные интервалы с уровнем доверия 95\% в общем виде и найдите их реализации для  
+
+\begin{enumerate}
+  \item параметра $\theta$ {[7 баллов]};
+  \item стандартного отклонения $X_1$ {[8 баллов]};
+  \item вероятности $\P(X_1 < 3)$ {[бонусный пункт в 10 баллов]}.
+\end{enumerate}
+
+\end{enumerate}
+
+\textbf{Буси-до, 武士道, кодекс чести самурая:}
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item Подпишите работу сверху: \verb|id_for_online|, фамилию, имя, номер группы.
+\item Должно быть выписано решение задачи, только ответ не засчитывается.
+\item Для каждого пункта задания обведите полученный результат в торжественную рамочку.
+\item Загрузите свою работу в лмс или на гитхаб в виде одного \verb|.pdf| файла.
+
+Ссылка на гитхаб: \url{https://classroom.github.com/a/tciY6H9J}.
+\item Имя файла должно иметь вид \verb|kr4_NNN.pdf| где вместо цифр \verb|NNN| следует написать \verb|id_for_online|.
+\item При загрузке версий работы и на гитхаб, и в лмс, проверяется версия из лмс. 
+\item Начало контрольной: 13:00. 
+
+Дедлайны: 13:40 — без штрафа, 13.45 — со штрафом 30\%, 13:50 — со штрафом 60\%.
+\item Оперативные важные сообщения будут в телеграм-канале \verb|@room112|.
+\end{enumerate}
+
+
+\newpage
+Номер выполняемого варианта $n$ определяется как $n=(\id \mod 7)+1$. 
+
+\section*{Вариант 4}
+
+
+\begin{enumerate}
+
+  \item {[5 баллов]} Монета подбрасывается 144 раза. По выборке из распределения Бернулли
+  постройте 95\% доверительный интервал для вероятности выпадения орла в общем виде и найдите его
+  реализацию, если выпало 45 орлов.
+  
+  \item Рассмотрим выборку $X_1$, $X_2$, \ldots, $X_n$ из нормального распределения $\cN(2, \theta^2)$, 
+  где $\theta^2$ — неизвестная дисперсия:
+  
+  \[
+  \sum_{i=1}^{100} X_i = 125, \quad \sum_{i=1}^{100} X_i^2 = 200, 
+  \quad \sum_{i=1}^{100} (X_i - 2)^2 = 100.  
+  \]
+  
+  С помощью метода максимального правдоподобия 
+  постройте асимптотические доверительные интервалы с уровнем доверия 90\% в общем виде и найдите их реализации для  
+  
+  \begin{enumerate}
+    \item параметра $\theta$ {[7 баллов]}; \textit{Обратите внимание, именно $\theta$!}
+    \item дисперсии $X_1$ {[8 баллов]};
+    \item вероятности $\P(X_1 < 1)$ {[бонусный пункт в 10 баллов]}.
+  \end{enumerate}
+  
+\end{enumerate}
+    
+\textbf{Буси-до, 武士道, кодекс чести самурая:}
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item Подпишите работу сверху: \verb|id_for_online|, фамилию, имя, номер группы.
+\item Должно быть выписано решение задачи, только ответ не засчитывается.
+\item Для каждого пункта задания обведите полученный результат в торжественную рамочку.
+\item Загрузите свою работу в лмс или на гитхаб в виде одного \verb|.pdf| файла.
+
+Ссылка на гитхаб: \url{https://classroom.github.com/a/tciY6H9J}.
+\item Имя файла должно иметь вид \verb|kr4_NNN.pdf| где вместо цифр \verb|NNN| следует написать \verb|id_for_online|.
+\item При загрузке версий работы и на гитхаб, и в лмс, проверяется версия из лмс. 
+\item Начало контрольной: 13:00. 
+
+Дедлайны: 13:40 — без штрафа, 13.45 — со штрафом 30\%, 13:50 — со штрафом 60\%.
+\item Оперативные важные сообщения будут в телеграм-канале \verb|@room112|.
+\end{enumerate}
+
+
+
+
+\newpage
+
+Номер выполняемого варианта $n$ определяется как $n=(\id \mod 7)+1$. 
+
+
+\section*{Вариант 5}
+\begin{enumerate}
+
+  \item {[5 баллов]} Монета подбрасывается 100 раз. По выборке из распределения Бернулли
+  постройте 90\% доверительный интервал для вероятности выпадения орла в общем виде и найдите его
+  реализацию, если выпал 61 орел.
+  
+  \item Рассмотрим выборку $X_1$, $X_2$, \ldots, $X_n$ из нормального распределения $\cN(1, \theta)$, 
+  где $\theta$ — неизвестная дисперсия:
+  
+  \[
+  \sum_{i=1}^{100} X_i = 150, \quad \sum_{i=1}^{100} X_i^2 = 600, \quad \sum_{i=1}^{100} (X_i - 1)^2 = 400.  
+  \]
+  
+  С помощью метода максимального правдоподобия 
+  постройте асимптотические доверительные интервалы с уровнем доверия 95\% в общем виде и найдите их реализации для  
+  
+  \begin{enumerate}
+    \item параметра $\theta$ {[7 баллов]};
+    \item стандартного отклонения $X_1$ {[8 баллов]};
+    \item вероятности $\P(X_1 > 3)$ {[бонусный пункт в 10 баллов]}.
+  \end{enumerate}
+  
+  
+  
+\end{enumerate}
+
+
+
+\textbf{Буси-до, 武士道, кодекс чести самурая:}
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item Подпишите работу сверху: \verb|id_for_online|, фамилию, имя, номер группы.
+\item Должно быть выписано решение задачи, только ответ не засчитывается.
+\item Для каждого пункта задания обведите полученный результат в торжественную рамочку.
+\item Загрузите свою работу в лмс или на гитхаб в виде одного \verb|.pdf| файла.
+
+Ссылка на гитхаб: \url{https://classroom.github.com/a/tciY6H9J}.
+\item Имя файла должно иметь вид \verb|kr4_NNN.pdf| где вместо цифр \verb|NNN| следует написать \verb|id_for_online|.
+\item При загрузке версий работы и на гитхаб, и в лмс, проверяется версия из лмс. 
+\item Начало контрольной: 13:00. 
+
+Дедлайны: 13:40 — без штрафа, 13.45 — со штрафом 30\%, 13:50 — со штрафом 60\%.
+\item Оперативные важные сообщения будут в телеграм-канале \verb|@room112|.
+\end{enumerate}
+
+
+\newpage
+Номер выполняемого варианта $n$ определяется как $n=(\id \mod 7)+1$. 
+
+\section*{Вариант 6}
+
+
+\begin{enumerate}
+
+\item {[5 баллов]} Монета подбрасывается 196 раз. По выборке из распределения Бернулли
+постройте 95\% доверительный интервал для вероятности выпадения орла в общем виде и найдите его
+реализацию, если выпало 54 орла.
+
+\item Рассмотрим выборку $X_1$, $X_2$, \ldots, $X_n$ из нормального распределения $\cN(1, \theta^2)$, 
+где $\theta^2$ — неизвестная дисперсия:
+
+\[
+\sum_{i=1}^{100} X_i = 150, \quad \sum_{i=1}^{100} X_i^2 = 600, \quad \sum_{i=1}^{100} (X_i - 1)^2 = 400.  
+\]
+
+С помощью метода максимального правдоподобия 
+постройте асимптотические доверительные интервалы с уровнем доверия 90\% в общем виде и найдите их реализации для  
+
+\begin{enumerate}
+\item параметра $\theta$ {[7 баллов]}; \textit{Обратите внимание, именно $\theta$!}
+\item дисперсии $X_1$ {[8 баллов]};
+\item вероятности $\P(X_1 > 2)$ {[бонусный пункт в 10 баллов]}.
+\end{enumerate}
+
+\end{enumerate}
+
+
+\textbf{Буси-до, 武士道, кодекс чести самурая:}
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item Подпишите работу сверху: \verb|id_for_online|, фамилию, имя, номер группы.
+\item Должно быть выписано решение задачи, только ответ не засчитывается.
+\item Для каждого пункта задания обведите полученный результат в торжественную рамочку.
+\item Загрузите свою работу в лмс или на гитхаб в виде одного \verb|.pdf| файла.
+
+Ссылка на гитхаб: \url{https://classroom.github.com/a/tciY6H9J}.
+\item Имя файла должно иметь вид \verb|kr4_NNN.pdf| где вместо цифр \verb|NNN| следует написать \verb|id_for_online|.
+\item При загрузке версий работы и на гитхаб, и в лмс, проверяется версия из лмс. 
+\item Начало контрольной: 13:00. 
+
+Дедлайны: 13:40 — без штрафа, 13.45 — со штрафом 30\%, 13:50 — со штрафом 60\%.
+\item Оперативные важные сообщения будут в телеграм-канале \verb|@room112|.
+\end{enumerate}
+
+
+\newpage
+Номер выполняемого варианта $n$ определяется как $n=(\id \mod 7)+1$. 
+
+\section*{Вариант 7}
+
+
+\begin{enumerate}
+
+\item {[5 баллов]} Монета подбрасывается 169 раз. По выборке из распределения Бернулли
+постройте 99\% доверительный интервал для вероятности выпадения орла в общем виде и найдите его
+реализацию, если выпало 58 орлов.
+
+\item Рассмотрим выборку $X_1$, $X_2$, \ldots, $X_n$ из нормального распределения $\cN(2, \theta)$, 
+где $\theta$ — неизвестная дисперсия:
+
+\[
+\sum_{i=1}^{100} X_i = 125, 
+\quad \sum_{i=1}^{100} X_i^2 = 200, 
+\quad \sum_{i=1}^{100} (X_i - 2)^2 = 100.  
+\]
+
+С помощью метода максимального правдоподобия 
+постройте асимптотические доверительные интервалы с уровнем доверия 95\% в общем виде и найдите их реализации для  
+
+\begin{enumerate}
+  \item параметра $\theta$ {[7 баллов]};
+  \item стандартного отклонения $X_1$ {[8 баллов]};
+  \item вероятности $\P(X_1 > 3)$ {[бонусный пункт в 10 баллов]}.
+\end{enumerate}
+
+\end{enumerate}
+
+
+\textbf{Буси-до, 武士道, кодекс чести самурая:}
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item Подпишите работу сверху: \verb|id_for_online|, фамилию, имя, номер группы.
+\item Должно быть выписано решение задачи, только ответ не засчитывается.
+\item Для каждого пункта задания обведите полученный результат в торжественную рамочку.
+\item Загрузите свою работу в лмс или на гитхаб в виде одного \verb|.pdf| файла.
+
+Ссылка на гитхаб: \url{https://classroom.github.com/a/tciY6H9J}.
+\item Имя файла должно иметь вид \verb|kr4_NNN.pdf| где вместо цифр \verb|NNN| следует написать \verb|id_for_online|.
+\item При загрузке версий работы и на гитхаб, и в лмс, проверяется версия из лмс. 
+\item Начало контрольной: 13:00. 
+
+Дедлайны: 13:40 — без штрафа, 13.45 — со штрафом 30\%, 13:50 — со штрафом 60\%.
+\item Оперативные важные сообщения будут в телеграм-канале \verb|@room112|.
+\end{enumerate}
+
+
+
+\newpage
+
+The variant $n$ is defined as $n=(\id \mod 7)+1$. 
+
+
+\section*{Variant 1}
+\begin{enumerate}
+
+\item {[5 points]} A coin was tossed 100 times and landed tails up in 61 tosses.
+Provide the general formula and particular values
+of the 90\% confidence interval for the probability of landing tails up.
+
+\item Consider a random sample $X_1$, $X_2$, \ldots, $X_n$ from normal distribution $\cN(1, \theta)$, 
+with unknown variance $\theta$:
+
+\[
+\sum_{i=1}^{100} X_i = 150, \quad \sum_{i=1}^{100} X_i^2 = 600, \quad \sum_{i=1}^{100} (X_i - 1)^2 = 400.  
+\]
+
+Using maximum likelihood 
+provide general formula and particular values
+of the 95\% asymptotic confidence interval for:
+
+\begin{enumerate}
+  \item parameter $\theta$ {[7 points]};
+  \item standard deviation $X_1$ {[8 points]};
+  \item probability $\P(X_1 < 1)$ {[bonus question for 10 points]}.
+\end{enumerate}
+
+\end{enumerate}
+
+
+\textbf{Bushido, 武士道, samurai code of honour:}
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item State your identity at the top of the sheet: \verb|id_for_online|, first name, last name, group number.
+\item Full solutions are required, answer without explanations is not graded. 
+\item You should draw a pretty box around every final numeric answer or formula.
+\item Upload your work to the lms or gihtub as a unique \verb|.pdf| file.
+
+Github link: \url{https://classroom.github.com/a/tciY6H9J}.
+\item The filename should be of the form \verb|kr4_NNN.pdf| with your \verb|id_for_online| instead of \verb|NNN|.
+\item If you submit your work on github and in lms, then the version in lms is checked.
+\item Start time: 13:00. Deadlines: 13:40 — without penalty, 13:45 — 30\% penalty, 13:50 — 60\% penalty.
+\item For prompt and important messages read the telegram channel \verb|@room112|.
+\end{enumerate}
+
+
+\newpage
+
+The variant $n$ is defined as $n=(\id \mod 7)+1$. 
+
+
+\section*{Variant 2}
+\begin{enumerate}
+
+\item {[5 points]} A coin was tossed 196 times and landed tails up in 54 tosses.
+Provide the general formula and particular values
+of the 95\% confidence interval for the probability of landing tails up.
+
+\item Consider a random sample $X_1$, $X_2$, \ldots, $X_n$ from normal distribution $\cN(1, \theta^2)$, 
+with unknown variance $\theta^2$:
+
+\[
+\sum_{i=1}^{100} X_i = 150, \quad \sum_{i=1}^{100} X_i^2 = 600, \quad \sum_{i=1}^{100} (X_i - 1)^2 = 400.  
+\]
+
+Using maximum likelihood 
+provide general formula and particular values
+of the 95\% asymptotic confidence interval for:
+
+\begin{enumerate}
+  \item parameter $\theta$ {[7 points]}; \textit{Be careful, exactly for $\theta$!}
+  \item variance $X_1$ {[8 points]};
+  \item probability $\P(X_1 < 2)$ {[bonus question for 10 points]}.
+\end{enumerate}
+
+\end{enumerate}
+
+\textbf{Bushido, 武士道, samurai code of honour:}
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item State your identity at the top of the sheet: \verb|id_for_online|, first name, last name, group number.
+\item Full solutions are required, answer without explanations is not graded. 
+\item You should draw a pretty box around every final numeric answer or formula.
+\item Upload your work to the lms or gihtub as a unique \verb|.pdf| file.
+
+Github link: \url{https://classroom.github.com/a/tciY6H9J}.
+\item The filename should be of the form \verb|kr4_NNN.pdf| with your \verb|id_for_online| instead of \verb|NNN|.
+\item If you submit your work on github and in lms, then the version in lms is checked.
+\item Start time: 13:00. Deadlines: 13:40 — without penalty, 13:45 — 30\% penalty, 13:50 — 60\% penalty.
+\item For prompt and important messages read the telegram channel \verb|@room112|.
+\end{enumerate}
+
+
+\newpage
+
+The variant $n$ is defined as $n=(\id \mod 7)+1$. 
+
+
+\section*{Variant 3}
+\begin{enumerate}
+
+\item {[5 points]} A coin was tossed 169 times and landed tails up in 58 tosses.
+Provide the general formula and particular values
+of the 99\% confidence interval for the probability of landing tails up.
+
+\item Consider a random sample $X_1$, $X_2$, \ldots, $X_n$ from normal distribution $\cN(2, \theta)$, 
+with unknown variance $\theta$:
+
+\[
+\sum_{i=1}^{100} X_i = 125, \quad \sum_{i=1}^{100} X_i^2 = 200, \quad \sum_{i=1}^{100} (X_i - 2)^2 = 100.  
+\]
+
+Using maximum likelihood 
+provide general formula and particular values
+of the 95\% asymptotic confidence interval for:
+
+\begin{enumerate}
+  \item parameter $\theta$ {[7 points]};
+  \item standard deviation $X_1$ {[8 points]};
+  \item probability $\P(X_1 < 3)$ {[bonus question for 10 points]}.
+\end{enumerate}
+
+\end{enumerate}
+
+
+\textbf{Bushido, 武士道, samurai code of honour:}
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item State your identity at the top of the sheet: \verb|id_for_online|, first name, last name, group number.
+\item Full solutions are required, answer without explanations is not graded. 
+\item You should draw a pretty box around every final numeric answer or formula.
+\item Upload your work to the lms or gihtub as a unique \verb|.pdf| file.
+
+Github link: \url{https://classroom.github.com/a/tciY6H9J}.
+\item The filename should be of the form \verb|kr4_NNN.pdf| with your \verb|id_for_online| instead of \verb|NNN|.
+\item If you submit your work on github and in lms, then the version in lms is checked.
+\item Start time: 13:00. Deadlines: 13:40 — without penalty, 13:45 — 30\% penalty, 13:50 — 60\% penalty.
+\item For prompt and important messages read the telegram channel \verb|@room112|.
+\end{enumerate}
+
+
+\newpage
+
+The variant $n$ is defined as $n=(\id \mod 7)+1$. 
+
+
+\section*{Variant 4}
+\begin{enumerate}
+
+\item {[5 points]} A coin was tossed 144 times and landed tails up in 45 tosses.
+Provide the general formula and particular values
+of the 95\% confidence interval for the probability of landing tails up.
+
+\item Consider a random sample $X_1$, $X_2$, \ldots, $X_n$ from normal distribution $\cN(2, \theta^2)$, 
+with unknown variance $\theta^2$:
+
+\[
+\sum_{i=1}^{100} X_i = 125, \quad \sum_{i=1}^{100} X_i^2 = 200, \quad \sum_{i=1}^{100} (X_i - 2)^2 = 100.  
+\]
+
+Using maximum likelihood 
+provide general formula and particular values
+of the 90\% asymptotic confidence interval for:
+
+\begin{enumerate}
+  \item parameter $\theta$ {[7 points]}; \textit{Be careful, exactly for $\theta$!}
+  \item variance $X_1$ {[8 points]};
+  \item probability $\P(X_1 < 4)$ {[bonus question for 10 points]}.
+\end{enumerate}
+
+\end{enumerate}
+
+\textbf{Bushido, 武士道, samurai code of honour:}
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item State your identity at the top of the sheet: \verb|id_for_online|, first name, last name, group number.
+\item Full solutions are required, answer without explanations is not graded. 
+\item You should draw a pretty box around every final numeric answer or formula.
+\item Upload your work to the lms or gihtub as a unique \verb|.pdf| file.
+
+Github link: \url{https://classroom.github.com/a/tciY6H9J}.
+\item The filename should be of the form \verb|kr4_NNN.pdf| with your \verb|id_for_online| instead of \verb|NNN|.
+\item If you submit your work on github and in lms, then the version in lms is checked.
+\item Start time: 13:00. Deadlines: 13:40 — without penalty, 13:45 — 30\% penalty, 13:50 — 60\% penalty.
+\item For prompt and important messages read the telegram channel \verb|@room112|.
+\end{enumerate}
+
+
+\newpage
+
+The variant $n$ is defined as $n=(\id \mod 7)+1$. 
+
+
+\section*{Variant 5}
+\begin{enumerate}
+
+\item {[5 points]} A coin was tossed 100 times and landed tails up in 61 tosses.
+Provide the general formula and particular values
+of the 90\% confidence interval for the probability of landing tails up.
+
+\item Consider a random sample $X_1$, $X_2$, \ldots, $X_n$ from normal distribution $\cN(1, \theta)$, 
+with unknown variance $\theta$:
+
+\[
+\sum_{i=1}^{100} X_i = 150, \quad \sum_{i=1}^{100} X_i^2 = 600, \quad \sum_{i=1}^{100} (X_i - 1)^2 = 400.  
+\]
+
+Using maximum likelihood 
+provide general formula and particular values
+of the 95\% asymptotic confidence interval for:
+
+\begin{enumerate}
+  \item parameter $\theta$ {[7 points]};
+  \item standard deviation $X_1$ {[8 points]};
+  \item probability $\P(X_1 > 1)$ {[bonus question for 10 points]}.
+\end{enumerate}
+
+\end{enumerate}
+
+\textbf{Bushido, 武士道, samurai code of honour:}
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item State your identity at the top of the sheet: \verb|id_for_online|, first name, last name, group number.
+\item Full solutions are required, answer without explanations is not graded. 
+\item You should draw a pretty box around every final numeric answer or formula.
+\item Upload your work to the lms or gihtub as a unique \verb|.pdf| file.
+
+Github link: \url{https://classroom.github.com/a/tciY6H9J}.
+\item The filename should be of the form \verb|kr4_NNN.pdf| with your \verb|id_for_online| instead of \verb|NNN|.
+\item If you submit your work on github and in lms, then the version in lms is checked.
+\item Start time: 13:00. Deadlines: 13:40 — without penalty, 13:45 — 30\% penalty, 13:50 — 60\% penalty.
+\item For prompt and important messages read the telegram channel \verb|@room112|.
+\end{enumerate}
+
+
+\newpage
+
+The variant $n$ is defined as $n=(\id \mod 7)+1$. 
+
+
+\section*{Variant 6}
+\begin{enumerate}
+
+\item {[5 points]} A coin was tossed 196 times and landed tails up in 54 tosses.
+Provide the general formula and particular values
+of the 95\% confidence interval for the probability of landing tails up.
+
+\item Consider a random sample $X_1$, $X_2$, \ldots, $X_n$ from normal distribution $\cN(1, \theta^2)$, 
+with unknown variance $\theta^2$:
+
+\[
+\sum_{i=1}^{100} X_i = 150, \quad \sum_{i=1}^{100} X_i^2 = 600, \quad \sum_{i=1}^{100} (X_i - 1)^2 = 400.  
+\]
+
+Using maximum likelihood 
+provide general formula and particular values
+of the 95\% asymptotic confidence interval for:
+
+\begin{enumerate}
+  \item parameter $\theta$ {[7 points]}; \textit{Be careful, exactly for $\theta$!}
+  \item variance $X_1$ {[8 points]};
+  \item probability $\P(X_1 > 2)$ {[bonus question for 10 points]}.
+\end{enumerate}
+
+\end{enumerate}
+
+\textbf{Bushido, 武士道, samurai code of honour:}
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item State your identity at the top of the sheet: \verb|id_for_online|, first name, last name, group number.
+\item Full solutions are required, answer without explanations is not graded. 
+\item You should draw a pretty box around every final numeric answer or formula.
+\item Upload your work to the lms or gihtub as a unique \verb|.pdf| file.
+
+Github link: \url{https://classroom.github.com/a/tciY6H9J}.
+\item The filename should be of the form \verb|kr4_NNN.pdf| with your \verb|id_for_online| instead of \verb|NNN|.
+\item If you submit your work on github and in lms, then the version in lms is checked.
+\item Start time: 13:00. Deadlines: 13:40 — without penalty, 13:45 — 30\% penalty, 13:50 — 60\% penalty.
+\item For prompt and important messages read the telegram channel \verb|@room112|.
+\end{enumerate}
+
+
+\newpage
+
+The variant $n$ is defined as $n=(\id \mod 7)+1$. 
+
+
+\section*{Variant 7}
+\begin{enumerate}
+
+\item {[5 points]} A coin was tossed 169 times and landed tails up in 58 tosses.
+Provide the general formula and particular values
+of the 99\% confidence interval for the probability of landing tails up.
+
+\item Consider a random sample $X_1$, $X_2$, \ldots, $X_n$ from normal distribution $\cN(2, \theta)$, 
+with unknown variance $\theta$:
+
+\[
+\sum_{i=1}^{100} X_i = 125, \quad \sum_{i=1}^{100} X_i^2 = 200, \quad \sum_{i=1}^{100} (X_i - 2)^2 = 100.  
+\]
+
+Using maximum likelihood 
+provide general formula and particular values
+of the 95\% asymptotic confidence interval for:
+
+\begin{enumerate}
+  \item parameter $\theta$ {[7 points]};
+  \item standard deviation $X_1$ {[8 points]};
+  \item probability $\P(X_1 > 3)$ {[bonus question for 10 points]}.
+\end{enumerate}
+
+\end{enumerate}
+
+\textbf{Bushido, 武士道, samurai code of honour:}
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item State your identity at the top of the sheet: \verb|id_for_online|, first name, last name, group number.
+\item Full solutions are required, answer without explanations is not graded. 
+\item You should draw a pretty box around every final numeric answer or formula.
+\item Upload your work to the lms or gihtub as a unique \verb|.pdf| file.
+
+Github link: \url{https://classroom.github.com/a/tciY6H9J}.
+\item The filename should be of the form \verb|kr4_NNN.pdf| with your \verb|id_for_online| instead of \verb|NNN|.
+\item If you submit your work on github and in lms, then the version in lms is checked.
+\item Start time: 13:00. Deadlines: 13:40 — without penalty, 13:45 — 30\% penalty, 13:50 — 60\% penalty.
+\item For prompt and important messages read the telegram channel \verb|@room112|.
+\end{enumerate}
+
+
+
+
+
+\end{document}

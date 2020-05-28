@@ -1,0 +1,451 @@
+\documentclass[12pt]{article}
+
+\usepackage{tikz} % картинки в tikz
+\usepackage{microtype} % свешивание пунктуации
+
+\usepackage{array} % для столбцов фиксированной ширины
+
+\usepackage{indentfirst} % отступ в первом параграфе
+
+\usepackage{sectsty} % для центрирования названий частей
+\allsectionsfont{\centering}
+
+\usepackage{amsmath} % куча стандартных математических плюшек
+
+\usepackage{comment}
+\usepackage{amsfonts}
+
+\usepackage{verbatim}
+
+\usepackage{graphicx} % for png images
+
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+
+\usepackage[top=2cm, left=1cm, right=1cm, bottom=2cm]{geometry} % размер текста на странице
+
+\usepackage{lastpage} % чтобы узнать номер последней страницы
+
+\usepackage{enumitem} % дополнительные плюшки для списков
+%  например \begin{enumerate}[resume] позволяет продолжить нумерацию в новом списке
+\usepackage{caption}
+
+\usepackage{hyperref} % гиперссылки
+
+\usepackage{multicol} % текст в несколько столбцов
+
+
+\usepackage{fancyhdr} % весёлые колонтитулы
+\pagestyle{fancy}
+\lhead{Теория вероятностей и математическая статистика-ВШЭ}
+\chead{}
+\rhead{Миниконтрольная №5}
+\lfoot{2020-05-28}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+\usepackage{todonotes} % для вставки в документ заметок о том, что осталось сделать
+% \todo{Здесь надо коэффициенты исправить}
+% \missingfigure{Здесь будет Последний день Помпеи}
+% \listoftodos --- печатает все поставленные \todo'шки
+
+
+% более красивые таблицы
+\usepackage{booktabs}
+% заповеди из докупентации:
+% 1. Не используйте вертикальные линни
+% 2. Не используйте двойные линии
+% 3. Единицы измерения - в шапку таблицы
+% 4. Не сокращайте .1 вместо 0.1
+% 5. Повторяющееся значение повторяйте, а не говорите "то же"
+
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+
+\setmainlanguage{russian}
+\setotherlanguages{english}
+
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Sans CJK JP}
+
+% download "Linux Libertine" fonts:
+% http://www.linuxlibertine.org/index.php?id=91&L=1
+\setmainfont{Linux Libertine O} % or Helvetica, Arial, Cambria
+% why do we need \newfontfamily:
+% http://tex.stackexchange.com/questions/91507/
+\newfontfamily{\cyrillicfonttt}{Linux Libertine O}
+
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ} % для списков с русскими буквами
+\setlist[enumerate, 2]{label=\asbuk*),ref=\asbuk*}
+
+%% эконометрические сокращения
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\E}{E}
+\def \hb{\hat{\beta}}
+\def \hs{\hat{\sigma}}
+\def \htheta{\hat{\theta}}
+\def \s{\sigma}
+\def \hy{\hat{y}}
+\def \hY{\hat{Y}}
+\def \v1{\vec{1}}
+\def \e{\varepsilon}
+\def \he{\hat{\e}}
+\def \z{z}
+\def \hVar{\widehat{\Var}}
+\def \hCorr{\widehat{\Corr}}
+\def \hCov{\widehat{\Cov}}
+\def \cN{\mathcal{N}}
+\def \P{\mathbb{P}}
+\newcommand \id {\mathrm{id}\_\mathrm{for}\_\mathrm{online}}
+
+\begin{document}
+
+
+
+\vspace{20mm}
+
+\textbf{Буси-до, 武士道, кодекс чести самурая:}
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item Подпишите работу сверху: \verb|id_for_online|, фамилию, имя, номер группы.
+\item Должно быть выписано решение задачи, только ответ не засчитывается.
+\item Для каждого пункта задания обведите полученный результат в торжественную рамочку.
+\item Загрузите свою работу в лмс или на гитхаб в виде одного \verb|.pdf| файла.
+
+Ссылка на гитхаб: \url{https://classroom.github.com/a/FzuyWyxQ}.
+\item Имя файла должно иметь вид \verb|kr5_NNN.pdf| где вместо цифр \verb|NNN| следует написать \verb|id_for_online|.
+\item При загрузке версий работы и на гитхаб, и в лмс, проверяется версия из лмс. 
+\item Начало контрольной: 13:00. 
+
+Дедлайны: 13:40 — без штрафа, 13.45 — со штрафом 30\%, 13:50 — со штрафом 60\%.
+\item Оперативные важные сообщения будут в телеграм-канале \verb|@room112|.
+\end{enumerate}
+
+\vspace{10mm}
+
+\textbf{Bushido, 武士道, samurai code of honour:}
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item State your identity at the top of the sheet: \verb|id_for_online|, first name, last name, group number.
+\item Full solutions are required, answer without explanations is not graded. 
+\item You should draw a pretty box around every final numeric answer or formula.
+\item Upload your work to the lms or gihtub as a unique \verb|.pdf| file.
+
+Github link: \url{https://classroom.github.com/a/FzuyWyxQ}.
+\item The filename should be of the form \verb|kr5_NNN.pdf| with your \verb|id_for_online| instead of \verb|NNN|.
+\item If you submit your work on github and in lms, then the version in lms is checked.
+\item Start time: 13:00. Deadlines: 13:40 — without penalty, 13:45 — 30\% penalty, 13:50 — 60\% penalty.
+\item For prompt and important messages read the telegram channel \verb|@room112|.
+\end{enumerate}
+
+
+\begin{center}
+  \begin{minipage}{5cm}
+    \includegraphics[height=30ex]{cheshire_cat.png}
+  \end{minipage}
+\end{center}
+  
+\newpage
+
+Номер выполняемого варианта $n$ определяется как $n=(\id \mod 6)+1$. 
+
+\section*{Вариант 1}
+
+
+Рассмотрим случайную выборку $X_1$, $X_2$, \ldots, $X_n$ из распределения Пуассона с параметром $\lambda$. 
+Чеширский Кот хочет проверить гипотезу $H_0$: $\lambda = 3$ против альтернативной $H_1$: $\lambda = 4$ на уровне
+значимости $0.05$. Помогите Чеширскому Коту разобраться с построением оптимального (равномерно наиболее мощного)
+критерия с помощью леммы Неймана-Пирсона при различных $n$.
+
+\begin{enumerate}
+  \item {[5+4]} Для $n=100$ найдите оптимальный критерий и вероятность ошибки второго рода. Можно использовать нормальную аппроксимацию.
+  \item {[6+4+1]} Для $n=1$ найдите оптимальный критерий и вероятность ошибки второго рода. Проверьте нулевую гипотезу для $x_1 = 5$. 
+  \item {[бонусный пункт, 6+4]} Для $n=3$ найдите оптимальный критерий и вероятность ошибки второго рода.
+\end{enumerate}
+
+\vspace{15mm}
+
+
+\textbf{Буси-до, 武士道, кодекс чести самурая:}
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item Подпишите работу сверху: \verb|id_for_online|, фамилию, имя, номер группы.
+\item Должно быть выписано решение задачи, только ответ не засчитывается.
+\item Для каждого пункта задания обведите полученный результат в торжественную рамочку.
+\item Загрузите свою работу в лмс или на гитхаб в виде одного \verb|.pdf| файла.
+
+Ссылка на гитхаб: \url{https://classroom.github.com/a/FzuyWyxQ}.
+\item Имя файла должно иметь вид \verb|kr5_NNN.pdf| где вместо цифр \verb|NNN| следует написать \verb|id_for_online|.
+\item При загрузке версий работы и на гитхаб, и в лмс, проверяется версия из лмс. 
+\item Начало контрольной: 13:00. 
+
+Дедлайны: 13:40 — без штрафа, 13.45 — со штрафом 30\%, 13:50 — со штрафом 60\%.
+\item Оперативные важные сообщения будут в телеграм-канале \verb|@room112|.
+\end{enumerate}
+
+
+\newpage
+
+Номер выполняемого варианта $n$ определяется как $n=(\id \mod 6)+1$. 
+
+\section*{Вариант 2}
+
+
+Рассмотрим случайную выборку $X_1$, $X_2$, \ldots, $X_n$ из распределения Пуассона с параметром $\lambda$. 
+Чеширский Кот хочет проверить гипотезу $H_0$: $\lambda = 4$ против альтернативной $H_1$: $\lambda = 3$ на уровне
+значимости $0.05$. Помогите Чеширскому Коту разобраться с построением оптимального (равномерно наиболее мощного)
+критерия с помощью леммы Неймана-Пирсона при различных $n$.
+
+\begin{enumerate}
+  \item {[5+4]} Для $n=100$ найдите оптимальный критерий и вероятность ошибки второго рода. Можно использовать нормальную аппроксимацию.
+  \item {[6+4+1]} Для $n=1$ найдите оптимальный критерий и вероятность ошибки второго рода. Проверьте нулевую гипотезу для $x_1 = 4$. 
+  \item {[бонусный пункт, 6+4]} Для $n=3$ найдите оптимальный критерий и вероятность ошибки второго рода.
+\end{enumerate}
+
+\vspace{15mm}
+
+
+\textbf{Буси-до, 武士道, кодекс чести самурая:}
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item Подпишите работу сверху: \verb|id_for_online|, фамилию, имя, номер группы.
+\item Должно быть выписано решение задачи, только ответ не засчитывается.
+\item Для каждого пункта задания обведите полученный результат в торжественную рамочку.
+\item Загрузите свою работу в лмс или на гитхаб в виде одного \verb|.pdf| файла.
+
+Ссылка на гитхаб: \url{https://classroom.github.com/a/FzuyWyxQ}.
+\item Имя файла должно иметь вид \verb|kr5_NNN.pdf| где вместо цифр \verb|NNN| следует написать \verb|id_for_online|.
+\item При загрузке версий работы и на гитхаб, и в лмс, проверяется версия из лмс. 
+\item Начало контрольной: 13:00. 
+
+Дедлайны: 13:40 — без штрафа, 13.45 — со штрафом 30\%, 13:50 — со штрафом 60\%.
+\item Оперативные важные сообщения будут в телеграм-канале \verb|@room112|.
+\end{enumerate}
+
+
+\newpage
+
+Номер выполняемого варианта $n$ определяется как $n=(\id \mod 6)+1$. 
+
+\section*{Вариант 3}
+
+
+Рассмотрим случайную выборку $X_1$, $X_2$, \ldots, $X_n$ из распределения Пуассона с параметром $\lambda$. 
+Чеширский Кот хочет проверить гипотезу $H_0$: $\lambda = 5$ против альтернативной $H_1$: $\lambda = 4$ на уровне
+значимости $0.05$. Помогите Чеширскому Коту разобраться с построением оптимального (равномерно наиболее мощного)
+критерия с помощью леммы Неймана-Пирсона при различных $n$.
+
+\begin{enumerate}
+  \item {[5+4]} Для $n=100$ найдите оптимальный критерий и вероятность ошибки второго рода. Можно использовать нормальную аппроксимацию.
+  \item {[6+4+1]} Для $n=1$ найдите оптимальный критерий и вероятность ошибки второго рода. Проверьте нулевую гипотезу для $x_1 = 3$. 
+  \item {[бонусный пункт, 6+4]} Для $n=3$ найдите оптимальный критерий и вероятность ошибки второго рода.
+\end{enumerate}
+
+\vspace{15mm}
+
+
+\textbf{Буси-до, 武士道, кодекс чести самурая:}
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item Подпишите работу сверху: \verb|id_for_online|, фамилию, имя, номер группы.
+\item Должно быть выписано решение задачи, только ответ не засчитывается.
+\item Для каждого пункта задания обведите полученный результат в торжественную рамочку.
+\item Загрузите свою работу в лмс или на гитхаб в виде одного \verb|.pdf| файла.
+
+Ссылка на гитхаб: \url{https://classroom.github.com/a/FzuyWyxQ}.
+\item Имя файла должно иметь вид \verb|kr5_NNN.pdf| где вместо цифр \verb|NNN| следует написать \verb|id_for_online|.
+\item При загрузке версий работы и на гитхаб, и в лмс, проверяется версия из лмс. 
+\item Начало контрольной: 13:00. 
+
+Дедлайны: 13:40 — без штрафа, 13.45 — со штрафом 30\%, 13:50 — со штрафом 60\%.
+\item Оперативные важные сообщения будут в телеграм-канале \verb|@room112|.
+\end{enumerate}
+
+
+\newpage
+
+Номер выполняемого варианта $n$ определяется как $n=(\id \mod 6)+1$. 
+
+\section*{Вариант 4}
+
+
+Рассмотрим случайную выборку $X_1$, $X_2$, \ldots, $X_n$ из распределения Пуассона с параметром $\lambda$. 
+Чеширский Кот хочет проверить гипотезу $H_0$: $\lambda = 4$ против альтернативной $H_1$: $\lambda = 5$ на уровне
+значимости $0.05$. Помогите Чеширскому Коту разобраться с построением оптимального (равномерно наиболее мощного)
+критерия с помощью леммы Неймана-Пирсона при различных $n$.
+
+\begin{enumerate}
+  \item {[5+4]} Для $n=100$ найдите оптимальный критерий и вероятность ошибки второго рода. Можно использовать нормальную аппроксимацию.
+  \item {[6+4+1]} Для $n=1$ найдите оптимальный критерий и вероятность ошибки второго рода. Проверьте нулевую гипотезу для $x_1 = 5$. 
+  \item {[бонусный пункт, 6+4]} Для $n=3$ найдите оптимальный критерий и вероятность ошибки второго рода.
+\end{enumerate}
+
+\vspace{15mm}
+
+
+\textbf{Буси-до, 武士道, кодекс чести самурая:}
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item Подпишите работу сверху: \verb|id_for_online|, фамилию, имя, номер группы.
+\item Должно быть выписано решение задачи, только ответ не засчитывается.
+\item Для каждого пункта задания обведите полученный результат в торжественную рамочку.
+\item Загрузите свою работу в лмс или на гитхаб в виде одного \verb|.pdf| файла.
+
+Ссылка на гитхаб: \url{https://classroom.github.com/a/FzuyWyxQ}.
+\item Имя файла должно иметь вид \verb|kr5_NNN.pdf| где вместо цифр \verb|NNN| следует написать \verb|id_for_online|.
+\item При загрузке версий работы и на гитхаб, и в лмс, проверяется версия из лмс. 
+\item Начало контрольной: 13:00. 
+
+Дедлайны: 13:40 — без штрафа, 13.45 — со штрафом 30\%, 13:50 — со штрафом 60\%.
+\item Оперативные важные сообщения будут в телеграм-канале \verb|@room112|.
+\end{enumerate}
+
+
+\newpage
+
+Номер выполняемого варианта $n$ определяется как $n=(\id \mod 6)+1$. 
+
+\section*{Вариант 5}
+
+
+Рассмотрим случайную выборку $X_1$, $X_2$, \ldots, $X_n$ из распределения Пуассона с параметром $\lambda$. 
+Чеширский Кот хочет проверить гипотезу $H_0$: $\lambda = 3$ против альтернативной $H_1$: $\lambda = 5$ на уровне
+значимости $0.05$. Помогите Чеширскому Коту разобраться с построением оптимального (равномерно наиболее мощного)
+критерия с помощью леммы Неймана-Пирсона при различных $n$.
+
+\begin{enumerate}
+  \item {[5+4]} Для $n=100$ найдите оптимальный критерий и вероятность ошибки второго рода. Можно использовать нормальную аппроксимацию.
+  \item {[6+4+1]} Для $n=1$ найдите оптимальный критерий и вероятность ошибки второго рода. Проверьте нулевую гипотезу для $x_1 = 4$. 
+  \item {[бонусный пункт, 6+4]} Для $n=3$ найдите оптимальный критерий и вероятность ошибки второго рода.
+\end{enumerate}
+
+\vspace{15mm}
+
+
+\textbf{Буси-до, 武士道, кодекс чести самурая:}
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item Подпишите работу сверху: \verb|id_for_online|, фамилию, имя, номер группы.
+\item Должно быть выписано решение задачи, только ответ не засчитывается.
+\item Для каждого пункта задания обведите полученный результат в торжественную рамочку.
+\item Загрузите свою работу в лмс или на гитхаб в виде одного \verb|.pdf| файла.
+
+Ссылка на гитхаб: \url{https://classroom.github.com/a/FzuyWyxQ}.
+\item Имя файла должно иметь вид \verb|kr5_NNN.pdf| где вместо цифр \verb|NNN| следует написать \verb|id_for_online|.
+\item При загрузке версий работы и на гитхаб, и в лмс, проверяется версия из лмс. 
+\item Начало контрольной: 13:00. 
+
+Дедлайны: 13:40 — без штрафа, 13.45 — со штрафом 30\%, 13:50 — со штрафом 60\%.
+\item Оперативные важные сообщения будут в телеграм-канале \verb|@room112|.
+\end{enumerate}
+
+
+\newpage
+
+Номер выполняемого варианта $n$ определяется как $n=(\id \mod 6)+1$. 
+
+\section*{Вариант 6}
+
+
+Рассмотрим случайную выборку $X_1$, $X_2$, \ldots, $X_n$ из распределения Пуассона с параметром $\lambda$. 
+Чеширский Кот хочет проверить гипотезу $H_0$: $\lambda = 5$ против альтернативной $H_1$: $\lambda = 3$ на уровне
+значимости $0.05$. Помогите Чеширскому Коту разобраться с построением оптимального (равномерно наиболее мощного)
+критерия с помощью леммы Неймана-Пирсона при различных $n$.
+
+\begin{enumerate}
+  \item {[5+4]} Для $n=100$ найдите оптимальный критерий и вероятность ошибки второго рода. Можно использовать нормальную аппроксимацию.
+  \item {[6+4+1]} Для $n=1$ найдите оптимальный критерий и вероятность ошибки второго рода. Проверьте нулевую гипотезу для $x_1 = 4$. 
+  \item {[бонусный пункт, 6+4]} Для $n=3$ найдите оптимальный критерий и вероятность ошибки второго рода.
+\end{enumerate}
+
+\vspace{15mm}
+
+
+\textbf{Буси-до, 武士道, кодекс чести самурая:}
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item Подпишите работу сверху: \verb|id_for_online|, фамилию, имя, номер группы.
+\item Должно быть выписано решение задачи, только ответ не засчитывается.
+\item Для каждого пункта задания обведите полученный результат в торжественную рамочку.
+\item Загрузите свою работу в лмс или на гитхаб в виде одного \verb|.pdf| файла.
+
+Ссылка на гитхаб: \url{https://classroom.github.com/a/FzuyWyxQ}.
+\item Имя файла должно иметь вид \verb|kr5_NNN.pdf| где вместо цифр \verb|NNN| следует написать \verb|id_for_online|.
+\item При загрузке версий работы и на гитхаб, и в лмс, проверяется версия из лмс. 
+\item Начало контрольной: 13:00. 
+
+Дедлайны: 13:40 — без штрафа, 13.45 — со штрафом 30\%, 13:50 — со штрафом 60\%.
+\item Оперативные важные сообщения будут в телеграм-канале \verb|@room112|.
+\end{enumerate}
+
+
+\newpage
+\lhead{Probability theory and statistics-HSE}
+\rhead{Minitest №5}
+
+
+Only non Russian speaking students are allowed to use English version of the test.
+Preliminary approval by your class teacher is required. 
+
+\section*{English version}
+
+
+Consider a random sample $X_1$, $X_2$, \ldots, $X_n$ from Poisson distribution with rate $\lambda$. 
+Cheshire Cat would like to test $H_0$: $\lambda = 3$ against alternative $H_1$: $\lambda = 4$ at
+$0.05$ significance level. Please, assist Cheshire Cat in designing optimal statistical test
+using Neyman-Pearson lemma for various $n$. 
+
+\begin{enumerate}
+  \item {[5+4]} For $n=100$ find the optimal criterion and the probability of second type error. You can use normal approximation.
+  \item {[6+4+1]} For $n=1$ find the optimal criterion and the probability of second type error. Test the null hypothesis for $x_1 = 5$. 
+  \item {[bonus point, 6+4]} For $n=3$ find the optimal criterion and the probability of second type error.
+\end{enumerate}
+ 
+
+\vspace{15mm}
+
+
+\textbf{Bushido, 武士道, samurai code of honour:}
+
+\vspace{5mm}
+
+\begin{enumerate}
+\item State your identity at the top of the sheet: \verb|id_for_online|, first name, last name, group number.
+\item Full solutions are required, answer without explanations is not graded. 
+\item You should draw a pretty box around every final numeric answer or formula.
+\item Upload your work to the lms or gihtub as a unique \verb|.pdf| file.
+
+Github link: \url{https://classroom.github.com/a/FzuyWyxQ}.
+\item The filename should be of the form \verb|kr5_NNN.pdf| with your \verb|id_for_online| instead of \verb|NNN|.
+\item If you submit your work on github and in lms, then the version in lms is checked.
+\item Start time: 13:00. Deadlines: 13:40 — without penalty, 13:45 — 30\% penalty, 13:50 — 60\% penalty.
+\item For prompt and important messages read the telegram channel \verb|@room112|.
+\end{enumerate}
+
+
+
+
+
+\end{document}
