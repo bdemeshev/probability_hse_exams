@@ -77,7 +77,9 @@ left=13mm, right=13mm, includefoot]{geometry}
 
 \usepackage{textcomp}  % Чтобы в формулах можно было русские буквы писать через \text{}
 
-%\usepackage{embedfile} % Чтобы код LaTeXа включился как приложение в PDF-файл
+%\usepackage{embedfile} % отказались от внедрения тех внутрь pdf так как всё равно всё на гитхабе :)
+
+\usepackage{physics} % \abs \norm \grad, меняет \sin, \cos...
 
 \usepackage{subfigure} % для создания нескольких рисунков внутри одного
 
@@ -134,7 +136,6 @@ left=13mm, right=13mm, includefoot]{geometry}
 \DeclareMathOperator{\Lin}{\mathrm{Lin}}
 \DeclareMathOperator{\Linp}{\Lin^{\perp}}
 \DeclareMathOperator*\plim{plim}
-\DeclareMathOperator{\grad}{grad}
 \DeclareMathOperator{\card}{card}
 \DeclareMathOperator{\sgn}{sign}
 \DeclareMathOperator{\sign}{sign}
