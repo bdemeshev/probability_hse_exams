@@ -315,9 +315,9 @@ $\P\left(\xi = 0 | \eta = 0\right) = \frac{0,5}{0,75} = \frac{2}{3}$
 	
 \begin{center}
 \begin{tabular}{ccc}
-	$\E(\xi|\eta)$ & 0 & $\frac{1}{3}$  \\
+	$u$ & 0 & $\frac{1}{3}$  \\
 	\hline
-	$\P$ & 0.25 & 0.75 \\
+	$\P(\E(\xi|\eta)=u)$ & 0.25 & 0.75 \\
 	\hline
 \end{tabular}
 \end{center}
@@ -337,7 +337,7 @@ $\P\left(\xi = 0 | \eta = 0\right) = \frac{0,5}{0,75} = \frac{2}{3}$
     
     \[\E(Z) = \E(A) - \E(B) = 25 - 30 = -5\] 
     
-    \[\Var(Z) = \Var(A) + \Var(B) - 2\cov(A, B) = 12.5 + 12 = 24.5\] 
+    \[\Var(Z) = \Var(A) + \Var(B) - 2\Cov(A, B) = 12.5 + 12 = 24.5\] 
     
     \[\P(A - B > 0) = \P(Z > 0) = \P\biggl(\frac{Z + 5}{\sqrt{24.5}} > \frac{5}{\sqrt{24.5}}\biggl) = \P\biggl(\frac{Z + 5}{\sqrt{24.5}} > 1.01\biggl)\]
     
@@ -464,12 +464,87 @@ $\sqrt{\Var(X)} = 30$
 \end{enumerate}	
 
 
+\item
+\begin{enumerate}
+	\item Ожидаемые доходности портфелей $A$ и $B$ — это $\E(R_A)$ и $\E(R_B)$. 
+	Выпишем доходности портфелей, используя веса отдельных ценных бумаг, входящих в портфели:
+	\[
+		\E(R_A) = \E\Bigr(\frac{1}{2}R_1+\frac{1}{2}R_2\Bigl) = \frac{1}{2}\E(R_1) + \frac{1}{2}\E(R_2) = \frac{5}{2} + \frac{10}{2} = \frac{15}{2}
+	\]
+	\[
+		\E(R_B) = \E\Bigr(\frac{1}{2}R_2+\frac{1}{2}R_3\Bigl) = \frac{1}{2}\E(R_2) + \frac{1}{2}\E(R_3) = \frac{10}{2} + \frac{15}{2} = \frac{25}{2}
+	\]
+	\item По условия, риски портфелей $A$ и $B$ определяются как стандартные отклонения $\sqrt{\Var(R_A)}$ и $\sqrt{\Var(R_B)}$. 
+	Для портфеля $A$:
+	\[
+		\Var(R_A) = \Var{\Bigr(\frac{1}{2}R_1 + \frac{1}{2}R_2\Bigl)} = \frac{1}{4}\Var(R_1) + \frac{1}{4}\Var(R_2) + 2\Cov{\Bigr(\frac{1}{2}R_1, \frac{1}{2}R_2\Bigl)} 
+	\]
+	\[
+		\sqrt{\Var(R_A)} =  \sqrt{\frac{50}{4} + \frac{100}{4} + \frac{2}{4}\Cov(R_1, R_2)} = \sqrt{\frac{190}{4}}
+	\]
+	И для $B$:
+	\[
+		\Var(R_B) = \Var{\Bigr(\frac{1}{2}R_2 + \frac{1}{2}R_3\Bigl)} = \frac{1}{4}\Var(R_2) + \frac{1}{4}\Var(R_3) + 2\Cov{\Bigr(\frac{1}{2}R_2, \frac{1}{2}R_3\Bigl)} 
+	\]
+	\[
+		\sqrt{\Var(R_B)} =  \sqrt{\frac{100}{4} + \frac{150}{4} + \frac{2}{4}\Cov{(R_2, R_3)}} = \sqrt{\frac{230}{4}}
+	\]
+	\item Здесь всё как в жизни:
+	портфель А имеет меньший риск и меньшую ожидаемую доходность, в то время как портфель B — большую ожидаемую доходность, а значит, больший риск.
+	\item Посчитаем корреляцию:
+	\[
+		\Corr(R_A, R_B) = \frac{\Cov(R_A, R_B)}{\sqrt{\Var(R_A)}\cdot \sqrt{\Var(R_B)}} = 
+		\frac{\Cov{\Bigr(\frac{1}{2}R_1 + \frac{1}{2}R_2,\frac{1}{2}R_2 + \frac{1}{2}R_3\Bigl)}}{\sqrt{\Var(R_A)}\cdot \sqrt{\Var(R_B)}} 
+	\]
+	\[
+		\Cov{\Bigr(\frac{1}{2}R_1 + \frac{1}{2}R_2,\frac{1}{2}R_2 + \frac{1}{2}R_3\Bigl)} = 
+		\Cov{\Bigr(\frac{1}{2}R_1,\frac{1}{2}R_2\Bigl)} + \Cov{\Bigr(\frac{1}{2}R_1, \frac{1}{2}R_3\Bigl)} + \Cov{\Bigr(\frac{1}{2}R_2,\frac{1}{2}R_2\Bigl)} + \Cov{\Bigr(\frac{1}{2}R_2, \frac{1}{2}R_3\Bigl)}
+	\]
+	Вспомним, что $\Cov(R_2,R_2) = \Var(R_2)$, и получим:
+	\[
+		\Cov{\Bigr(\frac{1}{2}R_1 + \frac{1}{2}R_2,\frac{1}{2}R_2 + \frac{1}{2}R_3\Bigl)} = \frac{20}{4} - \frac{10}{4} + \frac{100}{4} - \frac{10}{4} = 25
+	\]
+	Находим значение корреляции:
+	\[
+		\Corr(R_A, R_B) = \frac{25}{\sqrt{\frac{190}{4}\cdot \frac{230}{4}}} = \frac{100}{\sqrt{190} \cdot \sqrt{230}}
+	\]
+	\item {[непроверенное решение ассистента]} Для решения этого пункта достаточно найти хотя бы одно из решений следующей системы:
+	\begin{equation*}
+	\begin{cases}
+	5w_{1} + 10w_{2} + 15w_{3} \ge \frac{15}{2}\\
+	5w_{1} + 10w_{2} + 15w_{3} \ge \frac{25}{2}\\
+	\sqrt{50w_{1}^{2} + 100w_{2}^{2} + 150w_{3}^{2} +2w_{1}w_{2}\cdot20 + 2w_{1}w_{3}\cdot(-10) + 2w_{2}w_{3}(-10)} \le \sqrt{\frac{230}{4}}\\
+	\sqrt{50w_{1}^{2} + 100w_{2}^{2} + 150w_{3}^{2} +2w_{1}w_{2}\cdot20 + 2w_{1}w_{3}\cdot(-10) + 2w_{2}w_{3}(-10)} \le \sqrt{\frac{190}{4}}\\
+	w_{1} + w_{2} + w_{3} = 1
+	\end{cases}
+	\end{equation*}
+	Что эквивалентно:
+	\begin{equation*}
+	\begin{cases}
+	5w_{1} + 10w_{2} + 15w_{3} \ge \frac{25}{2} (1)\\
+	\sqrt{50w_{1}^{2} + 100w_{2}^{2} + 150w_{3}^{2} +2w_{1}w_{2}\cdot20 + 2w_{1}w_{3}\cdot(-10) + 2w_{2}w_{3}(-10)} \le \sqrt{\frac{190}{4}} (2)\\
+	w_{1} + w_{2} + w_{3} = 1 (3)
+	\end{cases}
+	\end{equation*}
+	(1) и (2) строчки вместе дают:
+	\[w_{2} = 1.5 - 2w_{3}\]
+	\[w_{1} = w_{3} - 0.5\]
+	Осталось подставить во (2) и решить получившееся неравенство\ldots
+	\[540w_{3}^{2} - 570w_{3} - 160 \ge 0\]
+	Решая сначала квадратное уравнение и определяя знак интервалов, получаем:
+	\[w_{3} \in \Bigr(-\infty, \frac{19}{36} - \frac{\sqrt{745}}{36}\Bigl]; \Bigl[\frac{19}{36} + \frac{\sqrt{745}}{36}, +\infty\Bigl)\]
+	Это невозможно по экономическому смыслу, значит данный пункт не имеет решений.
+\end{enumerate}
+
+
+
 \end{enumerate}
 
 \subsection[2017-2018]{\hyperref[sec:kr_02_2017_2018]{2017-2018}}
 \label{sec:sol_kr_02_2017_2018}
 
 \begin{enumerate}
+
 \item[7.]
 \begin{enumerate}
 \item Всем хватит места, если число явившихся на рейс пассажиров ($X$) не превысит $300$,
