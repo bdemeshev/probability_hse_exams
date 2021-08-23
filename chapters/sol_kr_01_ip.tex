@@ -16,7 +16,7 @@
 	\draw [color=gray, fill=gray!15] circle(2.5cm);
 	\draw (0,0) coordinate [label= below:$O$] (D);
 	\draw[color=teal] (0:-0.4) arc (140:90:0.68cm);
-    \draw[color=teal] (-1.2cm:-0.8cm) node {$2\pi - 2\alpha$};
+    \draw[color=teal] (-1.2cm:-0.8cm) node {$\pi - 2\alpha$};
     \draw[color=purple] (0:-2) arc (17:50:0.5cm);
     \draw[color=purple] (-8:-1.8) node {$\alpha$};
     \path[draw] (-2.5,0) coordinate [label= left:$I$] (A)
@@ -39,13 +39,13 @@
 
 	Так как координата Греты распределена равномерно, то при допустимых значениях $x$:
 	\[
-  F_L (x) = \P(L \le x) =\P(\breve{IG} \le \breve{IX}) = \frac{\breve{IX}}{\breve{IF}} = \frac{r \cdot (2\pi - 2\alpha)}{\pi r} 
+  F_L (x) = \P(L \le x) =\P(\breve{IG} \le \breve{IX}) = \frac{\breve{IX}}{\breve{IF}} = \frac{r \cdot (\pi - 2\alpha)}{\pi r} 
   \]
 \end{minipage}
 
   Угол $\alpha$ лежит в диапазоне $[0;\pi/2]$, поэтому:
 	\[
-  \cos \alpha = x \Rightarrow \alpha = \arccos x \Rightarrow F_L (x) = \frac{2\pi - 2\arccos x}{\pi},
+  \cos \alpha = x \Rightarrow \alpha = \arccos x \Rightarrow F_L (x) = \frac{\pi - 2\arccos x}{\pi},
   \]
 
   В результате получаем плотность:
