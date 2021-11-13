@@ -98,5 +98,12 @@ R: $(r_done_files)
 
 clean:
 	latexmk -c $(file_name).tex
-	-rm $(file_name).amc $(file_name).bbl $(file_name).log
-	-rm $(file_name).fdb_latexmk $(file_name).fls $(file_name).xdv
+	-rm $(file_name).amc 
+	-rm $(file_name).bbl 
+	-rm $(file_name).log
+	-rm $(file_name).fdb_latexmk 
+	-rm $(file_name).fls 
+	-rm $(file_name).xdv
+	-rm $(file_name).pyg
+	-rm $(file_name).synctex.gz
+	
