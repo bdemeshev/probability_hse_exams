@@ -38,7 +38,7 @@ all: $(r_done_files) $(file_name).pdf excerpt_minima.pdf excerpt_exam_questions.
 # 2. all tex plots will be transformed to small pdfs
 # 3. main tex file will be proceeded
 
-excerpt_minima.pdf: excerpt_minima.tex chapters/*.tex 
+excerpt_minima.pdf: excerpt_minima.tex chapters/minima.tex chapters/sol_minima.tex
 	# protection against biber error
 	# http://tex.stackexchange.com/questions/140814/
 	rm -rf `biber --cache`
@@ -51,7 +51,7 @@ excerpt_minima.pdf: excerpt_minima.tex chapters/*.tex
 	latexmk -c excerpt_minima.tex
 
 
-excerpt_exam_questions.pdf: excerpt_exam_questions.tex chapters/*.tex 
+excerpt_exam_questions.pdf: excerpt_exam_questions.tex chapters/exam_questions.tex
 	# protection against biber error
 	# http://tex.stackexchange.com/questions/140814/
 	rm -rf `biber --cache`
@@ -73,10 +73,11 @@ $(file_name).pdf: $(file_name).tex chapters/*.tex $(pdf_full_from_R_files)
 
 	# create pdf
 	# will automatically run pdflatex/biber if necessary
-	latexmk -xelatex -latexoption=-shell-escape $(file_name).tex
+	# latexmk -xelatex -latexoption=-shell-escape $(file_name).tex
+	arara -v $(file_name).tex
 
 	# clean
-	latexmk -c $(file_name).tex
+	# latexmk -c $(file_name).tex
 
 
 # $(file_name).tex: $(file_name).Rnw
