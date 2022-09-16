@@ -76,25 +76,32 @@
 \setlist[enumerate, 2]{label=\asbuk*),ref=\asbuk*}
 
 %% эконометрические сокращения
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\amn}{arg\,min}
+\DeclareMathOperator*{\amx}{arg\,max}
+\DeclareMathOperator{\cov}{Cov}
+\DeclareMathOperator{\Var}{Var}
 \DeclareMathOperator{\Cov}{Cov}
 \DeclareMathOperator{\Corr}{Corr}
-\DeclareMathOperator{\Var}{Var}
-\DeclareMathOperator{\E}{E}
-\def \hb{\hat{\beta}}
-\def \hs{\hat{\sigma}}
-\def \htheta{\hat{\theta}}
-\def \s{\sigma}
-\def \hy{\hat{y}}
-\def \hY{\hat{Y}}
-\def \v1{\vec{1}}
-\def \e{\varepsilon}
-\def \he{\hat{\e}}
-\def \z{z}
-\def \hVar{\widehat{\Var}}
-\def \hCorr{\widehat{\Corr}}
-\def \hCov{\widehat{\Cov}}
-\def \cN{\mathcal{N}}
-\def \P{\mathbb{P}}
+\DeclareMathOperator{\pCorr}{pCorr}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\let\P\relax
+\DeclareMathOperator{\P}{\mathbb{P}}
+
+
+\newcommand{\cN}{\mathrm{N}}
+\newcommand{\cU}{\mathrm{U}}
+\newcommand{\cBinom}{\mathrm{Binom}}
+\newcommand{\cBin}{\cBinom}
+\newcommand{\cExp}{\mathrm{Exp}}
+\newcommand{\cPois}{\mathrm{Pois}}
+\newcommand{\cBeta}{\mathrm{Beta}}
+\newcommand{\cGamma}{\mathrm{Gamma}}
+
+\newcommand \R{\mathbb{R}}
+\newcommand \N{\mathbb{N}}
+\newcommand \Z{\mathbb{Z}}
 
 
 \begin{document}
