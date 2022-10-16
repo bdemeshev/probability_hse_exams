@@ -73,8 +73,8 @@ $(file_name).pdf: $(file_name).tex chapters/*.tex $(pdf_full_from_R_files)
 
 	# create pdf
 	# will automatically run pdflatex/biber if necessary
-	# latexmk -xelatex -latexoption=-shell-escape $(file_name).tex
-	arara -v $(file_name).tex
+	latexmk -xelatex -latexoption=-shell-escape $(file_name).tex
+	# arara -v $(file_name).tex
 
 	# clean
 	# latexmk -c $(file_name).tex
