@@ -7,9 +7,16 @@
 \label{sec:sol_kr_01_ip_2022_2023}
 
 \begin{enumerate}
+  \item $p_a = \P(X \leq 3) = 1 - \exp(-3\lambda_N)$, 
+  \begin{align*}
+  F(1) = 1 - \P(X / (N+1)>1) = 1 - \sum_{k=0} \P(N = k) \P(X > k+1) = \\
+  = 1 - \sum \exp(-\lambda_N) \frac{\lambda_N^k}{k!} \exp( - (k+1)\lambda_X) = \\
+  = 1 - \exp(-\lambda_N - \lambda_X) \sum \frac{(\lambda_N \exp(-\lambda_X))^k}{k!} = \\
+  = 1 - \exp(-\lambda_N - \lambda_X + \lambda_N \exp(-\lambda_X))
+  \end{align*}
   \item 
-  \item 
-  \item 
+  \item Замечаем, что количество раундов распределено геометрически, это количество испытаний до первого успеха. 
+  Отсюда $\E(N) = 1/p$.
   \item $\P(X=1)=0.2$, $\P(X=2)=0.3$, $\P(X=3)=0.5$, $g'(1) = \E(X)$.
   \item $T = \min\{ X_1, X_2, X_3 \}$, $\E(T) = 5/4$.
 \end{enumerate}
@@ -240,7 +247,8 @@ $n-1$. Значит, $x_n=0.5(x_{n-1}+y_{n-1})$.
 
 Таким образом, получена следующая разностная система:
 \[
-\begin{cases}x_n=0.5(x_{n-1}+y_{n-1})\\
+\begin{cases}
+x_n=0.5(x_{n-1}+y_{n-1})\\
 y_n=0.5x_{n-1}
 \end{cases}
 \]
@@ -451,7 +459,7 @@ S = \frac{1}{12} \cdot 1 + \frac{11}{12}(S +1)
 
   Стало быть,
   \[
-  \ln (1 - 0.5) = -0.5 - 0.5^2/2 - 0.5^3/3 - 0.5^4/4  
+  \ln (1 - 0.5) = -0.5 - 0.5^2/2 - 0.5^3/3 - 0.5^4/4  +\ldots 
   \]
 
   И исходное ожидание равно:
@@ -515,7 +523,7 @@ m_t = e^{\ln 1.05 \cdot t}  = e^{rt}
 На первом месте обязательно будет находиться какая-то цифра,
 поэтому сумма вероятностей будет равна 1. Получаем:
 \[
-\dfrac{n}{ra}\left(\ln \frac{2}{1} + \ln \frac{3}{2} + \ldots + \ln \frac{10}{9}\right) = 1
+\frac{n}{ra}\left(\ln \frac{2}{1} + \ln \frac{3}{2} + \ldots + \ln \frac{10}{9}\right) = 1
 \]
 
 Таким образом $\frac{n}{ra} = \frac{1}{\ln 10}$.
