@@ -4,11 +4,13 @@
 \section{Решения контрольной работы 2}
 
 
+\subsection[2022-2023]{\hyperref[sec:sol_kr_02_2022_2023]{2022-2023}}
+\label{sec:sol_kr_02_2022_2023}
+
+
+
 \subsection[2021-2022]{\hyperref[sec:sol_kr_02_2021_2022]{2021-2022}}
 \label{sec:sol_kr_02_2021_2022}
-
-
-
 
 \begin{enumerate}
 	\item $F_Z(t) = \frac{F(t-1) + F(t) + F(t+1)}{3}$, где $F(t)$ — функция распределения стандартной нормальное случайной величины.
@@ -1868,8 +1870,11 @@ $\P(X^2 + Y^2<6) = 0.95$
 $\P(2X+Y>1) = 1 - \P\left(\frac{2X+Y - 2}{\sqrt{3}} < \frac{1-2}{\sqrt{3}}\right) =
 1 - \P\left(\cN(0,1) < \frac{-1}{\sqrt{3}}\right)= 0.72$
 
-$\P(2X+Y>1 \mid Y=2) = \P(2X>-1) = \P\left(\frac{X+1}{1} > \frac{-0.5+1}{1} \right) =
-1 - \P(\cN(0,1)< -0.5) = 0.31$
+Замечаем, что $(X|Y)\sim \cN(-3 - 0.5Y; 3/4)$ и $(X|Y=2)\sim \cN(-4;3/4)$.
+Получаем, что 
+$\P(2X+Y>1 \mid Y=2) = \P(X>-0.5 \mid Y=2) = 
+\P(\cN(0,1) > 7/\sqrt{3}) \approx 0.00$
+
 \item Если $S$ — финальная стоимость акции, то $S = 1000 + X_1 + X_2 + \ldots + X_{100}$.
 Тогда по ЦПТ $S\sim \cN(1000,100)$ и $\P(S > 1010) = \P(Z > 1)$.
 \end{enumerate}
@@ -2253,7 +2258,7 @@ $[0;1]$. Пусть для $1 \leq i \leq n$ $J_i$ — это отрезок с 
 \label{sec:sol_kr_02_2007_2008}
 
 \begin{enumerate}
-\item $c = 0.2$, далее $\P\left(Y>-X\right)=0.5$  и $\E\left(X\cdot Y\right)=0.1$
+\item $c = 0.3$, далее $\P\left(Y>-X\right)=0.4$  и $\E\left(X\cdot Y\right)=0.1$
 
 $\Corr(X,Y)=\frac{-0.02}{\sqrt{0.24\cdot 1.41}}$
 
@@ -2376,7 +2381,7 @@ $Y=(n-1)F-MF=(n-1)F-nF+F^{2}=F^{2}-F$
 \label{sec:sol_kr_02_2006_2007}
 
 \begin{enumerate}
-\item $c=0.3$, $\P(Y>-X)=0.5$, $\E(XY^{2})=0.5$, $\E(Y|X>0)=\frac{0.1}{0.4}=0.25$
+\item $c=0.3$, $\P(Y>-X)=0.4$, $\E(XY^{2})=0.5$, $\E(Y|X>0)=\frac{0.1}{0.4}=0.25$
 \item $\E(Y)=-1$, $\Var(Y)=207$, $\P(Y>20)=\P(Z>\frac{21}{\sqrt{207}})=\P(Z>1.46)=0.07$
 \item $\P(Y>2X)=\int_{0}^{1}\int_{0}^{y/2}(x+y)dxdy=\frac{5}{24}$
 
