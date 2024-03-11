@@ -8,6 +8,66 @@
 \label{sec:sol_kr_01_2023_2024}
 
 
+\begin{enumerate}
+	\item 
+   \begin{enumerate}
+   \item $\P(X_1 = x_1, X_2 = x_2 ) = 1/36$ для $x_1 \in \{1, \ldots, 6\}$, $x_2 \in \{1, \ldots 6\}$.
+   \item Величины $X_1$ и $X_2$ независимы. 
+   \item Обозначим $ L = \min\{ X_1, X_2\}$, 
+	\[
+   F_L(x) = \begin{cases}
+	0, x < 0 \\
+	1 - (1 - i/6)^2, x \in [i;i+1), i \in \{1, \ldots, 5\} \\
+	1, x \geq 6
+   \end{cases}
+   \]
+   \item $\P( X_1 < X_2 < X_3 ) = 20/6^3$
+   \end{enumerate}
+
+   \item 
+   \begin{enumerate}
+	\item Условие нормировки $\int_{-3}^3 f_X(t) \, dt = 1$, $18a + 6c = 1$.
+	
+	Условия непрерывности, $f_X(-3) = 9a + 3b + c = 0$, $f_X(3) = 9a - 3b + c = 0$.
+
+	Решаем систему, $a=-1/36$, $b=0$, $c=1/4$.
+	\item $\P( X \in [2;4]) = \int_{2}^3 f_X(t) \, dt = 2/27$.
+   \end{enumerate}
+   \item
+   \begin{enumerate}
+	\item Обозначим число верных ответов как $X$, $X \sim \dBin(n = 5, p=1/6)$.
+	
+	Наиболее вероятное число ответов: $ np - q \leq x \leq np + p$, $x \in \{0, 1\}$.
+	\item $\P(\text{зачёт}) = \P(X = 4) + \P(X = 5) = 26/6^5 = q$.
+	\item $\P(X \leq 10) = 1 - \P(X > 10) = 1 - (1 - q)^10 \approx 0.03$.
+   \end{enumerate}
+
+   \item 
+   \begin{enumerate}
+	\item $\P(\text{детектор показал ложь и подозреваемый лжёт}) = 0.9 \cdot 0.1 + 0.1 \cdot 0.95 = 0.185$
+	\item $\P(\text{невиновен} \mid \text{детектор показал ложь}) = \frac{0.9\cdot0.1}{0.185} = \frac{90}{185} = \frac{18}{37}$
+   \end{enumerate}
+
+   \item 
+   \begin{enumerate}
+	\item События попарно независимы, $\P(A \cap B) = \P(A) \P(B) = 0.25$, $\P(C \cap B) = \P(C) \P(B) = 0.25$, $\P(A \cap C) = \P(A) \P(C) = 0.25$.
+	\item События зависимы в совокупности, $\P(A \cap B \cap C) = 0 \neq  \P(A) \P(B) \P(C) = 1/8$.
+   \end{enumerate}
+   \item Обозначим число изюминок как $X$,
+   $\P(X \geq 1) = 1 - \P(X = 0) = 1 - \exp(-\lambda)$.
+   Решаем неравенство $\P(X \geq 1) \geq 0.99$, получаем $\lambda \geq \ln 100 \approx 4.6$. 
+
+   \item Обозначим $Z = X + Y$, $Z \sim \dPois(\lambda_X + \lambda_Y) = \dPois(3)$.
+   \[
+   \P(X = 2 \mid Z = 3) = \P(X = 2, Z = 3) / \P(Z = 3) = \exp(-3) /(9\exp(-3)/2) = 2/9.
+   \]
+   \item 
+   \[
+	(X \mid X + Y) \sim \dBin(n = X + Y, p = \lambda_X / (\lambda_X + \lambda_Y))
+   \]
+
+\end{enumerate}
+
 \subsection[2022-2023]{\hyperref[sec:kr_01_2022_2023]{2022-2023}}
 \label{sec:sol_kr_01_2022_2023}
 
@@ -666,7 +726,7 @@ f_X(x) =
 \item
 \begin{enumerate}
 \item $\P(\text{детектор показал ложь и подозреваемый лжёт}) = 0.9 \cdot 0.1 + 0.1 \cdot 0.95 = 0.185$
-\item $\P(\text{невиновен}|\text{детектор показал ложь}) = \frac{0.9\cdot0.1}{0.185} = \frac{90}{185}$
+\item $\P(\text{невиновен} \mid \text{детектор показал ложь}) = \frac{0.9\cdot0.1}{0.185} = \frac{90}{185} = \frac{18}{37}$
 \item $\P(\text{эксперт точно выявит преступника}) = (0.9)^9 \cdot 0.95$
 \item $\P(\text{эксперт ошибочно выявит преступника}) = 9 \cdot 0.1 \cdot 0.9^8\cdot 0.05$
 \end{enumerate}
@@ -757,18 +817,18 @@ X_i =
 \end{cases}
 \]
 
-Заметим, что $X_i \sim Be\left(p = 1/5 \right)$, $X_1, \ldots, X_{17}$ – независимы,
-$X = X_1 + \ldots + X_{17}$ – общее число верных ответов,
-$X \sim Bin\left(n=17, p=1/5\right)$.
+Заметим, что величины $X_i \sim \dBern\left(p = 1/5 \right)$, $X_1, \ldots, X_{17}$ независимы,
+$X = X_1 + \ldots + X_{17}$ — общее число верных ответов,
+$X \sim \dBin\left(n=17, p=1/5\right)$.
 
 \begin{enumerate}
-\item Наибольшее вероятное число правильных ответов $m_0$ может быть нвйдено по формуле:
+\item Наибольшее вероятное число правильных ответов $m_0$ может быть найдено по формуле:
 \begin{enumerate}
-\item[1)] если число $(n\cdot p - q)$ – не целое, где $q:=1-p$, то
+\item[1)] если число $(n\cdot p - q)$ — не целое, где $q:=1-p$, то
 \[
 m_0 = [np-q] +1,
 \]
-\item[2)] если число  $(n\cdot p - q)$ – целое, то наиболее вероятных значений $m_0$ два:
+\item[2)] если число  $(n\cdot p - q)$ — целое, то наиболее вероятных значений $m_0$ два:
 \[
 m_0' = np-q \text{ и } m_0'' = np-q+1
 \]

@@ -106,5 +106,6 @@ clean:
 	-rm $(file_name).fls 
 	-rm $(file_name).xdv
 	-rm $(file_name).pyg
+	-rm $(file_name).out.pyg
 	-rm $(file_name).synctex.gz
 	
