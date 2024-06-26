@@ -7,6 +7,7 @@
 \documentclass[11pt, a4paper]{article}
 
 \usepackage{fontspec}
+\usepackage{libertine}
 
 \usepackage[base]{babel} % hypenation
 % see: https://tex.stackexchange.com/questions/400986/hyphenrules-environment-no-longer-works-with-polyglossia
@@ -18,12 +19,12 @@
 
 % download "Linux Libertine" OTF-fonts:
 % http://www.linuxlibertine.org/index.php?id=91&L=1
-\setmainfont{Linux Libertine O} % or Helvetica, Arial, Cambria
+% \setmainfont{Linux Libertine O} % or Helvetica, Arial, Cambria
 % why do we need \newfontfamily:
 % http://tex.stackexchange.com/questions/91507/
-\newfontfamily{\cyrillicfonttt}{Linux Libertine O}
-\newfontfamily{\cyrillicfont}{Linux Libertine O}
-\newfontfamily{\cyrillicfontsf}{Linux Libertine O}
+% \newfontfamily{\cyrillicfonttt}{Linux Libertine O}
+% \newfontfamily{\cyrillicfont}{Linux Libertine O}
+% \newfontfamily{\cyrillicfontsf}{Linux Libertine O}
  
 \usepackage{etoolbox} % to use ifdef, must be after babel
 
@@ -80,6 +81,7 @@ left=13mm, right=13mm, includefoot]{geometry}
 \usepackage{epsfig}
 \usepackage{bm}
 \usepackage{color}
+\usepackage{mathtools} 
 
 \usepackage{multicol}
 \usepackage{multirow} % Слияние строк в таблице
@@ -88,7 +90,8 @@ left=13mm, right=13mm, includefoot]{geometry}
 
 %\usepackage{embedfile} % отказались от внедрения тех внутрь pdf так как всё равно всё на гитхабе :)
 
-\usepackage{physics} % \abs \norm \grad, меняет \sin, \cos...
+% \usepackage{physics} % \abs \norm \grad, меняет \sin, \cos...
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
 
 \usepackage{subfigure} % для создания нескольких рисунков внутри одного
 
